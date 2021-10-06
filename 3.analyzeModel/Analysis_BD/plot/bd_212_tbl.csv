@@ -1,0 +1,213 @@
+rxnList	subSystem	GPR	FluxSpan_a	FluxSpan_b	Flux_Span_Ratio	Var7	Var8
+BILIRUBtr	Transport, endoplasmic reticular		2000	0	Inf	L	intercompartmental
+C160CPT2	Fatty acid oxidation	1376.1 or 1374.1	140	90	1.55555555555556	L	[m]
+C161CPT1	Fatty acid oxidation	1375.1 or 1375.3 or 1375.4 or 126129.1 or 1374.1 or 1375.2	2000	324.851945854484	6.15665082362132	L	[c]
+DCIm	Fatty acid oxidation	1632.1 or 10455.1	85	45	1.88888888888889	L	[m]
+EX_M02745[e]	Exchange/demand reaction		85	45	1.88888888888889	L	[e]
+EX_ttdca[e]	Exchange		130	60	2.16666666666667	L	[e]
+EX_ttdcea[e]	Exchange/demand reaction		130	60	2.16666666666667	L	[e]
+HMR_2865	Transport, endoplasmic reticular	6584.1	390.685279187817	10	39.0685279187817	L	intercompartmental
+HMR_2866	Transport, endoplasmic reticular	1384.1	390.685279187817	10	39.0685279187817	L	[r]
+HMR_3234	Fatty acid oxidation	37.1 or 33.1 or 34.1 or 28976.1	85	45	1.88888888888889	L	[m]
+HMR_3235	Fatty acid oxidation	3030.1 or 1892.1	85	45	1.88888888888889	L	[m]
+HMR_3236	Fatty acid oxidation	3028.1 or 3030.1 or 3033.1	85	45	1.88888888888889	L	[m]
+HMR_3237	Fatty acid oxidation	3030.1 or 3032.1 or 10449.1	85	45	1.88888888888889	L	[m]
+HMR_3428	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	40	10	4	L	[m]
+PUNP6	Purine catabolism	4860.1	60	419.13282571912	0.143152710353946	H	[c]
+TTDCEAt	Transport, extracellular		130	60	2.16666666666667	L	intercompartmental
+sink_crvnc[c]	Exchange/demand reaction		10	20	0.5	H	[c]
+ACACT10m	Valine, leucine, and isoleucine metabolism	38.1 or 3032.1 or 10449.1	406.29058461463	20	20.3145292307315	L	[m]
+AICART	Purine synthesis	471.1	59.9999999999999	20	2.99999999999999	L	[c]
+BILGLCURtr	Transport, endoplasmic reticular		1147.28426395939	0	Inf	L	intercompartmental
+BILIRUBt2	Transport, extracellular	10599.1	2000	0	Inf	L	intercompartmental
+CITtbm	Transport, mitochondrial	6576.1	776.360889533479	1000	0.776360889533479	H	intercompartmental
+DCYTt	Transport, extracellular	3177.1	1000	20.0000000000001	49.9999999999997	L	intercompartmental
+FAOXC102C103m	Fatty acid oxidation	34.1	40	20	2	L	[m]
+FAOXC102C81m	Fatty acid oxidation	1892.1 and 3033.1 and 10449.1	40	20	2	L	[m]
+FAOXC102m	Fatty acid oxidation	1632.1	40	20	2	L	[m]
+FAOXC103C102m	Fatty acid oxidation	1666.1	40	20	2	L	[m]
+FAOXC123C102m	Fatty acid oxidation	1892.1 and 3033.1 and 10449.1	40	20	2	L	[m]
+FAOXC123m	Fatty acid oxidation	1632.1	40	20	2	L	[m]
+FAOXC143C123m	Fatty acid oxidation	37.1 and 3030.1 and 3032.1	40	20	2	L	[m]
+FAOXC61m	Fatty acid oxidation	1632.1	40	20	2	L	[m]
+FAOXC81C61m	Fatty acid oxidation	34.1 and 1892.1 and 3033.1 and 10449.1	40	20	2	L	[m]
+FBA2	Fructose and mannose metabolism	226.2 or 226.1 or 226.3 or 229.1 or 230.1	319.345741680767	0	Inf	L	[c]
+HACD9m	Valine, leucine, and isoleucine metabolism	3028.1 or 1962.1 or 3033.1	406.29058461463	20	20.3145292307315	L	[m]
+HMR_0362	Fatty acid oxidation	11332.1 or 10965.1 or 570.1 or 122970.1 or 641371.1 or 641372.1 or 344967.1	404.01861252115	10	40.401861252115	L	[c]
+HMR_6515	Methionine and cysteine metabolism	4357.1 or 7263.1	10	20	0.5	H	[c]
+HYPTROX	Taurine and hypotaurine metabolism		35	11.6666666666667	3	L	[c]
+IMPC	Purine synthesis	471.1	59.9999999999999	20	2.99999999999999	L	[c]
+KHK	Fructose and mannose metabolism	3795.1 or 3795.2	319.345741680767	0	Inf	L	[c]
+NDP7er	Nucleotide interconversion	124583.1 or 957.1 or 9583.1	758.26565143824	216.56796390299	3.50128263558825	L	[r]
+NDPK6m	Nucleotide interconversion	4833.1 or 10201.1	1363.42228668117	324.851945854484	4.19705747211965	L	[m]
+PI45P5P	Inositol phosphate metabolism	8867.1 or 56623.1 or 4952.1 or 8871.1 or 8867.2 or 4952.2 or 3633.1	778.26565143824	1000	0.77826565143824	H	[c]
+PRISTCOAtcx	Transport, peroxisomal	5825.1	758.265651438241	0	Inf	L	intercompartmental
+RE0691C	Urea cycle		0	70	0	H	[c]
+RE1897C	Urea cycle		0	70	0	H	[c]
+RE1898C	Urea cycle		0	70	0	H	[c]
+TMNDNCCPT1	Fatty acid oxidation	1375.1 or 1375.3 or 1375.4 or 126129.1 or 1374.1 or 1375.2	419.01861252115	10	41.901861252115	L	[c]
+UGT1A10r	Steroid metabolism	54576.1	1147.28426395939	0	Inf	L	[r]
+r0728	Fatty acid oxidation	3030.1 and 1962.1 and 1892.1	685.806671501088	1090.85002359658	0.628690155994088	H	[m]
+r2508	Transport, endoplasmic reticular		2000	1000	2	L	intercompartmental
+ACETONEt2	Transport, extracellular	6566.1 or 9123.1 or 9194.1	459.448538781308	1000	0.459448538781308	H	intercompartmental
+ACETONEt2m	Transport, mitochondrial	6566.1	459.448538781308	1000	0.459448538781308	H	intercompartmental
+ASNCYSCYSr	Peptide metabolism		10	20	0.5	H	[c]
+ASNCYSCYSt	Transport, extracellular	6564.1 or 6565.1	10	20	0.5	H	intercompartmental
+C180CPT1	Fatty acid oxidation	1375.4 or 1375.2 or 126129.1 or 1375.1 or 1374.1 or 1375.3	1018.9286559136	381.086012408347	2.67374981693576	L	[c]
+C180CPT2	Fatty acid oxidation	1376.1	1018.9286559136	375.752679075014	2.71170030888904	L	[m]
+CYSCYSr	Peptide metabolism		10	20	0.5	H	[c]
+CYSCYSt	Transport, extracellular	6564.1 or 6565.1	10	20	0.5	H	intercompartmental
+CYSTA	Methionine and cysteine metabolism	2805.1	20	37.5	0.533333333333333	H	[c]
+DNADtn	Transport, nuclear		389.018612521151	1324.85194585448	0.293631762959179	H	intercompartmental
+DXTRNt	Transport, extracellular		20	10	2	L	intercompartmental
+EX_HC00229[e]	Exchange/demand reaction		113.347081218274	75.0332967217827	1.51062376532056	L	[e]
+EX_HC00250[e]	Exchange/demand reaction		20	40	0.5	H	[e]
+EX_ac[e]	Exchange/demand reaction		773.706633111631	488.436388420855	1.58404789539344	L	[e]
+EX_asncyscys[e]	Exchange/demand reaction		10	20	0.5	H	[e]
+EX_cgly[e]	Exchange/demand reaction		20	40	0.5	H	[e]
+EX_cys_L[e]	Exchange/demand reaction		20	40	0.5	H	[e]
+EX_cyscys[e]	Exchange/demand reaction		10	20	0.5	H	[e]
+EX_dxtrn[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_glc_D[e]	Exchange/demand reaction		215.148697859192	141.081518130608	1.52499562458645	L	[e]
+EX_gluala[e]	Exchange/demand reaction		0	237.187017890913	0	H	[e]
+EX_glyald[e]	Exchange/demand reaction		314.237832188713	0	Inf	L	[e]
+EX_gthrd[e]	Exchange/demand reaction		20	40	0.5	H	[e]
+EX_hiscyscys[e]	Exchange/demand reaction		10	20	0.5	H	[e]
+EX_mercplaccys[e]	Exchange/demand reaction		10	20	0.5	H	[e]
+EX_sfcys[e]	Exchange/demand reaction		10	20	0.5	H	[e]
+FAOXC140	Fatty acid oxidation	35.1 or 34.1	85.2956870057668	53.0107355318084	1.60902666507214	L	[m]
+FAOXC18480m	Fatty acid oxidation	34.1 or 35.1	40	20	2	L	[m]
+GAPD	Glycolysis/gluconeogenesis	2597.1 or 26330.1	685.478318021004	393.210001880053	1.74328810239702	L	[c]
+GGLUCT	Glutathione metabolism	79017.1	0	368.033547880517	0	H	intercompartmental
+GLYALDtr	Transport, extracellular		314.237832188714	0	Inf	L	intercompartmental
+HEX7	Fructose and mannose metabolism	2645.2 or 2645.3 or 3098.3 or 3098.1 or 3101.1 or 3098.2 or 3099.1 or 2645.1 or 3098.4 or 80201.1 or 3098.5	479.01861252115	0	Inf	L	[c]
+HISCYSCYSr	Peptide metabolism		10	20	0.5	H	[c]
+HISCYSCYSt	Transport, extracellular	6564.1 or 6565.1	10	20	0.5	H	intercompartmental
+HMR_0354	Fatty acid oxidation	11332.1 or 10965.1 or 570.1 or 122970.1 or 641371.1 or 641372.1 or 344967.1	389.01861252115	20	19.4509306260575	L	[c]
+HMR_2613	Transport, mitochondrial	1384.1 or 1376.1	91.0546822609703	55.5720600255755	1.63849751510138	L	[m]
+HMR_3115	Fatty acid oxidation	37.1 or 33.1 or 34.1 or 28976.1	583.546893884457	30	19.4515631294819	L	[m]
+HMR_3398	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	91.0546822609702	55.5720600255755	1.63849751510138	L	[m]
+MCLACCYSR	Methionine and cysteine metabolism		10	20	0.5	H	[c]
+MCLOR	Methionine and cysteine metabolism	92483.1 or (3945.1 and 3939.1) or 55293.1 or 3948.2 or 3948.1 or 3945.1 or 160287.1 or 3939.1	10	20	0.5	H	[c]
+MERCPLACCYSt	Transport, extracellular		10	20	0.5	H	intercompartmental
+MGCHrm	Valine, leucine, and isoleucine metabolism	549.1	305.003685185892	20	15.2501842592946	L	[m]
+MMEm	Valine, leucine, and isoleucine metabolism	84693.1	544.879198912652	1020	0.53419529305162	H	[m]
+NDPK5m	Nucleotide interconversion	4833.1 or 10201.1	758.26565143824	60	12.637760857304	L	[m]
+O2tm	Transport, mitochondrial		80.5329949238578	40.5329949238578	1.98685034439574	L	intercompartmental
+O2tp	Transport, peroxisomal		115	75	1.53333333333333	L	intercompartmental
+SFCYSc	Methionine and cysteine metabolism		10	20	0.5	H	[c]
+SFCYSe	Transport, extracellular		10	20	0.5	H	intercompartmental
+STRDNCCPT1	Fatty acid oxidation	1375.1 or 1375.3 or 1375.4 or 126129.1 or 1374.1 or 1375.2	389.018612521151	20	19.4509306260575	L	[c]
+URIDK3	Nucleotide interconversion		2000	1323.19796954315	1.51148962289485	L	[c]
+r0339	Miscellaneous	132158.1	319.345741680767	0	Inf	L	[c]
+r0357	Fructose and mannose metabolism	3098.1 or 3099.1 or 3101.1	479.018612521151	0	Inf	L	[c]
+r0358	Fructose and mannose metabolism	3098.1 or 3099.1 or 3101.1	479.018612521151	0	Inf	L	[c]
+r0390	Miscellaneous	6476.1	113.347081218274	75.0332967217818	1.51062376532058	L	[e]
+r0392	Miscellaneous	224.1 or 217.1 or 219.1 or 223.1 or 501.1	319.345741680767	0	Inf	L	[c]
+r0571	Valine, leucine, and isoleucine metabolism		544.879198912652	1020	0.53419529305162	H	[m]
+r0633	Fatty acid oxidation	55825.1 or 51102.1 	706.179763113367	461.01269035533	1.53180113668687	L	[m]
+r0940	Transport, extracellular		20	40	0.5	H	intercompartmental
+sink_cys_L[c]	Exchange/demand reaction		20	40	0.5	H	[c]
+2OXOADOXm	Lysine metabolism	(4967.2 and 1738.1 and 8050.1 and 1743.1) or (4967.1 and 1738.1 and 8050.1 and 1743.1)	20	0	Inf	L	[m]
+2OXOADPTm	Tryptophan metabolism	89874.1	20	0	Inf	L	intercompartmental
+2OXOADPt	Transport, extracellular		20	0	Inf	L	intercompartmental
+34DHXMANDACOX_NADP_	Tyrosine metabolism	221.1 or 222.1	0	1000	0	H	[c]
+3SALATAi	Methionine and cysteine metabolism	2805.1	20	35	0.571428571428571	H	[c]
+3SALATAim	Methionine and cysteine metabolism	2806.1	20	35	0.571428571428571	H	[m]
+3SPYRSP	Methionine and cysteine metabolism		20	35	0.571428571428571	H	[c]
+3SPYRSPm	Methionine and cysteine metabolism		20	35	0.571428571428571	H	[m]
+4HOXPACDOX_NADP_	Tyrosine metabolism	222.1 or 220.1 or 221.1 or 218.1	1000	0	Inf	L	[c]
+AATAi	Lysine metabolism	51166.1 or 51166.2	20	0	Inf	L	[c]
+ADPOHc	Lysine metabolism		20	0	Inf	L	[c]
+ADPOHt	Transport, extracellular		20	0	Inf	L	intercompartmental
+ARTFR208	R group synthesis		19.1111111111111	10	1.91111111111111	L	intercompartmental
+C02712te	Transport, extracellular	64849.1	20	0	Inf	L	intercompartmental
+C13856te	Transport, extracellular		0	37.5	0	H	intercompartmental
+CE4890te	Transport, extracellular	222962.1	2000	0	Inf	L	intercompartmental
+CE7081tr	Transport, endoplasmic reticular		23.3333333333333	10	2.33333333333333	L	intercompartmental
+CE7090te	Transport, extracellular	10257.1 or 4363.1	31.6666666666667	20	1.58333333333333	L	intercompartmental
+CLPNDCPT1	Fatty acid oxidation	1375.1 or 1375.3 or 1375.4 or 126129.1 or 1374.1 or 1375.2	40	10	4	L	[c]
+CLPNDCPT2	Fatty acid oxidation	1376.1	40	10	4	L	[m]
+CO2t	Transport, extracellular		2000	926.71744313609	2.15815512572185	L	intercompartmental
+CYSO	Taurine and hypotaurine metabolism	1036.1	20	35	0.571428571428571	H	[c]
+ELAIDCPT1	Fatty acid oxidation	1375.1 or 1375.3 or 1375.4 or 126129.1 or 1374.1 or 1375.2	602.118322455886	65	9.26335880701363	L	[c]
+ELAIDCRNtd	Transport, extracellular		2000	0	Inf	L	intercompartmental
+EX_2oxoadp[e]	Exchange/demand reaction		20	0	Inf	L	[e]
+EX_C02712[e]	Exchange/demand reaction		20	0	Inf	L	[e]
+EX_C13856[e]	Exchange/demand reaction		0	37.5	0	H	[e]
+EX_CE7090[e]	Exchange/demand reaction		31.6666666666667	20	1.58333333333333	L	[e]
+EX_HC01444[e]	Exchange/demand reaction		0	76.4463756817652	0	H	[e]
+EX_L2aadp[e]	Exchange/demand reaction		20	0	Inf	L	[e]
+EX_adpoh[e]	Exchange/demand reaction		20	0	Inf	L	[e]
+EX_clpnd[e]	Exchange/demand reaction		40	10	4	L	[e]
+EX_glyc[e]	Exchange/demand reaction		0	139.44483884514	0	H	[e]
+EX_glyc_R[e]	Exchange/demand reaction		277.083057456044	0	Inf	L	[e]
+EX_mag_hs[e]	Exchange/demand reaction		0	40	0	H	[e]
+EX_so4[e]	Exchange/demand reaction		30	45	0.666666666666667	H	[e]
+EX_tmndnc[e]	Exchange/demand reaction		40	20	2	L	[e]
+EX_tsul[e]	Exchange/demand reaction		10	20	0.5	H	[e]
+EX_xolest_hs[e]	Exchange/demand reaction		23.8888888888889	12.5	1.91111111111111	L	[e]
+FAOXC164C143m	Fatty acid oxidation	3030.1 and 3032.1	40	20	2	L	[m]
+FAOXC164C165m	Fatty acid oxidation	37.1	40	20	2	L	[m]
+FAOXC164m	Fatty acid oxidation	1632.1	40	20	2	L	[m]
+FAOXC165C164m	Fatty acid oxidation	1666.1	40	20	2	L	[m]
+FAOXC184C164m	Fatty acid oxidation	37.1 and 3030.1 and 3032.1	40	20	2	L	[m]
+GLUTCOADHm	Tryptophan metabolism	2639.1 or 2639.2	20	0	Inf	L	[m]
+GLYC_Rt	Transport, extracellular		277.083057456043	0	Inf	L	intercompartmental
+GLYCtm	Transport, mitochondrial		0	141.061759729272	0	H	intercompartmental
+HMR_0366	Fatty acid oxidation	11332.1 or 10965.1 or 570.1 or 122970.1 or 641371.1 or 641372.1 or 344967.1	40	10	4	L	[c]
+HMR_0367	Transport, extracellular	19.1	40	10	4	L	intercompartmental
+HMR_0467	Transport, endoplasmic reticular		1000	20	50	L	intercompartmental
+HMR_2558	Fatty acid synthesis		23.3333333333333	10	2.33333333333333	L	[c]
+HMR_2560	Fatty acid synthesis		23.3333333333334	10	2.33333333333334	L	[c]
+HMR_2571	Fatty acid synthesis		23.3333333333334	10	2.33333333333334	L	[r]
+HMR_2585	Transport, nuclear	5743.1 or 5742.1	31.6666666666667	20	1.58333333333333	L	[c]
+HMR_2611	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	165	95	1.73684210526316	L	[c]
+HMR_3429	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	40	10	4	L	[m]
+HMR_9719	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	40	20	2	L	[m]
+Htr	Transport, endoplasmic reticular		2000	1183.33333333333	1.69014084507042	L	intercompartmental
+ILETA	Valine, leucine, and isoleucine metabolism	586.1	20	1000	0.02	H	[c]
+ILETAm	Valine, leucine, and isoleucine metabolism	587.1	20	1020	0.0196078431372549	H	[m]
+ILEt5m	Transport, mitochondrial		20	1020	0.0196078431372549	H	intercompartmental
+L2AADPtr	Transport, extracellular		20	0	Inf	L	intercompartmental
+LNLCCRNtd	Transport, extracellular		2000	0	Inf	L	intercompartmental
+LPS3	Triacylglycerol synthesis	11343.1 or 11343.2	0	139.950648618161	0	H	[c]
+MAGt	Transport, extracellular		0	139.950648618161	0	H	intercompartmental
+OCCOAtx	Transport, peroxisomal		113.333333333333	1040	0.108974358974359	H	intercompartmental
+PYRt2m	Transport, mitochondrial	6566.1	2000	845.973984771574	2.36413889315997	L	intercompartmental
+RE0583C	Fatty acid synthesis		602.118322455886	65	9.26335880701363	L	[c]
+RE0830C	Tetrahydrobiopterin metabolism		2000	0	Inf	L	[c]
+RE2563C	Arachidonic acid metabolism		0	37.5	0	H	[c]
+RE2954C	Pyrimidine synthesis	5315.1	2000	1253.33333333333	1.59574468085106	L	[c]
+RE3119C	Fatty acid oxidation		40	10	4	L	[c]
+RE3120C	Fatty acid oxidation	6785.1 or 79071.1 or 60481.1 or 54898.1 	40	10	4	L	[c]
+RE3121C	Fatty acid oxidation		40	10	4	L	[c]
+RE3122C	Fatty acid oxidation		40	10	4	L	[c]
+RE3273C	Phosphatidylinositol phosphate metabolism	5338.1	1774.9323181049	969.784263959391	1.8302341913224	L	[c]
+RE3273R	Phosphatidylinositol phosphate metabolism	5337.1	1000	20	50	L	[r]
+RE3488R	Eicosanoid metabolism	5742.1 or 5743.1	23.3333333333333	10	2.33333333333333	L	[r]
+RNDR1	Nucleotide interconversion	(6240.1 and 6241.1) or 50484.1	1000	658.26565143824	1.5191435217911	L	[c]
+SOAT12	Cholesterol metabolism	6646.1	23.8888888888889	12.5	1.91111111111111	L	[c]
+THYMDt1	Transport, extracellular	3177.1 or 2030.1	1000	0	Inf	L	intercompartmental
+TSULt4_3	Transport, extracellular	6561.1	2000	20	100	L	intercompartmental
+XOLESTte	Transport, extracellular		23.8888888888889	12.5	1.91111111111111	L	intercompartmental
+r0246	Miscellaneous	231.1 or 10327.1	0	141.061759729272	0	H	[m]
+r0340	Miscellaneous	132158.1	0	141.061759729272	0	H	[m]
+r0393	Miscellaneous	224.1 or 217.1 or 219.1 or 223.1 or 501.1	0	141.061759729272	0	H	[m]
+r0451	Miscellaneous	4967.1	20	0	Inf	L	[m]
+r0557	Miscellaneous	1743.1	20	0	Inf	L	[m]
+r0594	Lysine metabolism	501.1	20	0	Inf	L	[c]
+r0595	Methionine and cysteine metabolism	4357.1 or 7263.1	20	35	0.571428571428571	H	[c]
+r0627	Miscellaneous	2717.1	0	76.4463756817653	0	H	[e]
+r0638	Fatty acid oxidation	55825.1 or 51102.1 	645.806671501088	1089.27834179357	0.592875711122396	H	[m]
+r0660	Fatty acid oxidation	3030.1 and 1962.1 and 1892.1	645.806671501088	1089.27834179357	0.592875711122396	H	[m]
+r0688	Bile acid synthesis	224.1 or 217.1 or 219.1 or 223.1 or 501.1	2000	641.598984771573	3.11721191502829	L	[c]
+r0795	Miscellaneous		20	35	0.571428571428571	H	[c]
+r0826	Transport, endoplasmic reticular		1000	20	50	L	intercompartmental
+r0926	Transport, mitochondrial		0	141.061759729272	0	H	intercompartmental
+r0987	Transport, lysosomal		1000	0	Inf	L	intercompartmental
+r1468	Transport, mitochondrial		2000	359.851945854484	5.55784128178302	L	intercompartmental
+r2511	Transport, endoplasmic reticular		1390.68527918782	326.518612521151	4.25913018694373	L	intercompartmental
+sink_glygn2[c]	Exchange/demand reaction		20	10	2	L	[c]
+sink_tmndnc[c]	Exchange/demand reaction		40	20	2	L	[c]
+sink_tmndnccoa[c]	Exchange/demand reaction		40	10	4	L	[c]

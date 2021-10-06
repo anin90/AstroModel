@@ -1,0 +1,45 @@
+Rxn_ID	Rxn_Formula	Rat_RNA_Seq	Mouse_Microarray	Rat_Microarray
+'HDD2COAtx'	'hdd2coa[c]  <=> hdd2coa[x] '	14.4545454545455	1.57142857142857	0.639192644129342
+'LNELDCCPT2'	'coa[m] + lneldccrn[m]  <=> crn[m] + lneldccoa[m] '	2	1.57142857142857	0.010204081632653
+'OCCOAtx'	'occoa[c]  <=> occoa[x] '	16.1531327145836	1.57142857142857	0.220171021743925
+'r0636'	'coa[m] + c8crn[m]  <=> crn[m] + occoa[m] '	18.3956674506527	1.51612903225806	0.221011002967518
+'r2434'	'crn[m] + c8crn[c]  <=> crn[c] + c8crn[m] '	18.3956674506527	1.51612903225806	0.221011002967518
+'FAOXC181C161m'	'h2o[m] + nad[m] + coa[m] + fad[m] + octd11ecoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + hdcoa[m] '	2	1.57142857142857	0.01
+'FAOXTC102C101m'	'h[m] + nadph[m] + ctdecdcoa[m]  -> nadp[m] + dece3coa[m] '	2	1.57142857142857	0.022556390977444
+'FAOXTC122TC101m'	'h2o[m] + nad[m] + coa[m] + tddedi2coa[m]  -> h[m] + nadh[m] + accoa[m] + tdec4ecoa[m] '	2	1.57142857142857	0.022556390977444
+'FAOXTC122m'	'tddedicoa[m]  -> tddedi2coa[m] '	2	1.57142857142857	0.022556390977444
+'FAOXTC142TC122m'	'h2o[m] + nad[m] + coa[m] + fad[m] + ttetddcoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + tddedicoa[m] '	2	1.57142857142857	0.022556390977444
+'FAOXTC162TC142m'	'h2o[m] + nad[m] + coa[m] + fad[m] + thexddcoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + ttetddcoa[m] '	2	1.57142857142857	0.022304832713755
+'FAOXTC182TC162m'	'h2o[m] + nad[m] + coa[m] + fad[m] + lneldccoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + thexddcoa[m] '	2	1.57142857142857	0.022304832713755
+'OCD11CRNCACT'	'ocdececrn[c]  <=> ocdececrn[m] '	2	1.57142857142857	0.005181347150259
+'OCD11CRNCPT2'	'coa[m] + ocdececrn[m]  <=> crn[m] + octd11ecoa[m] '	2	1.57142857142857	0.005181347150259
+'HMR_2670'	'crn[c] + M02638[m]  <=> crn[m] + M02638[c] '	2	1.57142857142857	0.005235602094241
+'HMR_2671'	'crn[m] + M00116[m]  <=> coa[m] + M02638[m] '	2	1.57142857142857	0.005235602094241
+'HMR_2688'	'crn[c] + M01775[m]  <=> crn[m] + M01775[c] '	2	1.57142857142857	0.005
+'HMR_2689'	'crn[m] + M01236[m]  <=> coa[m] + M01775[m] '	2	1.57142857142857	0.005
+'HMR_2691'	'crn[m] + M00122[c]  <=> crn[c] + M00122[m] '	2	1.57142857142857	0.01
+'HMR_2692'	'crn[m] + M00123[m]  <=> coa[m] + M00122[m] '	2	1.57142857142857	0.01
+'HMR_2695'	'crn[m] + M00100[c]  <=> crn[c] + M00100[m] '	2	1.57142857142857	0.015974059828939
+'HMR_2697'	'crn[m] + M00101[m]  <=> coa[m] + M00100[m] '	2	1.57142857142857	0.015974059828939
+'HMR_2709'	'crn[c] + M01726[m]  <=> crn[m] + M01726[c] '	2	1.57142857142857	0.008207957806221
+'HMR_2710'	'crn[m] + M00006[m]  <=> coa[m] + M01726[m] '	2	1.57142857142857	0.008207957806221
+'HMR_3094'	'occoa[x] + o2[x]  -> h2o2[x] + HC01415[x] '	2.17451803706503	1.57142857142857	0.254934342398256
+'HMR_3095'	'h2o[x] + HC01415[x]  -> HC01405[x] '	2.17451803706503	1.57142857142857	0.254934342398256
+'HMR_3096'	'nad[x] + HC01405[x]  -> h[x] + nadh[x] + HC01406[x] '	2.17451803706503	1.57142857142857	0.254934342398256
+'HMR_3097'	'coa[x] + HC01406[x]  -> accoa[x] + hxcoa[x] '	2.17451803706503	1.57142857142857	0.254934342398256
+'FAOXC2051843x'	'nad[x] + coa[x] + h2o[x] + tmndnccoa[x]  -> h[x] + nadh[x] + accoa[x] + strdnccoa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'TMNDNCCOAtx'	'tmndnccoa[c]  <=> tmndnccoa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'FAOXC102C103x'	'o2[x] + dec47dicoa[x]  -> h2o2[x] + dectricoa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'FAOXC102C81x'	'nad[x] + coa[x] + h2o[x] + 2decdicoa[x]  -> h[x] + nadh[x] + accoa[x] + octe5coa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'FAOXC102x'	'3decdicoa[x]  -> 2decdicoa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'FAOXC103C102x'	'h[x] + nadph[x] + dectricoa[x]  -> nadp[x] + 3decdicoa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'FAOXC123C102x'	'nad[x] + coa[x] + h2o[x] + 2dodtricoa[x]  -> h[x] + nadh[x] + accoa[x] + dec47dicoa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'FAOXC123x'	'3dodtricoa[x]  -> 2dodtricoa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'FAOXC143C123x'	'nad[x] + coa[x] + o2[x] + h2o[x] + 5tedtricoa[x]  -> h[x] + nadh[x] + accoa[x] + h2o2[x] + 3dodtricoa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'FAOXC164C143x'	'nad[x] + coa[x] + h2o[x] + 2hexdtetcoa[x]  -> h[x] + nadh[x] + accoa[x] + 5tedtricoa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'FAOXC164C165x'	'o2[x] + 4hexdtetcoa[x]  -> h2o2[x] + hexdpencoa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'FAOXC164x'	'3hexdtetcoa[x]  -> 2hexdtetcoa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'FAOXC165C164x'	'h[x] + nadph[x] + hexdpencoa[x]  -> nadp[x] + 3hexdtetcoa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'FAOXC184C164x'	'nad[x] + coa[x] + o2[x] + h2o[x] + strdnccoa[x]  -> h[x] + nadh[x] + accoa[x] + h2o2[x] + 4hexdtetcoa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'FAOXC61x'	'hexe3coa[x]  -> hx2coa[x] '	0.78760829614072	1.53061224489796	0.399381166356248
+'FAOXC81C61x'	'nad[x] + coa[x] + o2[x] + h2o[x] + octe5coa[x]  -> h[x] + nadh[x] + accoa[x] + h2o2[x] + hexe3coa[x] '	0.78760829614072	1.53061224489796	0.399381166356248

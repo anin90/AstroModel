@@ -1,0 +1,119 @@
+2DR1PP	Pyrimidine catabolism
+7DHFtm	Transport, mitochondrial
+7THFtm	Transport, mitochondrial
+ALCD2yf	Glycolysis/gluconeogenesis
+ASPNATm	Alanine and aspartate metabolism
+BAAT2x	Bile acid synthesis
+CSNt	Transport, extracellular
+CYTDn	Nucleotide interconversion
+CYTDtn	Transport, nuclear
+DHCR241r	Cholesterol metabolism
+DNDPt12m	Transport, mitochondrial
+DNDPt37m	Transport, mitochondrial
+EBP2r	Cholesterol metabolism
+EX_nadp[e]	Exchange/demand reaction
+EX_rbt[e]	Exchange/demand reaction
+FACOAL224	Fatty acid oxidation
+FACOAL260	Fatty acid oxidation
+FAOXC180x	Fatty acid oxidation
+FAS140COA	Fatty acid synthesis
+FPGS3m	Folate metabolism
+FPGS6m	Folate metabolism
+GLNASNNaEx	Transport, extracellular
+GSNt4	Transport, extracellular
+HDD2COAtx	Transport, peroxisomal
+HEXCt	Transport, extracellular
+HSD17B8r	Steroid metabolism
+INSt4	Transport, extracellular
+NACASPtm	Transport, mitochondrial
+NADPHtxu	Transport, peroxisomal
+NADPNe	NAD metabolism
+NADPtxu	Transport, peroxisomal
+NMNATm	NAD metabolism
+NRVNCCOAtx	Transport, peroxisomal
+ODECOAtx	Transport, peroxisomal
+RADH	Vitamin A metabolism
+RADH4	Vitamin A metabolism
+RBTt	Transport, extracellular
+RETH	Vitamin A metabolism
+SO4CLtex2	Transport, extracellular
+ST6GALNAC31	Sphingolipid metabolism
+TCHOLAtx	Transport, peroxisomal
+THBPT4ACAMDASE	Tetrahydrobiopterin metabolism
+TYR3MO2	Tyrosine metabolism
+Uritn	Transport, nuclear
+r0165	Glycolysis/gluconeogenesis
+r0796	Pentose phosphate pathway
+r1154	Propanoate metabolism
+r1164	Miscellaneous
+r1454	Transport, mitochondrial
+r1512	Transport, extracellular
+r1717	Transport, extracellular
+r1722	Transport, extracellular
+r1785	Transport, extracellular
+r1828	Transport, extracellular
+r1834	Transport, extracellular
+r1945	Transport, extracellular
+r2021	Transport, extracellular
+r2037	Transport, extracellular
+r2268	Transport, extracellular
+r2306	Transport, extracellular
+r2397	Transport, mitochondrial
+r2406	Transport, mitochondrial
+r2449	Transport, extracellular
+r2495	Transport, extracellular
+RE2147C	Vitamin A metabolism
+FAOXC12C10x	Fatty acid oxidation
+FAOXC14C12x	Fatty acid oxidation
+FAOXC8DCC6DCx	Fatty acid oxidation
+METATB0tc	Transport, extracellular
+TAUBETAtc	Transport, extracellular
+FADDPle	Vitamin B2 metabolism
+GLU5SAtmc	Transport, mitochondrial
+INSK	Purine synthesis
+INSt5le	Transport, extracellular
+NADtm	Transport, mitochondrial
+P5CR	Arginine and proline metabolism
+XOLEST183CEH	Cholesterol metabolism
+LPS5e	Glycerophospholipid metabolism
+EX_magpalm_hs[e]	Exchange/demand reaction
+EX_xolest183_hs[e]	Exchange/demand reaction
+XOLEST183te	Transport, extracellular
+XOLEST183tl	Transport, lysosomal
+FBP	Glycolysis/gluconeogenesis
+G5SADs	Urea cycle
+CSND	Pyrimidine catabolism
+EX_csn[e]	Exchange/demand reaction
+EX_rib_D[e]	Exchange/demand reaction
+EX_etoh[e]	Exchange/demand reaction
+ETOHt	Transport, extracellular
+VANILPYRc	Tyrosine metabolism
+VANILLACc	Tyrosine metabolism
+VANILLACte	Transport, extracellular
+EX_vanillac[e]	Exchange/demand reaction
+HEXGLYc	Glycine, serine, alanine, and threonine metabolism
+HEXGLYte	Transport, extracellular
+EX_hexgly[e]	Exchange/demand reaction
+HC02020tr	Transport, endoplasmic reticular
+HC02020te	Transport, extracellular
+EX_HC02020[e]	Exchange/demand reaction
+DOPACHRMDC	Tyrosine metabolism
+HMR_0783	Sphingolipid metabolism
+HMR_3859	Pyruvate metabolism
+HMR_4266	Transport, mitochondrial
+HMR_6359	Transport, extracellular
+HMR_9604	Transport, extracellular
+HMR_9605	Transport, extracellular
+HMR_9609	Transport, extracellular
+HMR_9622	Transport, extracellular
+DM_3dhlchol[c]	Exchange/demand reaction
+DM_udca3s[c]	Exchange/demand reaction
+EX_udca3s[e]	Exchange/demand reaction
+UDCA3St	Transport, extracellular
+EX_nfdac[e]	Exchange/demand reaction
+NFDACtep	Drug metabolism
+NFDDMEThr	Drug metabolism
+NFDNPYitr	Drug metabolism
+NFDACitr	Drug metabolism
+DM_ach[c]	Exchange/demand reaction
+DM_Lkynr[c]	Exchange/demand reaction

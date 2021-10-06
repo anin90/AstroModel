@@ -1,0 +1,637 @@
+{SWITCH expression must be a scalar or string constant.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solveCobraLP', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/base/solvers/solveCobraLP.m', 185)" style="font-weight:bold">solveCobraLP</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/base/solvers/solveCobraLP.m',185,0)">line 185</a>)
+switch solver
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('optimizeCbModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/analysis/FBA/optimizeCbModel.m', 238)" style="font-weight:bold">optimizeCbModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/analysis/FBA/optimizeCbModel.m',238,0)">line 238</a>)
+    solution = solveCobraLP(LPproblem);
+
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Test4HumanBrain_Min', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Min.m', 276)" style="font-weight:bold">Test4HumanBrain_Min</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Min.m',276,0)">line 276</a>)
+        FBA = optimizeCbModel(model,'min','zero');
+} 
+clc
+changeCobraSolver('gurobi','all'); clear ans;
+
+ > Gurobi interface added to MATLAB path.
+ > Solver for LP problems has been set to gurobi.
+
+ > Gurobi interface added to MATLAB path.
+ > Solver for MILP problems has been set to gurobi.
+
+ > Gurobi interface added to MATLAB path.
+ > Solver for QP problems has been set to gurobi.
+
+ > Gurobi interface added to MATLAB path.
+ > Solver for MIQP problems has been set to gurobi.
+ > Solver gurobi not supported for problems of type NLP. No solver set for this problemtype 
+clc
+[~,TestSolutionName_Brain_Max] = Test4HumanBrain_Min(MBA_model_7_3_4_ASM);
+
+FBA = 
+
+         full: [3296x1 double]
+          obj: 0
+        rcost: []
+         dual: []
+        slack: [2681x1 double]
+       solver: 'gurobi'
+    algorithm: 'default'
+         stat: 1
+     origStat: 'OPTIMAL'
+         time: 0.0731
+        basis: [1x1 struct]
+            f: 0
+            x: [3296x1 double]
+            v: [3296x1 double]
+            w: []
+            y: []
+            s: [2681x1 double]
+
+[Warning: The following metabolites were not found in model and will be added:
+ach(c)
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addSinkReactions', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m', 30)" style="font-weight:bold">addSinkReactions</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m',30,0)">line 30</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Test4HumanBrain_Min', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Min.m', 541)" style="font-weight:bold">Test4HumanBrain_Min</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Min.m',541,0)">line 541</a>)] 
+sink_chol(c)	chol(c) 	<=>	
+sink_ach(c)	ach(c) 	->	
+[~,TestSolutionName_Brain_Max] = Test4HumanBrain_Max(MBA_model_7_3_4_ASM);
+
+FBA = 
+
+         full: [3296x1 double]
+          obj: 0
+        rcost: []
+         dual: []
+        slack: [2681x1 double]
+       solver: 'gurobi'
+    algorithm: 'default'
+         stat: 1
+     origStat: 'OPTIMAL'
+         time: 0.0756
+        basis: [1x1 struct]
+            f: 0
+            x: [3296x1 double]
+            v: [3296x1 double]
+            w: []
+            y: []
+            s: [2681x1 double]
+
+[Warning: The following metabolites were not found in model and will be added:
+ach(c)
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addSinkReactions', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m', 30)" style="font-weight:bold">addSinkReactions</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m',30,0)">line 30</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Test4HumanBrain_Max', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Max.m', 541)" style="font-weight:bold">Test4HumanBrain_Max</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Max.m',541,0)">line 541</a>)] 
+sink_chol(c)	chol(c) 	<=>	
+sink_ach(c)	ach(c) 	->	
+clc
+tic; save('v7_3_4'); toc;
+Elapsed time is 17.592642 seconds.
+quit
+
+FBA = 
+
+         full: [3297x1 double]
+          obj: 0
+        rcost: []
+         dual: []
+        slack: [2678x1 double]
+       solver: 'gurobi'
+    algorithm: 'default'
+         stat: 1
+     origStat: 'OPTIMAL'
+         time: 0.0649
+        basis: [1x1 struct]
+            f: 0
+            x: [3297x1 double]
+            v: [3297x1 double]
+            w: []
+            y: []
+            s: [2678x1 double]
+
+[Warning: The following metabolites were not found in model and will be added:
+ach(c)
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addSinkReactions', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m', 30)" style="font-weight:bold">addSinkReactions</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m',30,0)">line 30</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Test4HumanBrain_Max', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Max.m', 476)" style="font-weight:bold">Test4HumanBrain_Max</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Max.m',476,0)">line 476</a>)] 
+sink_chol(c)	chol(c) 	<=>	
+sink_ach(c)	ach(c) 	->	
+clc
+[~,TestSolutionName_Brain_Min] = Test4HumanBrain_Min(MBA_model_7_3_4_ASM);
+
+FBA = 
+
+         full: [3297x1 double]
+          obj: 0
+        rcost: []
+         dual: []
+        slack: [2678x1 double]
+       solver: 'gurobi'
+    algorithm: 'default'
+         stat: 1
+     origStat: 'OPTIMAL'
+         time: 0.0692
+        basis: [1x1 struct]
+            f: 0
+            x: [3297x1 double]
+            v: [3297x1 double]
+            w: []
+            y: []
+            s: [2678x1 double]
+
+[Warning: The following metabolites were not found in model and will be added:
+ach(c)
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addSinkReactions', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m', 30)" style="font-weight:bold">addSinkReactions</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m',30,0)">line 30</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Test4HumanBrain_Min', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Min.m', 476)" style="font-weight:bold">Test4HumanBrain_Min</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Min.m',476,0)">line 476</a>)] 
+sink_chol(c)	chol(c) 	<=>	
+sink_ach(c)	ach(c) 	->	
+clc
+tic; save('v7_3_4'); toc;
+Elapsed time is 18.308574 seconds.
+tic; save('v7_3_4'); toc;
+Elapsed time is 16.451820 seconds.
+edit expandModel.m
+clc
+run expandModel.m
+DM_atp_c_	h2o[c] + atp[c] 	->	h[c] + adp[c] + pi[c] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+4mop[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 10)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',10,0)">line 10</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+h[s]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 13)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',13,0)">line 13</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+nh4[s]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 14)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',14,0)">line 14</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+k[s]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 15)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',15,0)">line 15</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+gln_L[s]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 16)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',16,0)">line 16</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+lac_L[s]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 17)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',17,0)">line 17</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+ala_L[s]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 18)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',18,0)">line 18</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+cit[s]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 19)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',19,0)">line 19</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+gthrd[s]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 20)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',20,0)">line 20</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+chsterol[s]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 21)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',21,0)">line 21</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+HC00250[s]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 22)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',22,0)">line 22</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+ascb_L[s]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 23)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',23,0)">line 23</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+atp[s]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 24)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',24,0)">line 24</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+glu_L[s]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 25)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',25,0)">line 25</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+h2o[s]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 26)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',26,0)">line 26</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+GLUt6_s	k[c] + h[s] + glu_L[s] + 3 na1[s] 	->	h[c] + 3 na1[c] + glu_L[c] + k[s] 
+NAt_s	na1[s] 	<=>	na1[c] 
+r2525_s	gln_L[c] 	<=>	gln_L[s] 
+L_LACt2r_s	h[c] + lac_L[c] 	<=>	h[s] + lac_L[s] 
+ALAPAT4te_s	ala_L[c] 	<=>	ala_L[s] 
+CITt4_2_s	2 na1[c] + cit[c] 	<=>	cit[s] + 2 na1[s] 
+Kt_s	k[s] 	->	k[c] 
+GTHS	atp[c] + gly[c] + glucys[c] 	->	h[c] + adp[c] + pi[c] + gthrd[c] 
+r1493_s	gthrd[c] 	->	gthrd[s] 
+HMR_9802_s	gln_L[s] + h2o[s] 	->	nh4[s] + glu_L[s] 
+r1050_s	chsterol[s] 	<=>	chsterol[c] 
+r1116_s	atp[c] 	<=>	atp[s] 
+ASCBt_s	ascb_L[s] 	<=>	ascb_L[c] 
+r0940_s	HC00250[c] 	<=>	HC00250[s] 
+CO2t	co2[e] 	<=>	co2[c] 
+PGI	g6p[c] 	<=>	f6p[c] 
+TPI	dhap[c] 	<=>	g3p[c] 
+PGM	2pg[c] 	<=>	3pg[c] 
+PYK	h[c] + adp[c] + pep[c] 	->	atp[c] + pyr[c] 
+ME2	nadp[c] + mal_L[c] 	->	pyr[c] + nadph[c] + co2[c] 
+PCm	pyr[m] + atp[m] + hco3[m] 	->	h[m] + adp[m] + pi[m] + oaa[m] 
+r0941	hco3[c] 	<=>	hco3[m] 
+PYRt2m	h[c] + pyr[c] 	<=>	h[m] + pyr[m] 
+ICDHxm	nad[m] + icit[m] 	->	akg[m] + nadh[m] + co2[m] 
+ICDHy	nadp[c] + icit[c] 	->	nadph[c] + akg[c] + co2[c] 
+SUCD1m	fad[m] + succ[m] 	<=>	fadh2[m] + fum[m] 
+CITtam	cit[c] + mal_L[m] 	<=>	cit[m] + mal_L[c] 
+r0081	akg[m] + ala_L[m] 	<=>	glu_L[m] + pyr[m] 
+ILETA	akg[c] + ile_L[c] 	<=>	glu_L[c] + 3mop[c] 
+LEUTA	akg[c] + leu_L[c] 	<=>	glu_L[c] + 4mop[c] 
+4MOPte	4mop[e] 	<=>	4mop[c] 
+[Warning: Reaction with the same name already exists in the model, updating the reaction] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addReaction', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m', 129)" style="font-weight:bold">addReaction</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m',129,0)">line 129</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 64)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',64,0)">line 64</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+ASPTA	akg[c] + asp_L[c] 	<=>	glu_L[c] + oaa[c] 
+ALATA_L	akg[c] + ala_L[c] 	<=>	pyr[c] + glu_L[c] 
+[Warning: Reaction with the same name already exists in the model, updating the reaction] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addReaction', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m', 129)" style="font-weight:bold">addReaction</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m',129,0)">line 129</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 66)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',66,0)">line 66</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+GLUDxm	h2o[m] + nad[m] + glu_L[m] 	<=>	h[m] + akg[m] + nadh[m] + nh4[m] 
+HMR_9802	h2o[c] + gln_L[c] 	->	nh4[c] + glu_L[c] 
+GLUDC	h[c] + glu_L[c] 	->	co2[c] + 4abut[c] 
+[Warning: Reaction with the same name already exists in the model, updating the reaction] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addReaction', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m', 129)" style="font-weight:bold">addReaction</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m',129,0)">line 129</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 70)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',70,0)">line 70</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+HISDC	h[c] + his_L[c] 	->	co2[c] + hista[c] 
+[Warning: Reaction with the same name already exists in the model, updating the reaction] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addReaction', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m', 129)" style="font-weight:bold">addReaction</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m',129,0)">line 129</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 71)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',71,0)">line 71</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+GLNS	nh4[c] + atp[c] + glu_L[c] 	->	h[c] + adp[c] + pi[c] + gln_L[c] 
+[Warning: Reaction with the same name already exists in the model, updating the reaction] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addReaction', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m', 129)" style="font-weight:bold">addReaction</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m',129,0)">line 129</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 72)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',72,0)">line 72</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+PDHm	nad[m] + coa[m] + pyr[m] 	->	nadh[m] + co2[m] + accoa[m] 
+[Warning: Reaction with the same name already exists in the model, updating the reaction] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addReaction', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m', 129)" style="font-weight:bold">addReaction</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m',129,0)">line 129</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 73)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',73,0)">line 73</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+LDH_L	h[c] + pyr[c] + nadh[c] 	<=>	nad[c] + lac_L[c] 
+[Warning: Reaction with the same name already exists in the model, updating the reaction] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addReaction', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m', 129)" style="font-weight:bold">addReaction</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m',129,0)">line 129</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 74)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',74,0)">line 74</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+LDH_Lm	nad[m] + lac_L[m] 	<=>	h[m] + nadh[m] + pyr[m] 
+[Warning: Reaction with the same name already exists in the model, updating the reaction] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addReaction', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m', 129)" style="font-weight:bold">addReaction</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m',129,0)">line 129</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 77)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',77,0)">line 77</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+ABTArm	akg[m] + 4abut[m] 	<=>	glu_L[m] + sucsal[m] 
+METAT	h2o[c] + atp[c] + met_L[c] 	->	pi[c] + amet[c] + ppi[c] 
+ADNK1	atp[c] + adn[c] 	->	h[c] + adp[c] + amp[c] 
+HXPRT	prpp[c] + hxan[c] 	->	ppi[c] + imp[c] 
+GUAPRT	gua[c] + prpp[c] 	->	ppi[c] + gmp[c] 
+[Warning: Reaction with the same name already exists in the model, updating the reaction] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addReaction', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m', 129)" style="font-weight:bold">addReaction</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m',129,0)">line 129</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 83)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',83,0)">line 83</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+BDHm	nad[m] + bhb[m] 	<=>	h[m] + nadh[m] + acac[m] 
+[Warning: Reaction with the same name already exists in the model, updating the reaction] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addReaction', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m', 129)" style="font-weight:bold">addReaction</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addReaction.m',129,0)">line 129</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 84)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',84,0)">line 84</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+ME1m	nad[m] + mal_L[m] 	->	nadh[m] + co2[m] + pyr[m] 
+CK	atp[m] + creat[m] 	<=>	h[m] + adp[m] + pcreat[m] 
+PCREATtmdiffir	pcreat[m] 	->	pcreat[c] 
+CREATtmdiffir	creat[c] 	->	creat[m] 
+PGS	2 o2[c] + h[c] + nadph[c] + arachd[c] 	->	h2o[c] + nadp[c] + prostgh2[c] 
+sink_pi[m]	pi[m] 	<=>	
+sink_bhb[m]	bhb[m] 	<=>	
+sink_acac[m]	acac[m] 	<=>	
+sink_arachd[c]	arachd[c] 	<=>	
+sink_prostgh2[c]	prostgh2[c] 	<=>	
+HMR_9797	h2o[c] + h[c] + ade[c] 	->	nh4[c] + hxan[c] 
+GACMTRc	amet[c] + gudac[c] 	<=>	h[c] + ahcys[c] + creat[c] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+inost[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 102)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',102,0)">line 102</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+INSTt4	na1[e] + inost[e] 	<=>	na1[c] + inost[c] 
+DAGK_hs	atp[c] + dag_hs[c] 	<=>	h[c] + adp[c] + pa_hs[c] 
+MI1PS	g6p[c] 	->	mi1p_D[c] 
+MI14P4P	h2o[c] + mi14p[c] 	->	pi[c] + mi1p_D[c] 
+MI1345PKc	atp[c] + mi1345p[c] 	->	h[c] + adp[c] + mi13456p[c] 
+MI13456PK	atp[c] + mi13456p[c] 	->	h[c] + adp[c] + minohp[c] 
+sink_minohp[c]	minohp[c] 	<=>	
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+arg_L[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 135)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',135,0)">line 135</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+chol[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 139)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',139,0)">line 139</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: Model already has the same reaction you tried to add: EX_cys_L[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 64)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',64,0)">line 64</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 141)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',141,0)">line 141</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: Model already has the same reaction you tried to add: EX_fe3[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 64)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',64,0)">line 64</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 142)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',142,0)">line 142</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+fol[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 143)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',143,0)">line 143</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: Model already has the same reaction you tried to add: EX_glc_D[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 64)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',64,0)">line 64</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 144)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',144,0)">line 144</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: Model already has the same reaction you tried to add: EX_gly[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 64)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',64,0)">line 64</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 146)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',146,0)">line 146</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+ile_L[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 149)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',149,0)">line 149</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: Model already has the same reaction you tried to add: EX_inost[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 64)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',64,0)">line 64</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 150)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',150,0)">line 150</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: Model already has the same reaction you tried to add: EX_k[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 64)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',64,0)">line 64</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 151)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',151,0)">line 151</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+lys_L[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 153)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',153,0)">line 153</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+mg2[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 155)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',155,0)">line 155</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+ncam[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 157)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',157,0)">line 157</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+no3[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 158)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',158,0)">line 158</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: Model already has the same reaction you tried to add: EX_phe_L[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 64)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',64,0)">line 64</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 159)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',159,0)">line 159</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: Model already has the same reaction you tried to add: EX_pi[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 64)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',64,0)">line 64</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 160)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',160,0)">line 160</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+prgstrn[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 162)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',162,0)">line 162</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: Model already has the same reaction you tried to add: EX_pro_L[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 64)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',64,0)">line 64</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 163)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',163,0)">line 163</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+pydx[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 165)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',165,0)">line 165</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: Model already has the same reaction you tried to add: EX_pyr[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 64)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',64,0)">line 64</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 166)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',166,0)">line 166</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+selni[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 168)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',168,0)">line 168</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+thm[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 171)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',171,0)">line 171</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+val_L[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 175)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',175,0)">line 175</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+[Warning: The following Metabolites have been added to the model, as they were not in the model before:
+zn2[e]] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addExchangeRxn', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m', 38)" style="font-weight:bold">addExchangeRxn</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addExchangeRxn.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('expandModel', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m', 176)" style="font-weight:bold">expandModel</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/expandModel.m',176,0)">line 176</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m', 96)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2015b/toolbox/matlab/lang/run.m',96,0)">line 96</a>)] 
+ARGt4	na1[e] + arg_L[e] 	->	na1[c] + arg_L[c] 
+CHOLt4	na1[e] + chol[e] 	<=>	na1[c] + chol[c] 
+r0963	fol[e] 	->	fol[c] 
+LYSt4	na1[e] + lys_L[e] 	->	na1[c] + lys_L[c] 
+HMR_9586	mg2[e] 	->	mg2[c] 
+NCAMUP	ncam[e] 	->	ncam[c] 
+PRGSTRNt	prgstrn[e] 	<=>	prgstrn[c] 
+PTCRTD	ptrc[e] 	<=>	ptrc[c] 
+PYDXtr	pydx[e] 	<=>	pydx[c] 
+THMtrbc	thm[e] 	<=>	thm[c] 
+VALt4	na1[e] + val_L[e] 	->	na1[c] + val_L[c] 
+r2073	h[e] + zn2[e] 	->	h[c] + zn2[c] 
+ILEtec	ile_L[e] 	<=>	ile_L[c] 
+FOLR2	nadph[c] + fol[c] 	->	nadp[c] + dhf[c] 
+NMNS	h[c] + prpp[c] + ncam[c] 	->	ppi[c] + nmn[c] 
+TMDPK	atp[c] + thm[c] 	->	h[c] + amp[c] + thmpp[c] 
+sink_chsterol[c]	chsterol[c] 	<=>	
+sink_clpn_hs[c]	clpn_hs[c] 	<=>	
+sink_ctp[c]	ctp[c] 	<=>	
+sink_gtp[c]	gtp[c] 	<=>	
+sink_pail_hs[c]	pail_hs[c] 	<=>	
+sink_pe_hs[c]	pe_hs[c] 	<=>	
+sink_pglyc_hs[c]	pglyc_hs[c] 	<=>	
+sink_ps_hs[c]	ps_hs[c] 	<=>	
+sink_sphmyln_hs[c]	sphmyln_hs[c] 	<=>	
+sink_utp[c]	utp[c] 	<=>	
+The following problems have been encountered in the model structure
+propertiesNotMatched:
+subSystems: Field does not match the required properties
+The following problems have been encountered in the model structure
+propertiesNotMatched:
+subSystems: Field does not match the required properties
+Elapsed time is 108.682682 seconds.
+[~,TestSolutionName_Brain_Min] = Test4HumanBrain_Min(MBA_model_7_3_4_ASM);
+
+FBA = 
+
+         full: [3294x1 double]
+          obj: 0
+        rcost: []
+         dual: []
+        slack: [2678x1 double]
+       solver: 'gurobi'
+    algorithm: 'default'
+         stat: 1
+     origStat: 'OPTIMAL'
+         time: 0.0726
+        basis: [1x1 struct]
+            f: 0
+            x: [3294x1 double]
+            v: [3294x1 double]
+            w: []
+            y: []
+            s: [2678x1 double]
+
+[Warning: The following metabolites were not found in model and will be added:
+ach(c)
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addSinkReactions', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m', 30)" style="font-weight:bold">addSinkReactions</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m',30,0)">line 30</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Test4HumanBrain_Min', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Min.m', 476)" style="font-weight:bold">Test4HumanBrain_Min</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Min.m',476,0)">line 476</a>)] 
+sink_chol(c)	chol(c) 	<=>	
+sink_ach(c)	ach(c) 	->	
+[~,TestSolutionName_Brain_Max] = Test4HumanBrain_Max(MBA_model_7_3_4_ASM);
+
+FBA = 
+
+         full: [3294x1 double]
+          obj: 0
+        rcost: []
+         dual: []
+        slack: [2678x1 double]
+       solver: 'gurobi'
+    algorithm: 'default'
+         stat: 1
+     origStat: 'OPTIMAL'
+         time: 0.0687
+        basis: [1x1 struct]
+            f: 0
+            x: [3294x1 double]
+            v: [3294x1 double]
+            w: []
+            y: []
+            s: [2678x1 double]
+
+[Warning: The following metabolites were not found in model and will be added:
+ach(c)
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addSinkReactions', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m', 30)" style="font-weight:bold">addSinkReactions</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m',30,0)">line 30</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Test4HumanBrain_Max', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Max.m', 476)" style="font-weight:bold">Test4HumanBrain_Max</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Max.m',476,0)">line 476</a>)] 
+sink_chol(c)	chol(c) 	<=>	
+sink_ach(c)	ach(c) 	->	
+clc
+tic; save('v7_3_4'); toc;
+Elapsed time is 16.459460 seconds.
+clc
+[~,TestSolutionName_Brain_Min] = Test4HumanBrain_Min(MBA_model_7_3_4_ASM);
+
+FBA = 
+
+         full: [3294x1 double]
+          obj: 0
+        rcost: []
+         dual: []
+        slack: [2678x1 double]
+       solver: 'gurobi'
+    algorithm: 'default'
+         stat: 1
+     origStat: 'OPTIMAL'
+         time: 0.0690
+        basis: [1x1 struct]
+            f: 0
+            x: [3294x1 double]
+            v: [3294x1 double]
+            w: []
+            y: []
+            s: [2678x1 double]
+
+[Warning: The following metabolites were not found in model and will be added:
+ach(c)
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addSinkReactions', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m', 30)" style="font-weight:bold">addSinkReactions</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m',30,0)">line 30</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Test4HumanBrain_Min', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Min.m', 490)" style="font-weight:bold">Test4HumanBrain_Min</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Min.m',490,0)">line 490</a>)] 
+sink_chol(c)	chol(c) 	<=>	
+sink_ach(c)	ach(c) 	->	
+[~,TestSolutionName_Brain_Max] = Test4HumanBrain_Max(MBA_model_7_3_4_ASM);
+
+FBA = 
+
+         full: [3294x1 double]
+          obj: 0
+        rcost: []
+         dual: []
+        slack: [2678x1 double]
+       solver: 'gurobi'
+    algorithm: 'default'
+         stat: 1
+     origStat: 'OPTIMAL'
+         time: 0.0684
+        basis: [1x1 struct]
+            f: 0
+            x: [3294x1 double]
+            v: [3294x1 double]
+            w: []
+            y: []
+            s: [2678x1 double]
+
+[Warning: The following metabolites were not found in model and will be added:
+ach(c)
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addSinkReactions', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m', 30)" style="font-weight:bold">addSinkReactions</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/src/reconstruction/refinement/addSinkReactions.m',30,0)">line 30</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Test4HumanBrain_Max', '/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Max.m', 489)" style="font-weight:bold">Test4HumanBrain_Max</a> (<a href="matlab: opentoline('/media/anirudh/Work/ADBS_NIMHANS/Thesis/AstroModel/Databases_Tools/cobratoolbox/AstroModel_QC/2. sanityCheck/7_3_4/Test4HumanBrain_Max.m',489,0)">line 489</a>)] 
+sink_chol(c)	chol(c) 	<=>	
+sink_ach(c)	ach(c) 	->	
+clc
+tic; save('v7_3_4'); toc;
+Elapsed time is 16.780305 seconds.
+IdleTimeout has been reached.
+Parallel pool using the 'local' profile is shutting down.
+clc
+find(strcmp(MBA_model_7_3_4_ASM.rxns,'PGS'));
+find(strcmp(MBA_model_7_3_4_ASM.rxns,'PDE1'));
+find(strcmp(MBA_model_7_3_4_ASM.rxns,'HMR_9545'));
+find(strcmp(MBA_model_7_3_4_ASM.rxns,'BPNT'));
+find(strcmp(MBA_model_7_3_4_ASM.rxns,'HMR_9577'));
+printRxnFormula(MBA_model_7_3_4_ASM, findRxnsFromMets(MBA_model_7_3_4_ASM,{'M00196[c]'}));
+printRxnFormula(MBA_model_7_3_4_ASM, findRxnsFromMets(MBA_model_7_3_4_ASM,{'M02742[c]'}));
+printRxnFormula(MBA_model_7_3_4_ASM, findRxnsFromMets(MBA_model_7_3_4_ASM,{'M00193[c]'}));
+printRxnFormula(MBA_model_7_3_4_ASM, findRxnsFromMets(MBA_model_7_3_4_ASM,{'M00192[c]'}));
+printRxnFormula(MBA_model_7_3_4_ASM, findRxnsFromMets(MBA_model_7_3_4_ASM,{'M00190[c]'}));
+printRxnFormula(MBA_model_7_3_4_ASM, findRxnsFromMets(MBA_model_7_3_4_ASM,{'M00191[c]'}));
+printRxnFormula(MBA_model_7_3_4_ASM, findRxnsFromMets(MBA_model_7_3_4_ASM,{'M02840[c]'}));
+printRxnFormula(MBA_model_7_3_4_ASM, findRxnsFromMets(MBA_model_7_3_4_ASM,{'M02743[c]'}));
+printRxnFormula(MBA_model_7_3_4_ASM, findRxnsFromMets(MBA_model_7_3_4_ASM,{'M00187[c]'}));
+printRxnFormula(MBA_model_7_3_4_ASM, findRxnsFromMets(MBA_model_7_3_4_ASM,{'M02737[c]'}));
+printRxnFormula(MBA_model_7_3_4_ASM, findRxnsFromMets(MBA_model_7_3_4_ASM,{'M00196[c]'}));
+printRxnFormula(MBA_model_7_3_4_ASM, findRxnsFromMets(MBA_model_7_3_4_ASM,{'M02742[c]'}));
+printRxnFormula(MBA_model_7_3_4_ASM, findRxnsFromMets(MBA_model_7_3_4_ASM,{'M02801[c]'}));
+printRxnFormula(MBA_model_7_3_4_ASM, findRxnsFromMets(MBA_model_7_3_4_ASM,{'M02656[c]'}));
+clc
+clear ans
+clc
+tic; save('v7_3_4'); toc;
+Elapsed time is 16.552007 seconds.
+quit

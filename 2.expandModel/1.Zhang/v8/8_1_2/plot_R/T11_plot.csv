@@ -1,0 +1,8 @@
+Li_action,PIPLC,MI14P4P,ADNCYC
+MI1PP -/+,1.6,1.6,0
+INSTt4 -/+,0,0,0
+PGS -/+,0,0,0
+PDE1 -/+,0,0,1.6
+BPNT -/+,0,0,0
+"{MI1PP, INSTt4} -/+",1.6,1.6,0
+"{MI1PP, INSTt4, PGS, PDE1, BPNT} -/+",1.6,1.6,1.6

@@ -1,0 +1,17 @@
+'EX_ncam[e]'	fluxInconsistent
+'EX_no3[e]'	fluxInconsistent
+'EX_selni[e]'	fluxInconsistent
+'EX_na1[e]'	fluxInconsistent
+'EX_estradiol[e]'	fluxInconsistent
+'EX_cortsn[e]'	fluxInconsistent
+'EX_aldstrn[e]'	fluxInconsistent
+'EX_zn2[e]'	fluxInconsistent
+'EX_but[e]'	fluxInconsistent
+'EX_mg2[e]'	fluxInconsistent
+'EX_prgstrn[e]'	fluxInconsistent
+'EX_ca2[e]'	fluxInconsistent
+'EX_thm[e]'	fluxInconsistent
+'EX_tststerone[e]'	fluxInconsistent
+'EX_fe3[e]'	fluxInconsistent
+'EX_cl[e]'	fluxInconsistent
+'EX_melatn[e]'	fluxInconsistent
