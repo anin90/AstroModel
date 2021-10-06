@@ -1,4 +1,4 @@
-function [TestResults] = test4HumanAstro(model)
+function [TestResults] = Test4HumanAstro(model)
 
 changeCobraSolver('gurobi','all'); 
 
