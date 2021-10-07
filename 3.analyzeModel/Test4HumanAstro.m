@@ -33,7 +33,8 @@ k = 1;
         TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'biomass_maintenance';
-    TestedModel{k,1} = 'modelOri';
+    TestSolutionGroup{k,1} = 'biomass';
+    TestedMetabolite{k,1} = 'maintenance';
     k = k +1;
     %% "Recon3D  biomass_maintenance_noTrTr"
     model = modelOri;
@@ -46,7 +47,8 @@ k = 1;
         TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'biomass_maintenance_noTrTr';
-    TestedModel{k,1} = 'modelOri';
+    TestSolutionGroup{k,1} = 'biomass';
+    TestedMetabolite{k,1} = 'maintenance_noTrTr';
     k = k +1;
     %% ATP max aerobic, glc, v0.05
     model = modelClosed;
@@ -61,7 +63,8 @@ k = 1;
 		TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'ATP max, aerobic, glc -> atp';
-    TestedModel{k,1} = 'modelClosed';
+    TestSolutionGroup{k,1} = 'ATP Synthesis';
+    TestedMetabolite{k,1} = 'glc_D[e], aerobic';
     k = k +1;
     %% ATP max, anaerobic glc, v0.05
     model = modelClosed;
@@ -76,7 +79,8 @@ k = 1;
 		TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'ATP max, anaerobic, glc -> atp';
-    TestedModel{k,1} = 'modelClosed';
+    TestSolutionGroup{k,1} = 'ATP Synthesis';
+    TestedMetabolite{k,1} = 'glc_D[e], anaerobic';
     k = k +1;   
   %% ATP max, aerobic, pyr -> atp
     model = modelClosed;
@@ -91,7 +95,8 @@ k = 1;
 		TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'ATP max, aerobic, pyr -> atp';
-    TestedModel{k,1} = 'modelClosed';
+    TestSolutionGroup{k,1} = 'ATP Synthesis';
+    TestedMetabolite{k,1} = 'pyr[e]';
     k = k +1;
  %% ATP max, aerobic, lac_L -> atp
     model = modelClosed;
@@ -106,7 +111,8 @@ k = 1;
 		TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'ATP max, aerobic, lac_L -> atp';
-    TestedModel{k,1} = 'modelClosed';
+    TestSolutionGroup{k,1} = 'ATP Synthesis';
+    TestedMetabolite{k,1} = 'lac_L[e]';
     k = k +1;       
  %% ATP max, aerobic, glu_L, synaptic -> atp
     model = modelClosed;
@@ -121,7 +127,8 @@ k = 1;
 		TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'ATP max, aerobic, glu_L (synaptic) -> atp';
-    TestedModel{k,1} = 'modelClosed';
+    TestSolutionGroup{k,1} = 'ATP Synthesis';
+    TestedMetabolite{k,1} = 'glu_L[s]';
     k = k +1;
  %% ATP max, aerobic, glu_L, extracellular -> atp
     model = modelClosed;
@@ -136,7 +143,8 @@ k = 1;
 		TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'ATP max, aerobic, glu_L (extracellular) -> atp';
-    TestedModel{k,1} = 'modelClosed';
+    TestSolutionGroup{k,1} = 'ATP Synthesis';
+    TestedMetabolite{k,1} = 'glu_L[e]';
     k = k +1; 
 %% pyr[c] -> accoa[m]
     model = modelClosed;
@@ -150,7 +158,8 @@ k = 1;
         TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'pyr[c] -> accoa[m]';
-    TestedModel{k,1} = 'modelClosed';
+    TestSolutionGroup{k,1} = 'Pyruvate utilization';
+    TestedMetabolite{k,1} = 'accoa[m]';
     k = k +1;    
     %% pyr[c] -> oaa[m]
     model = modelClosed;
@@ -164,7 +173,8 @@ k = 1;
 		TestSolution(k,1) = NaN;
 	end	
     TestSolutionName{k,1} = 'pyr[c] -> oaa[m]';
-    TestedModel{k,1} = 'modelClosed';
+    TestSolutionGroup{k,1} = 'Pyruvate utilization';
+    TestedMetabolite{k,1} = 'oaa[m]';
     k = k +1;    
     %% pyr[c] -> etoh[c]
     model = modelClosed;
@@ -178,7 +188,8 @@ k = 1;
 		TestSolution(k,1) = NaN;
 	end	
     TestSolutionName{k,1} = 'pyr[c] -> etoh[c]';
-    TestedModel{k,1} = 'modelClosed';
+    TestSolutionGroup{k,1} = 'Pyruvate utilization';
+    TestedMetabolite{k,1} = 'etoh[c]';
     k = k +1;
     %% pyr[c] -> lac_L[s]
     model = modelClosed;
@@ -192,7 +203,8 @@ k = 1;
         TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'pyr[c] -> lac_L[s]';
-    TestedModel{k,1} = 'modelClosed';
+    TestSolutionGroup{k,1} = 'Pyruvate utilization';
+    TestedMetabolite{k,1} = 'lac_L[s]';
     k = k +1;    
     %% pyr[c] -> lac_L[m]
     model = modelClosed;
@@ -206,7 +218,8 @@ k = 1;
 		TestSolution(k,1) = NaN;
 	end	
     TestSolutionName{k,1} = 'pyr[c] -> lac_L[m]';
-    TestedModel{k,1} = 'modelClosed';
+    TestSolutionGroup{k,1} = 'Pyruvate utilization';
+    TestedMetabolite{k,1} = 'lac_L[m]';
     k = k +1;
     %% pyr[c] -> lac_L[c]
     model = modelClosed;
@@ -220,7 +233,8 @@ k = 1;
 		TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'pyr[c] -> lac_L[c]';
-    TestedModel{k,1} = 'modelClosed';
+    TestSolutionGroup{k,1} = 'Pyruvate utilization';
+    TestedMetabolite{k,1} = 'lac_L[c]';
     k = k +1;
     %% trp_L -> melatn
     model = modelClosed;
@@ -234,10 +248,11 @@ k = 1;
 		TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'trp_L -> melatn';
-    TestedModel{k,1} = 'modelClosed';
+    TestSolutionGroup{k,1} = 'Melatonin synthesis';
+    TestedMetabolite{k,1} = 'melatn';
     k = k +1;    
 %%
-VarNames = {'TestSolutionName', 'TestSolution'};
-TestResults = table(TestSolutionName, TestSolution, 'VariableNames',VarNames);
+VarNames = {'TestSolutionName', 'TestSolution', 'TestSolutionGroup', 'TestedMetabolite'};
+TestResults = table(TestSolutionName, TestSolution, TestSolutionGroup, TestedMetabolite, 'VariableNames',VarNames);
 
 end

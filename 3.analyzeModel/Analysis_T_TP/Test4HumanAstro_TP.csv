@@ -1,16 +1,16 @@
-TestSolutionName	Primary_TP	iPS_Ctrl_TP	iPS_BD_TP	iPS_BD_R_TP	iPS_BD_NR_TP
-biomass_maintenance	28.5731693379916	30.5846005592794	25.3185804645522	27.281884650177	20.2133199518049
-biomass_maintenance_noTrTr	32.9271236755161	35.2355155251816	29.1919665820037	29.9505401246415	22.4575208167518
-ATP max, aerobic, glc -> atp	4	22.0000000000056	21.999999999998	11.9999999999965	21.9999999999987
-ATP max, anaerobic, glc -> atp	2.00000000000008	2	2	2.0000000000003	1.99999999999989
-ATP max, aerobic, pyr -> atp	1.00000000000023	8.5	8.5	4.24999999999859	8.50000000000004
-ATP max, aerobic, lac_L -> atp	1	9.99999999999995	10.0000000000001	5	10
-ATP max, aerobic, glu_L (synaptic) -> atp	0	NaN	NaN	NaN	NaN
-ATP max, aerobic, glu_L (extracellular) -> atp	2.00000000000011	15.4999999999957	15.5000000000005	8.25000000000114	15.5
-pyr[c] -> accoa[m]	0	0	0	0	0
-pyr[c] -> oaa[m]	6.66666666666697	34.6773023930384	34.6773023930385	34.2857142857141	34.6773023930384
-pyr[c] -> etoh[c]	NaN	0	NaN	NaN	NaN
-pyr[c] -> lac_L[s]	6.66666666666742	NaN	NaN	NaN	NaN
-pyr[c] -> lac_L[m]	19.9999999999999	90.9137055837566	50.1522842639596	90.0000000000001	50.1522842639594
-pyr[c] -> lac_L[c]	19.9999999999999	90.9137055837549	50.1522842639594	90	50.1522842639594
-trp_L -> melatn	0	0	0	0	0
+TestSolutionName	Primary_TP	iPS_Ctrl_TP	iPS_BD_TP	iPS_BD_R_TP	iPS_BD_NR_TP	TestSolutionGroup	TestedMetabolite
+biomass_maintenance	28.5731693379916	30.5846005592794	25.3185804645522	27.281884650177	20.2133199518049	biomass	maintenance
+biomass_maintenance_noTrTr	32.9271236755161	35.2355155251816	29.1919665820037	29.9505401246415	22.4575208167518	biomass	maintenance_noTrTr
+ATP max, aerobic, glc -> atp	4	22.0000000000056	21.999999999998	11.9999999999965	21.9999999999987	ATP Synthesis	glc_D[e], aerobic
+ATP max, anaerobic, glc -> atp	2.00000000000008	2	2	2.0000000000003	1.99999999999989	ATP Synthesis	glc_D[e], anaerobic
+ATP max, aerobic, pyr -> atp	1.00000000000023	8.5	8.5	4.24999999999859	8.50000000000004	ATP Synthesis	pyr[e]
+ATP max, aerobic, lac_L -> atp	1	9.99999999999995	10.0000000000001	5	10	ATP Synthesis	lac_L[e]
+ATP max, aerobic, glu_L (synaptic) -> atp	0	NaN	NaN	NaN	NaN	ATP Synthesis	glu_L[s]
+ATP max, aerobic, glu_L (extracellular) -> atp	2.00000000000011	15.4999999999957	15.5000000000005	8.25000000000114	15.5	ATP Synthesis	glu_L[e]
+pyr[c] -> accoa[m]	0	0	0	0	0	Pyruvate utilization	accoa[m]
+pyr[c] -> oaa[m]	6.66666666666697	34.6773023930384	34.6773023930385	34.2857142857141	34.6773023930384	Pyruvate utilization	oaa[m]
+pyr[c] -> etoh[c]	NaN	0	NaN	NaN	NaN	Pyruvate utilization	etoh[c]
+pyr[c] -> lac_L[s]	6.66666666666742	NaN	NaN	NaN	NaN	Pyruvate utilization	lac_L[s]
+pyr[c] -> lac_L[m]	19.9999999999999	90.9137055837566	50.1522842639596	90.0000000000001	50.1522842639594	Pyruvate utilization	lac_L[m]
+pyr[c] -> lac_L[c]	19.9999999999999	90.9137055837549	50.1522842639594	90	50.1522842639594	Pyruvate utilization	lac_L[c]
+trp_L -> melatn	0	0	0	0	0	Melatonin synthesis	melatn
