@@ -50,6 +50,20 @@ k = 1;
     TestSolutionGroup{k,1} = 'biomass';
     TestedMetabolite{k,1} = 'maintenance_noTrTr';
     k = k +1;
+    %% ATP max, modelOri
+%     model = modelOri;
+%     model.c(find(model.c)) = 0;
+%     model.c(ismember(model.rxns,'DM_atp_c_'))=1;
+%     if find(model.c)>0
+%         FBA = optimizeCbModel(model,'max','zero');
+%         TestSolution(k,1) = FBA.f;
+%     else
+%         TestSolution(k,1) = NaN;
+%     end
+%     TestSolutionName{k,1} = 'ATP max, modelOri';
+%     TestSolutionGroup{k,1} = 'ATP demand';
+%     TestedMetabolite{k,1} = 'All';
+%     k = k +1;
     %% ATP max aerobic, glc, v0.05
     model = modelClosed;
     model.c(find(model.c)) = 0;
@@ -63,7 +77,7 @@ k = 1;
 		TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'ATP max, aerobic, glc -> atp';
-    TestSolutionGroup{k,1} = 'ATP Synthesis';
+    TestSolutionGroup{k,1} = 'ATP demand';
     TestedMetabolite{k,1} = 'glc_D[e], aerobic';
     k = k +1;
     %% ATP max, anaerobic glc, v0.05
@@ -79,7 +93,7 @@ k = 1;
 		TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'ATP max, anaerobic, glc -> atp';
-    TestSolutionGroup{k,1} = 'ATP Synthesis';
+    TestSolutionGroup{k,1} = 'ATP demand';
     TestedMetabolite{k,1} = 'glc_D[e], anaerobic';
     k = k +1;   
   %% ATP max, aerobic, pyr -> atp
@@ -95,7 +109,7 @@ k = 1;
 		TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'ATP max, aerobic, pyr -> atp';
-    TestSolutionGroup{k,1} = 'ATP Synthesis';
+    TestSolutionGroup{k,1} = 'ATP demand';
     TestedMetabolite{k,1} = 'pyr[e]';
     k = k +1;
  %% ATP max, aerobic, lac_L -> atp
@@ -111,7 +125,7 @@ k = 1;
 		TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'ATP max, aerobic, lac_L -> atp';
-    TestSolutionGroup{k,1} = 'ATP Synthesis';
+    TestSolutionGroup{k,1} = 'ATP demand';
     TestedMetabolite{k,1} = 'lac_L[e]';
     k = k +1;       
  %% ATP max, aerobic, glu_L, synaptic -> atp
@@ -127,7 +141,7 @@ k = 1;
 		TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'ATP max, aerobic, glu_L (synaptic) -> atp';
-    TestSolutionGroup{k,1} = 'ATP Synthesis';
+    TestSolutionGroup{k,1} = 'ATP demand';
     TestedMetabolite{k,1} = 'glu_L[s]';
     k = k +1;
  %% ATP max, aerobic, glu_L, extracellular -> atp
@@ -143,7 +157,7 @@ k = 1;
 		TestSolution(k,1) = NaN;
     end
     TestSolutionName{k,1} = 'ATP max, aerobic, glu_L (extracellular) -> atp';
-    TestSolutionGroup{k,1} = 'ATP Synthesis';
+    TestSolutionGroup{k,1} = 'ATP demand';
     TestedMetabolite{k,1} = 'glu_L[e]';
     k = k +1; 
 %% pyr[c] -> accoa[m]

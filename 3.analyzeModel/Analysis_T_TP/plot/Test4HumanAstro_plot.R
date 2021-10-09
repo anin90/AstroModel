@@ -31,12 +31,12 @@ Test4HumanAstro_T <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science
 
 # ATP Synthesis
 #TP
-ss.data = Test4HumanAstro_TP[Test4HumanAstro_TP$TestSolutionGroup == 'ATP Synthesis',]
+ss.data = Test4HumanAstro_TP[Test4HumanAstro_TP$TestSolutionGroup == 'ATP demand',]
 mdat = melt(ss.data, id.vars=c("TestedMetabolite", "TestSolutionGroup"),
             measure.vars=c("Primary_TP", "iPS_Ctrl_TP", "iPS_BD_TP", "iPS_BD_R_TP", "iPS_BD_NR_TP"))
 ggplot(mdat, aes(x = variable, y = value))+
   geom_col(aes(fill = TestedMetabolite), width = 0.7, colour = "black") + theme_classic()+ 
-   labs(fill = "Nutrient source", x ="closedModel", y = "ATP demand (mmol/gDw/h)") + 
+   labs(fill = "Nutrient source", x ="closedModel", y = "ATP demand (mmol/gDw/h), per 1 mmol of nutrient uptake") + 
    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
   scale_fill_brewer(palette = "Pastel1")
 
@@ -44,15 +44,15 @@ ggplot(mdat, aes(x = variable, y = value, fill = TestedMetabolite)) +
   geom_col(colour = "black", position = "fill") +
   scale_y_continuous(labels = scales::percent) +
   scale_fill_brewer(palette = "Pastel1") + theme_classic() + 
-   labs(fill = "Nutrient source", x ="closedModel", y = "ATP demand (mmol/gDw/h)") + 
+   labs(fill = "Nutrient source", x ="closedModel", y = "ATP demand (mmol/gDw/h), per 1 mmol of nutrient uptake") + 
    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 #T
-ss.data = Test4HumanAstro_T[Test4HumanAstro_T$TestSolutionGroup == 'ATP Synthesis',]
+ss.data = Test4HumanAstro_T[Test4HumanAstro_T$TestSolutionGroup == 'ATP demand',]
 mdat = melt(ss.data, id.vars=c("TestedMetabolite", "TestSolutionGroup"),
             measure.vars=c("Primary_T", "iPS_Ctrl_T", "iPS_BD_T", "iPS_BD_R_T", "iPS_BD_NR_T"))
 ggplot(mdat, aes(x = variable, y = value))+
   geom_col(aes(fill = TestedMetabolite), width = 0.7, colour = "black") + theme_classic()+ 
-   labs(fill = "Nutrient source", x ="closedModel", y = "ATP demand (mmol/gDw/h)") + 
+   labs(fill = "Nutrient source", x ="closedModel", y = "ATP demand (mmol/gDw/h), per 1 mmol of nutrient uptake") + 
    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
   scale_fill_brewer(palette = "Pastel1")
 
@@ -60,7 +60,7 @@ ggplot(mdat, aes(x = variable, y = value, fill = TestedMetabolite)) +
   geom_col(colour = "black", position = "fill") +
   scale_y_continuous(labels = scales::percent) +
   scale_fill_brewer(palette = "Pastel1") + theme_classic() + 
-   labs(fill = "Nutrient source", x ="closedModel", y = "ATP demand (mmol/gDw/h)") + 
+   labs(fill = "Nutrient source", x ="closedModel", y = "ATP demand (mmol/gDw/h), per 1 mmol of nutrient uptake") + 
    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))   
    
 
@@ -71,7 +71,7 @@ mdat = melt(ss.data, id.vars=c("TestedMetabolite", "TestSolutionGroup"),
             measure.vars=c("Primary_TP", "iPS_Ctrl_TP", "iPS_BD_TP", "iPS_BD_R_TP", "iPS_BD_NR_TP"))
 ggplot(mdat, aes(x = variable, y = value))+
   geom_col(aes(fill = TestedMetabolite), width = 0.7, colour = "black") + theme_classic()+ 
-   labs(fill = "Nutrient synthesis", x ="closedModel", y = "Pyruvate utilization (mmol/gDw/h)") + 
+   labs(fill = "Nutrient synthesis", x ="closedModel", y = "Pyruvate utilization (mmol/gDw/h), per 1 mmol of nutrient uptake") + 
    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
   scale_fill_brewer(palette = "Pastel1")
 
@@ -79,7 +79,7 @@ ggplot(mdat, aes(x = variable, y = value, fill = TestedMetabolite)) +
   geom_col(colour = "black", position = "fill") +
   scale_y_continuous(labels = scales::percent) +
   scale_fill_brewer(palette = "Pastel1") + theme_classic() + 
-   labs(fill = "Nutrient synthesis", x ="closedModel", y = "Pyruvate utilization (mmol/gDw/h)") + 
+   labs(fill = "Nutrient synthesis", x ="closedModel", y = "Pyruvate utilization (mmol/gDw/h), per 1 mmol of nutrient uptake") + 
    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 #T
 ss.data = Test4HumanAstro_T[Test4HumanAstro_T$TestSolutionGroup == 'Pyruvate utilization',]
@@ -87,7 +87,7 @@ mdat = melt(ss.data, id.vars=c("TestedMetabolite", "TestSolutionGroup"),
             measure.vars=c("Primary_T", "iPS_Ctrl_T", "iPS_BD_T", "iPS_BD_R_T", "iPS_BD_NR_T"))
 ggplot(mdat, aes(x = variable, y = value))+
   geom_col(aes(fill = TestedMetabolite), width = 0.7, colour = "black") + theme_classic()+ 
-   labs(fill = "Nutrient synthesis", x ="closedModel", y = "Pyruvate utilization (mmol/gDw/h)") + 
+   labs(fill = "Nutrient synthesis", x ="closedModel", y = "Pyruvate utilization (mmol/gDw/h), per 1 mmol of nutrient uptake") + 
    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
   scale_fill_brewer(palette = "Pastel1")
 
@@ -95,7 +95,7 @@ ggplot(mdat, aes(x = variable, y = value, fill = TestedMetabolite)) +
   geom_col(colour = "black", position = "fill") +
   scale_y_continuous(labels = scales::percent) +
   scale_fill_brewer(palette = "Pastel1") + theme_classic() + 
-   labs(fill = "Nutrient synthesis", x ="closedModel", y = "Pyruvate utilization (mmol/gDw/h)") + 
+   labs(fill = "Nutrient synthesis", x ="closedModel", y = "Pyruvate utilization (mmol/gDw/h), per 1 mmol of nutrient uptake") + 
    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
 
