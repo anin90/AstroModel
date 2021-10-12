@@ -18,7 +18,7 @@ library(ggvenn)
 library(plotrix)
 library(scales)
 library(plyr)
-pdf("Test4HumanAstro.pdf")
+pdf("Test4HumanAstro.pdf", width=3, height=3)
 
 ###########
 # Load data
