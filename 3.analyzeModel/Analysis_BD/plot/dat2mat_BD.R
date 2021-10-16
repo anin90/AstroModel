@@ -19,45 +19,32 @@ pdf("FSR_UpSet_BD.pdf")
 # rnxs to matrix: import output
 ##########################################
 
-iPS_Ctrl_TP_vs_iPS_BD_TP = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_TP.csv");
-iPS_Ctrl_TP_vs_iPS_BD_R_TP = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_R_TP.csv");
-iPS_Ctrl_TP_vs_iPS_BD_NR_TP = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_NR_TP.csv");
-FSR_iPS_Ctrl_TP_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_fluxdiff/FSR_iAstro_iPS_Ctrl_TP_Akkouh_Li.csv");
-FSR_iPS_BD_TP_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_fluxdiff/FSR_iAstro_iPS_BD_TP_Akkouh_Li.csv");
-FSR_iPS_BD_R_TP_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_fluxdiff/FSR_iAstro_iPS_BD_R_TP_Akkouh_Li.csv");
-FSR_iPS_BD_NR_TP_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_fluxdiff/FSR_iAstro_iPS_BD_NR_TP_Akkouh_Li.csv");
-RxnInput_iPS_Ctrl_TP_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_input/RxnInput_iAstro_iPS_Ctrl_TP_Akkouh_Li.csv");
-RxnInput_iPS_BD_TP_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_input/RxnInput_iAstro_iPS_BD_TP_Akkouh_Li.csv");
-RxnInput_iPS_BD_R_TP_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_input/RxnInput_iAstro_iPS_BD_R_TP_Akkouh_Li.csv");
-RxnInput_iPS_BD_NR_TP_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_input/RxnInput_iAstro_iPS_BD_NR_TP_Akkouh_Li.csv");
-UnChanged_Primary_TP_vs_iPS_Ctrl_TP = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Ctrl/UnChanged_iAstro_Primary_TP_vs_iAstro_iPS_Ctrl_TP.csv");
+iPS_Ctrl_TP_vs_iPS_BD_TP = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_TP.csv",header = T, sep = "\t");
+iPS_Ctrl_TP_vs_iPS_BD_R_TP = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_R_TP.csv",header = T, sep = "\t");
+iPS_Ctrl_TP_vs_iPS_BD_NR_TP = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_NR_TP.csv",header = T, sep = "\t");
+UnChanged_Primary_TP_vs_iPS_Ctrl_TP = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Ctrl/UnChanged_iAstro_Primary_TP_vs_iAstro_iPS_Ctrl_TP.csv",header = T, sep = "\t");
 
-iPS_Ctrl_T_vs_iPS_BD_T = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_T.csv");
-iPS_Ctrl_T_vs_iPS_BD_R_T = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_R_T.csv");
-iPS_Ctrl_T_vs_iPS_BD_NR_T = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_NR_T.csv");
-FSR_iPS_Ctrl_T_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_fluxdiff/FSR_iAstro_iPS_Ctrl_T_Akkouh_Li.csv");
-FSR_iPS_BD_T_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_fluxdiff/FSR_iAstro_iPS_BD_T_Akkouh_Li.csv");
-FSR_iPS_BD_R_T_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_fluxdiff/FSR_iAstro_iPS_BD_R_T_Akkouh_Li.csv");
-FSR_iPS_BD_NR_T_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_fluxdiff/FSR_iAstro_iPS_BD_NR_T_Akkouh_Li.csv");
-RxnInput_iPS_Ctrl_T_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_input/RxnInput_iAstro_iPS_Ctrl_T_Akkouh_Li.csv");
-RxnInput_iPS_BD_T_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_input/RxnInput_iAstro_iPS_BD_T_Akkouh_Li.csv");
-RxnInput_iPS_BD_R_T_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_input/RxnInput_iAstro_iPS_BD_R_T_Akkouh_Li.csv");
-RxnInput_iPS_BD_NR_T_Akkouh = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Rxn_input/RxnInput_iAstro_iPS_BD_NR_T_Akkouh_Li.csv");
-UnChanged_Primary_T_vs_iPS_Ctrl_T = readLines("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Ctrl/UnChanged_iAstro_Primary_T_vs_iAstro_iPS_Ctrl_T.csv");
+iPS_Ctrl_TP_vs_iPS_BD_TP = iPS_Ctrl_TP_vs_iPS_BD_TP$m
+iPS_Ctrl_TP_vs_iPS_BD_R_TP = iPS_Ctrl_TP_vs_iPS_BD_R_TP$m
+iPS_Ctrl_TP_vs_iPS_BD_NR_TP = iPS_Ctrl_TP_vs_iPS_BD_NR_TP$m
+UnChanged_Primary_TP_vs_iPS_Ctrl_TP = UnChanged_Primary_TP_vs_iPS_Ctrl_TP$n
+
+iPS_Ctrl_T_vs_iPS_BD_T = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_T.csv",header = T, sep = "\t");
+iPS_Ctrl_T_vs_iPS_BD_R_T = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_R_T.csv",header = T, sep = "\t");
+iPS_Ctrl_T_vs_iPS_BD_NR_T = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_NR_T.csv",header = T, sep = "\t");
+UnChanged_Primary_T_vs_iPS_Ctrl_T = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Ctrl/UnChanged_iAstro_Primary_T_vs_iAstro_iPS_Ctrl_T.csv",header = T, sep = "\t");
+
+iPS_Ctrl_T_vs_iPS_BD_T = iPS_Ctrl_T_vs_iPS_BD_T$m
+iPS_Ctrl_T_vs_iPS_BD_R_T = iPS_Ctrl_T_vs_iPS_BD_R_T$m
+iPS_Ctrl_T_vs_iPS_BD_NR_T = iPS_Ctrl_T_vs_iPS_BD_NR_T$m
+UnChanged_Primary_T_vs_iPS_Ctrl_T = UnChanged_Primary_T_vs_iPS_Ctrl_T$n
 
 ###################################
 # rnxs to matrix - wrangle
 ###################################
 
 mat = lst(iPS_Ctrl_TP_vs_iPS_BD_TP, iPS_Ctrl_TP_vs_iPS_BD_R_TP, iPS_Ctrl_TP_vs_iPS_BD_NR_TP,
-			iPS_Ctrl_T_vs_iPS_BD_T, iPS_Ctrl_T_vs_iPS_BD_R_T, iPS_Ctrl_T_vs_iPS_BD_NR_T,
-			
-			FSR_iPS_Ctrl_TP_Akkouh, FSR_iPS_BD_TP_Akkouh, FSR_iPS_BD_R_TP_Akkouh, FSR_iPS_BD_NR_TP_Akkouh,
-			FSR_iPS_Ctrl_T_Akkouh, FSR_iPS_BD_T_Akkouh, FSR_iPS_BD_R_T_Akkouh, FSR_iPS_BD_NR_T_Akkouh,
-			
-			RxnInput_iPS_Ctrl_TP_Akkouh, RxnInput_iPS_BD_TP_Akkouh, RxnInput_iPS_BD_R_TP_Akkouh, RxnInput_iPS_BD_NR_TP_Akkouh,
-			RxnInput_iPS_Ctrl_T_Akkouh, RxnInput_iPS_BD_T_Akkouh, RxnInput_iPS_BD_R_T_Akkouh, RxnInput_iPS_BD_NR_T_Akkouh, 
-			
+			iPS_Ctrl_T_vs_iPS_BD_T, iPS_Ctrl_T_vs_iPS_BD_R_T, iPS_Ctrl_T_vs_iPS_BD_NR_T, 			
 			UnChanged_Primary_TP_vs_iPS_Ctrl_TP, UnChanged_Primary_T_vs_iPS_Ctrl_T) %>% 
 			
   enframe %>% 
@@ -144,11 +131,3 @@ yInt = Reduce(union,y)
 bd_nr_670 = setdiff(xInt,yInt)
 length(bd_nr_670)
 write.table(bd_nr_670, "bd_nr_670.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)
-
-
-
-
-
-
-
-

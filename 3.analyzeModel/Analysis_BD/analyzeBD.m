@@ -23,7 +23,7 @@ model_b = iAstro_iPS_BD_TP;
 dat = FluxDiff;
 m = vertcat(union(dat.fluxGoneHigh.FSr_significant_H, dat.fluxGoneLow.FSr_significant_L));
 T = table(m);
-writetable(T,'FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_TP.csv','WriteVariableNames',0);
+writetable(T,'FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_TP.csv','WriteVariableNames', true, 'Delimiter','\t');
 FluxDiff_iPS_Ctrl_TP_vs_iPS_BD_TP = FluxDiff;
 clear model_a model_b dat m T FluxDiff
 
@@ -34,7 +34,7 @@ model_b = iAstro_iPS_BD_R_TP;
 dat = FluxDiff;
 m = vertcat(union(dat.fluxGoneHigh.FSr_significant_H, dat.fluxGoneLow.FSr_significant_L));
 T = table(m);
-writetable(T,'FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_R_TP.csv','WriteVariableNames',0);
+writetable(T,'FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_R_TP.csv','WriteVariableNames', true, 'Delimiter','\t');
 FluxDiff_iPS_Ctrl_TP_vs_iPS_BD_R_TP = FluxDiff;
 clear model_a model_b dat m T FluxDiff
 
@@ -45,7 +45,7 @@ model_b = iAstro_iPS_BD_NR_TP;
 dat = FluxDiff;
 m = vertcat(union(dat.fluxGoneHigh.FSr_significant_H, dat.fluxGoneLow.FSr_significant_L));
 T = table(m);
-writetable(T,'FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_NR_TP.csv','WriteVariableNames',0);
+writetable(T,'FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_NR_TP.csv','WriteVariableNames', true, 'Delimiter','\t');
 FluxDiff_iPS_Ctrl_TP_vs_iPS_BD_NR_TP = FluxDiff;
 clear model_a model_b dat m T FluxDiff
 
@@ -58,7 +58,7 @@ model_b = iAstro_iPS_BD_T;
 dat = FluxDiff;
 m = vertcat(union(dat.fluxGoneHigh.FSr_significant_H, dat.fluxGoneLow.FSr_significant_L));
 T = table(m);
-writetable(T,'FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_T.csv','WriteVariableNames',0);
+writetable(T,'FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_T.csv','WriteVariableNames', true, 'Delimiter','\t');
 FluxDiff_iPS_Ctrl_T_vs_iPS_BD_T = FluxDiff;
 clear model_a model_b dat m T FluxDiff
 
@@ -69,7 +69,7 @@ model_b = iAstro_iPS_BD_R_T;
 dat = FluxDiff;
 m = vertcat(union(dat.fluxGoneHigh.FSr_significant_H, dat.fluxGoneLow.FSr_significant_L));
 T = table(m);
-writetable(T,'FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_R_T.csv','WriteVariableNames',0);
+writetable(T,'FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_R_T.csv','WriteVariableNames', true, 'Delimiter','\t');
 FluxDiff_iPS_Ctrl_T_vs_iPS_BD_R_T = FluxDiff;
 clear model_a model_b dat m T FluxDiff
 
@@ -80,7 +80,7 @@ model_b = iAstro_iPS_BD_NR_T;
 dat = FluxDiff;
 m = vertcat(union(dat.fluxGoneHigh.FSr_significant_H, dat.fluxGoneLow.FSr_significant_L));
 T = table(m);
-writetable(T,'FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_NR_T.csv','WriteVariableNames',0);
+writetable(T,'FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_NR_T.csv','WriteVariableNames', true, 'Delimiter','\t');
 FluxDiff_iPS_Ctrl_T_vs_iPS_BD_NR_T = FluxDiff;
 clear model_a model_b dat m T FluxDiff
 
