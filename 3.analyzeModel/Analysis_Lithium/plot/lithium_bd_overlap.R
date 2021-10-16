@@ -71,22 +71,18 @@ hyper_matrix <- function(gene.list, background){
 }
 
 ########################
-# Load Primary_TP_Akkouh
+# Load Primary_TP_Lithium
 ########################
-Untreated_vs_Lithium_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iAstro_Primary_TP_Untreated_vs_Lithium_Output.csv",header = T, sep = "\t")
-Untreated_vs_Lithium_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iAstro_Primary_TP_Untreated_vs_Lithium_Input.csv",header = T, sep = "\t")
-bind = bind_rows(Untreated_vs_Lithium_Output,Untreated_vs_Lithium_Input)
-Untreated_vs_Lithium_all = coalesce(bind$m_out, bind$m_in)
-#Untreated_vs_Lithium_all = Untreated_vs_Lithium_Input$m_in #InputRxns_only
+Akkouh_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_Akkouh_Output.csv",header = T, sep = "\t")
+Akkouh_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_Akkouh_Input.csv",header = T, sep = "\t")
+bind = bind_rows(Akkouh_Output,Akkouh_Input)
+Akkouh_all = coalesce(bind$m_out, bind$m_in)
 
-# Fig.1: (Primary_TP_Akkouh vs BD_Disrupted)
+# Fig.1: (Primary_TP_Lithium vs BD_Disrupted)
 
 #1a (venn rxns, akkouh vs bd_212_92_670)
-	x <- list(
-	Akkouh = Untreated_vs_Lithium_all,	
-	BD_Lumped = bd_212_tbl$rxnList, 
-	BD_R = bd_r_92_tbl$rxnList, 
-	BD_NR = bd_nr_670_tbl$rxnList)
+	x <- list(Akkouh_all = Akkouh_all,	
+	BD_Lumped = bd_212_tbl$rxnList, BD_R = bd_r_92_tbl$rxnList, BD_NR = bd_nr_670_tbl$rxnList)
 	p = ggvenn(x, fill_color = c("grey","blue", "green", "red")); p
 
 #1b (venn hypergeometric test, akkouh vs bd_212_92_670)
@@ -96,20 +92,44 @@ Untreated_vs_Lithium_all = coalesce(bind$m_out, bind$m_in)
 	pheatmap(M, cluster_rows=F, cluster_cols=F, na_col="white", display_numbers = TRUE, main = 'Significance of pairwise overlap', 
 		fontsize_number = 20, fontsize = 15)
 
-#1c (venn rxns, akkouh vs bd_all)
-	x <- list(
-	Akkouh = Untreated_vs_Lithium_all,	
-	BD_Lumped = bd_tbl$m, 
-	BD_R = bd_r_tbl$m, 
-	BD_NR = bd_nr_tbl$m)
-	p = ggvenn(x, fill_color = c("grey","blue", "green", "red")); p
+#1c (venn hypergeometric test, Li+ action vs BD signature)
+	Akkouh_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_Akkouh_Output.csv",header = T, sep = "\t")
+	Akkouh_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_Akkouh_Input.csv",header = T, sep = "\t")
+	bind = bind_rows(Akkouh_Output,Akkouh_Input)
+	Akkouh_all = coalesce(bind$m_out, bind$m_in)
+	GSE66276_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_GSE66276_Output.csv",header = T, sep = "\t")
+	GSE66276_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_GSE66276_Input.csv",header = T, sep = "\t")
+	bind = bind_rows(GSE66276_Output,GSE66276_Input)
+	GSE66276_all = coalesce(bind$m_out, bind$m_in)
+	GSE132397_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_GSE132397_Output.csv",header = T, sep = "\t")
+	GSE132397_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_GSE132397_Input.csv",header = T, sep = "\t")
+	bind = bind_rows(GSE132397_Output,GSE132397_Input)
+	GSE132397_all = coalesce(bind$m_out, bind$m_in)
 
-#1d (venn hypergeometric test, akkouh vs bd_all)
+	x <- list(
+	Akkouh_all = Akkouh_all, GSE66276_all = GSE66276_all, GSE132397_all = GSE132397_all,	
+	BD_Lumped = bd_212_tbl$rxnList, BD_R = bd_r_92_tbl$rxnList, BD_NR = bd_nr_670_tbl$rxnList)
+	
 	y = list(iAstro_Primary_TP$Var1, iAstro_iPS_BD_TP$Var1, iAstro_iPS_BD_R_TP$Var1, iAstro_iPS_BD_NR_TP$Var1);
 	yInt = Reduce(union,y); background = length(yInt);
 	M <- hyper_matrix(x, background);	M[upper.tri(M)] <- NA;	diag(M)<-NA;
 	pheatmap(M, cluster_rows=F, cluster_cols=F, na_col="white", display_numbers = TRUE, main = 'Significance of pairwise overlap', 
 		fontsize_number = 20, fontsize = 15)
+
+#1d (venn hypergeometric test, Li+ action-InputRxnsOnly vs BD signature)
+	Akkouh_in = Akkouh_Input$m_in #InputRxnsOnly
+	GSE66276_in = GSE66276_Input$m_in #InputRxnsOnly
+	GSE132397_in = GSE132397_Input$m_in #InputRxnsOnly
+	
+	x <- list(Akkouh_in = Akkouh_in, GSE66276_in = GSE66276_in, GSE132397_in = GSE132397_in,	
+	BD_Lumped = bd_212_tbl$rxnList, BD_R = bd_r_92_tbl$rxnList, BD_NR = bd_nr_670_tbl$rxnList)
+	
+	y = list(iAstro_Primary_TP$Var1, iAstro_iPS_BD_TP$Var1, iAstro_iPS_BD_R_TP$Var1, iAstro_iPS_BD_NR_TP$Var1);
+	yInt = Reduce(union,y); background = length(yInt);
+	M <- hyper_matrix(x, background);	M[upper.tri(M)] <- NA;	diag(M)<-NA;
+	pheatmap(M, cluster_rows=F, cluster_cols=F, na_col="white", display_numbers = TRUE, main = 'Significance of pairwise overlap', 
+		fontsize_number = 20, fontsize = 15)
+	
 
 
 
