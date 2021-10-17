@@ -18,6 +18,7 @@ library(ggvenn)
 library(plotrix)
 library(pheatmap)
 library(magrittr)
+library(venn)
 
 pdf("lithium_bd_hyper.pdf", height=4, width=4)
 
@@ -38,10 +39,7 @@ bd_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/c
 bd_r_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_R_TP.csv", header = T, sep = "\t")		
 bd_nr_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_NR_TP.csv", header = T, sep = "\t")
 
-#1a (venn rxns, akkouh vs bd_212_92_670)
-	# x <- list(Akkouh_all = Akkouh_all,	
-	# BD_Lumped = bd_212_tbl$rxnList, BD_R = bd_r_92_tbl$rxnList, BD_NR = bd_nr_670_tbl$rxnList)
-	# p = ggvenn(x, fill_color = c("grey","blue", "green", "red")); p
+	#venn(x, ilab=TRUE, zcolor = "style")
 
 ###############################################################################################
 # https://stats.stackexchange.com/questions/95523/significance-of-overlap-between-multiple-lists
@@ -73,39 +71,23 @@ hyper_matrix <- function(gene.list, background){
       }
     }
   }
-  # round to 2 digit.
   return(combination)
 }
 
 ########################
 # Load Primary_TP_Lithium
 ########################
-Akkouh_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_Akkouh_Output.csv",header = T, sep = "\t")
-Akkouh_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_Akkouh_Input.csv",header = T, sep = "\t")
-bind = bind_rows(Akkouh_Output,Akkouh_Input)
-Akkouh_all = coalesce(bind$m_out, bind$m_in)
 
 # Fig.1: (Primary_TP_Lithium vs BD_Disrupted)
-
-	Akkouh_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_Akkouh_Output.csv",header = T, sep = "\t")
 	Akkouh_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_Akkouh_Input.csv",header = T, sep = "\t")
-	bind = bind_rows(Akkouh_Output,Akkouh_Input)
-	Akkouh_all = coalesce(bind$m_out, bind$m_in)
-	GSE66276_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_GSE66276_Output.csv",header = T, sep = "\t")
 	GSE66276_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_GSE66276_Input.csv",header = T, sep = "\t")
-	bind = bind_rows(GSE66276_Output,GSE66276_Input)
-	GSE66276_all = coalesce(bind$m_out, bind$m_in)
-	GSE132397_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_GSE132397_Output.csv",header = T, sep = "\t")
 	GSE132397_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_GSE132397_Input.csv",header = T, sep = "\t")
-	bind = bind_rows(GSE132397_Output,GSE132397_Input)
-	GSE132397_all = coalesce(bind$m_out, bind$m_in)
-
-	Akkouh_in = Akkouh_Input$m_in #InputRxnsOnly
-	GSE66276_in = GSE66276_Input$m_in #InputRxnsOnly
-	GSE132397_in = GSE132397_Input$m_in #InputRxnsOnly
+	Akkouh = Akkouh_Input$m_in #InputRxnsOnly
+	GSE66276 = GSE66276_Input$m_in #InputRxnsOnly
+	GSE132397 = GSE132397_Input$m_in #InputRxnsOnly
 	
-#1b (venn hypergeometric test, Li+ action-InputRxnsOnly vs BD signature) - Li_GSE132397_removed
-	x <- list(Li_Akkouh = Akkouh_in, Li_GSE66276 = GSE66276_in,	
+	#1b (plot_hypermat) - Li_GSE132397_removed
+	x <- list(Li_Akkouh = Akkouh, Li_GSE66276 = GSE66276,	
 	BD_Lumped = bd_212_tbl$rxnList, BD_R = bd_r_92_tbl$rxnList, BD_NR = bd_nr_670_tbl$rxnList)
 	
 	y = list(iAstro_Primary_TP$Var1, iAstro_iPS_BD_TP$Var1, iAstro_iPS_BD_R_TP$Var1, iAstro_iPS_BD_NR_TP$Var1);
@@ -118,26 +100,15 @@ Akkouh_all = coalesce(bind$m_out, bind$m_in)
 	M.adj
 
 # Fig.2: (iPS_Ctrl_TP_Lithium vs BD_Disrupted)
-
-	Akkouh_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iPS_Ctrl_TP_Akkouh_Output.csv",header = T, sep = "\t")
 	Akkouh_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iPS_Ctrl_TP_Akkouh_Input.csv",header = T, sep = "\t")
-	bind = bind_rows(Akkouh_Output,Akkouh_Input)
-	Akkouh_all = coalesce(bind$m_out, bind$m_in)
-	GSE66276_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iPS_Ctrl_TP_GSE66276_Output.csv",header = T, sep = "\t")
 	GSE66276_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iPS_Ctrl_TP_GSE66276_Input.csv",header = T, sep = "\t")
-	bind = bind_rows(GSE66276_Output,GSE66276_Input)
-	GSE66276_all = coalesce(bind$m_out, bind$m_in)
-	GSE132397_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iPS_Ctrl_TP_GSE132397_Output.csv",header = T, sep = "\t")
 	GSE132397_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iPS_Ctrl_TP_GSE132397_Input.csv",header = T, sep = "\t")
-	bind = bind_rows(GSE132397_Output,GSE132397_Input)
-	GSE132397_all = coalesce(bind$m_out, bind$m_in)
+	Akkouh = Akkouh_Input$m_in #InputRxnsOnly
+	GSE66276 = GSE66276_Input$m_in #InputRxnsOnly
+	GSE132397 = GSE132397_Input$m_in #InputRxnsOnly
 
-	Akkouh_in = Akkouh_Input$m_in #InputRxnsOnly
-	GSE66276_in = GSE66276_Input$m_in #InputRxnsOnly
-	GSE132397_in = GSE132397_Input$m_in #InputRxnsOnly
-
-#2b (venn hypergeometric test, Li+ action-InputRxnsOnly vs BD signature) - Li_GSE132397_removed
-	x <- list(Li_Akkouh = Akkouh_in, Li_GSE66276 = GSE66276_in,	
+	#2b (plot_hypermat) - Li_GSE132397_removed
+	x <- list(Li_Akkouh = Akkouh, Li_GSE66276 = GSE66276,	
 	BD_Lumped = bd_212_tbl$rxnList, BD_R = bd_r_92_tbl$rxnList, BD_NR = bd_nr_670_tbl$rxnList)
 	
 	y = list(iAstro_iPS_Ctrl_TP$Var1, iAstro_iPS_BD_TP$Var1, iAstro_iPS_BD_R_TP$Var1, iAstro_iPS_BD_NR_TP$Var1);
@@ -150,26 +121,15 @@ Akkouh_all = coalesce(bind$m_out, bind$m_in)
 	M.adj
 
 # Fig.3: (iPS_BD_TP_Lithium vs BD_Disrupted)
-
-	Akkouh_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iPS_BD_TP_Akkouh_Output.csv",header = T, sep = "\t")
 	Akkouh_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iPS_BD_TP_Akkouh_Input.csv",header = T, sep = "\t")
-	bind = bind_rows(Akkouh_Output,Akkouh_Input)
-	Akkouh_all = coalesce(bind$m_out, bind$m_in)
-	GSE66276_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iPS_BD_TP_GSE66276_Output.csv",header = T, sep = "\t")
 	GSE66276_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iPS_BD_TP_GSE66276_Input.csv",header = T, sep = "\t")
-	bind = bind_rows(GSE66276_Output,GSE66276_Input)
-	GSE66276_all = coalesce(bind$m_out, bind$m_in)
-	GSE132397_Output <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iPS_BD_TP_GSE132397_Output.csv",header = T, sep = "\t")
 	GSE132397_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iPS_BD_TP_GSE132397_Input.csv",header = T, sep = "\t")
-	bind = bind_rows(GSE132397_Output,GSE132397_Input)
-	GSE132397_all = coalesce(bind$m_out, bind$m_in)
-
-	Akkouh_in = Akkouh_Input$m_in #InputRxnsOnly
-	GSE66276_in = GSE66276_Input$m_in #InputRxnsOnly
-	GSE132397_in = GSE132397_Input$m_in #InputRxnsOnly
+	Akkouh = Akkouh_Input$m_in #InputRxnsOnly
+	GSE66276 = GSE66276_Input$m_in #InputRxnsOnly
+	GSE132397 = GSE132397_Input$m_in #InputRxnsOnly
 	
-#3b (venn hypergeometric test, Li+ action-InputRxnsOnly vs BD signature) - Li_GSE132397_removed
-	x <- list(Li_Akkouh = Akkouh_in, Li_GSE66276 = GSE66276_in,	
+	#3b (plot_hypermat) - Li_GSE132397_removed
+	x <- list(Li_Akkouh = Akkouh, Li_GSE66276 = GSE66276,	
 	BD_Lumped = bd_212_tbl$rxnList, BD_R = bd_r_92_tbl$rxnList, BD_NR = bd_nr_670_tbl$rxnList)
 	
 	y = list(iAstro_iPS_BD_TP$Var1, iAstro_iPS_BD_R_TP$Var1, iAstro_iPS_BD_NR_TP$Var1);
@@ -181,3 +141,13 @@ Akkouh_all = coalesce(bind$m_out, bind$m_in)
 	main = 'Li+ (iPS_BD) vs BD', color=colorRampPalette(c("green", "yellow", "orangered"))(50))
 	M.adj	
 
+	M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
+	M.int
+	
+################
+# rnxs slice
+################
+	#li_bd_nr_107
+	li_bd_nr_107 = intersect(bd_nr_670_tbl$rxnList,	GSE66276)
+	length(li_bd_nr_107)
+	write.table(li_bd_nr_107, "li_bd_nr_107.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)	
