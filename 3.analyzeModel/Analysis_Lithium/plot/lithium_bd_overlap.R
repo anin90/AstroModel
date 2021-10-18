@@ -97,7 +97,9 @@ hyper_matrix <- function(gene.list, background){
     rownames(M.adj) = rownames(M); colnames(M.adj) = colnames(M);
 	pheatmap(M.adj, cluster_rows=F, cluster_cols=F, na_col="white", display_numbers = TRUE, number_format = "%.1e",
 	main = 'Li+ (Primary) vs BD', color=colorRampPalette(c("green", "yellow", "orangered"))(50))
-	M.adj
+	
+	M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
+	M.int
 
 # Fig.2: (iPS_Ctrl_TP_Lithium vs BD_Disrupted)
 	Akkouh_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iPS_Ctrl_TP_Akkouh_Input.csv",header = T, sep = "\t")
@@ -118,7 +120,9 @@ hyper_matrix <- function(gene.list, background){
     rownames(M.adj) = rownames(M); colnames(M.adj) = colnames(M);
 	pheatmap(M.adj, cluster_rows=F, cluster_cols=F, na_col="white", display_numbers = TRUE, number_format = "%.1e",
 	main = 'Li+ (iPS_Ctrl) vs BD', color=colorRampPalette(c("green", "yellow", "orangered"))(50))
-	M.adj
+	
+	M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
+	M.int
 
 # Fig.3: (iPS_BD_TP_Lithium vs BD_Disrupted)
 	Akkouh_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/iPS_BD_TP_Akkouh_Input.csv",header = T, sep = "\t")
@@ -139,7 +143,6 @@ hyper_matrix <- function(gene.list, background){
     rownames(M.adj) = rownames(M); colnames(M.adj) = colnames(M);
 	pheatmap(M.adj, cluster_rows=F, cluster_cols=F, na_col="white", display_numbers = TRUE, number_format = "%.1e",
 	main = 'Li+ (iPS_BD) vs BD', color=colorRampPalette(c("green", "yellow", "orangered"))(50))
-	M.adj	
 
 	M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
 	M.int
@@ -147,7 +150,21 @@ hyper_matrix <- function(gene.list, background){
 ################
 # rnxs slice
 ################
-	#li_bd_nr_107
-	li_bd_nr_107 = intersect(bd_nr_670_tbl$rxnList,	GSE66276)
-	length(li_bd_nr_107)
-	write.table(li_bd_nr_107, "li_bd_nr_107.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)	
+	li_bd_Akkouh = intersect(bd_212_tbl$rxnList, Akkouh);	li_bd_r_Akkouh = intersect(bd_r_92_tbl$rxnList, Akkouh);
+	li_bd_nr_Akkouh = intersect(bd_nr_670_tbl$rxnList, Akkouh);	li_bd_GSE66276 = intersect(bd_212_tbl$rxnList, GSE66276);
+	li_bd_r_GSE66276 = intersect(bd_r_92_tbl$rxnList, GSE66276);	li_bd_nr_GSE66276 = intersect(bd_nr_670_tbl$rxnList, GSE66276);
+	x = c(length(li_bd_Akkouh), length(li_bd_r_Akkouh), length(li_bd_nr_Akkouh), length(li_bd_GSE66276), length(li_bd_r_GSE66276), 
+			length(li_bd_nr_GSE66276)); x;
+
+
+
+
+
+
+
+
+
+
+
+
+

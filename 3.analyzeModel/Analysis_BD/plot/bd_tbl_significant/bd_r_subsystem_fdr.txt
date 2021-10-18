@@ -1,0 +1,3 @@
+	subSystem	n.x	n.y	p.val	p.val.fdr
+16	Transport, nuclear	4	46	0.00464073970862373	0.0440870272319255
+5	Fatty acid oxidation	32	799	5.19164941966173e-08	9.86413389735729e-07
