@@ -1,0 +1,3 @@
+	subSystem	n
+1	Glutamate metabolism	1
+2	Inositol phosphate metabolism	1

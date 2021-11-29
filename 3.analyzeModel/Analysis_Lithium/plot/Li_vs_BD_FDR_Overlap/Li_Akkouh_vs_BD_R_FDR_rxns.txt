@@ -1,0 +1,3 @@
+	X	rxnList	subSystem	GPR	FluxSpan_a	FluxSpan_b	Flux_Span_Ratio	Var7	Var8
+17	45	FAOXC2251836m	Fatty acid oxidation	34.1 or 35.1	0	10	0	H	[m]
+18	46	FAOXC2252053m	Fatty acid oxidation	35.1 or 34.1	0	10	0	H	[m]

@@ -78,9 +78,9 @@ bd_nr_670_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 		xlab("hypergeometric significance (fdr.adj.p.value)")
 	#write fdr.significant subset to csv	
 	bd_lumped_subsystem_fdr = subset(combStat, p.val.fdr <= 0.05)
-	write.table(bd_lumped_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_lumped_subsystem_fdr.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	write.table(bd_lumped_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_lumped_subsystem_fdr.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 	bd_lumped_rxns_fdr = bd_212_tbl[bd_212_tbl$subSystem %in% bd_lumped_subsystem_fdr$subSystem,]
-	write.table(bd_lumped_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_lumped_rxns_fdr.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	write.table(bd_lumped_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_lumped_rxns_fdr.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 
 # Fig.4: Number of rxns per subSystem (bd_responder)
 	iAstro_iPS_BD_R_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_T_TP/Rxns_iAstro_iPS_BD_R_TP.csv", header = T, sep = "\t")
@@ -108,9 +108,9 @@ bd_nr_670_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 		xlab("hypergeometric significance (fdr.adj.p.value)")
 	#write fdr.significant subset to csv	
 	bd_r_subsystem_fdr = subset(combStat, p.val.fdr <= 0.05)
-	write.table(bd_r_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_r_subsystem_fdr.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA) 
+	write.table(bd_r_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_r_subsystem_fdr.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA) 
 	bd_r_rxns_fdr = bd_r_92_tbl[bd_r_92_tbl$subSystem %in% bd_r_subsystem_fdr$subSystem,]
-	write.table(bd_r_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_r_rxns_fdr.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	write.table(bd_r_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_r_rxns_fdr.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 
 # Fig.5: Number of rxns per subSystem (bd_nonresponder)
 	iAstro_iPS_BD_NR_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_T_TP/Rxns_iAstro_iPS_BD_NR_TP.csv", header = T, sep = "\t")
@@ -138,9 +138,9 @@ bd_nr_670_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 		xlab("hypergeometric significance (fdr.adj.p.value)")	
 	#write fdr.significant subset to csv	
 	bd_nr_subsystem_fdr = subset(combStat, p.val.fdr <= 0.05)
-	write.table(bd_nr_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_nr_subsystem_fdr.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	write.table(bd_nr_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_nr_subsystem_fdr.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 	bd_nr_rxns_fdr = bd_nr_670_tbl[bd_nr_670_tbl$subSystem %in% bd_nr_subsystem_fdr$subSystem,]
-	write.table(bd_nr_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_nr_rxns_fdr.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	write.table(bd_nr_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_nr_rxns_fdr.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 
 # Fig.6: Number of rxns per compartment (bd_lumped)
 	#6a: all.212

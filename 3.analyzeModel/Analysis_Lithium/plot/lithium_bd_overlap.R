@@ -31,6 +31,10 @@ iAstro_iPS_BD_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/
 iAstro_iPS_BD_R_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_T_TP/Rxns_iAstro_iPS_BD_R_TP.csv", header = T, sep = "\t")
 iAstro_iPS_BD_NR_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_T_TP/Rxns_iAstro_iPS_BD_NR_TP.csv", header = T, sep = "\t")
 
+bd_lumped_tbl_all <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_TP.csv", header = T, sep = "\t")
+bd_r_tbl_all <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_R_TP.csv", header = T, sep = "\t")		
+bd_nr_tbl_all <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_NR_TP.csv", header = T, sep = "\t")
+
 bd_212_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_212_tbl.csv", header = T, sep = "\t")
 bd_r_92_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_r_92_tbl.csv", header = T, sep = "\t")		
 bd_nr_670_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_nr_670_tbl.csv", header = T, sep = "\t")
@@ -38,10 +42,6 @@ bd_nr_670_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 bd_lumped_rxns_fdr <- read.table("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_lumped_rxns_fdr.txt", header = T, sep = "\t")
 bd_r_rxns_fdr <- read.table("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_r_rxns_fdr.txt", header = T, sep = "\t")		
 bd_nr_rxns_fdr <- read.table("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_nr_rxns_fdr.txt", header = T, sep = "\t")
-
-#~ bd_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_TP.csv", header = T, sep = "\t")
-#~ bd_r_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_R_TP.csv", header = T, sep = "\t")		
-#~ bd_nr_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_NR_TP.csv", header = T, sep = "\t")
 
 #~ 	venn(x, ilab=TRUE, zcolor = "style")
 
@@ -165,6 +165,29 @@ hyper_matrix <- function(gene.list, background){
 # Load Primary_TP_Lithium
 ########################
 
+#~ # Fig.5: (Primary_TP_Lithium vs BD_Disrupted_all)
+#~ 	Akkouh_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_Akkouh_Input.csv",header = T, sep = "\t")
+#~ 	GSE66276_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_GSE66276_Input.csv",header = T, sep = "\t")
+#~ 	GSE132397_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_GSE132397_Input.csv",header = T, sep = "\t")
+#~ 	Akkouh = Akkouh_Input$m_in #InputRxnsOnly
+#~ 	GSE66276 = GSE66276_Input$m_in #InputRxnsOnly
+#~ 	GSE132397 = GSE132397_Input$m_in #InputRxnsOnly
+	
+#~ 	#5a (plot_hypermat) - Li_GSE132397_removed
+#~ 	x <- list(Li_Akkouh = Akkouh, Li_GSE66276 = GSE66276,	
+#~ 	BD_Lumped = bd_lumped_tbl_all$m, BD_R = bd_r_tbl_all$m, BD_NR = bd_nr_tbl_all$m)
+	
+#~ 	y = list(iAstro_Primary_TP$Var1, iAstro_iPS_BD_TP$Var1, iAstro_iPS_BD_R_TP$Var1, iAstro_iPS_BD_NR_TP$Var1);
+#~ 	yInt = Reduce(intersect,y); background = length(yInt);
+#~ 	M <- hyper_matrix(x, background);	M[upper.tri(M)] <- NA;	diag(M)<-NA;
+#~ 	M.adj = M %>% as.matrix %>% as.vector %>% p.adjust(method='fdr') %>% matrix(ncol=ncol(M));
+#~     rownames(M.adj) = rownames(M); colnames(M.adj) = colnames(M);
+#~ 	pheatmap(M.adj, cluster_rows=F, cluster_cols=F, na_col="white", display_numbers = TRUE, number_format = "%.1e",
+#~ 	main = 'Li+.rxns vs BD.rxns.all', color=colorRampPalette(c("green", "yellow", "orangered"))(50))
+	
+#~ 	M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
+#~ 	M.int
+
 # Fig.4: (Primary_TP_Lithium vs BD_Disrupted_fdr)
 	Akkouh_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_Akkouh_Input.csv",header = T, sep = "\t")
 	GSE66276_Input <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/Primary_TP_GSE66276_Input.csv",header = T, sep = "\t")
@@ -173,7 +196,7 @@ hyper_matrix <- function(gene.list, background){
 	GSE66276 = GSE66276_Input$m_in #InputRxnsOnly
 	GSE132397 = GSE132397_Input$m_in #InputRxnsOnly
 	
-	#4b (plot_hypermat) - Li_GSE132397_removed
+	#4a (plot_hypermat) - Li_GSE132397_removed
 	x <- list(Li_Akkouh = Akkouh, Li_GSE66276 = GSE66276,	
 	BD_Lumped = bd_lumped_rxns_fdr$rxnList, BD_R = bd_r_rxns_fdr$rxnList, BD_NR = bd_nr_rxns_fdr$rxnList)
 	
@@ -189,30 +212,54 @@ hyper_matrix <- function(gene.list, background){
 	M.int
 
 	#rnxs slice
-	li_bd.fdr_Akkouh = intersect(bd_lumped_rxns_fdr$rxnList, Akkouh);
-	li_bd.fdr_r_Akkouh = intersect(bd_r_rxns_fdr$rxnList, Akkouh);
-	li_bd.fdr_nr_Akkouh = intersect(bd_nr_rxns_fdr$rxnList, Akkouh);	
+	li_bd_fdr_Akkouh = intersect(bd_lumped_rxns_fdr$rxnList, Akkouh);
+	li_bd_r_fdr_Akkouh = intersect(bd_r_rxns_fdr$rxnList, Akkouh);
+	li_bd_nr_fdr_Akkouh = intersect(bd_nr_rxns_fdr$rxnList, Akkouh);	
 	
-	li_bd.fdr_GSE66276 = intersect(bd_lumped_rxns_fdr$rxnList, GSE66276);
-	li_bd.fdr_r_GSE66276 = intersect(bd_r_rxns_fdr$rxnList, GSE66276);
-	li_bd.fdr_nr_GSE66276 = intersect(bd_nr_rxns_fdr$rxnList, GSE66276);
+	li_bd_fdr_GSE66276 = intersect(bd_lumped_rxns_fdr$rxnList, GSE66276);
+	li_bd_r_fdr_GSE66276 = intersect(bd_r_rxns_fdr$rxnList, GSE66276);
+	li_bd_nr_fdr_GSE66276 = intersect(bd_nr_rxns_fdr$rxnList, GSE66276);
 	
-	x = c(length(li_bd.fdr_Akkouh), length(li_bd.fdr_r_Akkouh), length(li_bd.fdr_nr_Akkouh),
-			length(li_bd.fdr_GSE66276), length(li_bd.fdr_r_GSE66276), length(li_bd.fdr_nr_GSE66276)); x;
+	x = c(length(li_bd_fdr_Akkouh), length(li_bd_r_fdr_Akkouh), length(li_bd_nr_fdr_Akkouh),
+			length(li_bd_fdr_GSE66276), length(li_bd_r_fdr_GSE66276), length(li_bd_nr_fdr_GSE66276)); x;
 
-	#write fdr.significant subset to csv
-	#Li_GSE66276_vs_BD_NR_FDR	
-	Li_GSE66276_vs_BD_NR_FDR_rxns = bd_nr_rxns_fdr[bd_nr_rxns_fdr$rxnList %in% li_bd.fdr_nr_GSE66276,]
-	write.table(Li_GSE66276_vs_BD_NR_FDR_rxns, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Li_vs_BD_FDR_Overlap/Li_GSE66276_vs_BD_NR_FDR_rxns.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
-	Li_GSE66276_vs_BD_NR_FDR_subSystem = Li_GSE66276_vs_BD_NR_FDR_rxns %>% count(subSystem)
-	write.table(Li_GSE66276_vs_BD_NR_FDR_subSystem, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Li_vs_BD_FDR_Overlap/Li_GSE66276_vs_BD_NR_FDR_subSystem.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
-	head(Li_GSE66276_vs_BD_NR_FDR_subSystem)
+	#write fdr.significant subset to csv		
+	#Li_Akkouh_vs_BD_Lumped_FDR	
+	Li_Akkouh_vs_BD_Lumped_FDR_rxns = bd_lumped_rxns_fdr[bd_lumped_rxns_fdr$rxnList %in% li_bd_fdr_Akkouh,]
+	write.table(Li_Akkouh_vs_BD_Lumped_FDR_rxns, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Li_vs_BD_FDR_Overlap/Li_Akkouh_vs_BD_Lumped_FDR_rxns.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	Li_Akkouh_vs_BD_Lumped_FDR_subSystem = Li_Akkouh_vs_BD_Lumped_FDR_rxns %>% count(subSystem)
+	write.table(Li_Akkouh_vs_BD_Lumped_FDR_subSystem, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Li_vs_BD_FDR_Overlap/Li_Akkouh_vs_BD_Lumped_FDR_subSystem.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	head(Li_Akkouh_vs_BD_Lumped_FDR_subSystem)
+	#Li_Akkouh_vs_BD_R_FDR	
+	Li_Akkouh_vs_BD_R_FDR_rxns = bd_r_rxns_fdr[bd_r_rxns_fdr$rxnList %in% li_bd_r_fdr_Akkouh,]
+	write.table(Li_Akkouh_vs_BD_R_FDR_rxns, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Li_vs_BD_FDR_Overlap/Li_Akkouh_vs_BD_R_FDR_rxns.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	Li_Akkouh_vs_BD_R_FDR_subSystem = Li_Akkouh_vs_BD_R_FDR_rxns %>% count(subSystem)
+	write.table(Li_Akkouh_vs_BD_R_FDR_subSystem, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Li_vs_BD_FDR_Overlap/Li_Akkouh_vs_BD_R_FDR_subSystem.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	head(Li_Akkouh_vs_BD_R_FDR_subSystem)
+	#Li_Akkouh_vs_BD_NR_FDR	
+	Li_Akkouh_vs_BD_NR_FDR_rxns = bd_nr_rxns_fdr[bd_nr_rxns_fdr$rxnList %in% li_bd_nr_fdr_Akkouh,]
+	write.table(Li_Akkouh_vs_BD_NR_FDR_rxns, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Li_vs_BD_FDR_Overlap/Li_Akkouh_vs_BD_NR_FDR_rxns.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	Li_Akkouh_vs_BD_NR_FDR_subSystem = Li_Akkouh_vs_BD_NR_FDR_rxns %>% count(subSystem)
+	write.table(Li_Akkouh_vs_BD_NR_FDR_subSystem, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Li_vs_BD_FDR_Overlap/Li_Akkouh_vs_BD_NR_FDR_subSystem.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	head(Li_Akkouh_vs_BD_NR_FDR_subSystem)
+	
 	#Li_GSE66276_vs_BD_Lumped_FDR	
-	Li_GSE66276_vs_BD_Lumped_FDR_rxns = bd_lumped_rxns_fdr[bd_lumped_rxns_fdr$rxnList %in% li_bd.fdr_GSE66276,]
+	Li_GSE66276_vs_BD_Lumped_FDR_rxns = bd_lumped_rxns_fdr[bd_lumped_rxns_fdr$rxnList %in% li_bd_fdr_GSE66276,]
 	write.table(Li_GSE66276_vs_BD_Lumped_FDR_rxns, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Li_vs_BD_FDR_Overlap/Li_GSE66276_vs_BD_Lumped_FDR_rxns.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 	Li_GSE66276_vs_BD_Lumped_FDR_subSystem = Li_GSE66276_vs_BD_Lumped_FDR_rxns %>% count(subSystem)
 	write.table(Li_GSE66276_vs_BD_Lumped_FDR_subSystem, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Li_vs_BD_FDR_Overlap/Li_GSE66276_vs_BD_Lumped_FDR_subSystem.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 	head(Li_GSE66276_vs_BD_Lumped_FDR_subSystem)
-
-
+	#Li_GSE66276_vs_BD_R_FDR	
+	Li_GSE66276_vs_BD_R_FDR_rxns = bd_r_rxns_fdr[bd_r_rxns_fdr$rxnList %in% li_bd_r_fdr_GSE66276,]
+	write.table(Li_GSE66276_vs_BD_R_FDR_rxns, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Li_vs_BD_FDR_Overlap/Li_GSE66276_vs_BD_R_FDR_rxns.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	Li_GSE66276_vs_BD_R_FDR_subSystem = Li_GSE66276_vs_BD_R_FDR_rxns %>% count(subSystem)
+	write.table(Li_GSE66276_vs_BD_R_FDR_subSystem, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Li_vs_BD_FDR_Overlap/Li_GSE66276_vs_BD_R_FDR_subSystem.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	head(Li_GSE66276_vs_BD_R_FDR_subSystem)
+	#Li_GSE66276_vs_BD_NR_FDR	
+	Li_GSE66276_vs_BD_NR_FDR_rxns = bd_nr_rxns_fdr[bd_nr_rxns_fdr$rxnList %in% li_bd_nr_fdr_GSE66276,]
+	write.table(Li_GSE66276_vs_BD_NR_FDR_rxns, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Li_vs_BD_FDR_Overlap/Li_GSE66276_vs_BD_NR_FDR_rxns.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	Li_GSE66276_vs_BD_NR_FDR_subSystem = Li_GSE66276_vs_BD_NR_FDR_rxns %>% count(subSystem)
+	write.table(Li_GSE66276_vs_BD_NR_FDR_subSystem, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Lithium/plot/Li_vs_BD_FDR_Overlap/Li_GSE66276_vs_BD_NR_FDR_subSystem.txt", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	head(Li_GSE66276_vs_BD_NR_FDR_subSystem)
+	
 

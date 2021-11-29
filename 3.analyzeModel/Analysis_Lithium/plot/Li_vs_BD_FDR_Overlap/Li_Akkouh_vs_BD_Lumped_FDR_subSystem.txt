@@ -1,0 +1,3 @@
+	subSystem	n
+1	Fatty acid oxidation	2
+2	Miscellaneous	2
