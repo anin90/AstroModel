@@ -1,0 +1,259 @@
+metID	metName
+13dpg	3-Phospho-D-Glyceroyl Phosphate
+2m3hvac	2-Methyl-3-Hydroxy-Valerate
+2m3ovac	2-Methyl-3-Oxo-Valerate
+2m3ovcoa	2-Methyl-3-Oxo-Valeryl Coenzyme A
+2pg	2-Phospho-D-Glycerate
+3hpp	3-Hydroxypropionate
+3pg	3-Phospho-D-Glycerate
+4abut	4-Aminobutanoate
+CE2243	(2E)-Eicosenoyl Coenzyme A
+CE2247	3-Hydroxyeicosanoyl Coenzyme A
+CE2251	3-Oxoeicosanoyl Coenzyme A
+CE2439	3-Oxo-6Z,9Z,12Z-Octadecatrienoyl Coenzyme A
+CE2440	4Z,7Z,10Z-Hexadecatrienoyl Coenzyme A
+CE2510	11-Cis-Eicosenoate
+CE4843	(11Z,14Z)-Icosadienoyl Coenzyme A
+CE4847	10Z,13Z,16Z-Docosatrienoyl Coenzyme A
+CE4854	10Z,13Z,16Z,19Z-Docosatetraenoyl Coenzyme A
+CE4855	12Z,15Z,18Z,21Z-Tetracosatetraenoyl Coenzyme A
+CE5151	11Z-Eicosenoyl Coenzyme A 
+CE5155	Docosenoyl Coenzyme A
+HC01118	Presqualene Diphosphate
+HC10784	Cis-Myrist-7-Enoyl Coenzyme A
+M00003	10Z-Heptadecenoic Acid
+M00004	10Z-Heptadecenoyl Coenzyme A
+M00006	11Z-Docosenoyl Coenzyme A
+M00008	11Z,14Z-Eicosadienoic Acid
+M00010	11Z,14Z,17Z-Eicosatrienoic Acid
+M00012	11Z,14Z,17Z-Eicosatrienoyl Coenzyme A
+M00017	13Z-Eicosenoic Acid
+M00018	13Z-Eicosenoyl Coenzyme A
+M00019	13Z-Octadecenoic Acid
+M00020	13Z-Octadecenoyl Coenzyme A
+M00021	13Z,16Z-Docosadienoic Acid
+M00023	13Z,16Z-Docosadienoyl Coenzyme A
+M00044	(2E)-Heneicosenoyl Coenzyme A
+M00054	(2E)-Nonadecenoyl Coenzyme A
+M00101	5Z,8Z,11Z-Eicosatrienoyl Coenzyme A
+M00117	7Z-Tetradecenoic Acid
+M00123	8Z,11Z-Eicosadienoyl Coenzyme A
+M00127	9E-Octadecenoic Acid
+M00129	9E-Tetradecenoyl Coenzyme A
+M00260	10Z,13Z,16Z,19Z-Docosatetraenoic Acid
+M00265	10Z,13Z,16Z-Docosatriynoic Acid
+M00315	12Z,15Z,18Z,21Z-Tetracosatetraenoic Acid
+M00341	13Z,16Z,19Z-Docosatrienoic Acid
+M00343	13Z,16Z,19Z-Docosatrienoyl Coenzyme A
+M00702	3(S)-Hydroxy-13-Cis-Eicosenoyl Coenzyme A
+M00778	3-Hydroxyheneicosanoyl Coenzyme A
+M00790	3-Hydroxynonadecanoyl Coenzyme A
+M00843	3-Oxo-13-Cis-Eicosenoyl Coenzyme A
+M00873	3-Oxoheneicosanoyl Coenzyme A
+M00887	3-Oxononadecanoyl Coenzyme A
+M01141	5Z-Tetradecenoyl Coenzyme A
+M01191	7Z-Hexadecenoyl Coenzyme A
+M01197	7Z-Hexadecenoic Acid
+M01207	8Z,11Z-Eicosadienoic Acid
+M01235	9Z-Eicosenoic Acid
+M01236	9Z-Eicosenoyl Coenzyme A
+M01237	9Z-Heptadecenoyl Coenzyme A
+M01238	9Z-Heptadecenoic Acid
+M01454	Cholest-5-En-3B-Yl (9Z-Heptadecenoate)
+M01455	Cholesterol-Ester-11,14,17-Eico
+M01456	Cholest-5-En-3Beta-Yl (11Z,14Z-Eicosadienoate)
+M01457	Cholesterol-Ester-11-Docose
+M01458	Cholest-5-En-3Beta-Yl (11Z-Eicosenoate)
+M01460	Cholesterol-Ester-13,16,19-Doco
+M01461	Cholest-5-En-3Beta-Yl (13Z,16Z-Docosadienoate)
+M01462	Cholest-5-En-3B-Yl (13Z-Docosenoate)
+M01463	Cholesterol-Ester-13-Eicose
+M01464	Cholesterol-Ester-13-Octade
+M01465	Cholest-5-En-3Beta-Yl (15Z-Tetracosenoate)
+M01466	Cholest-5-En-3Beta-Yl (4Z,7Z,10Z,13Z,16Z,19Z-Docosahexaenoate)
+M01467	Cholesterol-Ester-4,7,10,13,16-Docosa
+M01469	Cholesterol-Ester-5,8,11-Eico
+M01470	Cholesterol-Ester-5-Tetra
+M01471	Cholesterol-Ester-6,9,12,15,18,21-Tetra
+M01472	Cholesterol-Ester-6,9,12,15,18-Tetraco
+M01474	Cholesterol-Ester-6,9-Octa
+M01475	Cholest-5-En-3Beta-Yl (7Z,10Z,13Z,16Z,19Z-Docosapentaenoate)
+M01476	Cholest-5-En-3Beta-Yl (7Z,10Z,13Z,16Z-Docosatetraenoate)
+M01477	Cholesterol-Ester-7-Hexa
+M01479	Cholesterol-Ester-7-Tetrade
+M01480	Cholesterol-Ester-8,11,14,17-Eico
+M01481	Cholesterol-Ester-8,11-Eico
+M01482	Cholesterol-Ester-9,12,15,18,21-Tetra
+M01483	Cholesterol-Ester-9,12,15,18-Tetraco
+M01484	Cholesterol-Ester-9-Eicose
+M01485	Cholesterol-Ester-9-Heptade
+M01486	Cholesterol-Ester-9-Octa
+M01487	Cholest-5-En-3B-Yl (9Z-Tetradecenoate)
+M01489	Cholesterol-Ester-Cis-Vac
+M01492	Cholest-5-En-3Beta-Yl Eicosanoate
+M01494	Cholesterol-Ester-Heneico
+M01495	Cholest-5-En-3B-Yl (Heptadecanoate)
+M01496	Cholesterol-Ester-Hexacosa
+M01497	Cholesterol-Ester-Hexecose
+M01498	Cholest-5-En-3Beta-Yl Dodecanoate
+M01501	Cholest-5-En-3Beta-Yl Tetradecanoate
+M01502	Cholest-5-En-3Beta-Yl Nonadecanoate
+M01506	Cholest-5-En-3B-Yl (Pentadecanoate)
+M01508	Cholesterol-Ester-Tetraco
+M01509	Cholesterol-Ester-Trico
+M01510	Cholesterol-Ester-Tridec
+M01582	11Z-Docosenoic Acid
+M02052	Heneicosanoyl Coenzyme A
+M02053	Heneicosanoic Acid
+M02112	17Z-Hexacosenoyl Coenzyme A
+M02457	5Z,8Z,11Z-Eicosatrienoic Acid
+M02612	Nonadecanoyl Coenzyme A
+M02613	Nonadecanoic Acid
+M02745	5Z-Tetradecenoic Acid
+M03014	Trans,Cis-2,13-Eicosadienoyl Coenzyme A
+M03045	Tricosanoic Acid
+M03047	Tricosanoyl Coenzyme A
+M03050	Tridecanoyl Coenzyme A
+M03051	Tridecanoic Acid
+M03153	17Z-Hexacosenoic Acid
+Ssq23epx	Squalene 2,3-Epoxide
+aacoa	Acetoacetyl Coenzyme A
+ac	Acetate
+acac	Acetoacetate
+accoa	Acetyl Coenzyme A
+adp	Adenosine Diphosphate
+adrn	Adrenic Acid
+adrncoa	Adrenoyl Coenzyme A
+akg	2-Oxoglutarate
+amp	Adenosine Monophosphate
+apoC	Apocarboxlase (No Lys Residue)
+apoC_Lys	Apoc-Lysine
+apoC_Lys_btn	Holocarboxylase (Biotin Covalent Bound To Lys Residue Of Apoc)
+arach	Arachidic Acid
+arachcoa	Arachidoyl Coenzyme A
+atp	Adenosine Triphosphate
+biocyt	Biocytin
+btamp	Biotinyl-5-Adenosine-5'-Monophosphate
+btn	Biotin
+c226coa	Cervonyl Coenzyme A
+chsterol	Cholesterol
+clpnd	Docosapentaenoic Acid
+clpndcoa	Docosa-7,10,13,16,19-All-Cis-Pentaenoyl Coenzyme A
+cmp	Cytidine 5'-Monophosphate
+co2	Carbon Dioxide
+coa	Coenzyme A
+crvnc	Cervonic Acid, C22:6 N-3
+cytd	Cytidine
+dadp	Deoxyadenosine Diphosphate
+dag_hs	Diglyceride
+datp	Deoxyadenosine Triphosphate
+dcmp	Deoxycytidylic Acid
+dcsptn1	(4Z,7Z,10Z,13Z,16Z)-Docosa-4,7,10,13,16-Pentaenoic Acid
+dcsptn1coa	(4Z,7Z,10Z,13Z,16Z)-Docosapentaenoyl Coenzyme A
+dcyt	Deoxycytidine
+ddca	Dodecanoic Acid
+ddcacoa	Lauroyl Coenzyme A
+dhap	Dihydroxyacetone Phosphate
+dlnlcg	Dihomo-Gamma-Linolenate
+dlnlcgcoa	Dihomo-Gamma-Linolenyl Coenzyme A
+doco13ac	13-Docosenoate
+docosac	Docosanoic Acid
+docoscoa	Docosanoyl Coenzyme A
+dtmp	Deoxythymidine-5'-Phosphate
+dump	Deoxyuridine-5'-Monophosphate
+duri	Deoxyuridine
+eicostet	Omega-3-Arachidonic Acid
+eicostetcoa	(8Z,11Z,14Z,17Z)-Eicosatetraenoyl Coenzyme A
+elaid	(9E)-Octadecenoic Acid
+fad	Flavin Adenine Dinucleotide Oxidized
+fadh2	Flavin Adenine Dinucleotide Reduced
+frdp	Farnesyl Diphosphate
+g1p	D-Glucose 1-Phosphate
+g6p	D-Glucose 6-Phosphate
+glc_D	D-Glucose
+gln_L	L-Glutamine
+glu_L	L-Glutamate
+glyc3p	Glycerol 3-Phosphate
+h	Proton
+h2o	Water
+hexc	Cerotic Acid
+hexccoa	Hexacosanoyl Coenzyme A
+hmgcoa	Hydroxymethylglutaryl Coenzyme A
+hpdca	Margaric Acid
+hpdcacoa	Heptadecanoyl Coenzyme A
+idp	Inosine-5'-Diphosphate
+inost	Myo-Inositol
+itp	Iinosine-5'-Triphosphate
+lanost	Lanosterol
+lgnc	Lignocerate
+lneldc	Linoelaidic Acid (All Trans C18:2)
+lneldccoa	(6Z,9Z)-Octadecadienoyl Coenzyme A
+lys_L	L-Lysine
+malcoa	Malonyl Coenzyme A
+mi1345p	1D-Myo-Inositol 1,3,4,5-Tetrakisphosphate
+mi134p	1D-Myo-Inositol 1,3,4-Trisphosphate
+mi145p	1D-Myo-Inositol 1,4,5-Trisphosphate
+mi14p	(1R,2R,3R,4R,5R,6S)-2,3,5,6-Tetrahydroxy-4-(Phosphonatooxy)Cyclohexyl Phosphate
+mi1p_D	1D-Myo-Inositol 1-Phosphate
+mi34p	1D-Myo-Inositol 3,4-Bisphosphate
+mi3p_D	1D-Myo-Inositol 3-Phosphate
+mi4p_D	1D-Myo-Inositol 4-Phosphate
+minohp	Myo-Inositol Hexakisphosphate
+msa	3-Oxopropanoate
+nad	Nicotinamide Adenine Dinucleotide
+nadh	Nicotinamide Adenine Dinucleotide - Reduced
+nadp	Nicotinamide Adenine Dinucleotide Phosphate
+nadph	Nicotinamide Adenine Dinucleotide Phosphate - Reduced
+nh4	Ammonium
+nrvnc	Nervonic Acid
+nrvnccoa	Cis-15-Tetracosenoyl Coenzyme A
+o2	Oxygen
+ocdca	Octadecanoate (N-C18:0)
+pail345p_hs	1-Phosphatidyl-1D-Myo-Inositol 3,4,5-Trisphosphate
+pail34p_hs	1-Phosphatidyl-1D-Myo-Inositol 3,4-Bisphosphate
+pail35p_hs	1-Phosphatidyl-1D-Myo-Inositol 3,5-Bisphosphate
+pail3p_hs	1-Phosphatidyl-1D-Myo-Inositol 3-Phosphate
+pail45p_hs	Phosphatidylinositol 4,5-Bisphosphate
+pail4p_hs	1-Phosphatidyl-1D-Myo-Inositol 4-Phosphate
+pail5p_hs	1-Phosphatidyl-1D-Myo-Inositol 5-Phosphate
+pail_hs	1-Phosphatidyl-1D-Myo-Inositol
+pdx5p	Pyridoxine 5-Phosphate
+pep	Phosphoenolpyruvate
+pi	Orthophosphate
+ppa	Propionate
+ppcoa	Propanoyl Coenzyme A
+ppi	Diphosphate
+ppmi12346p	5-Diphosphoinositol Pentakisphosphate
+ptdca	Pentadecanoic Acid
+ptdcacoa	Pentadecanoyl Coenzyme A
+pyam5p	Pyridoxamine 5-Phosphate
+pydam	Pyridoxamine
+pydx	Pyridoxal
+pydx5p	Pyridoxal 5-Phosphate
+pydxn	Pyridoxine
+pyr	Pyruvate
+r1p	Alpha-D-Ribose 1-Phosphate
+sql	Squalene
+stcoa	Stearoyl Coenzyme A (N-C18:0 Coenzyme A)
+strdnc	Stearidonic Acid C18:4, N-3
+strdnccoa	Stearidonoyl Coenzyme A
+succ	Succinate
+sucsal	Succinic Semialdehyde
+tdcoa	Myristoyl Coenzyme A
+tethex3	6Z,9Z,12Z,15Z,18Z,21Z-Tetracosahexaenoic Acid
+tethex3coa	Tetracosa-6,9,12,15,18,21-All-Cis-Hexaenoyl Coenzyme A
+tetpent3	9Z,12Z,15Z,18Z,21Z-Tetracosapentaenoic Acid
+tetpent3coa	(9Z,12Z,15Z,18Z,21Z)-Tetracosapentaenoyl Coenzyme A
+tetpent6	6Z,9Z,12Z,15Z,18Z-Tetracosapentaenoic Acid
+tetpent6coa	Tetracosa-6,9,12,15,18-All-Cis-Pentaenoyl Coenzyme A
+tettet6	9Z,12Z,15Z,18Z-Tetracosatetraenoic Acid
+tettet6coa	(9Z,12Z,15Z,18Z)-Tetracosatetraenoyl Coenzyme A
+thymd	Thymidine
+ttccoa	Tetracosanoyl Coenzyme A
+ttdca	Tetradecanoic Acid
+ttdcea	9E-Tetradecenoic Acid (N-C14:1)
+ump	Uridine-5'-Monophosphate
+ura	Uracil
+uri	Uridine
+vacc	Vaccenic Acid
+vacccoa	11Z-Octadecenoyl Coenzyme A

@@ -1,0 +1,44 @@
+metID	metName
+2ddecdicoa	2,6-Dodecadienoyl Coenzyme A
+2docopencoa	2,7,10,13,16-Docosapentenoyl Coenzyme A
+2hexdtricoa	2,7,10-Hexadecatrienoyl Coenzyme A
+2octdectecoa	2,6,9,12-Octadecatetraenoyl Coenzyme A
+3ddecdicoa	3,6-Dodecadienoyl Coenzyme A
+3docopencoa	3,7,10,13,16-Docosapentenoyl Coenzyme A
+3hexdtricoa	3,7,10-Hexadecatrienoyl Coenzyme A
+3octdectecoa	3,6,9,12-Octadecatetraenoyl Coenzyme A
+4hexdtricoa	4,7,10-Hexadecatrienoyl Coenzyme A
+CE2243	(2E)-Eicosenoyl Coenzyme A
+CE2247	3-Hydroxyeicosanoyl Coenzyme A
+CE2251	3-Oxoeicosanoyl Coenzyme A
+accoa	Acetyl Coenzyme A
+arachcoa	Arachidoyl Coenzyme A
+coa	Coenzyme A
+crn	L-Carnitine
+dcsptn1coa	(4Z,7Z,10Z,13Z,16Z)-Docosapentaenoyl Coenzyme A
+dcsptn1crn	4Z,7Z,10Z,13Z,16Z-Docosapentaenoylcarnitine
+dece4coa	4-Decenoyl Coenzyme A
+docohexcoa	2,4,7,10,13,16-Docosahexenoyl Coenzyme A
+eipencoa	2,5,8,11,14-Eicosapentaenoyl Coenzyme A
+eitetcoa	5,8,11,14-Eicosatetraenoyl Coenzyme A
+fad	Flavin Adenine Dinucleotide Oxidized
+fadh2	Flavin Adenine Dinucleotide Reduced
+h	Proton
+h2o	Water
+h2o2	Hydrogen Peroxide
+hdcecrn	Palmitoleoyl-Carnitine
+hdcoa	Palmitoleyl Coenzyme A
+hexdectecoa	2,4,7,10-Hexadecatetraenoyl Coenzyme A
+lnlncgcoa	Gamma-Linolenoyl Coenzyme A
+nad	Nicotinamide Adenine Dinucleotide
+nadh	Nicotinamide Adenine Dinucleotide - Reduced
+nadp	Nicotinamide Adenine Dinucleotide Phosphate
+nadph	Nicotinamide Adenine Dinucleotide Phosphate - Reduced
+o2	Oxygen
+pail_hs	1-Phosphatidyl-1D-Myo-Inositol
+stcoa	Stearoyl Coenzyme A (N-C18:0 Coenzyme A)
+tetdecdicoa	5,8-Tetradecadienoyl Coenzyme A
+tmndnccoa	Eicosa-5,8,11,14,17-All-Cis-Pentaenoyl Coenzyme A
+trdox	Oxidized Thioredoxin
+trdrd	Reduced Thioredoxin
+utp	Uridine-5'-TrIphosphate
