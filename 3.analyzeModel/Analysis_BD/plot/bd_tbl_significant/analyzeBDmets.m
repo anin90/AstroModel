@@ -29,6 +29,7 @@ rxnFormula_bd_lumped = rxnFormula_bd_lumped';
 [mets_bd_lumped] = printUniqueMets(model, dat_rxns);
 
 %% bd_significant_r
+% rxns
 model = iAstro_iPS_BD_R_TP; dat_rxns = bd_significant_r.rxnList;
 [rxnFormula_bd_r]= deal(repmat({''},size(dat_rxns))');
 for i = 1:length(dat_rxns);
@@ -40,6 +41,7 @@ rxnFormula_bd_r = rxnFormula_bd_r';
 [mets_bd_r] = printUniqueMets(model, dat_rxns);
 
 %% bd_significant_nr
+% rxns
 model = iAstro_iPS_BD_NR_TP; dat_rxns = bd_significant_nr.rxnList;
 [rxnFormula_bd_nr]= deal(repmat({''},size(dat_rxns))');
 for i = 1:length(dat_rxns);
@@ -54,12 +56,15 @@ rxnFormula_bd_nr = rxnFormula_bd_nr';
 % rxns
 bd_significant_lumped = [bd_significant_lumped rxnFormula_bd_lumped];
 bd_significant_lumped.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'fluxspan_a', 'fluxspan_b', 'FluxSpanRatio', 'direction', 'localization', 'rxnFormula'};
+writetable(bd_significant_lumped, 'rxns_bd_lumped.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
 bd_significant_r = [bd_significant_r rxnFormula_bd_r];
 bd_significant_r.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'fluxspan_a', 'fluxspan_b', 'FluxSpanRatio', 'direction', 'localization', 'rxnFormula'};
+writetable(bd_significant_r, 'rxns_bd_r.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
 bd_significant_nr = [bd_significant_nr rxnFormula_bd_nr];
 bd_significant_nr.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'fluxspan_a', 'fluxspan_b', 'FluxSpanRatio', 'direction', 'localization', 'rxnFormula'};
+writetable(bd_significant_nr, 'rxns_bd_nr.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
 % mets
 writetable(mets_bd_lumped, 'mets_bd_lumped.csv', 'WriteVariableNames', true, 'Delimiter','\t');
