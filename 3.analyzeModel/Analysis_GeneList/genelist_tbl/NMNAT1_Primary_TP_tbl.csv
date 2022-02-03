@@ -1,0 +1,7 @@
+rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	direction	localization
+DNADtn	Transport, nuclear		364.166666666668	182.083333333334	2	L	intercompartmental
+NICRNTtn	Transport, nuclear		364.166666666667	182.083333333333	2	L	intercompartmental
+NMNATn	NAD metabolism	64802.1	1000	500	2	L	[n]
+NMNtn	Transport, nuclear		1000	500	2	L	intercompartmental
+NNATn	NAD metabolism	64802.1	364.166666666667	182.083333333333	2	L	[n]
+NNATr	NAD metabolism	349565.1 or 23057.2 or 23057.1 or 64802.1	364.166666666668	182.083333333334	2	L	[c]

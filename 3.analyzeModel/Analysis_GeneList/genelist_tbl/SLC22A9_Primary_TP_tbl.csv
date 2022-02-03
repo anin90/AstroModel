@@ -1,0 +1,127 @@
+rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	direction	localization
+C120CPT1	Fatty acid oxidation	1374.1 or 1375.1 or 126129.1	10	5	2	L	[c]
+C140CPT1	Fatty acid oxidation	1374.1 or 1375.1 or 126129.1	2000	1145	1.74672489082969	L	[c]
+C226CRNt	Fatty acid oxidation		2000	1010	1.98019801980198	L	intercompartmental
+CLPNDCRNt	Fatty acid oxidation	788.1	2000	1040	1.92307692307692	L	intercompartmental
+DCSPTN1CRNt	Fatty acid oxidation	788.1	2000	1000	2	L	intercompartmental
+DDECCRNe	Fatty acid oxidation		10	5	2	L	intercompartmental
+EX_ddecrn[e]	Exchange/demand reaction		10	5	2	L	[e]
+FAOXC162C142m	Fatty acid oxidation	37.1 and 3030.1 and 3032.1	40	20	2	L	[m]
+FAOXC182806m	Fatty acid oxidation	34.1 or 35.1	40	20	2	L	[m]
+FAOXC182C162m	Fatty acid oxidation	37.1 and 3030.1 and 3032.1	40	20	2	L	[m]
+HMR_2263	Fatty acid synthesis	60481.1 or 64834.1 or 6785.1 or 83401.1 or 79993.1 or 79071.1 or 54898.1	419	209.5	2	L	[c]
+HMR_2264	Fatty acid synthesis	51144.1	419	209.5	2	L	[c]
+HMR_2265	Fatty acid synthesis	51495.1 or 192286.1 or 9200.1 or 401494.1 or 201562.1	419	209.5	2	L	[c]
+HMR_2266	Fatty acid synthesis	9524.1 or 253017.1	419	209.5	2	L	[c]
+HMR_2342	Fatty acid synthesis	60481.1 or 64834.1 or 6785.1 or 83401.1 or 79993.1 or 79071.1 or 54898.1	419	209.5	2	L	[c]
+HMR_2343	Fatty acid synthesis	51144.1	419	209.5	2	L	[c]
+HMR_2344	Fatty acid synthesis	51495.1 or 192286.1 or 9200.1 or 401494.1 or 201562.1	419	209.5	2	L	[c]
+HMR_2345	Fatty acid synthesis	9524.1 or 253017.1	419	209.5	2	L	[c]
+HMR_2353	Fatty acid synthesis	60481.1 or 64834.1 or 6785.1 or 83401.1 or 79993.1 or 79071.1 or 54898.1	42.5	21.25	2	L	[c]
+HMR_2354	Fatty acid synthesis	51144.1	42.5	21.25	2	L	[c]
+HMR_2355	Fatty acid synthesis	51495.1 or 192286.1 or 9200.1 or 401494.1 or 201562.1	42.5	21.25	2	L	[c]
+HMR_2356	Fatty acid synthesis	9524.1 or 253017.1	42.5	21.25	2	L	[c]
+HMR_2365	Fatty acid synthesis	9415.1 or 3992.1 or 3995.1	22.5	11.25	2	L	[c]
+HMR_2433	Fatty acid synthesis	60481.1 or 64834.1 or 6785.1 or 83401.1 or 79993.1 or 79071.1 or 54898.1	40	20	2	L	[c]
+HMR_2434	Fatty acid synthesis	51144.1	40	20	2	L	[c]
+HMR_2435	Fatty acid synthesis	51495.1 or 192286.1 or 9200.1 or 401494.1 or 201562.1	40	20	2	L	[c]
+HMR_2436	Fatty acid synthesis	9524.1 or 253017.1	40	20	2	L	[c]
+HMR_2540	Fatty acid synthesis	60481.1 or 64834.1 or 6785.1 or 83401.1 or 79993.1 or 79071.1 or 54898.1	10	5	2	L	[c]
+HMR_2541	Fatty acid synthesis	51144.1	10	5	2	L	[c]
+HMR_2542	Fatty acid synthesis	51495.1 or 192286.1 or 9200.1 or 401494.1 or 201562.1	10	5	2	L	[c]
+HMR_2543	Fatty acid synthesis	9524.1 or 253017.1	10	5	2	L	[c]
+HMR_2602	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	10	5	2	L	[c]
+HMR_2603	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	10	5	2	L	intercompartmental
+HMR_2604	Transport, mitochondrial	1384.1 or 1376.1	10	5	2	L	[m]
+HMR_2608	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	2000	1000	2	L	[c]
+HMR_2609	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2610	Transport, mitochondrial	1384.1 or 1376.1	2000	1000	2	L	[m]
+HMR_2612	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2620	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	145	72.5	2	L	[c]
+HMR_2621	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	145	72.5	2	L	intercompartmental
+HMR_2622	Transport, mitochondrial	1384.1 or 1376.1	145	72.5	2	L	[m]
+HMR_2624	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2634	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	155	77.5	2	L	intercompartmental
+HMR_2644	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2655	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2660	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	461.5	230.75	2	L	[c]
+HMR_2661	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	461.5	230.75	2	L	intercompartmental
+HMR_2662	Transport, mitochondrial	1384.1 or 1376.1	461.5	230.75	2	L	[m]
+HMR_2667	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2669	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	42.5	21.25	2	L	[c]
+HMR_2670	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	42.5	21.25	2	L	intercompartmental
+HMR_2671	Transport, mitochondrial	1384.1 or 1376.1	42.5	21.25	2	L	[m]
+HMR_2673	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2675	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	838.000000000002	419.000000000001	2	L	[c]
+HMR_2676	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	838.000000000002	419.000000000001	2	L	intercompartmental
+HMR_2677	Transport, mitochondrial	1384.1 or 1376.1	838.000000000002	419.000000000001	2	L	[m]
+HMR_2679	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2681	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	419	209.5	2	L	[c]
+HMR_2682	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	419	209.5	2	L	intercompartmental
+HMR_2683	Transport, mitochondrial	1384.1 or 1376.1	419	209.5	2	L	[m]
+HMR_2687	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	42.5	21.25	2	L	[c]
+HMR_2688	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	42.5	21.25	2	L	intercompartmental
+HMR_2689	Transport, mitochondrial	1384.1 or 1376.1	42.5	21.25	2	L	[m]
+HMR_2690	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	45	22.5	2	L	[c]
+HMR_2691	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	45	22.5	2	L	intercompartmental
+HMR_2692	Transport, mitochondrial	1384.1 or 1376.1	45	22.5	2	L	[m]
+HMR_2693	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	22.5	11.25	2	L	[c]
+HMR_2695	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	22.5	11.25	2	L	intercompartmental
+HMR_2697	Transport, mitochondrial	1384.1 or 1376.1	22.5	11.25	2	L	[m]
+HMR_2699	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	419	209.5	2	L	[c]
+HMR_2700	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	419	209.5	2	L	intercompartmental
+HMR_2701	Transport, mitochondrial	1384.1 or 1376.1	419	209.5	2	L	[m]
+HMR_2708	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	42.5	21.25	2	L	[c]
+HMR_2709	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	42.5	21.25	2	L	intercompartmental
+HMR_2710	Transport, mitochondrial	1384.1 or 1376.1	42.5	21.25	2	L	[m]
+HMR_2715	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2718	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2722	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2727	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2731	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2733	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	10	5	2	L	[c]
+HMR_2734	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	10	5	2	L	intercompartmental
+HMR_2735	Transport, mitochondrial	1384.1 or 1376.1	10	5	2	L	[m]
+HMR_2736	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	10	5	2	L	[c]
+HMR_2737	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	10	5	2	L	intercompartmental
+HMR_2738	Transport, mitochondrial	1384.1 or 1376.1	10	5	2	L	[m]
+HMR_2744	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	40	20	2	L	intercompartmental
+HMR_2748	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2753	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2757	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2760	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2764	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	1000	2	L	intercompartmental
+HMR_2768	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	40	20	2	L	[c]
+HMR_2769	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	40	20	2	L	intercompartmental
+HMR_2770	Transport, mitochondrial	1384.1 or 1376.1	40	20	2	L	[m]
+HMR_2771	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	40	20	2	L	[c]
+HMR_2772	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	40	20	2	L	intercompartmental
+HMR_2773	Transport, mitochondrial	1384.1 or 1376.1	40	20	2	L	[m]
+HMR_3170	Fatty acid oxidation	37.1 or 33.1 or 34.1 or 28976.1	419	209.5	2	L	[m]
+HMR_3171	Fatty acid oxidation	3030.1 or 1892.1	419	209.5	2	L	[m]
+HMR_3172	Fatty acid oxidation	3028.1 or 3030.1 or 3033.1	419	209.5	2	L	[m]
+HMR_3173	Fatty acid oxidation	3030.1 or 3032.1 or 10449.1	419	209.5	2	L	[m]
+HMR_3240	Fatty acid oxidation	37.1 or 33.1 or 34.1 or 28976.1	419	209.5	2	L	[m]
+HMR_3241	Fatty acid oxidation	3030.1 or 1892.1	419	209.5	2	L	[m]
+HMR_3242	Fatty acid oxidation	3028.1 or 3030.1 or 3033.1	419	209.5	2	L	[m]
+HMR_3243	Fatty acid oxidation	3030.1 or 3032.1 or 10449.1	419	209.5	2	L	[m]
+HMR_3408	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	42.5	21.25	2	L	[m]
+HMR_3411	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	42.5	21.25	2	L	[m]
+HMR_3413	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	45	22.5	2	L	[m]
+HMR_3414	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	22.5	11.25	2	L	[m]
+HMR_3416	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	42.5	21.25	2	L	[m]
+HMR_3423	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	40	20	2	L	[m]
+HMR_3424	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	40	20	2	L	[m]
+HMR_3431	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	10	5	2	L	[m]
+HMR_3432	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	10	5	2	L	[m]
+HPDCACRNt	Fatty acid oxidation	788.1	2000	1314.25	1.5217804831653	L	intercompartmental
+LNELDCCRNt	Fatty acid oxidation	788.1	2000	1045	1.91387559808612	L	intercompartmental
+LNLCCPT2	Fatty acid oxidation	1376.1	40	20	2	L	[m]
+PTDCACRNt	Fatty acid oxidation	788.1	2000	1000	2	L	intercompartmental
+RE0512M	Fatty acid oxidation	3030.1 or 3295.1 or 1962.1 or 3033.1 or 3028.1 or 3032.1	40	20	2	L	[m]
+RE1516M	Fatty acid oxidation	33.1 or 51.1	40	20	2	L	[m]
+RE1517M	Fatty acid oxidation	33.1 or 51.1	40	20	2	L	[m]
+RE1523M	Fatty acid oxidation	1892.1 or 3030.1 or 1962.1 or 3032.1	40	20	2	L	[m]
+RE1531M	Fatty acid oxidation	10449.1 or 3032.1 or 3030.1	40	20	2	L	[m]
+TMNDNCCRNt	Fatty acid oxidation	788.1	2000	1075	1.86046511627907	L	intercompartmental
+TTDCPT2	Fatty acid oxidation	1376.1	2000	1110	1.8018018018018	L	[m]

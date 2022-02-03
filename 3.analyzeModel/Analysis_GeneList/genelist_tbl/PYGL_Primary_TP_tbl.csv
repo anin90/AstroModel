@@ -1,0 +1,6 @@
+rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	direction	localization
+GGNG	Starch and sucrose metabolism	(8908.1 and 2998.1) or (2998.1 and 2992.1) or (2997.1 and 2992.1) or (8908.1 and 2997.1)	38.3333333333333	25.5509641873278	1.50026954177897	L	[c]
+GLBRAN	Starch and sucrose metabolism	2632.1	38.3333333333333	25.5509641873278	1.50026954177897	L	[c]
+GLGNS1	Starch and sucrose metabolism	(8908.1 and 2997.1) or (2998.1 and 2992.1) or (2997.1 and 2992.1) or (8908.1 and 2998.1)	38.3333333333333	25.5509641873278	1.50026954177897	L	[c]
+GLPASE1	Starch and sucrose metabolism	5834.1 or 5837.1 or 5836.1	48.3333333333333	24.1666666666667	2	L	[c]
+GLPASE2	Starch and sucrose metabolism	5834.1 or 5836.1 or 5837.1	48.3333333333333	24.1666666666667	2	L	[c]

@@ -1,0 +1,7 @@
+rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	direction	localization
+BUTSMCT1	Transport, extracellular	160728.1	2000	1000	2	L	intercompartmental
+L_LACt4r	Transport, extracellular	160728.1	2000	1000	2	L	intercompartmental
+NACSMCTte	Transport, extracellular	160728.1	1000	500	2	L	intercompartmental
+NACUP	Transport, extracellular		1000	500	2	L	intercompartmental
+PPASMCT1	Transport, extracellular	160728.1	2000	1000	2	L	intercompartmental
+PYRSMCT1	Transport, extracellular	160728.1	2000	1000	2	L	intercompartmental

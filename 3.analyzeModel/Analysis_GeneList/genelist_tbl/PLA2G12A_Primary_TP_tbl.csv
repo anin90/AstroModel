@@ -1,0 +1,166 @@
+rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	direction	localization
+ARACHETH	Glycerophospholipid metabolism	5337.1 or 5338.1	15	7.5	2	L	[e]
+DIDECAETH	Glycerophospholipid metabolism	5337.1 or 5338.1	15	7.5	2	L	[e]
+DIHOLINETH	Glycerophospholipid metabolism	5337.1 or 5338.1	15	7.5	2	L	[e]
+DOCOHEXETHc	Glycerophospholipid metabolism	5337.1 or 5338.1	15	7.5	2	L	[e]
+DOCTETETH	Glycerophospholipid metabolism	5337.1 or 5338.1	15	7.5	2	L	[e]
+EX_aracheth[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_didecaeth[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_diholineth[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_docohxeth[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_docteteth[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_hepdeceth[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_hexdeceeth[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_lineth[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_oleth[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_pailar_hs[e]	Exchange/demand reaction		50	25	2	L	[e]
+EX_pailpalm_hs[e]	Exchange/demand reaction		50	25	2	L	[e]
+EX_pchol2linl_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pchol2ole_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pchol2palm_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pchol2ste_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholar_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholdoc_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholeic_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholet_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholhep_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pchollinl_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholmyr_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn15_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn1836_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn183_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn19_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn201_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn203_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn204_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn205_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn224_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn2254_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn225_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn226_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn24_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn261_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn281_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholn28_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholole_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholpalm_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholpalme_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pcholste_hs[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_pe12_hs[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_pe14_hs[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_pe15_hs[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_pe17_hs[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_pe203_hs[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_pe226_hs[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_pe2linl_hs[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_pendecaeth[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_pmeth[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_tetdecaeth[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+EX_trideceth[e]	Exchange/demand reaction		15	7.5	2	L	[e]
+HEPDECETH	Glycerophospholipid metabolism	5337.1 or 5338.1	15	7.5	2	L	[e]
+HEXDECEETH	Glycerophospholipid metabolism	5337.1 or 5338.1	15	7.5	2	L	[e]
+LPCHOLt	Transport, extracellular		20	10	2	L	intercompartmental
+OLEETH	Glycerophospholipid metabolism	5337.1 or 5338.1	15	7.5	2	L	[e]
+PAILAR_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	50	25	2	L	[c]
+PAILPALM_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	50	25	2	L	[c]
+PAILPALM_HSSECt	Transport, extracellular		50	25	2	L	intercompartmental
+PAILR_HSSECt	Transport, extracellular		50	25	2	L	intercompartmental
+PCHLN225_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOL2LINL_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOL2LINL_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOL2OLE_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOL2OLE_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOL2PALM_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOL2PALM_HSte	Transport, extracellular		20	10	2	L	intercompartmental
+PCHOL2STE_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOL2STE_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLAR_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLAR_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLDEIC_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLDET_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLDOC_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLDOC_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLEIC_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLET_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLHEP_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLHEP_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLLINL_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLLINL_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLMYR_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLMYR_HsABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLN15_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLN15_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN1836_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLN1836_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN183_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLN183_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN19_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLN19_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN201_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLN201_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN203_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLN203_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN204_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLN204_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN205_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLN205_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN224_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLN224_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN2254_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLN2254_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN225_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLN225_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN226_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN24_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN261_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN261_HSte	Transport, extracellular		20	10	2	L	intercompartmental
+PCHOLN264_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLN281_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN281_HSte	Transport, extracellular		20	10	2	L	intercompartmental
+PCHOLN28_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLN28_HSte	Transport, extracellular		20	10	2	L	intercompartmental
+PCHOLOLE_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLOLE_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLPALME-HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLPALME_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLPALM_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PCHOLSTE_HSABCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PCHOLSTE_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PE12_HSABCt	Transport, extracellular	23250.1 or 286410.1	15	7.5	2	L	intercompartmental
+PE14_HSABCt	Transport, extracellular	23250.1 or 286410.1	15	7.5	2	L	intercompartmental
+PE15_HSABCt	Transport, extracellular	23250.1 or 286410.1	15	7.5	2	L	intercompartmental
+PE161_HSABCt	Transport, extracellular	23250.1 or 286410.1	15	7.5	2	L	intercompartmental
+PE17_HSABCt	Transport, extracellular	23250.1 or 286410.1	15	7.5	2	L	intercompartmental
+PE203_HSABCt	Transport, extracellular	23250.1 or 286410.1	15	7.5	2	L	intercompartmental
+PE203_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PE224_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PE224_HSte	Transport, extracellular		15	7.5	2	L	intercompartmental
+PE226_HSABCt	Transport, extracellular	23250.1 or 286410.1	15	7.5	2	L	intercompartmental
+PE226_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PE2LINL_HSABCt	Transport, extracellular	23250.1 or 286410.1	15	7.5	2	L	intercompartmental
+PE2LINL_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PEAR_HSABCt	Transport, extracellular	23250.1 or 286410.1	15	7.5	2	L	intercompartmental
+PEAR_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PEDH12_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PEDH13_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PEDH14_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PEDH15_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PEDH161_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PEDH17_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PEDH203_HSABCt	Transport, extracellular	23250.1 or 286410.1	15	7.5	2	L	intercompartmental
+PEDH203_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PELINETH	Glycerophospholipid metabolism	5337.1 or 5338.1	15	7.5	2	L	[e]
+PELINL_HSABCt	Transport, extracellular	23250.1 or 286410.1	15	7.5	2	L	intercompartmental
+PELINL_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PELPALM_HSABCt	Transport, extracellular	23250.1 or 286410.1	15	7.5	2	L	intercompartmental
+PENDECAETH	Glycerophospholipid metabolism	5337.1 or 5338.1	15	7.5	2	L	[e]
+PEOLE_HSABCt	Transport, extracellular	23250.1 or 286410.1	15	7.5	2	L	intercompartmental
+PEOLE_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PEPALM	Glycerophospholipid metabolism	5337.1 or 5338.1	15	7.5	2	L	[e]
+PEPALM_HSASBCt	Transport, extracellular	5244.1 or 19.1 or 5205.1 or 57198.1 or 57194.1	20	10	2	L	intercompartmental
+PEPALM_HSPLA2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	15	7.5	2	L	[c]
+PLA2_2	Glycerophospholipid metabolism	8398.1 or 5320.1 or 8398.2 or 50487.1 or 5321.1 or 81579.1 or 5322.1 or 64600.1 or 100137049.1 or 123745.1	20	10	2	L	[c]
+PLA2_2e	Glycerophospholipid metabolism	5322.1 or 5319.1 or 81579.1 or 64600.1 or 26279.1 or 5320.1 or 8399.1 or 30814.1	20	10	2	L	[e]
+Pe13_HSABCt	Transport, extracellular	23250.1 or 286410.1	15	7.5	2	L	intercompartmental
+TETDECAETH	Glycerophospholipid metabolism	5337.1 or 5338.1	15	7.5	2	L	[e]
+TRIDECETH	Glycerophospholipid metabolism	5337.1 or 5338.1	15	7.5	2	L	[e]
