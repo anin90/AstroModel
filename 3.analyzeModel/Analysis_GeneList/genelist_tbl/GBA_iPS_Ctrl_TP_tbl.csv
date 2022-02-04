@@ -1,0 +1,5 @@
+rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	direction	localization
+GALGLUSIDEtl	Transport, lysosomal		10	5	2	L	intercompartmental
+GBA	Sphingolipid metabolism	2629.2 or 2629.3 or 2629.4 or 2629.5 or 2629.1	389.018612521151	194.509306260575	2	L	[c]
+GBAl	Sphingolipid metabolism	2629.4 or 2629.1 or 2629.3 or 2629.2 or 2629.5	10	5	2	L	[l]
+GLB1	Sphingolipid metabolism	(5476.1 and 2720.1 and 2588.1 and 4758.1) or (5476.1 and 2720.1)	10	5	2	L	[l]

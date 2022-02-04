@@ -1,0 +1,34 @@
+rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	direction	localization
+ADEt	Transport, extracellular	3177.1	136.666666666667	68.3333333333334	2	L	intercompartmental
+ADNt	Transport, extracellular	3177.1 or 2030.1	2000	1000	2	L	intercompartmental
+CYTDt	Transport, extracellular	3177.1 or 2030.1	2000	1000	2	L	intercompartmental
+DADNt4	Transport, extracellular	3177.1	60.0000000000001	30.0000000000001	2	L	intercompartmental
+DCK1m	Nucleotide interconversion		1573.60970107163	786.804850535815	2	L	[m]
+DCMPtm	Transport, mitochondrial		1573.60970107163	786.804850535815	2	L	intercompartmental
+DCYTDn	Nucleotide interconversion	57379.1	1000	500	2	L	[n]
+DCYTt	Transport, extracellular	3177.1	1000	500	2	L	intercompartmental
+DGSNt	Transport, extracellular	3177.1	1000	500	2	L	intercompartmental
+DINt	Transport, extracellular	3177.1	1000	500	2	L	intercompartmental
+DURIt	Transport, extracellular	3177.1	20	10	2	L	intercompartmental
+DURItn	Transport, nuclear		1000	500	2	L	intercompartmental
+EX_dad_2[e]	Exchange/demand reaction		60.0000000000002	30.0000000000001	2	L	[e]
+EX_duri[e]	Exchange/demand reaction		20	10	2	L	[e]
+EX_gua[e]	Exchange/demand reaction		60.0000000000001	30.0000000000014	1.99999999999991	L	[e]
+EX_hxan[e]	Exchange/demand reaction		60.0000000000001	29.9999999999999	2.00000000000001	L	[e]
+EX_ura[e]	Exchange/demand reaction		20	10	2	L	[e]
+GSNt	Transport, extracellular	3177.1 or 2030.1	2000	1000	2	L	intercompartmental
+GUAt	Transport, extracellular	3177.1	60.0000000000027	30.0000000000014	2	L	intercompartmental
+HMR_6359	Transport, extracellular	64078.1	1000	500	2	L	intercompartmental
+HMR_6364	Transport, extracellular	64078.1	1000	500	2	L	intercompartmental
+HMR_8475	Transport, mitochondrial	2030.1 or 3177.1	1573.60970107163	786.804850535815	2	L	intercompartmental
+HMR_8476	Transport, nuclear	2030.1 or 3177.1	1000	500	2	L	intercompartmental
+HYXNt	Transport, extracellular	3177.1	59.9999999999999	29.9999999999999	2	L	intercompartmental
+INSt	Transport, extracellular	3177.1 or 2030.1	2000	1000	2	L	intercompartmental
+NTD6	Nucleotide interconversion	22978.1 or 30833.1 or 93034.1 or 93034.2 or 84618.1 or 51251.1 or 4907.1	60.0000000000001	30.0000000000001	2	L	[c]
+THMDt2r	Transport, extracellular	64078.1	1000	500	2	L	intercompartmental
+THYMDt1	Transport, extracellular	3177.1 or 2030.1	1000	500	2	L	intercompartmental
+URAt	Transport, extracellular	3177.1	20	10	2	L	intercompartmental
+URIt	Transport, extracellular	3177.1 or 2030.1	2000	1000	2	L	intercompartmental
+URIt2r	Transport, extracellular	64078.1	2000	1135	1.76211453744493	L	intercompartmental
+r0345	Nucleotide interconversion	204.1 or 203.1 or 122481.1 or 26289.1 or 205.1 or 100507855.1	60.0000000000001	30	2	L	[c]
+r2449	Transport, extracellular	9153.1 or 64078.1	1000	500	2	L	intercompartmental
