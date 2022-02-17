@@ -17,6 +17,12 @@ FolderName = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobrato
 File = fullfile(FolderName, FileName);
 load(File);
 clear File FileName FolderName
+% Load MetabolicUnits from Recon3DModel_MetabolicUnits
+FileName   = 'MetabolicUnits.mat';
+FolderName = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations_MetabolicUnits/';
+File = fullfile(FolderName, FileName);
+load(File);
+clear File FileName FolderName
 
 %% bd_17
 rxnList = importdata('bd_17.csv'); 
@@ -42,9 +48,17 @@ C = repmat({''},size(nameidx_L));
 C(nameidx_L~=0) = {'L'};
 C(nameidx_L==0) = {'H'};
 
-bd_17_tbl = [tbl_temp tbl_temp_fst(:,2:end) C];
+List1 = A.rxnList;
+List2 = MetabolicUnits_ACS.HarvettaRxns;
+List3 = MetabolicUnits_ACS.MetabolicUnits;
+nameidx_L = getnameidx(List2, List1)';
+MU = repmat({''},size(nameidx_L));
+MU(nameidx_L~=0) = List3(nonzeros(nameidx_L));
+MU(nameidx_L==0) = {'NA'};
+
+bd_17_tbl = [tbl_temp tbl_temp_fst(:,2:end) C MU];
 clear rxnList model tf loc p idx subSystem GPR tbl_temp
-clear dat tbl_temp_fst A B ii List1 List2 nameidx_L C
+clear dat tbl_temp_fst A B ii List1 List2 List3 nameidx_L C MU
 
 %% bd_33
 rxnList = importdata('bd_33.csv');
@@ -70,9 +84,17 @@ C = repmat({''},size(nameidx_L));
 C(nameidx_L~=0) = {'L'};
 C(nameidx_L==0) = {'H'};
 
-bd_33_tbl = [tbl_temp tbl_temp_fst(:,2:end) C];
+List1 = A.rxnList;
+List2 = MetabolicUnits_ACS.HarvettaRxns;
+List3 = MetabolicUnits_ACS.MetabolicUnits;
+nameidx_L = getnameidx(List2, List1)';
+MU = repmat({''},size(nameidx_L));
+MU(nameidx_L~=0) = List3(nonzeros(nameidx_L));
+MU(nameidx_L==0) = {'NA'};
+
+bd_33_tbl = [tbl_temp tbl_temp_fst(:,2:end) C MU];
 clear rxnList model tf loc p idx subSystem GPR tbl_temp
-clear dat tbl_temp_fst A B ii List1 List2 nameidx_L C
+clear dat tbl_temp_fst A B ii List1 List2 List3 nameidx_L C MU
 
 %% bd_59
 rxnList = importdata('bd_59.csv');
@@ -98,9 +120,17 @@ C = repmat({''},size(nameidx_L));
 C(nameidx_L~=0) = {'L'};
 C(nameidx_L==0) = {'H'};
 
-bd_59_tbl = [tbl_temp tbl_temp_fst(:,2:end) C];
+List1 = A.rxnList;
+List2 = MetabolicUnits_ACS.HarvettaRxns;
+List3 = MetabolicUnits_ACS.MetabolicUnits;
+nameidx_L = getnameidx(List2, List1)';
+MU = repmat({''},size(nameidx_L));
+MU(nameidx_L~=0) = List3(nonzeros(nameidx_L));
+MU(nameidx_L==0) = {'NA'};
+
+bd_59_tbl = [tbl_temp tbl_temp_fst(:,2:end) C MU];
 clear rxnList model tf loc p idx subSystem GPR tbl_temp
-clear dat tbl_temp_fst A B ii List1 List2 nameidx_L C
+clear dat tbl_temp_fst A B ii List1 List2 List3 nameidx_L C MU
 
 %% bd_103
 rxnList = importdata('bd_103.csv');
@@ -126,9 +156,17 @@ C = repmat({''},size(nameidx_L));
 C(nameidx_L~=0) = {'L'};
 C(nameidx_L==0) = {'H'};
 
-bd_103_tbl = [tbl_temp tbl_temp_fst(:,2:end) C];
+List1 = A.rxnList;
+List2 = MetabolicUnits_ACS.HarvettaRxns;
+List3 = MetabolicUnits_ACS.MetabolicUnits;
+nameidx_L = getnameidx(List2, List1)';
+MU = repmat({''},size(nameidx_L));
+MU(nameidx_L~=0) = List3(nonzeros(nameidx_L));
+MU(nameidx_L==0) = {'NA'};
+
+bd_103_tbl = [tbl_temp tbl_temp_fst(:,2:end) C MU];
 clear rxnList model tf loc p idx subSystem GPR tbl_temp
-clear dat tbl_temp_fst A B ii List1 List2 nameidx_L C
+clear dat tbl_temp_fst A B ii List1 List2 List3 nameidx_L C MU
 
 %% bd_r_92
 rxnList = importdata('bd_r_92.csv');
@@ -154,9 +192,17 @@ C = repmat({''},size(nameidx_L));
 C(nameidx_L~=0) = {'L'};
 C(nameidx_L==0) = {'H'};
 
-bd_r_92_tbl = [tbl_temp tbl_temp_fst(:,2:end) C];
+List1 = A.rxnList;
+List2 = MetabolicUnits_ACS.HarvettaRxns;
+List3 = MetabolicUnits_ACS.MetabolicUnits;
+nameidx_L = getnameidx(List2, List1)';
+MU = repmat({''},size(nameidx_L));
+MU(nameidx_L~=0) = List3(nonzeros(nameidx_L));
+MU(nameidx_L==0) = {'NA'};
+
+bd_r_92_tbl = [tbl_temp tbl_temp_fst(:,2:end) C MU];
 clear rxnList model tf loc p idx subSystem GPR tbl_temp
-clear dat tbl_temp_fst A B ii List1 List2 nameidx_L C
+clear dat tbl_temp_fst A B ii List1 List2 List3 nameidx_L C MU
 
 %% bd_nr_670
 rxnList = importdata('bd_nr_670.csv');
@@ -182,9 +228,17 @@ C = repmat({''},size(nameidx_L));
 C(nameidx_L~=0) = {'L'};
 C(nameidx_L==0) = {'H'};
 
-bd_nr_670_tbl = [tbl_temp tbl_temp_fst(:,2:end) C];
+List1 = A.rxnList;
+List2 = MetabolicUnits_ACS.HarvettaRxns;
+List3 = MetabolicUnits_ACS.MetabolicUnits;
+nameidx_L = getnameidx(List2, List1)';
+MU = repmat({''},size(nameidx_L));
+MU(nameidx_L~=0) = List3(nonzeros(nameidx_L));
+MU(nameidx_L==0) = {'NA'};
+
+bd_nr_670_tbl = [tbl_temp tbl_temp_fst(:,2:end) C MU];
 clear rxnList model tf loc p idx subSystem GPR tbl_temp
-clear dat tbl_temp_fst A B ii List1 List2 nameidx_L C
+clear dat tbl_temp_fst A B ii List1 List2 List3 nameidx_L C MU
 
 %% merge bd_17_33_59_103
 bd_212_tbl = vertcat(bd_17_tbl, bd_33_tbl, bd_59_tbl, bd_103_tbl);

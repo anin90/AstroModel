@@ -43,14 +43,14 @@ bd_nr_670_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 		BD_Lumped = bd_212_tbl$rxnList, 
 		BD_Responder = bd_r_92_tbl$rxnList, 
 		BD_NonResponder = bd_nr_670_tbl$rxnList)
-	ggvenn(x, fill_color = c("blue", "green", "red")) + ggtitle("Overlp in rxns disrupted between models")
+	ggvenn(x, fill_color = c("blue", "green", "red")) + ggtitle("Overlap in rxns disrupted between models")
 
 # Fig.2: venn subsystems
 	x <- list(
 		BD_Lumped = bd_212_tbl$subSystem, 
 		BD_Responder = bd_r_92_tbl$subSystem, 
 		BD_NonResponder = bd_nr_670_tbl$subSystem)
-	ggvenn(x, fill_color = c("blue", "green", "red")) + ggtitle("Overlp in subSystems disrupted between models")				
+	ggvenn(x, fill_color = c("blue", "green", "red")) + ggtitle("Overlap in subSystems disrupted between models")				
 
 # Fig.3: Number of rxns per subSystem (bd_lumped)
 	iAstro_iPS_BD_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_T_TP/Rxns_iAstro_iPS_BD_TP.csv", header = T, sep = "\t")
@@ -144,7 +144,7 @@ bd_nr_670_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 
 # Fig.6: Number of rxns per compartment (bd_lumped)
 	#6a: all.212
-	myTable <- table(bd_212_tbl$Var7, bd_212_tbl$Var8)
+	myTable <- table(bd_212_tbl$Var7, bd_212_tbl$Var9)
 	compartment <- c("cytoplasm", "extracellular space", "mitochondrion", "endoplasmic reticulum", "intercompartmental")
 	ggplot(as.data.frame(myTable), aes(Var2, Freq, fill=Var1, label = Freq)) + 
 		geom_bar(stat="identity") +
@@ -155,7 +155,7 @@ bd_nr_670_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 		scale_x_discrete(labels= compartment) + ggtitle("Disrupted rxns (all, n=212) per compartment (bd_lumped)")
 
 	#6b: only.fdr.significant	
-	myTable <- table(bd_lumped_rxns_fdr$Var7, bd_lumped_rxns_fdr$Var8)
+	myTable <- table(bd_lumped_rxns_fdr$Var7, bd_lumped_rxns_fdr$Var9)
 	compartment <- c("cytoplasm", "extracellular space", "mitochondrion", "endoplasmic reticulum", "intercompartmental")
 	ggplot(as.data.frame(myTable), aes(Var2, Freq, fill=Var1, label = Freq)) + 
 		geom_bar(stat="identity") +
@@ -167,7 +167,7 @@ bd_nr_670_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 
 # Fig.7: Number of rxns per compartment (bd_responder)
 	#7a: all.92
-	myTable <- table(bd_r_92_tbl$Var7, bd_r_92_tbl$Var8)
+	myTable <- table(bd_r_92_tbl$Var7, bd_r_92_tbl$Var9)
 	compartment <- c("cytoplasm", "extracellular space", "mitochondrion", "nucleus", "endoplasmic reticulum", 
 					"peroxisome", "intercompartmental")
 	ggplot(as.data.frame(myTable), aes(Var2, Freq, fill=Var1, label = Freq)) + 
@@ -179,7 +179,7 @@ bd_nr_670_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 		scale_x_discrete(labels= compartment) + ggtitle("Disrupted rxns (all, n=92) per compartment (bd_responder)")
 
 	#7b: only.fdr.significant	
-	myTable <- table(bd_r_rxns_fdr$Var7, bd_r_rxns_fdr$Var8)
+	myTable <- table(bd_r_rxns_fdr$Var7, bd_r_rxns_fdr$Var9)
 	compartment <- c("cytoplasm", "extracellular space", "mitochondrion", "nucleus", "endoplasmic reticulum", 
 					"peroxisome", "intercompartmental")
 	ggplot(as.data.frame(myTable), aes(Var2, Freq, fill=Var1, label = Freq)) + 
@@ -192,7 +192,7 @@ bd_nr_670_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
   
 # Fig.8: Number of rxns per compartment (bd_nonresponder)
 	#8a: all.670
-	myTable <- table(bd_nr_670_tbl$Var7, bd_nr_670_tbl$Var8)
+	myTable <- table(bd_nr_670_tbl$Var7, bd_nr_670_tbl$Var9)
 	compartment <- c("cytoplasm", "extracellular space", "Golgi apparatus", "lysosome", "mitochondrion", "nucleus", 
 					"endoplasmic reticulum", "peroxisome", "intercompartmental")
 	ggplot(as.data.frame(myTable), aes(Var2, Freq, fill=Var1, label = Freq)) + 
@@ -204,7 +204,7 @@ bd_nr_670_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 		scale_x_discrete(labels= compartment) + ggtitle("Disrupted rxns (all, n=670) per compartment (bd_nonresponder)")
 
 	#8b: only.fdr.significant	
-	myTable <- table(bd_nr_rxns_fdr$Var7, bd_nr_rxns_fdr$Var8)
+	myTable <- table(bd_nr_rxns_fdr$Var7, bd_nr_rxns_fdr$Var9)
 	compartment <- c("cytoplasm", "extracellular space", "Golgi apparatus", "lysosome", "mitochondrion", "nucleus", 
 					"endoplasmic reticulum", "peroxisome", "intercompartmental")
 	ggplot(as.data.frame(myTable), aes(Var2, Freq, fill=Var1, label = Freq)) + 

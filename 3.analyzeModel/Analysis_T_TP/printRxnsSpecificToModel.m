@@ -11,6 +11,12 @@ FolderName = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobrato
 File = fullfile(FolderName, FileName);
 load(File);
 clear File FileName FolderName
+% Load MetabolicUnits from Recon3DModel_MetabolicUnits
+FileName   = 'MetabolicUnits.mat';
+FolderName = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations_MetabolicUnits/';
+File = fullfile(FolderName, FileName);
+load(File);
+clear File FileName FolderName
 
 %% iAstro_Primary (T vs TP)
 model_A = iAstro_Primary_T; model_B = iAstro_Primary_TP;
