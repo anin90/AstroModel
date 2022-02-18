@@ -1,16 +1,6 @@
-TestSolutionName	Primary_T	iPS_Ctrl_T	iPS_BD_T	iPS_BD_R_T	iPS_BD_NR_T	TestSolutionGroup	TestedMetabolite
-biomass_maintenance	25.2332429834934	31.9455061602558	22.2128349770852	28.1037612442433	28.3401728831482	biomass	maintenance
-biomass_maintenance_noTrTr	28.9296188532555	37.0345206159925	25.8470768733949	32.0701745836668	33.2042824751658	biomass	maintenance_noTrTr
-ATP max, aerobic, glc -> atp	9.00000000000034	21.9999999999999	3.99999999999909	9.00000000000023	3.99999999999886	ATP demand	glc_D[e], aerobic
-ATP max, anaerobic, glc -> atp	1.99999999999932	2.0000000000002	2	2	2.00000000000008	ATP demand	glc_D[e], anaerobic
-ATP max, aerobic, pyr -> atp	2.99999999999557	8.50000000000057	1.00000000000318	3	1	ATP demand	pyr[e]
-ATP max, aerobic, lac_L -> atp	3.5	9.99999999999909	1.00000000000409	3.5	1.00000000000011	ATP demand	lac_L[e]
-ATP max, aerobic, glu_L (synaptic) -> atp	0.87499999999871	NaN	NaN	NaN	NaN	ATP demand	glu_L[s]
-ATP max, aerobic, glu_L (extracellular) -> atp	5.5	15.5	2.00000000000045	5.50000000000864	2	ATP demand	glu_L[e]
-pyr[c] -> accoa[m]	0	0	0	0	0	Pyruvate utilization	accoa[m]
-pyr[c] -> oaa[m]	13.3333333333331	34.6773023930388	9.23076923076928	13.33333333333	9.23076923076917	Pyruvate utilization	oaa[m]
-pyr[c] -> etoh[c]	0	0	0	0	0	Pyruvate utilization	etoh[c]
-pyr[c] -> lac_L[s]	20.0000000000001	NaN	NaN	NaN	NaN	Pyruvate utilization	lac_L[s]
-pyr[c] -> lac_L[m]	29.1489361702129	54.6200241254517	23.8461538461555	29.1489361702126	44.2857142857156	Pyruvate utilization	lac_L[m]
-pyr[c] -> lac_L[c]	29.1489361702129	54.6200241254528	23.8461538461548	29.148936170212	44.285714285714	Pyruvate utilization	lac_L[c]
-trp_L -> melatn	0	0	0	0	0	Melatonin synthesis	melatn
+TestSolutionName	Primary_T	iPS_Ctrl_T	iPS_BD_T	iPS_BD_R_T	iPS_BD_NR_T	TestSolutionGroup	TestedMetabolite	TestedModel
+biomass_maintenance	25.2332429834934	31.9455061602558	22.2128349770852	28.1037612442433	28.3401728831482	biomass	maintenance	modelOri
+biomass_maintenance_noTrTr	28.9296188532555	37.0345206159925	25.8470768733949	32.0701745836668	33.2042824751658	biomass	maintenance_noTrTr	modelOri
+PI5P4K	631.544715447154	805.487873660463	565.505226480837	698.780487804877	725.62717770035	Inositol phosphate metabolism	NA	modelOri
+MI1PP	631.666666666667	805.487873660463	569.651567944251	700	729.04761904762	Inositol phosphate metabolism	NA	modelOri
+GLUDC	329.646258503401	339.755449059594	296.265306122449	333.133640552996	368.265306122449	Glutamate metabolism	NA	modelOri
