@@ -24,19 +24,18 @@ pdf("Test4HumanAstro.pdf", width=3.5, height=3.5)
 # Load data
 ###########
 
-Test4HumanAstro_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_T_TP/Test4HumanAstro_TP.csv",
+Test4HumanAstro <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_T_TP/Test4HumanAstro_TP.csv",
 		header = T, sep = "\t")
-Test4HumanAstro_T <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_T_TP/Test4HumanAstro_T.csv",
-		header = T, sep = "\t")
+#~ Test4HumanAstro_T <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_T_TP/Test4HumanAstro_T.csv",
+#~ 		header = T, sep = "\t")
 
-# Inositol phosphate metabolism
 # PI5P4K
-	ss.data = Test4HumanAstro_TP[Test4HumanAstro_TP$TestSolutionName == 'PI5P4K',]						
+	ss.data = Test4HumanAstro[Test4HumanAstro$TestSolutionName == 'PI5P4K',]						
 	mdat = melt(ss.data, id.vars=c("TestSolutionName", "TestSolutionGroup"),
-            measure.vars=c("Primary_TP", "iPS_Ctrl_TP", "iPS_BD_TP", "iPS_BD_R_TP", "iPS_BD_NR_TP"))
+            measure.vars=c("Primary", "iPS_Ctrl", "iPS_BD", "iPS_BD_R", "iPS_BD_NR"))
 	mdat_ctrl = melt(ss.data, id.vars=c("TestedMetabolite", "TestSolutionGroup"),
-            measure.vars=c("iPS_Ctrl_TP", "iPS_BD_TP", "iPS_BD_R_TP", "iPS_BD_NR_TP"))     
-    mdat_ctrl = mdat_ctrl[mdat_ctrl$variable == 'iPS_Ctrl_TP',]
+            measure.vars=c("iPS_Ctrl", "iPS_BD", "iPS_BD_R", "iPS_BD_NR"))     
+    mdat_ctrl = mdat_ctrl[mdat_ctrl$variable == 'iPS_Ctrl',]
 	FluxCtrl = mdat_ctrl$value               
 
 	ggplot(mdat, aes(x = variable, y = value)) +
@@ -47,12 +46,12 @@ Test4HumanAstro_T <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science
 		geom_hline(yintercept=c(FluxCtrl/1.5, FluxCtrl/0.8), linetype="dashed", color = c("black","red"), size=1)
 
 # MI1PP
-	ss.data = Test4HumanAstro_TP[Test4HumanAstro_TP$TestSolutionName == 'MI1PP',]						
+	ss.data = Test4HumanAstro[Test4HumanAstro$TestSolutionName == 'MI1PP',]						
 	mdat = melt(ss.data, id.vars=c("TestSolutionName", "TestSolutionGroup"),
-            measure.vars=c("Primary_TP", "iPS_Ctrl_TP", "iPS_BD_TP", "iPS_BD_R_TP", "iPS_BD_NR_TP"))
+            measure.vars=c("Primary", "iPS_Ctrl", "iPS_BD", "iPS_BD_R", "iPS_BD_NR"))
 	mdat_ctrl = melt(ss.data, id.vars=c("TestedMetabolite", "TestSolutionGroup"),
-            measure.vars=c("iPS_Ctrl_TP", "iPS_BD_TP", "iPS_BD_R_TP", "iPS_BD_NR_TP"))     
-    mdat_ctrl = mdat_ctrl[mdat_ctrl$variable == 'iPS_Ctrl_TP',]
+            measure.vars=c("iPS_Ctrl", "iPS_BD", "iPS_BD_R", "iPS_BD_NR"))     
+    mdat_ctrl = mdat_ctrl[mdat_ctrl$variable == 'iPS_Ctrl',]
 	FluxCtrl = mdat_ctrl$value               
 
 	ggplot(mdat, aes(x = variable, y = value)) +
@@ -62,14 +61,13 @@ Test4HumanAstro_T <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science
 		scale_fill_brewer(palette = "Blues") +
 		geom_hline(yintercept=c(FluxCtrl/1.5, FluxCtrl/0.8), linetype="dashed", color = c("black","red"), size=1)
 
-# Glutamate metabolism		
-# GLUDC
-	ss.data = Test4HumanAstro_TP[Test4HumanAstro_TP$TestSolutionName == 'GLUDC',]						
+# PIPLC
+	ss.data = Test4HumanAstro[Test4HumanAstro$TestSolutionName == 'PIPLC',]						
 	mdat = melt(ss.data, id.vars=c("TestSolutionName", "TestSolutionGroup"),
-            measure.vars=c("Primary_TP", "iPS_Ctrl_TP", "iPS_BD_TP", "iPS_BD_R_TP", "iPS_BD_NR_TP"))
+            measure.vars=c("Primary", "iPS_Ctrl", "iPS_BD", "iPS_BD_R", "iPS_BD_NR"))
 	mdat_ctrl = melt(ss.data, id.vars=c("TestedMetabolite", "TestSolutionGroup"),
-            measure.vars=c("iPS_Ctrl_TP", "iPS_BD_TP", "iPS_BD_R_TP", "iPS_BD_NR_TP"))     
-    mdat_ctrl = mdat_ctrl[mdat_ctrl$variable == 'iPS_Ctrl_TP',]
+            measure.vars=c("iPS_Ctrl", "iPS_BD", "iPS_BD_R", "iPS_BD_NR"))     
+    mdat_ctrl = mdat_ctrl[mdat_ctrl$variable == 'iPS_Ctrl',]
 	FluxCtrl = mdat_ctrl$value               
 
 	ggplot(mdat, aes(x = variable, y = value)) +
@@ -77,5 +75,36 @@ Test4HumanAstro_T <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science
 		labs(fill = "Reaction ID             ", x ="modelOri", y = "Flux (mmol/gDw/h)")+
 		theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
 		scale_fill_brewer(palette = "Blues") +
-		geom_hline(yintercept=c(FluxCtrl/1.5, FluxCtrl/0.8), linetype="dashed", color = c("black","red"), size=1)		
-		
+		geom_hline(yintercept=c(FluxCtrl/1.5, FluxCtrl/0.8), linetype="dashed", color = c("black","red"), size=1)
+
+# PGMT
+	ss.data = Test4HumanAstro[Test4HumanAstro$TestSolutionName == 'PGMT',]						
+	mdat = melt(ss.data, id.vars=c("TestSolutionName", "TestSolutionGroup"),
+            measure.vars=c("Primary", "iPS_Ctrl", "iPS_BD", "iPS_BD_R", "iPS_BD_NR"))
+	mdat_ctrl = melt(ss.data, id.vars=c("TestedMetabolite", "TestSolutionGroup"),
+            measure.vars=c("iPS_Ctrl", "iPS_BD", "iPS_BD_R", "iPS_BD_NR"))     
+    mdat_ctrl = mdat_ctrl[mdat_ctrl$variable == 'iPS_Ctrl',]
+	FluxCtrl = mdat_ctrl$value               
+
+	ggplot(mdat, aes(x = variable, y = value)) +
+		geom_col(aes(fill = TestSolutionName), width = 0.7, colour = "black") + theme_classic()+
+		labs(fill = "Reaction ID             ", x ="modelOri", y = "Flux (mmol/gDw/h)")+
+		theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+		scale_fill_brewer(palette = "Blues") +
+		geom_hline(yintercept=c(FluxCtrl/1.5, FluxCtrl/0.8), linetype="dashed", color = c("black","red"), size=1)
+
+# HMGCOASim
+	ss.data = Test4HumanAstro[Test4HumanAstro$TestSolutionName == 'HMGCOASim',]						
+	mdat = melt(ss.data, id.vars=c("TestSolutionName", "TestSolutionGroup"),
+            measure.vars=c("Primary", "iPS_Ctrl", "iPS_BD", "iPS_BD_R", "iPS_BD_NR"))
+	mdat_ctrl = melt(ss.data, id.vars=c("TestedMetabolite", "TestSolutionGroup"),
+            measure.vars=c("iPS_Ctrl", "iPS_BD", "iPS_BD_R", "iPS_BD_NR"))     
+    mdat_ctrl = mdat_ctrl[mdat_ctrl$variable == 'iPS_Ctrl',]
+	FluxCtrl = mdat_ctrl$value               
+
+	ggplot(mdat, aes(x = variable, y = value)) +
+		geom_col(aes(fill = TestSolutionName), width = 0.7, colour = "black") + theme_classic()+
+		labs(fill = "Reaction ID             ", x ="modelOri", y = "Flux (mmol/gDw/h)")+
+		theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+		scale_fill_brewer(palette = "Blues") +
+		geom_hline(yintercept=c(FluxCtrl/1.5, FluxCtrl/0.8), linetype="dashed", color = c("black","red"), size=1)

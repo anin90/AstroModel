@@ -7,7 +7,7 @@ if nargin<=2
     endRow = inf;
 end
 
-formatSpec = '%*s%s%s%s%f%f%f%s%s%[^\n\r]';
+formatSpec = '%*s%s%s%s%f%f%f%s%s%s%[^\n\r]';
 
 %% Open the text file.
 fileID = fopen(filename,'r');
@@ -35,5 +35,5 @@ fclose(fileID);
 % script.
 
 %% Create output variable
-dat = table(dataArray{1:end-1}, 'VariableNames', {'rxnList','subSystem','GPR','FluxSpan_a','FluxSpan_b','Flux_Span_Ratio','Var7','Var8'});
+dat = table(dataArray{1:end-1}, 'VariableNames', {'rxnList','subSystem','GPR','FluxSpan_a','FluxSpan_b','Flux_Span_Ratio','Var7','Var8','Var9'});
 

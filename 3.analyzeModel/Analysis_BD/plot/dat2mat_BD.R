@@ -22,22 +22,22 @@ pdf("FSR_UpSet_BD.pdf")
 iPS_Ctrl_TP_vs_iPS_BD_TP = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_TP.csv",header = T, sep = "\t");
 iPS_Ctrl_TP_vs_iPS_BD_R_TP = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_R_TP.csv",header = T, sep = "\t");
 iPS_Ctrl_TP_vs_iPS_BD_NR_TP = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_TP_vs_iAstro_iPS_BD_NR_TP.csv",header = T, sep = "\t");
-UnChanged_Primary_TP_vs_iPS_Ctrl_TP = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Ctrl/UnChanged_iAstro_Primary_TP_vs_iAstro_iPS_Ctrl_TP.csv",header = T, sep = "\t");
+UnChanged_iPS_Ctrl_TP_vs_Primary_TP = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Ctrl/UnChanged_iAstro_iPS_Ctrl_TP_vs_iAstro_Primary_TP.csv",header = T, sep = "\t");
 
 iPS_Ctrl_TP_vs_iPS_BD_TP = iPS_Ctrl_TP_vs_iPS_BD_TP$m
 iPS_Ctrl_TP_vs_iPS_BD_R_TP = iPS_Ctrl_TP_vs_iPS_BD_R_TP$m
 iPS_Ctrl_TP_vs_iPS_BD_NR_TP = iPS_Ctrl_TP_vs_iPS_BD_NR_TP$m
-UnChanged_Primary_TP_vs_iPS_Ctrl_TP = UnChanged_Primary_TP_vs_iPS_Ctrl_TP$n
+UnChanged_iPS_Ctrl_TP_vs_Primary_TP = UnChanged_iPS_Ctrl_TP_vs_Primary_TP$n
 
 iPS_Ctrl_T_vs_iPS_BD_T = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_T.csv",header = T, sep = "\t");
 iPS_Ctrl_T_vs_iPS_BD_R_T = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_R_T.csv",header = T, sep = "\t");
 iPS_Ctrl_T_vs_iPS_BD_NR_T = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/FSR_iAstro_iPS_Ctrl_T_vs_iAstro_iPS_BD_NR_T.csv",header = T, sep = "\t");
-UnChanged_Primary_T_vs_iPS_Ctrl_T = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Ctrl/UnChanged_iAstro_Primary_T_vs_iAstro_iPS_Ctrl_T.csv",header = T, sep = "\t");
+UnChanged_iPS_Ctrl_T_vs_Primary_T = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_Ctrl/UnChanged_iAstro_iPS_Ctrl_T_vs_iAstro_Primary_T.csv",header = T, sep = "\t");
 
 iPS_Ctrl_T_vs_iPS_BD_T = iPS_Ctrl_T_vs_iPS_BD_T$m
 iPS_Ctrl_T_vs_iPS_BD_R_T = iPS_Ctrl_T_vs_iPS_BD_R_T$m
 iPS_Ctrl_T_vs_iPS_BD_NR_T = iPS_Ctrl_T_vs_iPS_BD_NR_T$m
-UnChanged_Primary_T_vs_iPS_Ctrl_T = UnChanged_Primary_T_vs_iPS_Ctrl_T$n
+UnChanged_iPS_Ctrl_T_vs_Primary_T = UnChanged_iPS_Ctrl_T_vs_Primary_T$n
 
 ###################################
 # rnxs to matrix - wrangle
@@ -45,7 +45,7 @@ UnChanged_Primary_T_vs_iPS_Ctrl_T = UnChanged_Primary_T_vs_iPS_Ctrl_T$n
 
 mat = lst(iPS_Ctrl_TP_vs_iPS_BD_TP, iPS_Ctrl_TP_vs_iPS_BD_R_TP, iPS_Ctrl_TP_vs_iPS_BD_NR_TP,
 			iPS_Ctrl_T_vs_iPS_BD_T, iPS_Ctrl_T_vs_iPS_BD_R_T, iPS_Ctrl_T_vs_iPS_BD_NR_T, 			
-			UnChanged_Primary_TP_vs_iPS_Ctrl_TP, UnChanged_Primary_T_vs_iPS_Ctrl_T) %>% 
+			UnChanged_iPS_Ctrl_TP_vs_Primary_TP, UnChanged_iPS_Ctrl_T_vs_Primary_T) %>% 
 			
   enframe %>% 
   unnest %>% 
@@ -65,13 +65,13 @@ mat <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobr
 
 p = upset(mat,
 	order.by = c("degree","freq"), #query.legend = "bottom",
-	matrix.color="black", sets = c("UnChanged_Primary_TP_vs_iPS_Ctrl_TP", "iPS_Ctrl_TP_vs_iPS_BD_TP", 
+	matrix.color="black", sets = c("UnChanged_iPS_Ctrl_TP_vs_Primary_TP", "iPS_Ctrl_TP_vs_iPS_BD_TP", 
 									"iPS_Ctrl_TP_vs_iPS_BD_R_TP", "iPS_Ctrl_TP_vs_iPS_BD_NR_TP"), 
 	keep.order = TRUE, 
 
 	sets.bar.color=c("dark grey","dark grey","dark grey","dark blue"), nintersects = 60,
-	queries = list(list(query = intersects, params = list("iPS_Ctrl_TP_vs_iPS_BD_NR_TP", "UnChanged_Primary_TP_vs_iPS_Ctrl_TP"), color = "red", active = T), 
-	list(query = intersects, params = list("iPS_Ctrl_TP_vs_iPS_BD_R_TP", "UnChanged_Primary_TP_vs_iPS_Ctrl_TP"), color = "blue", active = T)))
+	queries = list(list(query = intersects, params = list("iPS_Ctrl_TP_vs_iPS_BD_NR_TP", "UnChanged_iPS_Ctrl_TP_vs_Primary_TP"), color = "red", active = T), 
+	list(query = intersects, params = list("iPS_Ctrl_TP_vs_iPS_BD_R_TP", "UnChanged_iPS_Ctrl_TP_vs_Primary_TP"), color = "blue", active = T)))
 p
 
 svg(filename="FSR_UpSet_BD_TP.svg")
@@ -82,52 +82,52 @@ dev.off()
 # rnxs slice
 ################
 
-#bd_17
-x = list(UnChanged_Primary_TP_vs_iPS_Ctrl_TP, iPS_Ctrl_TP_vs_iPS_BD_TP, iPS_Ctrl_TP_vs_iPS_BD_R_TP)
+#bd_9
+x = list(UnChanged_iPS_Ctrl_TP_vs_Primary_TP, iPS_Ctrl_TP_vs_iPS_BD_TP, iPS_Ctrl_TP_vs_iPS_BD_R_TP)
 xInt = Reduce(intersect, x)
 y = iPS_Ctrl_TP_vs_iPS_BD_NR_TP
-bd_17 = setdiff(xInt,y)
-length(bd_17)
-write.table(bd_17, "bd_17.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)
+bd_9 = setdiff(xInt,y)
+length(bd_9)
+write.table(bd_9, "bd_9.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)
 
-#bd_33
-x = list(UnChanged_Primary_TP_vs_iPS_Ctrl_TP, iPS_Ctrl_TP_vs_iPS_BD_TP,
+#bd_29
+x = list(UnChanged_iPS_Ctrl_TP_vs_Primary_TP, iPS_Ctrl_TP_vs_iPS_BD_TP,
 			iPS_Ctrl_TP_vs_iPS_BD_R_TP, iPS_Ctrl_TP_vs_iPS_BD_NR_TP)
-bd_33 = Reduce(intersect, x)		
-length(bd_33)
-write.table(bd_33, "bd_33.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)
+bd_29 = Reduce(intersect, x)		
+length(bd_29)
+write.table(bd_29, "bd_29.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)
 
-#bd_59
-x = list(iPS_Ctrl_TP_vs_iPS_BD_NR_TP, iPS_Ctrl_TP_vs_iPS_BD_TP, UnChanged_Primary_TP_vs_iPS_Ctrl_TP)
+#bd_58
+x = list(iPS_Ctrl_TP_vs_iPS_BD_NR_TP, iPS_Ctrl_TP_vs_iPS_BD_TP, UnChanged_iPS_Ctrl_TP_vs_Primary_TP)
 xInt = Reduce(intersect, x)
 y = iPS_Ctrl_TP_vs_iPS_BD_R_TP
-bd_59 = setdiff(xInt,y)
-length(bd_59)
-write.table(bd_59, "bd_59.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)
+bd_58 = setdiff(xInt,y)
+length(bd_58)
+write.table(bd_58, "bd_58.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)
 
-#bd_103
-x = list(UnChanged_Primary_TP_vs_iPS_Ctrl_TP, iPS_Ctrl_TP_vs_iPS_BD_TP)
+#bd_113
+x = list(UnChanged_iPS_Ctrl_TP_vs_Primary_TP, iPS_Ctrl_TP_vs_iPS_BD_TP)
 xInt = Reduce(intersect,x)
 y = list(iPS_Ctrl_TP_vs_iPS_BD_R_TP, iPS_Ctrl_TP_vs_iPS_BD_NR_TP)
 yInt = Reduce(union,y)
-bd_103 = setdiff(xInt,yInt)
-length(bd_103)
-write.table(bd_103, "bd_103.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)
+bd_113 = setdiff(xInt,yInt)
+length(bd_113)
+write.table(bd_113, "bd_113.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)
 
-#bd_r_92
-x = list(UnChanged_Primary_TP_vs_iPS_Ctrl_TP, iPS_Ctrl_TP_vs_iPS_BD_R_TP)
+#bd_r_63
+x = list(UnChanged_iPS_Ctrl_TP_vs_Primary_TP, iPS_Ctrl_TP_vs_iPS_BD_R_TP)
 xInt = Reduce(intersect,x)
 y = list(iPS_Ctrl_TP_vs_iPS_BD_TP, iPS_Ctrl_TP_vs_iPS_BD_NR_TP)
 yInt = Reduce(union,y)
-bd_r_92 = setdiff(xInt,yInt)
-length(bd_r_92)
-write.table(bd_r_92, "bd_r_92.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)
+bd_r_63 = setdiff(xInt,yInt)
+length(bd_r_63)
+write.table(bd_r_63, "bd_r_63.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)
 
-#bd_nr_670
-x = list(UnChanged_Primary_TP_vs_iPS_Ctrl_TP, iPS_Ctrl_TP_vs_iPS_BD_NR_TP)
+#bd_nr_668
+x = list(UnChanged_iPS_Ctrl_TP_vs_Primary_TP, iPS_Ctrl_TP_vs_iPS_BD_NR_TP)
 xInt = Reduce(intersect,x)
 y = list(iPS_Ctrl_TP_vs_iPS_BD_TP, iPS_Ctrl_TP_vs_iPS_BD_R_TP)
 yInt = Reduce(union,y)
-bd_nr_670 = setdiff(xInt,yInt)
-length(bd_nr_670)
-write.table(bd_nr_670, "bd_nr_670.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)
+bd_nr_668 = setdiff(xInt,yInt)
+length(bd_nr_668)
+write.table(bd_nr_668, "bd_nr_668.csv", sep = "\t", quote = FALSE, row.names = F, col.names=F)

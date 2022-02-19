@@ -55,25 +55,25 @@ rxnFormula_bd_nr = rxnFormula_bd_nr';
 %% write to table
 % rxns
 bd_significant_lumped = [bd_significant_lumped rxnFormula_bd_lumped];
-bd_significant_lumped.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'fluxspan_a', 'fluxspan_b', 'FluxSpanRatio', 'direction', 'localization', 'rxnFormula'};
-writetable(bd_significant_lumped, 'rxns_bd_lumped.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+bd_significant_lumped.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'fluxspan_a', 'fluxspan_b', 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'localization', 'rxnFormula'};
+writetable(bd_significant_lumped, 'final_bd_lumped.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
 bd_significant_r = [bd_significant_r rxnFormula_bd_r];
-bd_significant_r.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'fluxspan_a', 'fluxspan_b', 'FluxSpanRatio', 'direction', 'localization', 'rxnFormula'};
-writetable(bd_significant_r, 'rxns_bd_r.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+bd_significant_r.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'fluxspan_a', 'fluxspan_b', 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'localization', 'rxnFormula'};
+writetable(bd_significant_r, 'final_bd_r.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
 bd_significant_nr = [bd_significant_nr rxnFormula_bd_nr];
-bd_significant_nr.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'fluxspan_a', 'fluxspan_b', 'FluxSpanRatio', 'direction', 'localization', 'rxnFormula'};
-writetable(bd_significant_nr, 'rxns_bd_nr.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+bd_significant_nr.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'fluxspan_a', 'fluxspan_b', 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'localization', 'rxnFormula'};
+writetable(bd_significant_nr, 'final_bd_nr.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
 % mets
-writetable(mets_bd_lumped, 'mets_bd_lumped.csv', 'WriteVariableNames', true, 'Delimiter','\t');
-writetable(mets_bd_r, 'mets_bd_r.csv', 'WriteVariableNames', true, 'Delimiter','\t');
-writetable(mets_bd_nr, 'mets_bd_nr.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+% writetable(mets_bd_lumped, 'mets_bd_lumped.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+% writetable(mets_bd_r, 'mets_bd_r.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+% writetable(mets_bd_nr, 'mets_bd_nr.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
 %%
-clearvars -except bd_significant_lumped bd_significant_r bd_significant_nr mets_bd_lumped mets_bd_r mets_bd_nr
+clearvars -except bd_significant_lumped bd_significant_r bd_significant_nr %mets_bd_lumped mets_bd_r mets_bd_nr
 %%
-save('bd_significant_mets.mat');
+save('final_bd_rxns.mat');
 %%
 toc;

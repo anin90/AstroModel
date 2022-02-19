@@ -85,18 +85,50 @@ k = 1;
     TestedModel{k,1} = 'modelOri';
     k = k +1;   
 
-    %% GLUDC - Glutamate metabolism
+    %% PIPLC - Inositol phosphate metabolism
     model = modelOri;
     model.c(find(model.c)) = 0;
-    model.c(ismember(model.rxns,'GLUDC'))=1;
+    model.c(ismember(model.rxns,'PIPLC'))=1;
     if find(model.c)>0
         FBA = optimizeCbModel(model,'max','zero');
         TestSolution(k,1) = FBA.f;
     else
         TestSolution(k,1) = NaN;
     end
-    TestSolutionName{k,1} = 'GLUDC';
-    TestSolutionGroup{k,1} = 'Glutamate metabolism';
+    TestSolutionName{k,1} = 'PIPLC';
+    TestSolutionGroup{k,1} = 'Inositol phosphate metabolism';
+    TestedMetabolite{k,1} = 'NA';
+    TestedModel{k,1} = 'modelOri';
+    k = k +1;   
+
+    %% PGMT - glycogen metabolism
+    model = modelOri;
+    model.c(find(model.c)) = 0;
+    model.c(ismember(model.rxns,'PGMT'))=1;
+    if find(model.c)>0
+        FBA = optimizeCbModel(model,'max','zero');
+        TestSolution(k,1) = FBA.f;
+    else
+        TestSolution(k,1) = NaN;
+    end
+    TestSolutionName{k,1} = 'PGMT';
+    TestSolutionGroup{k,1} = 'glycogen metabolism';
+    TestedMetabolite{k,1} = 'NA';
+    TestedModel{k,1} = 'modelOri';
+    k = k +1;   
+        
+    %% HMGCOASim - cholesterol synthesis
+    model = modelOri;
+    model.c(find(model.c)) = 0;
+    model.c(ismember(model.rxns,'HMGCOASim'))=1;
+    if find(model.c)>0
+        FBA = optimizeCbModel(model,'max','zero');
+        TestSolution(k,1) = FBA.f;
+    else
+        TestSolution(k,1) = NaN;
+    end
+    TestSolutionName{k,1} = 'HMGCOASim';
+    TestSolutionGroup{k,1} = 'cholesterol synthesis';
     TestedMetabolite{k,1} = 'NA';
     TestedModel{k,1} = 'modelOri';
     k = k +1;   

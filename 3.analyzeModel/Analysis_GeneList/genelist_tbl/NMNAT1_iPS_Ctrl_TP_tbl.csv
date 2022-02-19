@@ -1,8 +1,8 @@
-rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	direction	localization
-DNADtn	Transport, nuclear		389.018612521151	194.509306260575	2	L	intercompartmental
-NADtn	Transport, nuclear		1000	500	2	L	intercompartmental
-NICRNTtn	Transport, nuclear		389.018612521151	194.509306260575	2	L	intercompartmental
-NMNATn	NAD metabolism	64802.1	1000	500	2	L	[n]
-NMNtn	Transport, nuclear		1000	500	2	L	intercompartmental
-NNATn	NAD metabolism	64802.1	389.018612521151	194.509306260575	2	L	[n]
-NNATr	NAD metabolism	349565.1 or 23057.2 or 23057.1 or 64802.1	389.01861252115	194.509306260575	2	L	[c]
+rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	PerturbationClass	Flux	MetabolicUnits	localization	rxnFormula
+DNADtn	Transport, nuclear		389.018612521151	194.509306260575	2	Cascade	L	NA	intercompartmental	dnad[c]  <=> dnad[n] 
+NADtn	Transport, nuclear		1000	500	2	Cascade	L	NA	intercompartmental	nad[n]  <=> nad[c] 
+NICRNTtn	Transport, nuclear		389.018612521151	194.509306260575	2	Cascade	L	NA	intercompartmental	nicrnt[c]  <=> nicrnt[n] 
+NMNATn	NAD metabolism	64802.1	1000	500	2	DirectMapping	L	NA	[n]	atp[n] + h[n] + nmn[n]  -> ppi[n] + nad[n] 
+NMNtn	Transport, nuclear		1000	500	2	Cascade	L	NA	intercompartmental	nmn[c]  <=> nmn[n] 
+NNATn	NAD metabolism	64802.1	389.018612521151	194.509306260575	2	DirectMapping	L	NA	[n]	atp[n] + h[n] + nicrnt[n]  -> ppi[n] + dnad[n] 
+NNATr	NAD metabolism	349565.1 or 23057.2 or 23057.1 or 64802.1	389.01861252115	194.509306260575	2	DirectMapping	L	NA	[c]	h[c] + atp[c] + nicrnt[c]  -> ppi[c] + dnad[c] 

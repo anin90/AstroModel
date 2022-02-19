@@ -61,7 +61,7 @@ bd_nr_rxns_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/An
 	ggplot(as.data.frame(myTable), aes(x = reorder(Var2, -Freq), Freq, fill=Var1, label = Freq))+ 
 		geom_bar(stat="identity") + coord_flip() + 
 		scale_fill_manual(values = c("palegreen3", "orangered1")) + theme_classic() + 
-		labs(fill = "Direction of disruption", x ="subsystem", y = "# of disrupted reactions") +
+		labs(fill = "Flux", x ="subsystem", y = "# of disrupted reactions") +
 		geom_text(data=subset(as.data.frame(myTable),Freq != 0), position = position_stack(vjust = 0.5)) +
 		ggtitle("BD_Lumped")	
 
@@ -79,7 +79,7 @@ bd_nr_rxns_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/An
 	ggplot(as.data.frame(myTable), aes(x = reorder(Var2, -Freq), Freq, fill=Var1, label = Freq))+ 
 		geom_bar(stat="identity", width = 0.5) + coord_flip() + 
 		scale_fill_manual(values = c("palegreen3", "orangered1")) + theme_classic() + 
-		labs(fill = "Direction of disruption", x ="subsystem", y = "# of disrupted reactions") +
+		labs(fill = "Flux", x ="subsystem", y = "# of disrupted reactions") +
 		geom_text(data=subset(as.data.frame(myTable),Freq != 0), position = position_stack(vjust = 0.5)) +
 		ggtitle("BD_Responder")	
 
@@ -96,41 +96,41 @@ bd_nr_rxns_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/An
 	head(myTable)
 	ggplot(as.data.frame(myTable), aes(x = reorder(Var2, -Freq), Freq, fill=Var1, label = Freq))+ 
 		geom_bar(stat="identity") + coord_flip() + 
-		scale_fill_manual(values = c("palegreen3", "orangered1")) + theme_classic() + 
-		labs(fill = "Direction of disruption", x ="subsystem", y = "# of disrupted reactions") +
+		scale_fill_manual(values = c("orangered1")) + theme_classic() + 
+		labs(fill = "Flux", x ="subsystem", y = "# of disrupted reactions") +
 		geom_text(data=subset(as.data.frame(myTable),Freq != 0), position = position_stack(vjust = 0.5)) +
 		ggtitle("BD_NonResponder")			
 
 # Fig.4: Number of rxns per compartment post fdr (BD_Lumped)
-	myTable <- table(bd_lumped_rxns_fdr$Var7, bd_lumped_rxns_fdr$Var8)
-	compartment <- c("cytoplasm", "extracellular space", "mitochondrion", "endoplasmic reticulum", "intercompartmental")
+	myTable <- table(bd_lumped_rxns_fdr$Var7, bd_lumped_rxns_fdr$Var9)
+	compartment <- c("cytoplasm", "extracellular space", "mitochondrion", "peroxisome")
 	ggplot(as.data.frame(myTable), aes(Var2, Freq, fill=Var1, label = Freq)) + 
 		geom_bar(stat="identity") + coord_flip() + 
 		scale_fill_manual(values = c("palegreen3", "orangered1")) + theme_classic() + 
-		labs(fill = "Direction of disruption", x ="compartment", y = "# of disrupted reactions") +
+		labs(fill = "Flux", x ="compartment", y = "# of disrupted reactions") +
 		geom_text(data=subset(as.data.frame(myTable),Freq != 0), position = position_stack(vjust = 0.5)) +
 		scale_x_discrete(labels= compartment) + 
 		ggtitle("BD_Lumped")
 		
 # Fig.5: Number of rxns per compartment post fdr (BD_Responder)
-	myTable <- table(bd_r_rxns_fdr$Var7, bd_r_rxns_fdr$Var8)
-	compartment <- c("cytoplasm", "mitochondrion", "peroxisome", "intercompartmental")
+	myTable <- table(bd_r_rxns_fdr$Var7, bd_r_rxns_fdr$Var9)
+	compartment <- c("cytoplasm", "mitochondrion", "endoplasmic reticulum", "peroxisome", "intercompartmental")
 	ggplot(as.data.frame(myTable), aes(Var2, Freq, fill=Var1, label = Freq)) + 
 		geom_bar(stat="identity") + coord_flip() + 
 		scale_fill_manual(values = c("palegreen3", "orangered1")) + theme_classic() + 
-		labs(fill = "Direction of disruption", x ="compartment", y = "# of disrupted reactions") +
+		labs(fill = "Flux", x ="compartment", y = "# of disrupted reactions") +
 		geom_text(data=subset(as.data.frame(myTable),Freq != 0), position = position_stack(vjust = 0.5)) +
 		scale_x_discrete(labels= compartment) + 
 		ggtitle("BD_Responder")		
 
 # Fig.6: Number of rxns per compartment post fdr (BD_NonResponder)
-	myTable <- table(bd_nr_rxns_fdr$Var7, bd_nr_rxns_fdr$Var8)
+	myTable <- table(bd_nr_rxns_fdr$Var7, bd_nr_rxns_fdr$Var9)
 	compartment <- c("cytoplasm", "Golgi apparatus", "lysosome", "mitochondrion", "nucleus", 
 					"endoplasmic reticulum", "peroxisome", "intercompartmental")
 	ggplot(as.data.frame(myTable), aes(Var2, Freq, fill=Var1, label = Freq)) + 
 		geom_bar(stat="identity") + coord_flip() + 
-		scale_fill_manual(values = c("palegreen3", "orangered1")) + theme_classic() + 
-		labs(fill = "Direction of disruption", x ="compartment", y = "# of disrupted reactions") +
+		scale_fill_manual(values = c("orangered1")) + theme_classic() + 
+		labs(fill = "Flux", x ="compartment", y = "# of disrupted reactions") +
 		geom_text(data=subset(as.data.frame(myTable),Freq != 0), position = position_stack(vjust = 0.5)) +
 		scale_x_discrete(labels= compartment) + 
 		ggtitle("BD_NonResponder")

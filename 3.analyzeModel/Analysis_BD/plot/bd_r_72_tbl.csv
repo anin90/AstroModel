@@ -3,33 +3,16 @@ rxnList	subSystem	GPR	FluxSpan_a	FluxSpan_b	Flux_Span_Ratio	Var7	Var8	Var9
 ABT_Dt2	Transport, extracellular		2000	0	Inf	L	NA	intercompartmental
 ADRNCOAtx	Transport, peroxisomal		0	10	0	H	NA	intercompartmental
 AHCYSte	Transport, extracellular		40	20	2	L	NA	intercompartmental
-AICARte	Transport, extracellular		59.9999999999998	96.1783439490446	0.623841059602647	H	NA	intercompartmental
 AMETt	Transport, extracellular		40	19.9999999999998	2.00000000000002	L	NA	intercompartmental
 APAT2rm	Beta-Alanine metabolism	18.1 or 18.2	489.454005199951	36.6666666666667	13.3487455963623	L	NA	[m]
 BALAtmr	Transport, mitochondrial		489.454005199951	36.6666666666667	13.3487455963623	L	NA	intercompartmental
-C04483t2	Transport, extracellular		40	0	Inf	L	NA	intercompartmental
 C161CPT2	Fatty acid oxidation	1376.1	2000	418.333333333333	4.78087649402391	L	carnitine shuttle	[m]
-DADNt4	Transport, extracellular	3177.1	60.0000000000001	81.2369856222113	0.738579841933418	H	NA	intercompartmental
-DCK1m	Nucleotide interconversion		1573.60970107163	2000	0.786804850535815	H	NA	[m]
-DCMPtm	Transport, mitochondrial		1573.60970107163	2000	0.786804850535815	H	NA	intercompartmental
 DCSPTN1COAtx	Transport, peroxisomal		0	10	0	H	NA	intercompartmental
 DCSPTN1CPT1	Fatty acid oxidation	1375.1 or 1375.3 or 1375.4 or 126129.1 or 1374.1 or 1375.2	0	10	0	H	carnitine shuttle	[c]
 DCSPTN1CPT2	Fatty acid oxidation	1376.1	0	10	0	H	carnitine shuttle	[m]
-EX_ade[e]	Exchange/demand reaction		60.0000000000002	95.2524383247274	0.629905134768863	H	NA	[e]
-EX_adn[e]	Exchange		60	80.0102669404516	0.749903759784423	H	NA	[e]
-EX_aicar[e]	Exchange/demand reaction		60	96.1783439490446	0.623841059602649	H	NA	[e]
 EX_ala_B[e]	Exchange/demand reaction		489.454005199951	36.6666666666666	13.3487455963623	L	NA	[e]
-EX_dad_2[e]	Exchange/demand reaction		60.0000000000002	81.2369856222111	0.73857984193342	H	NA	[e]
 EX_dcsptn1[e]	Exchange/demand reaction		0	10	0	H	NA	[e]
-EX_dgsn[e]	Exchange/demand reaction		59.9999999999991	86.8599999999998	0.690766751093705	H	NA	[e]
-EX_din[e]	Exchange/demand reaction		60	87.2612197928654	0.68759066332586	H	NA	[e]
-EX_gsn[e]	Exchange/demand reaction		60	84.8119122257053	0.707447791535761	H	NA	[e]
-EX_gua[e]	Exchange/demand reaction		60.0000000000001	100.423156801661	0.597471757619628	H	NA	[e]
-EX_hxan[e]	Exchange/demand reaction		60.0000000000001	106.046587926509	0.565789066608917	H	NA	[e]
-EX_imp[e]	Exchange/demand reaction		60	87.2612197928655	0.68759066332586	H	NA	[e]
-EX_ins[e]	Exchange/demand reaction		60	85.7805429864255	0.699459316893049	H	NA	[e]
 EX_mlthf[e]	Exchange/demand reaction		20	0	Inf	L	NA	[e]
-EX_xtsn[e]	Exchange/demand reaction		59.9999999999991	84.3492769744156	0.711327970460233	H	NA	[e]
 FAOXC122x	Fatty acid oxidation	1962.1 or 10455.1	0	10	0	H	betaoxidation	[x]
 FAOXC142C122x	Fatty acid oxidation	51.1 and 1962.1 and 3295.1 and 30.1	0	10	0	H	betaoxidation	[x]
 FAOXC163C142x	Fatty acid oxidation	1962.1 and 3295.1 and 30.1	0	10	0	H	betaoxidation	[x]
@@ -54,24 +37,13 @@ FAOXC225x	Fatty acid oxidation	1962.1 or 10455.1	0	10	0	H	betaoxidation	[x]
 FAOXC226C225m	Fatty acid oxidation	1666.1	0	10	0	H	betaoxidation	[m]
 FAOXC226C225x	Fatty acid oxidation	26063.1	0	10	0	H	betaoxidation	[x]
 FOAXC122C101x	Fatty acid oxidation	1962.1 and 3295.1 and 30.1	0	10	0	H	betaoxidation	[x]
-GK1	Nucleotide interconversion	2987.1	814.932318104905	1081.52727272727	0.753501403667704	H	purine synthesis, cytosol	[c]
-GUAt	Transport, extracellular	3177.1	60.0000000000027	100.423156801661	0.597471757619654	H	NA	intercompartmental
-HMR_3070	Fatty acid oxidation	8310.1 or 51.1	70	0	Inf	L	NA	[x]
-HMR_3071	Fatty acid oxidation	1962.1	70	0	Inf	L	NA	[x]
-HMR_3072	Fatty acid oxidation	1962.1 or 3295.1	70	0	Inf	L	NA	[x]
-HMR_3073	Fatty acid oxidation	30.1 or 4645.1	70	0	Inf	L	NA	[x]
 HMR_3422	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	0	10	0	H	NA	[m]
 HMR_6617	Transport, nuclear		2000	383.333333333333	5.21739130434782	L	NA	intercompartmental
 HMR_6619	Transport, nuclear		2000	383.333333333333	5.21739130434782	L	NA	intercompartmental
 HMR_7949	Transport, endoplasmic reticular		22.5	2000	0.01125	H	NA	intercompartmental
-HMR_8475	Transport, mitochondrial	2030.1 or 3177.1	1573.60970107163	2000	0.786804850535815	H	NA	intercompartmental
 HMR_9634	Transport, endoplasmic reticular		0	200	0	H	NA	intercompartmental
-HYXNt	Transport, extracellular	3177.1	59.9999999999999	106.046587926509	0.565789066608915	H	NA	intercompartmental
-IMPtr	Transport, extracellular		59.9999999999991	87.2612197928651	0.687590663325852	H	NA	intercompartmental
 MMAte	Transport, extracellular	57127.1 or 51458.1	2000	0	Inf	L	NA	intercompartmental
-PAIL_HStn	Transport, nuclear		1160.73181049069	1536.14832535885	0.75561180605365	H	NA	intercompartmental
 PGESr	Eicosanoid metabolism	80142.4 or 80142.2 or 9536.1 or 80142.1 or 9536.2 or 80142.3	1000	2000	0.5	H	prostaglandin synthesis, cytosol	[r]
-PI45P4P	Inositol phosphate metabolism		758.265651438241	1000	0.758265651438241	H	NA	[c]
 PROSTGE2t2r	Transport, endoplasmic reticular		1000	2000	0.5	H	NA	intercompartmental
 PUNP3	Purine catabolism	4860.1	868.265651438242	1135.59999999999	0.764587576116808	H	purine catabolism	[c]
 PUNP7	Nucleotide interconversion	4860.1	868.265651438241	1135.6	0.764587576116803	H	purine catabolism	[c]
@@ -80,7 +52,6 @@ RDH3	Vitamin A metabolism	5959.1	2000	1000	2	L	vitamin A metabolism	[c]
 RE0456N	Pyrimidine synthesis	50484.1	2000	383.333333333333	5.21739130434782	L	pyrimidine synthesis/ de novo	[n]
 RE1100R	Steroid metabolism	412.1	22.5	2000	0.01125	H	cholesterol synthesis	[r]
 UTPtn	Transport, nuclear		2000	383.333333333333	5.21739130434783	L	NA	intercompartmental
-XTSNtr	Transport, extracellular		59.9999999999998	84.3492769744157	0.71132797046024	H	NA	intercompartmental
 r0193	Methionine and cysteine metabolism	1491.1	848.682318104905	518.614718614718	1.6364408637916	L	NA	[c]
 r0210	Methionine and cysteine metabolism	875.1 or 102724560.1	812.432318104908	483.376623376624	1.68074391440295	L	NA	[c]
 r0276	Purine catabolism	51292.1 or 2766.1	828.265651438241	1109.6	0.746454264093584	H	purine synthesis, cytosol	[c]
@@ -91,3 +62,12 @@ r1378	Miscellaneous	128.1	2000	0	Inf	L	NA	[c]
 r1384	Nucleotide interconversion		868.265651438244	1135.6	0.764587576116806	H	purine catabolism, cytosol	[c]
 r2520	Transport, mitochondrial	8402.1	2000	372.5	5.36912751677852	L	NA	intercompartmental
 sink_HC02191[c]	Exchange/demand reaction		10	0	Inf	L	NA	[c]
+BILIRUBtr	Transport, endoplasmic reticular		2000	0	Inf	L	NA	intercompartmental
+C161CPT1	Fatty acid oxidation	1375.1 or 1375.3 or 1375.4 or 126129.1 or 1374.1 or 1375.2	2000	324.851945854484	6.15665082362132	L	carnitine shuttle	[c]
+EX_ttdca[e]	Exchange		130	60	2.16666666666667	L	NA	[e]
+EX_ttdcea[e]	Exchange/demand reaction		130	60	2.16666666666667	L	NA	[e]
+HMR_2865	Transport, endoplasmic reticular	6584.1	390.685279187817	10	39.0685279187817	L	NA	intercompartmental
+HMR_2866	Transport, endoplasmic reticular	1384.1	390.685279187817	10	39.0685279187817	L	NA	[r]
+HMR_3428	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	40	10	4	L	NA	[m]
+TTDCEAt	Transport, extracellular		130	60	2.16666666666667	L	lipid metabolism	intercompartmental
+sink_crvnc[c]	Exchange/demand reaction		10	20	0.5	H	NA	[c]

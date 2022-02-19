@@ -1,8 +1,8 @@
-rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	direction	localization
-DPCOAK	CoA synthesis	80347.1	10	5	2	L	[c]
-PAN4PP	CoA catabolism		10	5	2	L	[c]
-PTPAT	CoA synthesis	80347.1	10	5	2	L	[c]
-r0033	CoA synthesis	80347.1	10	5	2	L	[m]
-r0579	CoA synthesis	79646.1 or 80025.1 or 53354.1 or 55229.1	10	5	2	L	[m]
-r0590	CoA synthesis	80347.1	10	5	2	L	[m]
-r0973	Transport, mitochondrial		10	5	2	L	intercompartmental
+rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	PerturbationClass	Flux	MetabolicUnits	localization	rxnFormula
+DPCOAK	CoA synthesis	80347.1	10	5	2	DirectMapping	L	NA	[c]	atp[c] + dpcoa[c]  -> h[c] + adp[c] + coa[c] 
+PAN4PP	CoA catabolism		10	5	2	Cascade	L	cysteine and CoA metabolism	[c]	h2o[c] + pan4p[c]  -> pi[c] + ptth[c] 
+PTPAT	CoA synthesis	80347.1	10	5	2	DirectMapping	L	NA	[c]	h[c] + atp[c] + pan4p[c]  -> ppi[c] + dpcoa[c] 
+r0033	CoA synthesis	80347.1	10	5	2	DirectMapping	L	NA	[m]	atp[m] + dpcoa[m]  -> h[m] + coa[m] + adp[m] 
+r0579	CoA synthesis	79646.1 or 80025.1 or 53354.1 or 55229.1	10	5	2	Cascade	L	cysteine and CoA metabolism	[m]	atp[m] + ptth[m]  -> h[m] + adp[m] + pan4p[m] 
+r0590	CoA synthesis	80347.1	10	5	2	DirectMapping	L	NA	[m]	h[m] + atp[m] + pan4p[m]  -> ppi[m] + dpcoa[m] 
+r0973	Transport, mitochondrial		10	5	2	Cascade	L	NA	intercompartmental	ptth[m]  <=> ptth[c] 
