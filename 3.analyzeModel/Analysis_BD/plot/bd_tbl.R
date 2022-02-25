@@ -81,7 +81,7 @@ bd_nr_726_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 	write.table(bd_lumped_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_lumped_subsystem_fdr.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 	bd_lumped_rxns_fdr = bd_209_tbl[bd_209_tbl$subSystem %in% bd_lumped_subsystem_fdr$subSystem,]
 	write.table(bd_lumped_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant/bd_lumped_rxns_fdr.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
-
+		
 # Fig.4: Number of rxns per subSystem (bd_responder)
 	iAstro_iPS_BD_R_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_T_TP/Rxns_iAstro_iPS_BD_R_TP.csv", header = T, sep = "\t")
 	iAstro_iPS_BD_R_TP_subSystem = iAstro_iPS_BD_R_TP %>% count(Var2)
