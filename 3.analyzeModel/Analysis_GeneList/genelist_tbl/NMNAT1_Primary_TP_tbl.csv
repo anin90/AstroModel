@@ -1,7 +1,0 @@
-rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	PerturbationClass	Flux	MetabolicUnits	localization	rxnFormula
-DNADtn	Transport, nuclear		364.166666666668	182.083333333334	2	Cascade	L	NA	intercompartmental	dnad[c]  <=> dnad[n] 
-NICRNTtn	Transport, nuclear		364.166666666667	182.083333333333	2	Cascade	L	NA	intercompartmental	nicrnt[c]  <=> nicrnt[n] 
-NMNATn	NAD metabolism	64802.1	1000	500	2	DirectMapping	L	NA	[n]	atp[n] + h[n] + nmn[n]  -> ppi[n] + nad[n] 
-NMNtn	Transport, nuclear		1000	500	2	Cascade	L	NA	intercompartmental	nmn[c]  <=> nmn[n] 
-NNATn	NAD metabolism	64802.1	364.166666666667	182.083333333333	2	DirectMapping	L	NA	[n]	atp[n] + h[n] + nicrnt[n]  -> ppi[n] + dnad[n] 
-NNATr	NAD metabolism	349565.1 or 23057.2 or 23057.1 or 64802.1	364.166666666668	182.083333333334	2	DirectMapping	L	NA	[c]	h[c] + atp[c] + nicrnt[c]  -> ppi[c] + dnad[c] 

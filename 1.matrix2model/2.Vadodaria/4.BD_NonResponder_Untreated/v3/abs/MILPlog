@@ -1,0 +1,39 @@
+
+Gurobi 8.1.1 (linux64, Matlab) logging started Sat Feb 26 18:08:01 2022
+
+Optimize a model with 9167 rows, 13932 columns and 47089 nonzeros
+Variable types: 10600 continuous, 3332 integer (3332 binary)
+Coefficient statistics:
+  Matrix range     [1e-04, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+03]
+  RHS range        [1e+03, 1e+03]
+Presolve removed 5725 rows and 6342 columns
+Presolve time: 0.14s
+Presolved: 3442 rows, 7590 columns, 29226 nonzeros
+Variable types: 6047 continuous, 1543 integer (1542 binary)
+
+Root relaxation: objective 1.871585e+03, 3436 iterations, 0.20 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1871.58541    0  195          - 1871.58541      -     -    0s
+H    0     0                    1665.0000000 1871.58541  12.4%     -    0s
+H    0     0                    1666.0000000 1871.58541  12.3%     -    1s
+     0     0     cutoff    0      1666.00000 1666.00000  0.00%     -    1s
+
+Cutting planes:
+  Learned: 193
+  Gomory: 3
+  Cover: 2
+  Implied bound: 21
+  MIR: 1
+
+Explored 1 nodes (5458 simplex iterations) in 1.62 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 1666 1665 
+
+Optimal solution found (tolerance 1.00e-12)
+Best objective 1.666000000000e+03, best bound 1.666000000000e+03, gap 0.0000%

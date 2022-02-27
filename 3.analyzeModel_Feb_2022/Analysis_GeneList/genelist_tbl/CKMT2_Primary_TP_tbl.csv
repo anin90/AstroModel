@@ -1,0 +1,4 @@
+rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	PerturbationClass	Flux	MetabolicUnits	localization	rxnFormula
+CK	Urea cycle	1159.1 or 1160.1 or 548596.1	20	10	2	DirectMapping	L	phosphocreatine synthesis, mitochondria	[m]	atp[m] + creat[m]  <=> h[m] + adp[m] + pcreat[m] 
+CREATtmdiffir	Urea cycle		20	10	2	Cascade	L	NA	intercompartmental	creat[c]  -> creat[m] 
+PCREATtmdiffir	Urea cycle		20	10	2	Cascade	L	NA	intercompartmental	pcreat[m]  -> pcreat[c] 

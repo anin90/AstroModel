@@ -1,3 +1,0 @@
-	subSystem	n
-1	Fatty acid synthesis	76
-2	Inositol phosphate metabolism	4

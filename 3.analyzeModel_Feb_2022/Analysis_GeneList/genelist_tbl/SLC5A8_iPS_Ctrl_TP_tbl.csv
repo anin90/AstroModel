@@ -1,0 +1,7 @@
+rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	PerturbationClass	Flux	MetabolicUnits	localization	rxnFormula
+BUTSMCT1	Transport, extracellular	160728.1	2000	1000	2	DirectMapping	L	NA	intercompartmental	na1[e] + but[e]  <=> na1[c] + but[c] 
+L_LACt4r	Transport, extracellular	160728.1	2000	1000	2	DirectMapping	L	NA	intercompartmental	na1[e] + lac_L[e]  <=> na1[c] + lac_L[c] 
+NACSMCTte	Transport, extracellular	160728.1	1000	500	2	DirectMapping	L	NA	intercompartmental	na1[e] + nac[e]  <=> na1[c] + nac[c] 
+NACUP	Transport, extracellular		1000	500	2	Cascade	L	NA	intercompartmental	nac[e]  -> nac[c] 
+PPASMCT1	Transport, extracellular	160728.1	2000	1000	2	DirectMapping	L	NA	intercompartmental	na1[e] + ppa[e]  <=> na1[c] + ppa[c] 
+PYRSMCT1	Transport, extracellular	160728.1	2000	1000	2	DirectMapping	L	NA	intercompartmental	na1[e] + pyr[e]  <=> pyr[c] + na1[c] 

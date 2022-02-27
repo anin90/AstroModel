@@ -90,7 +90,7 @@ model = addReaction(model,'AKGDm','reactionFormula','akg[m] + coa[m] + nad[m] ->
 model = addReaction(model,'BPNT','reactionFormula','h2o[c] + pap[c] -> amp[c] + pi[c]', 'subSystem','Nucleotide interconversion', 'geneRule','10380.1');
 model = addExchangeRxn(model,{'cit[e]'}, -10, 1000);
 model = addExchangeRxn(model,{'ser_D[e]'}, -10, 1000);
-model = addReaction(model,'ILEtec','reactionFormula','ile_L[e] <=> ile_L[c]', 'subSystem','Transport, extracellular', 'geneRule','');
+model = addReaction(model,'ILEtec','reactionFormula','ile_L[e] <=> ile_L[c]', 'subSystem','Transport, extracellular', 'geneRule','8501.1 or 124935.1');
 model = addReaction(model,'r0354','reactionFormula','glc_D[c] + itp[c] -> g6p[c] + h[c] + idp[c]', 'subSystem','Glycolysis/gluconeogenesis', 'geneRule','2645.1 or 3098.1 or 3099.1 or 3101.1');
 
 %% add literature curated synapse exchange rxns

@@ -1,5 +1,0 @@
-	X	rxnList	subSystem	GPR	FluxSpan_a	FluxSpan_b	Flux_Span_Ratio	Var7	Var8	Var9
-23	65	FAOXC140	Fatty acid oxidation	35.1 or 34.1	85.2956870057668	53.0107355318084	1.60902666507214	L	betaoxidation	[m]
-24	66	FAOXC18480m	Fatty acid oxidation	34.1 or 35.1	40	20	2	L	betaoxidation	[m]
-39	91	r0392	Miscellaneous	224.1 or 217.1 or 219.1 or 223.1 or 501.1	319.345741680767	0	Inf	L	NA	[c]
-82	191	r0393	Miscellaneous	224.1 or 217.1 or 219.1 or 223.1 or 501.1	0	141.061759729272	0	H	NA	[m]

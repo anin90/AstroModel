@@ -1,0 +1,5 @@
+rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	PerturbationClass	Flux	MetabolicUnits	localization	rxnFormula
+GALGLUSIDEtl	Transport, lysosomal		10	5	2	Cascade	L	NA	intercompartmental	galgluside_hs[c]  <=> galgluside_hs[l] 
+GBA	Sphingolipid metabolism	2629.2 or 2629.3 or 2629.4 or 2629.5 or 2629.1	389.018612521151	194.509306260575	2	DirectMapping	L	NA	[c]	h2o[c] + gluside_hs[c]  -> glc_D[c] + crm_hs[c] 
+GBAl	Sphingolipid metabolism	2629.4 or 2629.1 or 2629.3 or 2629.2 or 2629.5	10	5	2	DirectMapping	L	NA	[l]	h2o[l] + gluside_hs[l]  -> crm_hs[l] + glc_D[l] 
+GLB1	Sphingolipid metabolism	(5476.1 and 2720.1 and 2588.1 and 4758.1) or (5476.1 and 2720.1)	10	5	2	Cascade	L	NA	[l]	h2o[l] + galgluside_hs[l]  -> gal[l] + gluside_hs[l] 
