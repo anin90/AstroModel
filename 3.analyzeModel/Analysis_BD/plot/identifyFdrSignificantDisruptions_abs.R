@@ -21,17 +21,17 @@ library(pheatmap)
 library(magrittr)
 library(venn)
 
-pdf("bd_tbl_abs.pdf")
+pdf("bd_tbl_abs/bd_tbl_abs.pdf")
 
 ###########
 # Load data
 ###########
 
-bd_209_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_209_tbl_abs.csv",
+bd_209_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_abs/bd_209_tbl_abs.csv",
 		header = T, sep = "\t")
-bd_r_72_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_r_72_tbl_abs.csv",
+bd_r_72_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_abs/bd_r_72_tbl_abs.csv",
 		header = T, sep = "\t")		
-bd_nr_733_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_nr_733_tbl_abs.csv",
+bd_nr_733_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_abs/bd_nr_733_tbl_abs.csv",
 		header = T, sep = "\t")
 
 ###########
