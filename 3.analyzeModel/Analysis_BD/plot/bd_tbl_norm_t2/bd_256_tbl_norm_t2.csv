@@ -1,0 +1,257 @@
+rxnList	subSystem	GPR	Fluxspan_a	Fluxspan_b	FluxSpanRatio	Flux	MetabolicUnits	Localization
+2OXOADPt	Transport, extracellular		20	0	Inf	L	NA	intercompartmental
+ACGAMPM	Aminosugar metabolism	5238.1	0	38.9827911362565	0	H	amino sugar metabolism	[c]
+ACNAMlt	Transport, lysosomal	26503.1	0	30.9245283018868	0	H	NA	intercompartmental
+ADPOHc	Lysine metabolism		20	0	Inf	L	NA	[c]
+ADPOHt	Transport, extracellular		20	0	Inf	L	NA	intercompartmental
+ASNCYSCYSr	Peptide metabolism		10	20	0.5	H	NA	[c]
+ASNCYSCYSt	Transport, extracellular	6564.1 or 6565.1	10	20	0.5	H	NA	intercompartmental
+BTNt2	Transport, extracellular	6566.1	10	1000	0.01	H	NA	intercompartmental
+CMPACNAtg	Transport, golgi apparatus	10559.1	0	65.491089108911	0	H	NA	intercompartmental
+CYSCYSr	Peptide metabolism		10	20	0.5	H	NA	[c]
+CYSCYSt	Transport, extracellular	6564.1 or 6565.1	10	20	0.5	H	NA	intercompartmental
+CYSTA	Methionine and cysteine metabolism	2805.1	20	40	0.5	H	NA	[c]
+DCMPDA	Pyrimidine catabolism	1635.1	1010	1320.36546184739	0.764939730085682	H	NA	[c]
+EX_2oxoadp[e]	Exchange/demand reaction		20	0	Inf	L	NA	[e]
+EX_HC00250[e]	Exchange/demand reaction		20	40	0.5	H	NA	[e]
+EX_L2aadp[e]	Exchange/demand reaction		20	0	Inf	L	NA	[e]
+EX_adpoh[e]	Exchange/demand reaction		20	0	Inf	L	NA	[e]
+EX_asncyscys[e]	Exchange/demand reaction		10	20	0.5	H	NA	[e]
+EX_cys_L[e]	Exchange/demand reaction		20	40	0.5	H	NA	[e]
+EX_cyscys[e]	Exchange/demand reaction		10	20	0.5	H	NA	[e]
+EX_gthrd[e]	Exchange/demand reaction		20	40	0.5	H	NA	[e]
+EX_hiscyscys[e]	Exchange/demand reaction		10	20	0.5	H	NA	[e]
+EX_lpchol_hs[e]	Exchange/demand reaction		20	0	Inf	L	NA	[e]
+EX_mercplaccys[e]	Exchange/demand reaction		10	20	0.5	H	NA	[e]
+EX_sfcys[e]	Exchange/demand reaction		10	20	0.5	H	NA	[e]
+EX_so4[e]	Exchange/demand reaction		29.9999999999999	50	0.599999999999998	H	NA	[e]
+EX_taur[e]	Exchange/demand reaction		40	60	0.666666666666667	H	NA	[e]
+EX_tsul[e]	Exchange/demand reaction		10	20	0.5	H	NA	[e]
+GALASE16ly	Keratan sulfate degradation	(5476.1 and 2720.1 and 2588.1 and 4758.1) or (5476.1 and 2720.1)	0	8.39629347550137	0	H	NA	[l]
+GALASE17ly	Keratan sulfate degradation	(5476.1 and 2720.1 and 2588.1 and 4758.1) or (5476.1 and 2720.1)	0	8.39629347550139	0	H	NA	[l]
+GALASE18ly	Keratan sulfate degradation	(5476.1 and 2720.1 and 2588.1 and 4758.1) or (5476.1 and 2720.1)	0	8.39629347550139	0	H	NA	[l]
+GALASE19ly	Keratan sulfate degradation	(5476.1 and 2720.1 and 2588.1 and 4758.1) or (5476.1 and 2720.1)	0	8.39629347550139	0	H	NA	[l]
+GALASE20ly	Keratan sulfate degradation	(5476.1 and 2720.1 and 2588.1 and 4758.1) or (5476.1 and 2720.1)	0	7.7965582272513	0	H	NA	[l]
+GALNTg	O-glycan metabolism	26290.1 or 79695.1 or 2589.1 or 50614.1 or 8693.1 or 55568.2 or 114805.1 or 11226.1 or 117248.1 or 11227.1 or 55568.1 or 2590.1 or 51809.1 or 26290.1 or 79623.1 or 63917.1 or 2591.1	0	8.39629347550139	0	H	amino sugar metabolism	[g]
+GALSIDEtl	Transport, lysosomal		10	109.151815181518	0.0916155171892479	H	NA	intercompartmental
+HISCYSCYSr	Peptide metabolism		10	20	0.5	H	NA	[c]
+HISCYSCYSt	Transport, extracellular	6564.1 or 6565.1	10	20	0.5	H	NA	intercompartmental
+HMR_1317	Eicosanoid metabolism		1000	0	Inf	L	NA	[c]
+KSII_CORE2tly	Transport, lysosomal		0	8.39629347550137	0	H	NA	intercompartmental
+KSII_CORE4tly	Transport, lysosomal		0	7.7965582272513	0	H	NA	intercompartmental
+L2AADPtr	Transport, extracellular		20	0	Inf	L	NA	intercompartmental
+LPCHOLt	Transport, extracellular		20	0	Inf	L	NA	intercompartmental
+MCLACCYSR	Methionine and cysteine metabolism		10	20	0.5	H	NA	[c]
+MCLOR	Methionine and cysteine metabolism	92483.1 or (3945.1 and 3939.1) or 55293.1 or 3948.2 or 3948.1 or 3945.1 or 160287.1 or 3939.1	10	20	0.5	H	NA	[c]
+MERCPLACCYSt	Transport, extracellular		10	20	0.5	H	NA	intercompartmental
+MI145PP	Inositol phosphate metabolism	3635.1 or 8867.2 or 3636.1 or 27124.2 or 8867.1 or 27124.1 or 3633.1 or 56623.1 or 3632.1	518.759259259259	339.638190954774	1.52738788827296	L	NA	[c]
+N3Tg	O-glycan metabolism	56913.1	0	8.39629347550137	0	H	NA	[g]
+NACHEX23ly	Keratan sulfate degradation	(3073.1 and 3074.1) or 3073.1 or 3074.1	0	8.39629347550137	0	H	NA	[l]
+NACHEX24ly	Keratan sulfate degradation	3073.1 or 3074.1 or (3073.1 and 3074.1)	0	8.39629347550139	0	H	NA	[l]
+NACHEX25ly	Keratan sulfate degradation	(3073.1 and 3074.1) or 3073.1 or 3074.1	0	8.39629347550139	0	H	NA	[l]
+NACHEX26ly	Keratan sulfate degradation	(3073.1 and 3074.1) or 3073.1 or 3074.1	0	7.7965582272513	0	H	chondroitin sulphate degradation, lysosome	[l]
+NAGA2ly	Keratan sulfate degradation	4668.1	0	8.39629347550139	0	H	NA	[l]
+NAGLCAly	Keratan sulfate degradation		0	8.39629347550139	0	H	NA	[l]
+NDP7g	Nucleotide interconversion	9583.1	0	109.151815181518	0	H	pyrimidine degradation	[g]
+PI45PLC	Inositol phosphate metabolism	23236.2 or 5336.1 or 9651.1 or 113026.1 or 89869.1 or 84812.1 or 5330.1 or 5335.1 or 51196.1 or 5333.1 or 5332.2 or 5331.1 or 5335.2 or 5334.1 or 5332.1 or 257068.1 or 23236.1 or 23007.1	521.203703703704	341.070175438597	1.52814212803411	L	phospholipid metabolism/inositol, cytosol	[c]
+RE3477C1	Eicosanoid metabolism		1000	0	Inf	L	NA	[c]
+S6TASE22ly	Keratan sulfate degradation	5476.1 and 2720.1 and 2588.1 and 4758.1	0	8.39629347550135	0	H	NA	[l]
+S6TASE23ly	Keratan sulfate degradation	2799.1	0	8.39629347550135	0	H	NA	[l]
+S6TASE24ly	Keratan sulfate degradation	2799.1	0	8.39629347550135	0	H	NA	[l]
+S6TASE25ly	Keratan sulfate degradation	5476.1 and 2720.1 and 2588.1 and 4758.1	0	7.79655822725135	0	H	chondroitin degradation, lysosome	[l]
+S6TASE26ly	Keratan sulfate degradation	2799.1	0	7.79655822725135	0	H	chondroitin degradation, lysosome	[l]
+SFCYSc	Methionine and cysteine metabolism		10	20	0.5	H	NA	[c]
+SFCYSe	Transport, extracellular		10	20	0.5	H	NA	intercompartmental
+SIAASE3ly	Keratan sulfate degradation	5476.1 and 2720.1 and 2588.1 and 4758.1	0	8.39629347550137	0	H	NA	[l]
+SIAASE4ly	Keratan sulfate degradation	5476.1 and 2720.1 and 2588.1 and 4758.1	0	7.7965582272513	0	H	chondroitin degradation, lysosome	[l]
+Ser_Thrtg	Transport, golgi apparatus		0	8.39629347550135	0	H	NA	intercompartmental
+TXB2c	Eicosanoid metabolism		1000	0	Inf	L	lipid metabolism	[c]
+UAGDP	Aminosugar metabolism	6675.1 or 91373.1	0	38.9827911362565	0	H	amino sugar metabolism	[c]
+UDPACGALtl	Transport, lysosomal		0	8.39629347550135	0	H	NA	intercompartmental
+UDPGALtg	Transport, golgi apparatus	7355.1	0	109.151815181518	0	H	NA	intercompartmental
+UDPtl	Transport, lysosomal		0	8.39629347550135	0	H	NA	intercompartmental
+UGALNACtg	Transport, golgi apparatus	7355.1	0	32.7455445544554	0	H	NA	intercompartmental
+UGLCNACtg	Transport, golgi apparatus	11046.1	0	38.9827911362565	0	H	NA	intercompartmental
+r0594	Lysine metabolism	501.1	20	0	Inf	L	lysine metabolism	[c]
+r0940	Transport, extracellular		20	40	0.5	H	NA	intercompartmental
+r2347	Transport, extracellular	387775.1	2000	0	Inf	L	NA	intercompartmental
+r2539	Transport, mitochondrial		20	0	Inf	L	NA	intercompartmental
+sink_crvnc[c]	Exchange/demand reaction		20	10	2	L	NA	[c]
+sink_cys_L[c]	Exchange/demand reaction		20	40	0.5	H	NA	[c]
+15KPROSTGF2t	Transport, extracellular		20	0	Inf	L	NA	intercompartmental
+2OXOADOXm	Lysine metabolism	(4967.2 and 1738.1 and 8050.1 and 1743.1) or (4967.1 and 1738.1 and 8050.1 and 1743.1)	20	0	Inf	L	lysine metabolism	[m]
+ACACT10m	Valine, leucine, and isoleucine metabolism	38.1 or 3032.1 or 10449.1	41.4285714285714	20	2.07142857142857	L	isoleucine metabolism	[m]
+BGAL1e	Sphingolipid metabolism	2720.1	140.925925925926	0	Inf	L	NA	[e]
+C11695td	Transport, extracellular		10	37.5	0.266666666666667	H	NA	intercompartmental
+CE5304t	Transport, extracellular		20	28.3333333333333	0.705882352941178	H	NA	intercompartmental
+DESAT18_10	Fatty acid synthesis	9415.1	10	32.5	0.307692307692308	H	fatty acid synthesis & elongation	[c]
+EX_15kprostgf2[e]	Exchange/demand reaction		20	0	Inf	L	NA	[e]
+EX_C05957[e]	Exchange/demand reaction		20	28.3333333333333	0.705882352941177	H	NA	[e]
+EX_C11695[e]	Exchange/demand reaction		10	37.5	0.266666666666667	H	NA	[e]
+EX_CE5304[e]	Exchange/demand reaction		20	28.3333333333333	0.705882352941177	H	NA	[e]
+EX_HC02180[e]	Exchange/demand reaction		20	0	Inf	L	NA	[e]
+EX_HC02203[e]	Exchange/demand reaction		20	28.3333333333334	0.705882352941176	H	NA	[e]
+EX_HC02204[e]	Exchange/demand reaction		0	18.3333333333333	0	H	NA	[e]
+EX_HC02205[e]	Exchange/demand reaction		20	28.3333333333333	0.705882352941177	H	NA	[e]
+EX_arachd[e]	Exchange/demand reaction		10	37.5	0.266666666666667	H	NA	[e]
+EX_dlnlcg[e]	Exchange/demand reaction		0	35	0	H	NA	[e]
+EX_lnlnca[e]	Exchange/demand reaction		10	45	0.222222222222222	H	NA	[e]
+EX_prostgd2[e]	Exchange/demand reaction		20	28.3333333333333	0.705882352941177	H	NA	[e]
+EX_prostge1[e]	Exchange/demand reaction		0	18.3333333333333	0	H	NA	[e]
+EX_prostge2[e]	Exchange/demand reaction		20	28.3333333333334	0.705882352941176	H	NA	[e]
+EX_prostgf2[e]	Exchange/demand reaction		20	28.3333333333334	0.705882352941176	H	NA	[e]
+EX_prostgh2[e]	Exchange/demand reaction		20	28.3333333333333	0.705882352941177	H	NA	[e]
+FAOXC163C143m	Fatty acid oxidation	37.1 and 3030.1 and 3032.1	10	41.4798206278027	0.241081081081081	H	betaoxidation	[m]
+FAOXC183803m	Fatty acid oxidation	34.1 or 35.1	10	45	0.222222222222222	H	betaoxidation	[m]
+FAOXC183C163m	Fatty acid oxidation	37.1 and 3030.1 and 3032.1	10	45	0.222222222222222	H	betaoxidation	[m]
+GLUTCOADHm	Tryptophan metabolism	2639.1 or 2639.2	20	0	Inf	L	lysine metabolism	[m]
+HACD9m	Valine, leucine, and isoleucine metabolism	3028.1 or 1962.1 or 3033.1	41.4285714285714	20	2.07142857142857	L	isoleucine metabolism	[m]
+HMR_0765	Sphingolipid metabolism	55830.1 or 11285.1 or 55650.1 or 9488.1 or 55624.1 or 2683.1 or 55757.1 or 168391.1 or 51809.1 or 8704.1 or 51146.1 or 9331.1 or 80235.1 or 83468.1 or 8702.1 or 140687.1 or 3703.1 or 56886.1 or 283358.1 or 93183.1 or 8473.1 or 26301.1 or 93010.1 or 9334.1 or 8703.1 or 8707.1 or 148789.1 or 56983.1 or 201595.1 or 124872.1 or 146664.1 or 10678.1 or 8708.1 or 10690.1 or 84750.1 or 146712.1 or 79369.1 or 84002.1 or 374907.1 or 10331.1 or 2529.1 or 338707.1 or 10317.1 or 145173.1 or 200810.1 or 2526.1 or 170384.1 or 192134.1 or 360203.1 or 152586.1 or 644378.1 or 84752.1 or 644974.1	140.925925925926	0	Inf	L	NA	[r]
+HMR_1332	Eicosanoid metabolism		20	28.3333333333334	0.705882352941176	H	NA	[c]
+HMR_2472	Fatty acid synthesis	9415.1 or 3992.1 or 3995.1	10	32.5	0.307692307692308	H	NA	[c]
+HMR_2530	Fatty acid synthesis	60481.1 or 64834.1 or 6785.1 or 83401.1 or 79993.1 or 79071.1 or 54898.1	10	33.9626666666667	0.294440954773869	H	NA	[c]
+HMR_2533	Fatty acid synthesis	51144.1	10	33.9626666666667	0.294440954773869	H	NA	[c]
+HMR_2535	Fatty acid synthesis	51495.1 or 192286.1 or 9200.1 or 401494.1 or 201562.1	10	33.9626666666667	0.294440954773869	H	NA	[c]
+HMR_2537	Fatty acid synthesis	9524.1 or 253017.1	10	33.9626666666667	0.294440954773869	H	NA	[c]
+HMR_2540	Fatty acid synthesis	60481.1 or 64834.1 or 6785.1 or 83401.1 or 79993.1 or 79071.1 or 54898.1	10	30.2985074626866	0.330049261083744	H	NA	[c]
+HMR_2541	Fatty acid synthesis	51144.1	10	30.2985074626866	0.330049261083744	H	NA	[c]
+HMR_2542	Fatty acid synthesis	51495.1 or 192286.1 or 9200.1 or 401494.1 or 201562.1	10	30.2985074626866	0.330049261083744	H	NA	[c]
+HMR_2543	Fatty acid synthesis	9524.1 or 253017.1	10	30.2985074626866	0.330049261083744	H	NA	[c]
+HMR_2733	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	10	33.9626666666668	0.294440954773868	H	NA	[c]
+HMR_2734	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	10	33.9626666666668	0.294440954773868	H	NA	intercompartmental
+HMR_2735	Transport, mitochondrial	1384.1 or 1376.1	10	33.9626666666667	0.294440954773869	H	NA	[m]
+HMR_2736	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	10	30.2985074626865	0.330049261083744	H	NA	[c]
+HMR_2737	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	10	30.2985074626865	0.330049261083744	H	NA	intercompartmental
+HMR_2738	Transport, mitochondrial	1384.1 or 1376.1	10	30.2985074626865	0.330049261083744	H	NA	[m]
+HMR_3426	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	10	38.5939393939394	0.259108040201005	H	NA	[m]
+HMR_3431	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	10	33.9626666666667	0.294440954773869	H	NA	[m]
+HMR_3432	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	10	30.2985074626866	0.330049261083744	H	NA	[m]
+HMR_3446	Fatty acid synthesis	1666.1 or 26063.1	10	25	0.4	H	NA	[m]
+HMR_3447	Fatty acid synthesis	1891.1 or 1632.1 or 10455.1	10	25	0.4	H	NA	[m]
+HMR_6515	Methionine and cysteine metabolism	4357.1 or 7263.1	10	20	0.5	H	NA	[c]
+HMR_9627	Transport, endoplasmic reticular		140.925925925926	0	Inf	L	NA	intercompartmental
+KYNATEtr2	Transport, extracellular		2000	0	Inf	L	NA	intercompartmental
+PPAm	Oxidative phosphorylation	27068.4 or 27068.1 or 27068.3 or 27068.2	309.122807017544	180.515789473685	1.71244193053044	L	NA	[m]
+RE1233C	Tryptophan metabolism	883.1	1000	0	Inf	L	NA	[c]
+RE1978C	Eicosanoid metabolism		10	37.5	0.266666666666667	H	NA	[c]
+RE2985M	Fatty acid oxidation	51.1	10	25	0.4	H	betaoxidation	[m]
+RE3422C	Eicosanoid metabolism		20	28.3333333333333	0.705882352941178	H	NA	[c]
+RE3556C	Eicosanoid metabolism		0	18.3333333333334	0	H	NA	[c]
+RE3565C	Eicosanoid metabolism		0	18.3333333333334	0	H	NA	[c]
+RE3568C	Eicosanoid metabolism		0	18.3333333333334	0	H	NA	[c]
+TKT1	Pentose phosphate pathway	7086.1 or 84076.1 or 8277.1	345.146251450001	213.796357615894	1.61436918429681	L	HMP shunt	[c]
+TKT2	Pentose phosphate pathway	7086.1 or 84076.1 or 8277.1	345.146251450001	213.796357615894	1.61436918429681	L	HMP shunt	[c]
+r0451	Miscellaneous	4967.1	20	0	Inf	L	lysine metabolism	[m]
+r0557	Miscellaneous	1743.1	20	0	Inf	L	NA	[m]
+r0638	Fatty acid oxidation	55825.1 or 51102.1 	818.502487562189	335.710609935673	2.43811921142148	L	fatty acid synthesis & elongation	[m]
+r0660	Fatty acid oxidation	3030.1 and 1962.1 and 1892.1	818.502487562189	339.922883318232	2.40790640386489	L	betaoxidation	[m]
+r1259	Fatty acid oxidation	2182.1 or 2181.1 or 81616.1 or 11001.1 or 2180.1 or 23305.1 or 51703.1	10	163.727722772277	0.0610770114594987	H	NA	[r]
+r2321	Transport, extracellular	6578.1	0	18.3333333333334	0	H	NA	intercompartmental
+r2357	Transport, extracellular	387775.1	20	28.3333333333334	0.705882352941176	H	NA	intercompartmental
+sink_arachd[c]	Sink		10	37.5	0.266666666666667	H	NA	[c]
+sink_lnlncacoa[c]	Exchange/demand reaction		10	45	0.222222222222222	H	NA	[c]
+sink_prostgh2[c]	Sink		20	28.3333333333333	0.705882352941176	H	NA	[c]
+C160CPT2	Fatty acid oxidation	1376.1 or 1374.1	80	171.666666666667	0.466019417475728	H	carnitine shuttle	[m]
+EX_adrn[e]	Exchange/demand reaction		0	37.5	0	H	NA	[e]
+FAOXC18480m	Fatty acid oxidation	34.1 or 35.1	40	62.5	0.64	H	betaoxidation	[m]
+GLDBRAN	Starch and sucrose metabolism	178.4 or 178.5 or 178.1 or 178.3 or 178.2 or 178.6	1000	17.2344971339239	58.0231608865237	L	glycogen metabolism	[c]
+HMR_6617	Transport, nuclear		2000	163.727722772277	12.2154022918998	L	NA	intercompartmental
+HMR_6619	Transport, nuclear		2000	163.727722772277	12.2154022918998	L	NA	intercompartmental
+HMR_9640	Transport, extracellular		140.925925925926	0	Inf	L	NA	intercompartmental
+NMNATr	NAD metabolism	349565.1 or 23057.1 or 23057.2	1261.85185185185	10	126.185185185185	L	NA	[c]
+PHETA1	Phenylalanine metabolism	2805.1	1020	373.5	2.73092369477912	L	phenylalanine metabolism	[c]
+PHETA1m	Phenylalanine metabolism	6898.1 or 2806.1	1000	361.148809523809	2.76894170388806	L	phenylalanine metabolism	[m]
+PHPYRtm	Transport, mitochondrial	51660.1 and 25874.1	1000	361.148809523809	2.76894170388806	L	NA	intercompartmental
+PPA	Oxidative phosphorylation	5464.1 or 64077.1	309.122807017544	180.504435245417	1.71254964786464	L	NA	[c]
+RE0456N	Pyrimidine synthesis	50484.1	2000	163.727722772277	12.2154022918998	L	pyrimidine synthesis/ de novo	[n]
+UTPtn	Transport, nuclear		2000	163.727722772277	12.2154022918997	L	NA	intercompartmental
+r1459	Transport, nuclear		1309.12280701754	163.727722772277	7.99573086861016	L	NA	intercompartmental
+r2508	Transport, endoplasmic reticular		1010	2000	0.505	H	NA	intercompartmental
+5OXPROt	Transport, extracellular		288.800718132855	156.225806451614	1.84861083256627	L	NA	intercompartmental
+7DHFtl	Transport, lysosomal		166.666666666667	103.916666666667	1.60384923817161	L	NA	intercompartmental
+ACGALtly	Transport, lysosomal		0	81.8638613861386	0	H	NA	intercompartmental
+ADSL2	Purine synthesis	158.1 or 158.2	17.5	10	1.75	L	purine synthesis, cytosol	[c]
+AIRCr	Purine synthesis	10606.1	17.5	10	1.75	L	purine synthesis, cytosol	[c]
+ALCD1	Miscellaneous	124.1 or 131.1 or 130.1 or (125.1 and 124.1) or (125.1 and 126.1) or 128.1 or 127.1 or (126.1 and 124.1) or 125.1 or 137872.1 or 284273.1 or 126.1 or 284273.2	50	130	0.384615384615385	H	NA	[c]
+BGAL1l	Sphingolipid metabolism	(5476.1) and (2720.1) and (2588.1) and (4758.1) and (5660.1) or (5476.1) and (2720.1) and (2588.1) and (4758.1) and (2760.1) or (5476.1) and (2720.1) and (5660.1) or (5476.1) and (2720.1) and (2760.1)	0	30.9245283018868	0	H	NA	[l]
+BGAL3l	Sphingolipid metabolism	2720.1	0	81.8638613861388	0	H	NA	[l]
+C02712te	Transport, extracellular	64849.1	20	0	Inf	L	NA	intercompartmental
+C140CPT1	Fatty acid oxidation	1374.1 or 1375.1 or 126129.1	2000	137.978547854785	14.4950068767566	L	carnitine shuttle	[c]
+CDIPTr	Glycerophospholipid metabolism	10423.1 or 10423.2	321.851851851852	203.727722772277	1.57981372133439	L	new to recon	[c]
+DHFtl	Transport, lysosomal		166.666666666667	103.916666666667	1.60384923817161	L	NA	intercompartmental
+ESTRADIOLtr	Transport, endoplasmic reticular		1000	309.139072847682	3.23479005998286	L	NA	intercompartmental
+ESTRONEtr	Transport, endoplasmic reticular		1000	309.139072847682	3.23479005998286	L	NA	intercompartmental
+ETHAK	Glycerophospholipid metabolism	1119.2 or 55500.1 or 1119.1 or 55224.1 or 1120.1	197.901234567901	128.5	1.54008742854398	L	phospholipid metabolism, phospho-ethanolamine, cytosol	[c]
+EX_5oxpro[e]	Exchange/demand reaction		288.800718132855	156.225806451613	1.84861083256628	L	NA	[e]
+EX_C02712[e]	Exchange/demand reaction		20	0	Inf	L	NA	[e]
+EX_Rtotal2[e]	Exchange/demand reaction		50	0	Inf	L	NA	[e]
+EX_btn[e]	Exchange/demand reaction		10	0	Inf	L	NA	[e]
+EX_gsn[e]	Exchange/demand reaction		57.5	30	1.91666666666667	L	NA	[e]
+EX_mi1p_D[e]	Exchange/demand reaction		175.727812550152	110.299435028249	1.59318869135773	L	NA	[e]
+EX_nicrnt[e]	Exchange/demand reaction		20	10	2	L	NA	[e]
+EX_prpp[e]	Exchange/demand reaction		67.5706293706295	37.3615384615385	1.80856121436727	L	NA	[e]
+EX_trpprogly[e]	Exchange/demand reaction		20	0	Inf	L	NA	[e]
+EX_xan[e]	Exchange/demand reaction		57.5	30	1.91666666666667	L	NA	[e]
+EX_xtsn[e]	Exchange/demand reaction		57.5	30	1.91666666666667	L	NA	[e]
+FATP4t	Transport, extracellular	10998.1	2000	68.1506090808416	29.3467663308417	L	NA	intercompartmental
+FPGS6	Folate metabolism	2356.1	166.666666666667	103.916666666667	1.60384923817161	L	NA	[c]
+GALGLUSIDEtg	Transport, golgi apparatus		0	32.7455445544554	0	H	NA	intercompartmental
+GARFT	Purine synthesis	2618.1 or 2618.2	17.5	10	1.75	L	purine synthesis, cytosol	[c]
+GD1Btl	Transport, lysosomal		0	81.8638613861388	0	H	NA	intercompartmental
+GGH_5DHFl	Folate metabolism	8836.1	166.666666666667	103.916666666667	1.60384923817161	L	NA	[l]
+GGH_6DHFl	Folate metabolism	8836.1	166.666666666667	103.916666666667	1.60384923817161	L	NA	[l]
+GGH_7DHFl	Folate metabolism	8836.1	166.666666666667	103.916666666667	1.60384923817161	L	NA	[l]
+GLUCYS	Glutathione metabolism	2729.1 and 2730.1	282.212121212121	172.934782608696	1.63189912957355	L	glutathione synthesis	[c]
+GLUPRT	Purine synthesis	5471.1	17.5	10	1.75	L	purine synthesis, cytosol	[c]
+GLXtm	Transport, mitochondrial		45	135	0.333333333333333	H	NA	intercompartmental
+GUAPRT	Nucleotide salvage pathway	3251.1	20	10	1.99999999999999	L	purine salvage	[c]
+H2Otp	Transport, peroxisomal		1692.25225225225	733.156190654088	2.30817426603532	L	NA	intercompartmental
+HEX1	Glycolysis/gluconeogenesis	3098.3 or 80201.1 or 2645.3 or 3098.4 or 3099.1 or 2645.2 or 3098.5 or 2645.1 or 3098.1 or 3101.1 or 3098.2	291.851851851852	173.727722772277	1.67993828039991	L	glycolysis	[c]
+HEXA2l	Sphingolipid metabolism	3073.1 and 3074.1	0	81.8638613861388	0	H	NA	[l]
+HMR_0354	Fatty acid oxidation	11332.1 or 10965.1 or 570.1 or 122970.1 or 641371.1 or 641372.1 or 344967.1	296.25	179.464285714286	1.65074626865672	L	NA	[c]
+HMR_0828	Glycosphingolipid metabolism	3074.1 or 284004.1 or 3073.1	0	163.727722772277	0	H	NA	[c]
+HMR_0831	Transport, lysosomal		0	30.9245283018868	0	H	NA	intercompartmental
+HMR_0835	Glycosphingolipid metabolism	2760.1	0	30.9245283018868	0	H	NA	[l]
+HMR_0836	Glycosphingolipid metabolism	3074.1 or 284004.1 or 3073.1	0	30.9245283018868	0	H	NA	[l]
+HMR_2041	Steroid metabolism	8630.1 or 3294.1 or 158160.1 or 3292.1 or 7923.1 or 51478.1 or 51144.1 or 51170.1 or 7923.1 or 7923.1 or 7923.1 or 7923.1 or 7923.1	1000	309.139072847682	3.23479005998286	L	NA	intercompartmental
+HMR_2608	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	2000	92.9785478547863	21.5103380956605	L	NA	[c]
+HMR_2609	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	92.9785478547863	21.5103380956605	L	NA	intercompartmental
+HMR_2610	Transport, mitochondrial	1384.1 or 1376.1	2000	92.9785478547861	21.5103380956605	L	NA	[m]
+HMR_2679	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	2000	176.5	11.3314447592068	L	NA	intercompartmental
+HMR_2861	Transport, endoplasmic reticular	6584.1	321.851851851852	163.727722772277	1.96577492438164	L	NA	intercompartmental
+HMR_2862	Transport, endoplasmic reticular	1384.1	321.851851851852	163.727722772277	1.96577492438164	L	NA	[r]
+HMR_3321	Fatty acid oxidation	8310.1 or 51.1	730.3125	42.8571428571429	17.040625	L	NA	[x]
+HMR_4270	NAD metabolism	55.1 or 54.1 or 93650.1 or 52.1 or 92370.1 or 51205.1 or 390928.1	10	311.75	0.0320769847634322	H	NA	[c]
+HMR_6545	Inositol phosphate metabolism	9108.1 or 29085.1 or 8776.1 or 8898.1 or 55613.1 or 23371.1 or 51559.1 or 9896.1 or 163404.1 or 30833.1 or 81537.1 or 51496.1 or 374462.1 or 9107.1 or 8446.1 or 138639.1 or 84814.1 or 130367.1 or 64419.1 or 3636.1 or 23203.1 or 22876.1 or 56953.1 or 403313.1 or 22908.1 or 145553.1	533.69918699187	311.75	1.71194606893944	L	NA	[c]
+HSD17B1	Steroid metabolism	3292.1 or 7923.1	1000	309.139072847682	3.23479005998286	L	NA	[c]
+HXPRT	Nucleotide salvage pathway	3251.1	20	9.99999999999993	2.00000000000001	L	purine salvage	[c]
+LEUKTRB4t	Transport, extracellular	387775.1	2000	10	200	L	NA	intercompartmental
+MI145PK	Inositol phosphate metabolism	3706.1 or 80271.1 or 3707.1	533.69918699187	311.75	1.71194606893944	L	NA	[c]
+MI1Pt	Exchange/demand reaction		175.727812550153	110.299435028249	1.59318869135773	L	NA	intercompartmental
+NEU11l	Sphingolipid metabolism	2720.1 and 4758.1 and 5476.1 and 2588.1	0	30.9245283018868	0	H	NA	[l]
+NICRNtr	Transport, extracellular		20	10	2	L	NA	intercompartmental
+PCHOL_HSter	Transport, endoplasmic reticular		16.25	2.19608242465608	7.39954011632547	L	NA	intercompartmental
+PGMT	Glycolysis/gluconeogenesis	5236.1 or 55276.1	281.851851851852	163.727722772278	1.72146687854364	L	glycogen metabolism	[c]
+PPItm	Transport, mitochondrial		590.974658869396	344.213383975403	1.71688460234779	L	NA	intercompartmental
+PRAGSr	Purine synthesis	2618.1 or 2618.2	17.5	10	1.75	L	purine synthesis, cytosol	[c]
+PRASCS	Purine synthesis	10606.1	17.5	10	1.75	L	purine synthesis, cytosol	[c]
+PRFGS	Purine synthesis	5198.1	17.5	10	1.75	L	purine synthesis, cytosol	[c]
+PRISTtx	Transport, peroxisomal		1000	0	Inf	L	NA	intercompartmental
+RDH4	Vitamin A metabolism	5959.1	2000	0	Inf	L	NA	[c]
+RE1519X	Fatty acid oxidation	51.1 or 8310.1	793.095238095239	32.1428571428571	24.6740740740741	L	betaoxidation	[x]
+RE3073X	Fatty acid oxidation		1000	0	Inf	L	alpha oxidation	[x]
+RETI3	Vitamin A metabolism		2000	0	Inf	L	vitamin A metabolism	[c]
+SIAT9g	Sphingolipid metabolism	8869.1	0	32.7455445544561	0	H	NA	[g]
+TRPPROGLYr	Peptide metabolism		20	0	Inf	L	NA	[c]
+TRPPROGLYt	Transport, extracellular	6564.1 or 6565.1	20	0	Inf	L	NA	intercompartmental
+XANtr	Transport, extracellular		57.4999999999999	30	1.91666666666666	L	NA	intercompartmental
+XTSNtr	Transport, extracellular		57.5	30.0000000000001	1.91666666666666	L	NA	intercompartmental
+r0051	Purine catabolism	3251.1 and 353.1	67.5706293706296	37.3615384615384	1.80856121436728	L	purine salvage	[e]
+r0354	Glycolysis/gluconeogenesis	2645.1 or 3098.1 or 3099.1 or 3101.1	291.851851851852	173.727722772277	1.67993828039991	L	glycolysis	[c]
+r0355	Glycolysis/gluconeogenesis	2645.1 or 3098.1 or 3099.1 or 3101.1	291.851851851852	173.727722772274	1.67993828039994	L	glycolysis	[c]
+r0512	Folate metabolism	1719.1	20	723.825396825396	0.027630973004978	H	NA	[c]
+r0666	Purine synthesis	2618.1	17.5	10	1.75	L	purine synthesis, cytosol	[c]
+r2144	Transport, extracellular	6579.1	10	1000	0.01	H	NA	intercompartmental
+r2359	Transport, extracellular	387775.1	2000	28.3333333333334	70.5882352941176	L	NA	intercompartmental
+sink_gtp[c]	Sink		57.2438449223315	29.9999999999997	1.90812816407774	L	NA	[c]
+sink_nad[c]	Exchange/demand reaction		20.0000000000003	10	2.00000000000003	L	NA	[c]
