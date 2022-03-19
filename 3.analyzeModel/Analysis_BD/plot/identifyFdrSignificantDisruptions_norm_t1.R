@@ -21,17 +21,17 @@ library(pheatmap)
 library(magrittr)
 library(venn)
 
-pdf("bd_tbl_norm/bd_tbl_norm.pdf")
+pdf("bd_tbl_norm_t1/bd_tbl_norm_t1.pdf")
 
 ###########
 # Load data
 ###########
 
-bd_199_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_norm/bd_199_tbl_norm.csv",
+bd_199_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_norm_t1/bd_199_tbl_norm_t1.csv",
 		header = T, sep = "\t")
-bd_r_185_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_norm/bd_r_185_tbl_norm.csv",
+bd_r_185_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_norm_t1/bd_r_185_tbl_norm_t1.csv",
 		header = T, sep = "\t")		
-bd_nr_184_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_norm/bd_nr_184_tbl_norm.csv",
+bd_nr_184_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_norm_t1/bd_nr_184_tbl_norm_t1.csv",
 		header = T, sep = "\t")
 
 ###########
@@ -53,7 +53,7 @@ bd_nr_184_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 	ggvenn(x, fill_color = c("blue", "green", "red")) + ggtitle("Overlap in subSystems disrupted between models")				
 
 # Fig.3: Number of rxns per subSystem (bd_lumped)
-	iPS_BD_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_TP_norm.csv", header = T, sep = "\t")
+	iPS_BD_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_TP_norm_t1.csv", header = T, sep = "\t")
 	iPS_BD_TP_subSystem = iPS_BD_TP %>% count(SubSystem)
 	bd_199_tbl_subSystem = bd_199_tbl %>% count(subSystem)
 	comb = merge(bd_199_tbl_subSystem, iPS_BD_TP_subSystem, by.x = "subSystem", by.y = "SubSystem")
@@ -78,12 +78,12 @@ bd_nr_184_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 		xlab("hypergeometric significance (fdr.adj.p.value)")
 	#write fdr.significant subset to csv	
 	bd_lumped_subsystem_fdr = subset(combStat, p.val.fdr <= 0.05)
-	write.table(bd_lumped_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm/bd_lumped_subsystem_fdr_norm.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	write.table(bd_lumped_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm_t1/bd_lumped_subsystem_fdr_norm_t1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 	bd_lumped_rxns_fdr = bd_199_tbl[bd_199_tbl$subSystem %in% bd_lumped_subsystem_fdr$subSystem,]
-	write.table(bd_lumped_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm/bd_lumped_rxns_fdr_norm.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	write.table(bd_lumped_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm_t1/bd_lumped_rxns_fdr_norm_t1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 
 # Fig.4: Number of rxns per subSystem (bd_responder)
-	iPS_BD_R_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_R_TP_norm.csv", header = T, sep = "\t")
+	iPS_BD_R_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_R_TP_norm_t1.csv", header = T, sep = "\t")
 	iPS_BD_R_TP_subSystem = iPS_BD_R_TP %>% count(SubSystem)
 	bd_r_185_tbl_subSystem = bd_r_185_tbl %>% count(subSystem)
 	comb = merge(bd_r_185_tbl_subSystem, iPS_BD_R_TP_subSystem, by.x = "subSystem", by.y = "SubSystem")
@@ -108,12 +108,12 @@ bd_nr_184_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 		xlab("hypergeometric significance (fdr.adj.p.value)")
 	#write fdr.significant subset to csv	
 	bd_r_subsystem_fdr = subset(combStat, p.val.fdr <= 0.05)
-	write.table(bd_r_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm/bd_r_subsystem_fdr_norm.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	write.table(bd_r_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm_t1/bd_r_subsystem_fdr_norm_t1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 	bd_r_rxns_fdr = bd_r_185_tbl[bd_r_185_tbl$subSystem %in% bd_r_subsystem_fdr$subSystem,]
-	write.table(bd_r_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm/bd_r_rxns_fdr_norm.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	write.table(bd_r_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm_t1/bd_r_rxns_fdr_norm_t1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 
 # Fig.5: Number of rxns per subSystem (bd_nonresponder)
-	iPS_BD_NR_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_NR_TP_norm.csv", header = T, sep = "\t")
+	iPS_BD_NR_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_NR_TP_norm_t1.csv", header = T, sep = "\t")
 	iPS_BD_NR_TP_subSystem = iPS_BD_NR_TP %>% count(SubSystem)
 	bd_nr_184_tbl_subSystem = bd_nr_184_tbl %>% count(subSystem)
 	comb = merge(bd_nr_184_tbl_subSystem, iPS_BD_NR_TP_subSystem, by.x = "subSystem", by.y = "SubSystem")
@@ -138,9 +138,9 @@ bd_nr_184_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Ana
 		xlab("hypergeometric significance (fdr.adj.p.value)")	
 	#write fdr.significant subset to csv	
 	bd_nr_subsystem_fdr = subset(combStat, p.val.fdr <= 0.05)
-	write.table(bd_nr_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm/bd_nr_subsystem_fdr_norm.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	write.table(bd_nr_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm_t1/bd_nr_subsystem_fdr_norm_t1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 	bd_nr_rxns_fdr = bd_nr_184_tbl[bd_nr_184_tbl$subSystem %in% bd_nr_subsystem_fdr$subSystem,]
-	write.table(bd_nr_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm/bd_nr_rxns_fdr_norm.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+	write.table(bd_nr_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm_t1/bd_nr_rxns_fdr_norm_t1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 
 # Fig.6: Number of rxns per compartment (bd_lumped)
 	#6a: all.199

@@ -19,24 +19,24 @@ File = fullfile(FolderName, FileName);
 load(File);
 clear File FileName FolderName
 
-%% bd_30_norm
+%% bd_30_norm_t1
 
-    rxnList = importdata('bd_tbl_norm/bd_30_norm.csv'); 
-    model = iAstro_iPS_Ctrl_TP_norm;
+    rxnList = importdata('bd_tbl_norm_t1/bd_30_norm_t1.csv'); 
+    model = iAstro_iPS_Ctrl_TP_norm_t1;
     [tf,loc] = ismember(model.rxns, rxnList); [~,p] = sort(loc(tf)); idx = find(tf); idx = idx(p);
     subSystem = model.subSystems(idx);
     subSystem = [subSystem{:}]';
     GPR = findGPRFromRxns(model,rxnList);
     tbl_temp = table(rxnList, subSystem, GPR);
 
-    dat = FluxDiff_iPS_Ctrl_TP_norm_vs_iPS_BD_TP_norm.fluxSpanTable;
+    dat = FluxDiff_iPS_Ctrl_TP_norm_t1_vs_iPS_BD_TP_norm_t1.fluxSpanTable;
     tbl_temp_fst = dat(ismember(dat.Rxn, tbl_temp.rxnList)==1,:);
     A = tbl_temp; B = tbl_temp_fst;
     [~,ii] = ismember(A.rxnList,B.Rxn); tbl_temp_fst = B(ii,:);
     tbl_temp_fst.minFlux_a=[]; tbl_temp_fst.maxFlux_a=[];
     tbl_temp_fst.minFlux_b=[]; tbl_temp_fst.maxFlux_b=[];
 
-    dat = FluxDiff_iPS_Ctrl_TP_norm_vs_iPS_BD_TP_norm.fluxGoneLow;
+    dat = FluxDiff_iPS_Ctrl_TP_norm_t1_vs_iPS_BD_TP_norm_t1.fluxGoneLow;
     List1 = A.rxnList;
     List2 = dat.FSr_significant_L;
     nameidx_L = getnameidx(List2, List1)';
@@ -56,24 +56,24 @@ clear File FileName FolderName
     clear rxnList model tf loc p idx subSystem GPR tbl_temp
     clear dat tbl_temp_fst A B ii List1 List2 List3 nameidx_L C MU
 
-%% bd_38_norm
+%% bd_38_norm_t1
 
-    rxnList = importdata('bd_tbl_norm/bd_38_norm.csv');
-    model = iAstro_iPS_Ctrl_TP_norm;
+    rxnList = importdata('bd_tbl_norm_t1/bd_38_norm_t1.csv');
+    model = iAstro_iPS_Ctrl_TP_norm_t1;
     [tf,loc] = ismember(model.rxns, rxnList); [~,p] = sort(loc(tf)); idx = find(tf); idx = idx(p);
     subSystem = model.subSystems(idx);
     subSystem = [subSystem{:}]';
     GPR = findGPRFromRxns(model,rxnList);
     tbl_temp = table(rxnList, subSystem, GPR);
 
-    dat = FluxDiff_iPS_Ctrl_TP_norm_vs_iPS_BD_TP_norm.fluxSpanTable;
+    dat = FluxDiff_iPS_Ctrl_TP_norm_t1_vs_iPS_BD_TP_norm_t1.fluxSpanTable;
     tbl_temp_fst = dat(ismember(dat.Rxn, tbl_temp.rxnList)==1,:);
     A = tbl_temp; B = tbl_temp_fst;
     [~,ii] = ismember(A.rxnList,B.Rxn); tbl_temp_fst = B(ii,:);
     tbl_temp_fst.minFlux_a=[]; tbl_temp_fst.maxFlux_a=[];
     tbl_temp_fst.minFlux_b=[]; tbl_temp_fst.maxFlux_b=[];
 
-    dat = FluxDiff_iPS_Ctrl_TP_norm_vs_iPS_BD_TP_norm.fluxGoneLow;
+    dat = FluxDiff_iPS_Ctrl_TP_norm_t1_vs_iPS_BD_TP_norm_t1.fluxGoneLow;
     List1 = A.rxnList;
     List2 = dat.FSr_significant_L;
     nameidx_L = getnameidx(List2, List1)';
@@ -93,24 +93,24 @@ clear File FileName FolderName
     clear rxnList model tf loc p idx subSystem GPR tbl_temp
     clear dat tbl_temp_fst A B ii List1 List2 List3 nameidx_L C MU
 
-%% bd_36_norm
+%% bd_36_norm_t1
 
-    rxnList = importdata('bd_tbl_norm/bd_36_norm.csv');
-    model = iAstro_iPS_Ctrl_TP_norm;
+    rxnList = importdata('bd_tbl_norm_t1/bd_36_norm_t1.csv');
+    model = iAstro_iPS_Ctrl_TP_norm_t1;
     [tf,loc] = ismember(model.rxns, rxnList); [~,p] = sort(loc(tf)); idx = find(tf); idx = idx(p);
     subSystem = model.subSystems(idx);
     subSystem = [subSystem{:}]';
     GPR = findGPRFromRxns(model,rxnList);
     tbl_temp = table(rxnList, subSystem, GPR);
 
-    dat = FluxDiff_iPS_Ctrl_TP_norm_vs_iPS_BD_TP_norm.fluxSpanTable;
+    dat = FluxDiff_iPS_Ctrl_TP_norm_t1_vs_iPS_BD_TP_norm_t1.fluxSpanTable;
     tbl_temp_fst = dat(ismember(dat.Rxn, tbl_temp.rxnList)==1,:);
     A = tbl_temp; B = tbl_temp_fst;
     [~,ii] = ismember(A.rxnList,B.Rxn); tbl_temp_fst = B(ii,:);
     tbl_temp_fst.minFlux_a=[]; tbl_temp_fst.maxFlux_a=[];
     tbl_temp_fst.minFlux_b=[]; tbl_temp_fst.maxFlux_b=[];
 
-    dat = FluxDiff_iPS_Ctrl_TP_norm_vs_iPS_BD_TP_norm.fluxGoneLow;
+    dat = FluxDiff_iPS_Ctrl_TP_norm_t1_vs_iPS_BD_TP_norm_t1.fluxGoneLow;
     List1 = A.rxnList;
     List2 = dat.FSr_significant_L;
     nameidx_L = getnameidx(List2, List1)';
@@ -130,24 +130,24 @@ clear File FileName FolderName
     clear rxnList model tf loc p idx subSystem GPR tbl_temp
     clear dat tbl_temp_fst A B ii List1 List2 List3 nameidx_L C MU
 
-%% bd_95_norm
+%% bd_95_norm_t1
 
-    rxnList = importdata('bd_tbl_norm/bd_95_norm.csv');
-    model = iAstro_iPS_Ctrl_TP_norm;
+    rxnList = importdata('bd_tbl_norm_t1/bd_95_norm_t1.csv');
+    model = iAstro_iPS_Ctrl_TP_norm_t1;
     [tf,loc] = ismember(model.rxns, rxnList); [~,p] = sort(loc(tf)); idx = find(tf); idx = idx(p);
     subSystem = model.subSystems(idx);
     subSystem = [subSystem{:}]';
     GPR = findGPRFromRxns(model,rxnList);
     tbl_temp = table(rxnList, subSystem, GPR);
 
-    dat = FluxDiff_iPS_Ctrl_TP_norm_vs_iPS_BD_TP_norm.fluxSpanTable;
+    dat = FluxDiff_iPS_Ctrl_TP_norm_t1_vs_iPS_BD_TP_norm_t1.fluxSpanTable;
     tbl_temp_fst = dat(ismember(dat.Rxn, tbl_temp.rxnList)==1,:);
     A = tbl_temp; B = tbl_temp_fst;
     [~,ii] = ismember(A.rxnList,B.Rxn); tbl_temp_fst = B(ii,:);
     tbl_temp_fst.minFlux_a=[]; tbl_temp_fst.maxFlux_a=[];
     tbl_temp_fst.minFlux_b=[]; tbl_temp_fst.maxFlux_b=[];
 
-    dat = FluxDiff_iPS_Ctrl_TP_norm_vs_iPS_BD_TP_norm.fluxGoneLow;
+    dat = FluxDiff_iPS_Ctrl_TP_norm_t1_vs_iPS_BD_TP_norm_t1.fluxGoneLow;
     List1 = A.rxnList;
     List2 = dat.FSr_significant_L;
     nameidx_L = getnameidx(List2, List1)';
@@ -167,24 +167,24 @@ clear File FileName FolderName
     clear rxnList model tf loc p idx subSystem GPR tbl_temp
     clear dat tbl_temp_fst A B ii List1 List2 List3 nameidx_L C MU
 
-%% bd_r_155_norm
+%% bd_r_155_norm_t1
 
-    rxnList = importdata('bd_tbl_norm/bd_r_155_norm.csv');
-    model = iAstro_iPS_Ctrl_TP_norm;
+    rxnList = importdata('bd_tbl_norm_t1/bd_r_155_norm_t1.csv');
+    model = iAstro_iPS_Ctrl_TP_norm_t1;
     [tf,loc] = ismember(model.rxns, rxnList); [~,p] = sort(loc(tf)); idx = find(tf); idx = idx(p);
     subSystem = model.subSystems(idx);
     subSystem = [subSystem{:}]';
     GPR = findGPRFromRxns(model,rxnList);
     tbl_temp = table(rxnList, subSystem, GPR);
 
-    dat = FluxDiff_iPS_Ctrl_TP_norm_vs_iPS_BD_R_TP_norm.fluxSpanTable;
+    dat = FluxDiff_iPS_Ctrl_TP_norm_t1_vs_iPS_BD_R_TP_norm_t1.fluxSpanTable;
     tbl_temp_fst = dat(ismember(dat.Rxn, tbl_temp.rxnList)==1,:);
     A = tbl_temp; B = tbl_temp_fst;
     [~,ii] = ismember(A.rxnList,B.Rxn); tbl_temp_fst = B(ii,:);
     tbl_temp_fst.minFlux_a=[]; tbl_temp_fst.maxFlux_a=[];
     tbl_temp_fst.minFlux_b=[]; tbl_temp_fst.maxFlux_b=[];
 
-    dat = FluxDiff_iPS_Ctrl_TP_norm_vs_iPS_BD_R_TP_norm.fluxGoneLow;
+    dat = FluxDiff_iPS_Ctrl_TP_norm_t1_vs_iPS_BD_R_TP_norm_t1.fluxGoneLow;
     List1 = A.rxnList;
     List2 = dat.FSr_significant_L;
     nameidx_L = getnameidx(List2, List1)';
@@ -204,24 +204,24 @@ clear File FileName FolderName
     clear rxnList model tf loc p idx subSystem GPR tbl_temp
     clear dat tbl_temp_fst A B ii List1 List2 List3 nameidx_L C MU
 
-%% bd_nr_148_norm
+%% bd_nr_148_norm_t1
 
-    rxnList = importdata('bd_tbl_norm/bd_nr_148_norm.csv');
-    model = iAstro_iPS_Ctrl_TP_norm;
+    rxnList = importdata('bd_tbl_norm_t1/bd_nr_148_norm_t1.csv');
+    model = iAstro_iPS_Ctrl_TP_norm_t1;
     [tf,loc] = ismember(model.rxns, rxnList); [~,p] = sort(loc(tf)); idx = find(tf); idx = idx(p);
     subSystem = model.subSystems(idx);
     subSystem = [subSystem{:}]';
     GPR = findGPRFromRxns(model,rxnList);
     tbl_temp = table(rxnList, subSystem, GPR);
 
-    dat = FluxDiff_iPS_Ctrl_TP_norm_vs_iPS_BD_NR_TP_norm.fluxSpanTable;
+    dat = FluxDiff_iPS_Ctrl_TP_norm_t1_vs_iPS_BD_NR_TP_norm_t1.fluxSpanTable;
     tbl_temp_fst = dat(ismember(dat.Rxn, tbl_temp.rxnList)==1,:);
     A = tbl_temp; B = tbl_temp_fst;
     [~,ii] = ismember(A.rxnList,B.Rxn); tbl_temp_fst = B(ii,:);
     tbl_temp_fst.minFlux_a=[]; tbl_temp_fst.maxFlux_a=[];
     tbl_temp_fst.minFlux_b=[]; tbl_temp_fst.maxFlux_b=[];
 
-    dat = FluxDiff_iPS_Ctrl_TP_norm_vs_iPS_BD_NR_TP_norm.fluxGoneLow;
+    dat = FluxDiff_iPS_Ctrl_TP_norm_t1_vs_iPS_BD_NR_TP_norm_t1.fluxGoneLow;
     List1 = A.rxnList;
     List2 = dat.FSr_significant_L;
     nameidx_L = getnameidx(List2, List1)';
@@ -247,7 +247,7 @@ clear File FileName FolderName
     bd_nr_184_tbl = vertcat(bd_nr_148_tbl, bd_36_tbl);
 
 %% annotate rxns by organelle information
-    model = iAstro_iPS_Ctrl_TP_norm;
+    model = iAstro_iPS_Ctrl_TP_norm_t1;
     [transportRxnBool] = transportReactionBool(model);
     trspRxns = model.rxns(transportRxnBool==1);
     trspSubSys = model.subSystems(transportRxnBool==1);
@@ -308,12 +308,12 @@ bd_199_tbl.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'Fluxspan_
 bd_r_185_tbl.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'Fluxspan_a', 'Fluxspan_b', 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'Localization'};
 bd_nr_184_tbl.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'Fluxspan_a', 'Fluxspan_b', 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'Localization'};
 
-writetable(bd_199_tbl, 'bd_tbl_norm/bd_199_tbl_norm.csv', 'WriteVariableNames', true, 'Delimiter','\t');
-writetable(bd_r_185_tbl, 'bd_tbl_norm/bd_r_185_tbl_norm.csv', 'WriteVariableNames', true, 'Delimiter','\t');
-writetable(bd_nr_184_tbl, 'bd_tbl_norm/bd_nr_184_tbl_norm.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+writetable(bd_199_tbl, 'bd_tbl_norm_t1/bd_199_tbl_norm_t1.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+writetable(bd_r_185_tbl, 'bd_tbl_norm_t1/bd_r_185_tbl_norm_t1.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+writetable(bd_nr_184_tbl, 'bd_tbl_norm_t1/bd_nr_184_tbl_norm_t1.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
 %%
 clearvars -except bd_199_tbl bd_r_185_tbl bd_nr_184_tbl
 
 %%
-save('bd_tbl_norm/bd_tbl_norm.mat');
+save('bd_tbl_norm_t1/bd_tbl_norm_t1.mat');

@@ -7,16 +7,16 @@ File = fullfile(FolderName, FileName);
 load(File);
 clear File FileName FolderName
 %% add path to run 'importfile' & 'printUniqueMets'
-addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm')
+addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm_t1')
 
 % Load BD_Significant Rxns
-bd_significant_lumped = importfile('bd_tbl_significant_norm/bd_lumped_rxns_fdr_norm.csv');
-bd_significant_r = importfile('bd_tbl_significant_norm/bd_r_rxns_fdr_norm.csv');
-bd_significant_nr = importfile('bd_tbl_significant_norm/bd_nr_rxns_fdr_norm.csv');
+bd_significant_lumped = importfile('bd_tbl_significant_norm_t1/bd_lumped_rxns_fdr_norm_t1.csv');
+bd_significant_r = importfile('bd_tbl_significant_norm_t1/bd_r_rxns_fdr_norm_t1.csv');
+bd_significant_nr = importfile('bd_tbl_significant_norm_t1/bd_nr_rxns_fdr_norm_t1.csv');
 
 %% bd_significant_lumped
 % rxns
-model = iAstro_iPS_BD_TP_norm; dat_rxns = bd_significant_lumped.rxnList;
+model = iAstro_iPS_BD_TP_norm_t1; dat_rxns = bd_significant_lumped.rxnList;
 [rxnFormula_bd_lumped]= deal(repmat({''},size(dat_rxns))');
 for i = 1:length(dat_rxns);
     [rxnFormula_bd_lumped{i}] = printRxnFormula(model, dat_rxns{i})';
@@ -28,7 +28,7 @@ rxnFormula_bd_lumped = rxnFormula_bd_lumped';
 
 %% bd_significant_r
 % rxns
-model = iAstro_iPS_BD_R_TP_norm; dat_rxns = bd_significant_r.rxnList;
+model = iAstro_iPS_BD_R_TP_norm_t1; dat_rxns = bd_significant_r.rxnList;
 [rxnFormula_bd_r]= deal(repmat({''},size(dat_rxns))');
 for i = 1:length(dat_rxns);
     [rxnFormula_bd_r{i}] = printRxnFormula(model, dat_rxns{i})';
@@ -40,7 +40,7 @@ rxnFormula_bd_r = rxnFormula_bd_r';
 
 %% bd_significant_nr
 % rxns
-model = iAstro_iPS_BD_NR_TP_norm; dat_rxns = bd_significant_nr.rxnList;
+model = iAstro_iPS_BD_NR_TP_norm_t1; dat_rxns = bd_significant_nr.rxnList;
 [rxnFormula_bd_nr]= deal(repmat({''},size(dat_rxns))');
 for i = 1:length(dat_rxns);
     [rxnFormula_bd_nr{i}] = printRxnFormula(model, dat_rxns{i})';
@@ -54,15 +54,15 @@ rxnFormula_bd_nr = rxnFormula_bd_nr';
 % rxns
 bd_significant_lumped = [bd_significant_lumped rxnFormula_bd_lumped];
 bd_significant_lumped.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'fluxspan_a', 'fluxspan_b', 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'localization', 'rxnFormula'};
-writetable(bd_significant_lumped, 'bd_tbl_significant_norm/FinalTable_BD_Lumped_norm.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+writetable(bd_significant_lumped, 'bd_tbl_significant_norm_t1/FinalTable_BD_Lumped_norm_t1.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
 bd_significant_r = [bd_significant_r rxnFormula_bd_r];
 bd_significant_r.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'fluxspan_a', 'fluxspan_b', 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'localization', 'rxnFormula'};
-writetable(bd_significant_r, 'bd_tbl_significant_norm/FinalTable_BD_Responder_norm.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+writetable(bd_significant_r, 'bd_tbl_significant_norm_t1/FinalTable_BD_Responder_norm_t1.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
 bd_significant_nr = [bd_significant_nr rxnFormula_bd_nr];
 bd_significant_nr.Properties.VariableNames = {'rxnList', 'subSystem', 'GPR', 'fluxspan_a', 'fluxspan_b', 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'localization', 'rxnFormula'};
-writetable(bd_significant_nr, 'bd_tbl_significant_norm/FinalTable_BD_NonResponder_norm.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+writetable(bd_significant_nr, 'bd_tbl_significant_norm_t1/FinalTable_BD_NonResponder_norm_t1.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
 % mets
 % writetable(mets_bd_lumped, 'mets_bd_lumped.csv', 'WriteVariableNames', true, 'Delimiter','\t');
@@ -72,6 +72,6 @@ writetable(bd_significant_nr, 'bd_tbl_significant_norm/FinalTable_BD_NonResponde
 %%
 clearvars -except bd_significant_lumped bd_significant_r bd_significant_nr %mets_bd_lumped mets_bd_r mets_bd_nr
 %%
-save('bd_tbl_significant_norm/final_bd_rxns_norm.mat');
+save('bd_tbl_significant_norm_t1/final_bd_rxns_norm_t1.mat');
 %%
 toc;

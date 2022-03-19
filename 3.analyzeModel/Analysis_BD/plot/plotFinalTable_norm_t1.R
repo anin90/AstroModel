@@ -21,26 +21,26 @@ library(pheatmap)
 library(magrittr)
 library(venn)
 
-pdf("bd_tbl_significant_norm/plotFinalTable_norm.pdf", width=7, height=3)
+pdf("bd_tbl_significant_norm_t1/plotFinalTable_norm_t1.pdf", width=7, height=3)
 
 ###########
 # Load data
 ###########
 
 # load subsystems
-bd_lumped_subsystem_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm/bd_lumped_subsystem_fdr_norm.csv",
+bd_lumped_subsystem_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm_t1/bd_lumped_subsystem_fdr_norm_t1.csv",
 		header = T, sep = "\t")
-bd_r_subsystem_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm/bd_r_subsystem_fdr_norm.csv",
+bd_r_subsystem_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm_t1/bd_r_subsystem_fdr_norm_t1.csv",
 		header = T, sep = "\t")		
-bd_nr_subsystem_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm/bd_nr_subsystem_fdr_norm.csv",
+bd_nr_subsystem_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm_t1/bd_nr_subsystem_fdr_norm_t1.csv",
 		header = T, sep = "\t")
 
 # load rxns
-bd_lumped_rxns_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm/bd_lumped_rxns_fdr_norm.csv",
+bd_lumped_rxns_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm_t1/bd_lumped_rxns_fdr_norm_t1.csv",
 		header = T, sep = "\t")
-bd_r_rxns_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm/bd_r_rxns_fdr_norm.csv",
+bd_r_rxns_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm_t1/bd_r_rxns_fdr_norm_t1.csv",
 		header = T, sep = "\t")		
-bd_nr_rxns_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm/bd_nr_rxns_fdr_norm.csv",
+bd_nr_rxns_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Analysis_BD/plot/bd_tbl_significant_norm_t1/bd_nr_rxns_fdr_norm_t1.csv",
 		header = T, sep = "\t")
 
 ###########
@@ -93,7 +93,7 @@ bd_nr_rxns_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/An
 	myTable <- table(bd_nr_rxns_fdr$Flux, bd_nr_rxns_fdr$subSystem)
 	ggplot(as.data.frame(myTable), aes(x = reorder(Var2, -Freq), Freq, fill=Var1, label = Freq))+ 
 		geom_bar(stat="identity") + coord_flip() + 
-		scale_fill_manual(values = c("orangered1")) + theme_classic() + 
+		scale_fill_manual(values = c("palegreen3")) + theme_classic() + 
 		labs(fill = "Flux", x ="subsystem", y = "# of disrupted reactions") +
 		geom_text(data=subset(as.data.frame(myTable),Freq != 0), position = position_stack(vjust = 0.5)) +
 		ggtitle("BD_NonResponder")		
@@ -125,7 +125,7 @@ bd_nr_rxns_fdr <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/An
 	compartment <- c("cytoplasm", "lysosome", "endoplasmic reticulum", "intercompartmental")
 	ggplot(as.data.frame(myTable), aes(Var2, Freq, fill=Var1, label = Freq)) + 
 		geom_bar(stat="identity") + coord_flip() + 
-		scale_fill_manual(values = c("orangered1")) + theme_classic() + 
+		scale_fill_manual(values = c("palegreen3")) + theme_classic() + 
 		labs(fill = "Flux", x ="compartment", y = "# of disrupted reactions") +
 		geom_text(data=subset(as.data.frame(myTable),Freq != 0), position = position_stack(vjust = 0.5)) +
 		scale_x_discrete(labels= compartment) + 
