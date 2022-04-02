@@ -55,5 +55,5 @@ for i=1:length(model.genes_unique)
 end
     
 for i = 1:length(model.rules)
-    discrete_rxns_vector(i) = evalExpRule(model.rules{i}, geneState2);
+    discrete_rxns_vector(i) = evalExpRule2(model.rules{i}, geneState2); % Was changed to "evalExpRule2" from "evalExpRule" by Anirudh
 end
