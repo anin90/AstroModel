@@ -1,0 +1,5 @@
+subSystem	n.x	n.y	p.val	p.val.fdr
+Aminosugar metabolism	4	18	0.00264097190877468	0.0237687471789721
+N-glycan synthesis	3	4	0.000147173912994046	0.00176608695592855
+Keratan sulfate degradation	18	60	3.72035395219591e-13	6.69663711395264e-12
+Phosphatidylinositol phosphate metabolism	17	33	3.28020401093625e-17	1.18087344393705e-15
