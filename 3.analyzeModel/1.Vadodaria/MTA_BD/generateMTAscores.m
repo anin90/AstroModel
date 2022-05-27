@@ -59,9 +59,9 @@ rxnList = del_rxnID;
     List2 = MetabolicUnits_ACS.HarvettaRxns;
     List3 = MetabolicUnits_ACS.MetabolicUnits;
     nameidx_L = getnameidx(List2, List1)';
-    MU = repmat({''},size(nameidx_L));
-    MU(nameidx_L~=0) = List3(nonzeros(nameidx_L));
-    MU(nameidx_L==0) = {'NA'};
+    MetabolicUnits = repmat({''},size(nameidx_L));
+    MetabolicUnits(nameidx_L~=0) = List3(nonzeros(nameidx_L));
+    MetabolicUnits(nameidx_L==0) = {'NA'};
 
     % Organelle from Recon3D (Brunk et al. 2018)
     [transportRxnBool] = transportReactionBool(model);
@@ -69,22 +69,29 @@ rxnList = del_rxnID;
     trspSubSys = model.subSystems(transportRxnBool==1);
     
     patterns = {'[c]' '[l]' '[n]' '[m]' '[i]' '[x]' '[e]' '[g]' '[r]'};
-    D = repmat({''},size(rxnList));
+    Localization = repmat({''},size(rxnList));
     for i = 1:length(patterns)
         [rxns{i}] = findRxnFromCompartment(model,patterns{i});
         [rxns_subset{i}] = intersect(setdiff(rxns{i}(:,1), trspRxns), rxnList);
         if ~isempty(rxns_subset{i})
             nameidx{i} = getnameidx(rxnList, rxns_subset{i})';
-            D(nameidx{1,i}) = {patterns{i}};
+            Localization(nameidx{1,i}) = {patterns{i}};
         else % do nothing
         end
     end
-    idx = cellfun(@isempty,D);
-    D(idx) = {'intercompartmental'};
+    idx = cellfun(@isempty,Localization);
+    Localization(idx) = {'intercompartmental'};
+    
+    % Reaction Formula
+    [RxnFormula]= deal(repmat({''},size(rxnList))');
+    for i = 1:length(rxnList);
+        [RxnFormula{i}] = printRxnFormula(model, rxnList{i})';
+    end
+    RxnFormula = RxnFormula'; 
 
 %% Final Table
-mta_tbl = table(del_rxnID, mta_score, alt_score, subSystem, GPR, MU, D);
-mta_tbl.Properties.VariableNames = {'del_rxnID_KO', 'mta_score', 'alt_score', 'subSystem', 'GPR', 'MetabolicUnits', 'Localization'};
+mta_tbl = table(del_rxnID, mta_score, alt_score, subSystem, GPR, MetabolicUnits, Localization, RxnFormula);
+mta_tbl.Properties.VariableNames = {'del_rxnID_KO', 'mta_score', 'alt_score', 'subSystem', 'GPR', 'MetabolicUnits', 'Localization', 'RxnFormula'};
 
 %%
 tEnd = toc(tStart);
