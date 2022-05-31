@@ -1,0 +1,316 @@
+#~ install.packages("pacman")
+#~ install.packages("mgsub")
+#~ install.packages("gsubfn")
+#~ install.packages("readxl")
+#~ install.packages("openxlsx")
+pacman::p_load(affy, pheatmap, RColorBrewer, dplyr, tidyverse, annotate, rat2302.db, mouse4302.db, homologene, 
+readxl, oligo, limma, mogene20sttranscriptcluster.db, qvalue, GEOquery, tidyr, tibble, splitstackshape, gplots, 
+ggplot2, ggfortify, reshape2, factoextra, plot.matrix, VennDiagram, ggvenn, plotrix, pheatmap, magrittr, venn, 
+mgsub, gsubfn, readxl, openxlsx, UpSetR, qvalue, GEOquery, TeachingDemos, sm, org.Hs.eg.db) 
+
+setwd("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays")
+
+pdf("PlotResults/plotDataOverlaysHyper.pdf")
+
+#################################################################################################
+# https://stats.stackexchange.com/questions/95523/significance-of-overlap-between-multiple-lists
+#################################################################################################
+	hyper_matrix <- function(gene.list, background){
+		
+	  # generate every combinations of two gene lists
+	  combination <- expand.grid(names(gene.list),names(gene.list))
+	  combination$values <- rep(NA, times=nrow(combination))
+
+	  # convert long table into wide
+	  combination <- reshape(combination, idvar="Var1", timevar="Var2", direction="wide")
+	  rownames(combination) <- combination$Var1
+	  combination <- combination[,-1]
+	  colnames(combination) <- gsub("values.", "", colnames(combination))
+
+	  # calculate the length of overlap of each pair
+	  for(i in colnames(combination)){
+		for(j in rownames(combination)){
+		  combination[j,i]<-length(intersect(gene.list[[j]],gene.list[[i]]))
+		}
+	  }
+
+	  # calculate the significance of the overlap of each pair
+	  for(m in 1:length(gene.list)){
+		for(n in 1:length(gene.list)){
+		  if(n>m){
+			combination[n,m] <- phyper(combination[m,n]-1, length(gene.list[[m]]), background-length(gene.list[[m]]), length(gene.list[[n]]), lower.tail=F)
+			
+			# note that the phyper function (lower.tail=F) give the probability of P[X>x], so the the overlap length should subtract 1 to get a P[X>=x].
+		  }
+		}
+	  }
+	  return(combination)
+	}
+
+###################
+# Load rxn data
+###################
+
+	# model_abs
+		# background
+		All_Primary_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_Primary_TP_abs.csv", header = T, sep = "\t")
+		All_Ctrl_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_Ctrl_TP_abs.csv", header = T, sep = "\t")
+		All_BD_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_TP_abs.csv", header = T, sep = "\t")
+		All_BD_R_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_R_TP_abs.csv", header = T, sep = "\t")
+		All_BD_NR_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_NR_TP_abs.csv", header = T, sep = "\t")
+		# results_vadodaria
+		FSr_BD_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_abs/bd_lumped_rxns_fdr_abs.csv", header = T, sep = "\t")
+		FSr_BD_R_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_abs/bd_r_rxns_fdr_abs.csv", header = T, sep = "\t")
+		FSr_BD_NR_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_abs/bd_nr_rxns_fdr_abs.csv", header = T, sep = "\t")
+		MTA_BD_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_abs/bd_lumped_rxns_fdr.csv", header = T, sep = "\t")
+		MTA_BD_R_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_abs/bd_r_rxns_fdr.csv", header = T, sep = "\t")
+		MTA_BD_NR_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_abs/bd_nr_rxns_fdr.csv", header = T, sep = "\t")
+		# results_lithium
+		Lanz_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Lanz_vs_Ctrl_abs.csv", header = T, sep = "\t")
+		Rivera_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Rivera_vs_Ctrl_abs.csv", header = T, sep = "\t")
+		
+	# model_norm_t1
+		# background
+		All_Primary_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_Primary_TP_norm_t1.csv", header = T, sep = "\t")
+		All_Ctrl_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_Ctrl_TP_norm_t1.csv", header = T, sep = "\t")
+		All_BD_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_TP_norm_t1.csv", header = T, sep = "\t")
+		All_BD_R_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_R_TP_norm_t1.csv", header = T, sep = "\t")
+		All_BD_NR_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_NR_TP_norm_t1.csv", header = T, sep = "\t")
+		# results_vadodaria
+		FSr_BD_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_norm_t1/bd_lumped_rxns_fdr_norm_t1.csv", header = T, sep = "\t")
+		FSr_BD_R_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_norm_t1/bd_r_rxns_fdr_norm_t1.csv", header = T, sep = "\t")
+		FSr_BD_NR_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_norm_t1/bd_nr_rxns_fdr_norm_t1.csv", header = T, sep = "\t")
+		MTA_BD_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t1/bd_lumped_rxns_fdr.csv", header = T, sep = "\t")
+		MTA_BD_R_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t1/bd_r_rxns_fdr.csv", header = T, sep = "\t")
+		MTA_BD_NR_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t1/bd_nr_rxns_fdr.csv", header = T, sep = "\t")
+		# results_lithium
+		Lanz_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Lanz_vs_Ctrl_norm_t1.csv", header = T, sep = "\t")
+		Rivera_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Rivera_vs_Ctrl_norm_t1.csv", header = T, sep = "\t")
+
+	# model_norm_t2
+		# background
+		All_Primary_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_Primary_TP_norm_t2.csv", header = T, sep = "\t")
+		All_Ctrl_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_Ctrl_TP_norm_t2.csv", header = T, sep = "\t")
+		All_BD_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_TP_norm_t2.csv", header = T, sep = "\t")
+		All_BD_R_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_R_TP_norm_t2.csv", header = T, sep = "\t")
+		All_BD_NR_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_NR_TP_norm_t2.csv", header = T, sep = "\t")
+		# results_vadodaria
+		FSr_BD_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_norm_t2/bd_lumped_rxns_fdr_norm_t2.csv", header = T, sep = "\t")
+		FSr_BD_R_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_norm_t2/bd_r_rxns_fdr_norm_t2.csv", header = T, sep = "\t")
+		FSr_BD_NR_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_norm_t2/bd_nr_rxns_fdr_norm_t2.csv", header = T, sep = "\t")
+		MTA_BD_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t2/bd_lumped_rxns_fdr.csv", header = T, sep = "\t")
+		MTA_BD_R_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t2/bd_r_rxns_fdr.csv", header = T, sep = "\t")
+		MTA_BD_NR_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t2/bd_nr_rxns_fdr.csv", header = T, sep = "\t")
+		# results_lithium
+		Lanz_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Lanz_vs_Ctrl_norm_t2.csv", header = T, sep = "\t")
+		Rivera_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Rivera_vs_Ctrl_norm_t2.csv", header = T, sep = "\t")
+
+###################################
+# BD significance across methods
+###################################
+
+	# model_abs
+	
+		mat = lst(FSr_BD_abs$subSystem, FSr_BD_R_abs$subSystem, FSr_BD_NR_abs$subSystem, 
+					MTA_BD_abs$subSystem_CB, MTA_BD_R_abs$subSystem_CBR, MTA_BD_NR_abs$subSystem_CBNR) %>% 
+					
+		  enframe %>% 
+		  unnest %>% 
+		  count(name, value) %>% 
+		  spread(value, n, fill = 0)
+		  
+		mat = t(mat)
+
+		write.table(mat, "PlotResults/Tbl_abs.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
+		
+		mat <- read.csv("PlotResults/Tbl_abs.csv", header = T, sep = "\t")
+
+		colnames(mat) = c("subSystem", "FSr_BD", "FSr_BD_R", "FSr_BD_NR", 
+							"MTA_BD", "MTA_BD_R", "MTA_BD_NR")
+
+		row.names(mat) <- mat$subSystem
+		
+		mat = mat[,colnames(mat)!="subSystem"]
+
+		pheatmap(mat, cluster_rows=T, cluster_cols=F, display_numbers = round(mat,2), main = 'Abs - BD (Vadodaria)', 
+					color = c("white", "lightblue", "orange"), breaks = c(0, 0.99, 50, max(mat)))
+
+	# model_norm_t1
+	
+		mat = lst(FSr_BD_norm_t1$subSystem, FSr_BD_R_norm_t1$subSystem, FSr_BD_NR_norm_t1$subSystem, 
+					MTA_BD_norm_t1$subSystem_CB, MTA_BD_R_norm_t1$subSystem_CBR, MTA_BD_NR_norm_t1$subSystem_CBNR) %>% 
+					
+		  enframe %>% 
+		  unnest %>% 
+		  count(name, value) %>% 
+		  spread(value, n, fill = 0)
+		  
+		mat = t(mat)
+
+		write.table(mat, "PlotResults/Tbl_norm_t1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
+		
+		mat <- read.csv("PlotResults/Tbl_norm_t1.csv", header = T, sep = "\t")
+
+		colnames(mat) = c("subSystem", "FSr_BD", "FSr_BD_R", "FSr_BD_NR", 
+							"MTA_BD", "MTA_BD_R", "MTA_BD_NR")
+
+		row.names(mat) <- mat$subSystem
+		
+		mat = mat[,colnames(mat)!="subSystem"]
+
+		pheatmap(mat, cluster_rows=T, cluster_cols=F, display_numbers = round(mat,2), main = 'Norm_t1 - BD (Vadodaria)', 
+					color = c("white", "lightblue", "orange"), breaks = c(0, 0.99, 50, max(mat)))
+
+	# model_norm_t2
+	
+		mat = lst(FSr_BD_norm_t2$subSystem, FSr_BD_R_norm_t2$subSystem, FSr_BD_NR_norm_t2$subSystem, 
+					MTA_BD_norm_t2$subSystem_CB, MTA_BD_R_norm_t2$subSystem_CBR, MTA_BD_NR_norm_t2$subSystem_CBNR) %>% 
+					
+		  enframe %>% 
+		  unnest %>% 
+		  count(name, value) %>% 
+		  spread(value, n, fill = 0)
+		  
+		mat = t(mat)
+
+		write.table(mat, "PlotResults/Tbl_norm_t2.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
+		
+		mat <- read.csv("PlotResults/Tbl_norm_t2.csv", header = T, sep = "\t")
+
+		colnames(mat) = c("subSystem", "FSr_BD", "FSr_BD_R", "FSr_BD_NR", 
+							"MTA_BD", "MTA_BD_R", "MTA_BD_NR")
+
+		row.names(mat) <- mat$subSystem
+		
+		mat = mat[,colnames(mat)!="subSystem"]
+
+		pheatmap(mat, cluster_rows=T, cluster_cols=F, display_numbers = round(mat,2), main = 'Norm_t2 - BD (Vadodaria)', 
+					color = c("white", "lightblue", "orange"), breaks = c(0, 0.99, 50, max(mat)))
+
+	# model_all
+
+		mat = lst(FSr_BD_abs$subSystem, FSr_BD_R_abs$subSystem, FSr_BD_NR_abs$subSystem, 
+					MTA_BD_abs$subSystem_CB, MTA_BD_R_abs$subSystem_CBR, MTA_BD_NR_abs$subSystem_CBNR,
+					FSr_BD_norm_t1$subSystem, FSr_BD_R_norm_t1$subSystem, FSr_BD_NR_norm_t1$subSystem, 
+					MTA_BD_norm_t1$subSystem_CB, MTA_BD_R_norm_t1$subSystem_CBR, MTA_BD_NR_norm_t1$subSystem_CBNR,
+					FSr_BD_norm_t2$subSystem, FSr_BD_R_norm_t2$subSystem, FSr_BD_NR_norm_t2$subSystem, 
+					MTA_BD_norm_t2$subSystem_CB, MTA_BD_R_norm_t2$subSystem_CBR, MTA_BD_NR_norm_t2$subSystem_CBNR) %>% 
+					
+		  enframe %>% 
+		  unnest %>% 
+		  count(name, value) %>% 
+		  spread(value, n, fill = 0)
+		  
+		mat = t(mat)
+
+		write.table(mat, "PlotResults/Tbl_all.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
+		
+		mat <- read.csv("PlotResults/Tbl_all.csv", header = T, sep = "\t")
+
+		colnames(mat) = c("subSystem", "FSr_BD_abs", "FSr_BD_R_abs", "FSr_BD_NR_abs", "MTA_BD_abs", "MTA_BD_R_abs", "MTA_BD_NR_abs",
+							"FSr_BD_norm_t1", "FSr_BD_R_norm_t1", "FSr_BD_NR_norm_t1", "MTA_BD_norm_t1", "MTA_BD_R_norm_t1", "MTA_BD_NR_norm_t1",
+							"FSr_BD_norm_t2", "FSr_BD_R_norm_t2", "FSr_BD_NR_norm_t2", "MTA_BD_norm_t2", "MTA_BD_R_norm_t2", "MTA_BD_NR_norm_t2")
+
+		row.names(mat) <- mat$subSystem
+		
+		mat = mat[,colnames(mat)!="subSystem"]
+
+		pheatmap(mat, cluster_rows=T, cluster_cols=F, main = 'All - BD (Vadodaria)', fontsize_row = 8, fontsize_col = 10,
+					color = c("white", "lightblue", "orange"), breaks = c(0, 0.99, 50, max(mat)))
+
+############################
+# BD vs Lithium
+############################
+	
+	# model_abs
+
+		x = list(Lanz = Lanz_abs$Var1, Rivera = Rivera_abs$Var1,
+					FSr_BD = FSr_BD_abs$rxnList, FSr_BD_R = FSr_BD_R_abs$rxnList, FSr_BD_NR = FSr_BD_NR_abs$rxnList,
+						MTA_BD = MTA_BD_abs$del_rxnID_KO, MTA_BD_R = MTA_BD_R_abs$del_rxnID_KO, MTA_BD_NR = MTA_BD_NR_abs$del_rxnID_KO)
+
+		y = list(All_Primary_abs$Rxn, All_Ctrl_abs$Rxn, All_BD_abs$Rxn, All_BD_R_abs$Rxn, All_BD_NR_abs$Rxn)
+		yInt = Reduce(intersect,y); background = length(yInt);
+		
+		M <- hyper_matrix(x, background);	M[upper.tri(M)] <- NA;	diag(M)<-NA;
+		M.adj = M %>% as.matrix %>% as.vector %>% p.adjust(method='fdr') %>% matrix(ncol=ncol(M));
+		rownames(M.adj) = rownames(M); colnames(M.adj) = colnames(M);
+		pheatmap(M.adj, cluster_rows=F, cluster_cols=F, na_col="white", display_numbers = TRUE, number_format = "%.1e",
+		main = 'Abs - BD (Vadodaria) vs Li+', #color=colorRampPalette(c("green", "yellow", "orangered"))(50))
+		color = c("green", "orange"), breaks = c(0, 0.05, 1))
+
+		M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
+		M.int
+	
+	# model_norm_t1
+
+		x = list(Lanz = Lanz_norm_t1$Var1, Rivera = Rivera_norm_t1$Var1,
+					FSr_BD = FSr_BD_norm_t1$rxnList, FSr_BD_R = FSr_BD_R_norm_t1$rxnList, FSr_BD_NR = FSr_BD_NR_norm_t1$rxnList,
+						MTA_BD = MTA_BD_norm_t1$del_rxnID_KO, MTA_BD_R = MTA_BD_R_norm_t1$del_rxnID_KO, MTA_BD_NR = MTA_BD_NR_norm_t1$del_rxnID_KO)
+
+		y = list(All_Primary_norm_t1$Rxn, All_Ctrl_norm_t1$Rxn, All_BD_norm_t1$Rxn, All_BD_R_norm_t1$Rxn, All_BD_NR_norm_t1$Rxn)
+		yInt = Reduce(intersect,y); background = length(yInt);
+		
+		M <- hyper_matrix(x, background);	M[upper.tri(M)] <- NA;	diag(M)<-NA;
+		M.adj = M %>% as.matrix %>% as.vector %>% p.adjust(method='fdr') %>% matrix(ncol=ncol(M));
+		rownames(M.adj) = rownames(M); colnames(M.adj) = colnames(M);
+		pheatmap(M.adj, cluster_rows=F, cluster_cols=F, na_col="white", display_numbers = TRUE, number_format = "%.1e",
+		main = 'Norm_t1 - BD (Vadodaria) vs Li+', #color=colorRampPalette(c("green", "yellow", "orangered"))(50))
+		color = c("green", "orange"), breaks = c(0, 0.05, 1))
+		
+		M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
+		M.int
+	
+	# model_norm_t2
+
+		x = list(Lanz = Lanz_norm_t2$Var1, Rivera = Rivera_norm_t2$Var1,
+					FSr_BD = FSr_BD_norm_t2$rxnList, FSr_BD_R = FSr_BD_R_norm_t2$rxnList, FSr_BD_NR = FSr_BD_NR_norm_t2$rxnList,
+						MTA_BD = MTA_BD_norm_t2$del_rxnID_KO, MTA_BD_R = MTA_BD_R_norm_t2$del_rxnID_KO, MTA_BD_NR = MTA_BD_NR_norm_t2$del_rxnID_KO)
+
+		y = list(All_Primary_norm_t2$Rxn, All_Ctrl_norm_t2$Rxn, All_BD_norm_t2$Rxn, All_BD_R_norm_t2$Rxn, All_BD_NR_norm_t2$Rxn)
+		yInt = Reduce(intersect,y); background = length(yInt);
+		
+		M <- hyper_matrix(x, background);	M[upper.tri(M)] <- NA;	diag(M)<-NA;
+		M.adj = M %>% as.matrix %>% as.vector %>% p.adjust(method='fdr') %>% matrix(ncol=ncol(M));
+		rownames(M.adj) = rownames(M); colnames(M.adj) = colnames(M);
+		pheatmap(M.adj, cluster_rows=F, cluster_cols=F, na_col="white", display_numbers = TRUE, number_format = "%.1e",
+		main = 'Norm_t2 - BD (Vadodaria) vs Li+', #color=colorRampPalette(c("green", "yellow", "orangered"))(50))
+		color = c("green", "orange"), breaks = c(0, 0.05, 1))
+		
+		M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
+		M.int
+
+	# model_all
+
+		x = list(Lanz_abs = Lanz_abs$Var1, Rivera_abs = Rivera_abs$Var1,
+					FSr_BD_abs = FSr_BD_abs$rxnList, FSr_BD_R_abs = FSr_BD_R_abs$rxnList, FSr_BD_NR_abs = FSr_BD_NR_abs$rxnList,
+						MTA_BD_abs = MTA_BD_abs$del_rxnID_KO, MTA_BD_R_abs = MTA_BD_R_abs$del_rxnID_KO, MTA_BD_NR_abs = MTA_BD_NR_abs$del_rxnID_KO,
+				
+				Lanz_norm_t1 = Lanz_norm_t1$Var1, Rivera_norm_t1 = Rivera_norm_t1$Var1,
+					FSr_BD_norm_t1 = FSr_BD_norm_t1$rxnList, FSr_BD_R_norm_t1 = FSr_BD_R_norm_t1$rxnList, FSr_BD_NR_norm_t1 = FSr_BD_NR_norm_t1$rxnList,
+						MTA_BD_norm_t1 = MTA_BD_norm_t1$del_rxnID_KO, MTA_BD_R_norm_t1 = MTA_BD_R_norm_t1$del_rxnID_KO, MTA_BD_NR_norm_t1 = MTA_BD_NR_norm_t1$del_rxnID_KO,
+						
+				Lanz_norm_t2 = Lanz_norm_t2$Var1, Rivera_norm_t2 = Rivera_norm_t2$Var1,
+					FSr_BD_norm_t2 = FSr_BD_norm_t2$rxnList, FSr_BD_R_norm_t2 = FSr_BD_R_norm_t2$rxnList, FSr_BD_NR_norm_t2 = FSr_BD_NR_norm_t2$rxnList,
+						MTA_BD_norm_t2 = MTA_BD_norm_t2$del_rxnID_KO, MTA_BD_R_norm_t2 = MTA_BD_R_norm_t2$del_rxnID_KO, MTA_BD_NR_norm_t2 = MTA_BD_NR_norm_t2$del_rxnID_KO)
+
+		y = list(All_Primary_abs$Rxn, All_Ctrl_abs$Rxn, All_BD_abs$Rxn, All_BD_R_abs$Rxn, All_BD_NR_abs$Rxn,
+					All_Primary_norm_t1$Rxn, All_Ctrl_norm_t1$Rxn, All_BD_norm_t1$Rxn, All_BD_R_norm_t1$Rxn, All_BD_NR_norm_t1$Rxn,
+						All_Primary_norm_t2$Rxn, All_Ctrl_norm_t2$Rxn, All_BD_norm_t2$Rxn, All_BD_R_norm_t2$Rxn, All_BD_NR_norm_t2$Rxn)
+						
+		yInt = Reduce(intersect,y); background = length(yInt);
+		
+		M <- hyper_matrix(x, background);	M[upper.tri(M)] <- NA;	diag(M)<-NA;
+		M.adj = M %>% as.matrix %>% as.vector %>% p.adjust(method='fdr') %>% matrix(ncol=ncol(M));
+		rownames(M.adj) = rownames(M); colnames(M.adj) = colnames(M);
+		pheatmap(M.adj, cluster_rows=F, cluster_cols=F, na_col="white", #display_numbers = TRUE, number_format = "%.1e",
+		main = 'All - BD (Vadodaria) vs Li+', #color=colorRampPalette(c("green", "yellow", "orangered"))(50))
+		color = c("green", "orange"), breaks = c(0, 0.05, 1))
+		
+		M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
+		M.int
+
+
+
+
+
+

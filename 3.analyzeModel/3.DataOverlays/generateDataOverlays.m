@@ -11,20 +11,48 @@ clear File FileName FolderName
 %% add path to dependencies:
 addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/')
 
-%% Li_analysis:
+%% model_abs:
 
     dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_abs, 'Lanz_Li.mat');
     Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
-    writetable(Tbl,'AnalysisFiles/Ctrl_vs_Lanz.csv','WriteVariableNames', true, 'Delimiter','\t');
+    writetable(Tbl,'AnalysisFiles/Lanz_vs_Ctrl_abs.csv','WriteVariableNames', true, 'Delimiter','\t');
     
     dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_abs, 'Rivera_Li.mat');
     Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
-    writetable(Tbl,'AnalysisFiles/Ctrl_vs_Rivera.csv','WriteVariableNames', true, 'Delimiter','\t');    
+    writetable(Tbl,'AnalysisFiles/Rivera_vs_Ctrl_abs.csv','WriteVariableNames', true, 'Delimiter','\t');    
     
 %     dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_abs, 'Akkouh_Li.mat');
 %     Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
-%     writetable(Tbl,'AnalysisFiles/Ctrl_vs_Akkouh.csv','WriteVariableNames', true, 'Delimiter','\t');   
+%     writetable(Tbl,'AnalysisFiles/Akkouh_vs_Ctrl_abs.csv','WriteVariableNames', true, 'Delimiter','\t');   
+
+%% model_norm_t1:
+
+    dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_norm_t1, 'Lanz_Li.mat');
+    Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
+    writetable(Tbl,'AnalysisFiles/Lanz_vs_Ctrl_norm_t1.csv','WriteVariableNames', true, 'Delimiter','\t');
     
+    dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_norm_t1, 'Rivera_Li.mat');
+    Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
+    writetable(Tbl,'AnalysisFiles/Rivera_vs_Ctrl_norm_t1.csv','WriteVariableNames', true, 'Delimiter','\t');    
+    
+%     dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_norm_t1, 'Akkouh_Li.mat');
+%     Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
+%     writetable(Tbl,'AnalysisFiles/Akkouh_vs_Ctrl_norm_t1.csv','WriteVariableNames', true, 'Delimiter','\t');   
+
+%% model_norm_t2:
+
+    dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_norm_t2, 'Lanz_Li.mat');
+    Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
+    writetable(Tbl,'AnalysisFiles/Lanz_vs_Ctrl_norm_t2.csv','WriteVariableNames', true, 'Delimiter','\t');
+    
+    dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_norm_t2, 'Rivera_Li.mat');
+    Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
+    writetable(Tbl,'AnalysisFiles/Rivera_vs_Ctrl_norm_t2.csv','WriteVariableNames', true, 'Delimiter','\t');    
+    
+%     dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_norm_t2, 'Akkouh_Li.mat');
+%     Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
+%     writetable(Tbl,'AnalysisFiles/Akkouh_vs_Ctrl_norm_t2.csv','WriteVariableNames', true, 'Delimiter','\t');   
+
 %%
 clear all
 

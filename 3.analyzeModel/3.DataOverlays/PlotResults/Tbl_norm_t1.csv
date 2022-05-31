@@ -1,0 +1,18 @@
+name	FSr_BD_norm_t1$subSystem	FSr_BD_NR_norm_t1$subSystem	FSr_BD_R_norm_t1$subSystem	MTA_BD_norm_t1$subSystem_CB	MTA_BD_NR_norm_t1$subSystem_CBNR	MTA_BD_R_norm_t1$subSystem_CBR
+Fatty acid oxidation	62	 0	 0	 0	 0	 0
+Pyruvate metabolism	5	0	0	0	0	0
+Peptide metabolism	 0	 0	27	 0	22	 0
+ROS detoxification	0	0	4	0	0	0
+Aminosugar metabolism	0	4	0	0	0	0
+Keratan sulfate degradation	 0	18	 0	 0	 0	 0
+N-glycan synthesis	0	3	0	0	0	0
+Phosphatidylinositol phosphate metabolism	 0	17	 0	 0	 0	 0
+Drug metabolism	 0	 0	 0	18	 0	14
+Nucleotide interconversion	 0	 0	 0	23	 0	 0
+Transport, extracellular	  0	  0	  0	215	  0	 98
+Urea cycle	0	0	0	0	0	5
+Valine, leucine, and isoleucine metabolism	0	0	0	0	0	5
+Arginine and proline metabolism	0	0	0	0	4	0
+CoA synthesis	0	0	0	0	3	0
+Inositol phosphate metabolism	0	0	0	0	9	0
+Methionine and cysteine metabolism	0	0	0	0	5	0
