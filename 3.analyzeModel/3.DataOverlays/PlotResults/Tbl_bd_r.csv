@@ -1,0 +1,21 @@
+name	FVA_BD_R_abs$subSystem	FVA_BD_R_norm_t1$subSystem	FVA_BD_R_norm_t2$subSystem	MTA_BD_R_abs$subSystem_CBR	MTA_BD_R_norm_t1$subSystem_CBR	MTA_BD_R_norm_t2$subSystem_CBR
+Fatty acid oxidation	1	0	0	0	0	0
+Transport, endoplasmic reticular	1	0	0	0	0	0
+Cholesterol metabolism	0	0	0	1	0	0
+Fatty acid synthesis	0	0	0	1	0	0
+Fructose and mannose metabolism	0	0	0	1	0	0
+ROS detoxification	0	1	0	1	0	0
+Starch and sucrose metabolism	0	0	0	1	0	0
+Transport, extracellular	0	0	0	1	1	1
+Peptide metabolism	0	1	0	0	0	0
+Drug metabolism	0	0	0	0	1	1
+Urea cycle	0	0	0	0	1	0
+Valine, leucine, and isoleucine metabolism	0	0	0	0	1	0
+Eicosanoid metabolism	0	0	1	0	0	0
+Keratan sulfate degradation	0	0	1	0	0	0
+Methionine and cysteine metabolism	0	0	1	0	0	0
+O-glycan metabolism	0	0	1	0	0	0
+Transport, golgi apparatus	0	0	1	0	0	0
+Transport, lysosomal	0	0	1	0	0	0
+Miscellaneous	0	0	0	0	0	1
+Vitamin A metabolism	0	0	0	0	0	1
