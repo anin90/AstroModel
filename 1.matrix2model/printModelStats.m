@@ -6,7 +6,7 @@ tStart = tic;
 addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/')
 
 %% Load Lewis et al. rxns
-    astroModelLewis = xls2model('AstroModel_New.xlsx');
+    astroModelLewis = xls2model('AstroModel_Lewis_et_al_2010.xlsx');
     
 %% Print
 
