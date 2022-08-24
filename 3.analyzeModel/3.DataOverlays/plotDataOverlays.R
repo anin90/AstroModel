@@ -126,7 +126,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		color = c("green", "orange"), breaks = c(0, 0.05, 1), legend = F)
 
 		M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
-		M.int
+#~ 		M.int
 	
 	# model_norm_t1
 
@@ -145,7 +145,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		color = c("green", "orange"), breaks = c(0, 0.05, 1), legend = F)
 		
 		M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
-		M.int
+#~ 		M.int
 	
 	# model_norm_t2
 
@@ -164,7 +164,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		color = c("green", "orange"), breaks = c(0, 0.05, 1), legend = F)
 		
 		M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
-		M.int
+#~ 		M.int
 
 	# model_all
 
@@ -194,7 +194,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		color = c("green", "orange"), breaks = c(0, 0.05, 1), legend = F)
 		
 		M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
-		M.int
+#~ 		M.int
 
 ###################################
 # BD significance across methods
@@ -337,6 +337,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		mat = mat[order(mat$Total),]
 		dotchart(mat$Total, labels = row.names(mat), cex = 0.7, bg = "blue", 
 			xlab = "Number of disrupted modules", main = "All")
+			
 
 	# model_bd
 
@@ -370,7 +371,12 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		mat = mat[order(mat$Total),]
 		dotchart(mat$Total, labels = row.names(mat), cex = 0.7, bg = "blue", 
 			xlab = "Number of disrupted modules", main = "BD_Lumped")	
-
+			
+		# filter subSystems disrupted by 2 or more methods
+		keep = rownames(mat)[rowSums(mat)>2];
+		mat_keep = mat[(row.names(mat) %in% keep),]
+		write.table(mat_keep, "PlotResults/Tbl_bd_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)	
+		
 	# model_bd_r
 
 		mat = lst(FVA_BD_R_abs$subSystem,
@@ -403,6 +409,11 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		mat = mat[order(mat$Total),]
 		dotchart(mat$Total, labels = row.names(mat), cex = 0.7, bg = "blue", 
 			xlab = "Number of disrupted modules", main = "BD_R")
+			
+		# filter subSystems disrupted by 2 or more methods
+		keep = rownames(mat)[rowSums(mat)>2];
+		mat_keep = mat[(row.names(mat) %in% keep),]
+		write.table(mat_keep, "PlotResults/Tbl_bd_r_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)	
 
 	# model_bd_nr
 
@@ -436,4 +447,126 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		mat = mat[order(mat$Total),]
 		dotchart(mat$Total, labels = row.names(mat), cex = 0.7, bg = "blue",
 			xlab = "Number of disrupted modules", main = "BD_NR")
+			
+		# filter subSystems disrupted by 2 or more methods
+		keep = rownames(mat)[rowSums(mat)>2];
+		mat_keep = mat[(row.names(mat) %in% keep),]
+		write.table(mat_keep, "PlotResults/Tbl_bd_nr_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+		
+	
 
+###########################
+# subSystem - Module matrix
+###########################
+
+	# tbl_filt
+		BD_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/Tbl_bd_filt.csv", header = T, sep = "\t")
+		BD_R_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/Tbl_bd_r_filt.csv", header = T, sep = "\t")
+		BD_NR_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/Tbl_bd_nr_filt.csv", header = T, sep = "\t")
+		
+				# bd	
+					df = data.frame("subSystem" = BD_tbl$X, 
+								"disruptedBy" = c(BD_tbl$Total))
+								
+					bd_lst = rep(df$subSystem, df$disruptedBy)
+
+
+				# bd_r
+					df = data.frame("subSystem" = BD_R_tbl$X, 
+								"disruptedBy" = c(BD_R_tbl$Total))
+								
+					bd_r_lst = rep(df$subSystem, df$disruptedBy)
+
+
+				# bd_nr
+					df = data.frame("subSystem" = BD_NR_tbl$X, 
+								"disruptedBy" = c(BD_NR_tbl$Total))
+								
+					bd_nr_lst = rep(df$subSystem, df$disruptedBy)
+		
+
+		mat = lst(bd_lst,
+					bd_r_lst,
+					bd_nr_lst) %>% 
+					
+		  enframe %>% 
+		  unnest %>% 
+		  count(name, value) %>% 
+		  spread(value, n, fill = 0)
+		  
+		mat = t(mat)
+		
+		write.table(mat, "PlotResults/Tbl_mat_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
+		
+		mat <- read.csv("PlotResults/Tbl_mat_filt.csv", header = T, sep = "\t")	
+		
+		mat <- mat[, c("name", "bd_lst", "bd_r_lst", "bd_nr_lst")]
+		
+		colnames(mat) = c("subSystem", "BD", "BD_R", "BD_NR")
+		
+		mm <- melt(mat, id="subSystem")
+			
+		ggplot(mm, aes(x=reorder(subSystem, -value), y=value, fill=variable)) + 
+			geom_bar(stat="identity", color="black", width = 0.7) + theme_classic() +
+			scale_fill_manual(values=c("#339cff", "#33ff58", "#ff4233")) + 
+			coord_flip() +
+			scale_y_continuous(breaks=c(0:1:10)) + theme(aspect.ratio=1) +
+			xlab("") + ylab("# of Disrupted Modules") + labs(fill = "Phenotype") +
+			theme(axis.text.y=element_text(size=rel(1.1)))
+
+###############################################
+# Backtracking - subSystems to Modules to Rxns
+###############################################
+		
+	# bd	
+	
+		DF = BD_tbl
+		
+		DF$DisruptedModule <- simplify2array(apply(DF[2:7], 1, function(x) paste(names(DF[2:7])[x != 0], collapse = " ")))
+		
+		DF$Phenotype <- rep(c("BD"),times=nrow(DF))
+		
+		DF_BD = DF
+			
+	# bd_r
+	
+		DF = BD_R_tbl
+		
+		DF$DisruptedModule <- simplify2array(apply(DF[2:7], 1, function(x) paste(names(DF[2:7])[x != 0], collapse = " ")))
+		
+		DF$Phenotype <- rep(c("BD_R"),times=nrow(DF))
+		
+		DF_BD_R = DF
+
+	# bd_nr
+	
+		DF = BD_NR_tbl
+		
+		DF$DisruptedModule <- simplify2array(apply(DF[2:7], 1, function(x) paste(names(DF[2:7])[x != 0], collapse = " ")))
+		
+		DF$Phenotype <- rep(c("BD_NR"),times=nrow(DF))
+		
+		DF_BD_NR = DF 
+
+
+	# merge bd, bd_r, bd_nr
+
+		df_list <- list(DF_BD, DF_BD_R, DF_BD_NR)
+		
+		RBIND <- function(datalist) {
+					  require(plyr)
+					  temp <- rbind.fill(datalist)
+					  temp
+					}
+					
+		BD = RBIND(df_list)
+		
+		BD <- BD %>% relocate(Total, DisruptedModule, .before = FVA_BD_abs)
+		
+		BD <- BD %>% relocate(Phenotype, .before = X)
+
+		BD
+		
+		
+		
+		
