@@ -6,7 +6,7 @@
 pacman::p_load(affy, pheatmap, RColorBrewer, dplyr, tidyverse, annotate, rat2302.db, mouse4302.db, homologene, 
 readxl, oligo, limma, mogene20sttranscriptcluster.db, qvalue, GEOquery, tidyr, tibble, splitstackshape, gplots, 
 ggplot2, ggfortify, reshape2, factoextra, plot.matrix, VennDiagram, ggvenn, plotrix, pheatmap, magrittr, venn, 
-mgsub, gsubfn, readxl, openxlsx, UpSetR, qvalue, GEOquery, TeachingDemos, sm, org.Hs.eg.db) 
+mgsub, gsubfn, readxl, openxlsx, UpSetR, qvalue, GEOquery, TeachingDemos, sm, org.Hs.eg.db, data.table) 
 
 setwd("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays")
 
@@ -359,9 +359,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		
 		mat <- read.csv("PlotResults/Tbl_bd.csv", header = T, sep = "\t")
 
-		colnames(mat) = c("subSystem", "FVA_BD_abs", "MTA_BD_abs", 
-							"FVA_BD_norm_t1", "MTA_BD_norm_t1", 
-							"FVA_BD_norm_t2", "MTA_BD_norm_t2")
+		colnames(mat) = c("subSystem", "FVA_BD_abs", "FVA_BD_norm_t1", 
+							"FVA_BD_norm_t2", "MTA_BD_abs", 
+							"MTA_BD_norm_t1", "MTA_BD_norm_t2")
 
 		row.names(mat) <- mat$subSystem
 		
@@ -370,7 +370,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		mat = cbind(mat, Total = rowSums(mat!= 0))
 		mat = mat[order(mat$Total),]
 		dotchart(mat$Total, labels = row.names(mat), cex = 0.7, bg = "blue", 
-			xlab = "Number of disrupted modules", main = "BD_Lumped")	
+			xlab = "Number of disrupted modules", main = "BD_Lumped")		
 			
 		# filter subSystems disrupted by 2 or more methods
 		keep = rownames(mat)[rowSums(mat)>2];
@@ -397,9 +397,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		
 		mat <- read.csv("PlotResults/Tbl_bd_r.csv", header = T, sep = "\t")
 
-		colnames(mat) = c("subSystem", "FVA_BD_R_abs", "MTA_BD_R_abs", 
-							"FVA_BD_R_norm_t1", "MTA_BD_R_norm_t1", 
-							"FVA_BD_R_norm_t2", "MTA_BD_R_norm_t2")
+		colnames(mat) = c("subSystem", "FVA_BD_R_abs", "FVA_BD_R_norm_t1", 
+							"FVA_BD_R_norm_t2", "MTA_BD_R_abs", 
+							"MTA_BD_R_norm_t1", "MTA_BD_R_norm_t2")
 
 		row.names(mat) <- mat$subSystem
 		
@@ -435,9 +435,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		
 		mat <- read.csv("PlotResults/Tbl_bd_nr.csv", header = T, sep = "\t")
 
-		colnames(mat) = c("subSystem", "FVA_BD_NR_abs", "MTA_BD_NR_abs", 
-							"FVA_BD_NR_norm_t1", "MTA_BD_NR_norm_t1", 
-							"FVA_BD_NR_norm_t2", "MTA_BD_NR_norm_t2")
+		colnames(mat) = c("subSystem", "FVA_BD_NR_abs", "FVA_BD_NR_norm_t1", 
+							"FVA_BD_NR_norm_t2", "MTA_BD_NR_abs", 
+							"MTA_BD_NR_norm_t1", "MTA_BD_NR_norm_t2")
 
 		row.names(mat) <- mat$subSystem
 		
@@ -453,8 +453,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		mat_keep = mat[(row.names(mat) %in% keep),]
 		write.table(mat_keep, "PlotResults/Tbl_bd_nr_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 		
-	
-
+		
 ###########################
 # subSystem - Module matrix
 ###########################
@@ -512,10 +511,10 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 			coord_flip() +
 			scale_y_continuous(breaks=c(0:1:10)) + theme(aspect.ratio=1) +
 			xlab("") + ylab("# of Disrupted Modules") + labs(fill = "Phenotype") +
-			theme(axis.text.y=element_text(size=rel(1.1)))
+			theme(axis.text.y=element_text(size=rel(1.1)))	
 
 ###############################################
-# Backtracking - subSystems to Modules to Rxns
+# Backtracking - subSystems to Modules
 ###############################################
 		
 	# bd	
@@ -527,7 +526,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		DF$Phenotype <- rep(c("BD"),times=nrow(DF))
 		
 		DF_BD = DF
-			
+		
+		DF_BD
+					
 	# bd_r
 	
 		DF = BD_R_tbl
@@ -565,8 +566,61 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		
 		BD <- BD %>% relocate(Phenotype, .before = X)
 
-		BD
+		setnames(BD, old = c('X','Total', 'DisruptedModule'), new = c('subSystem','No.of.disrupted.modules', 'disrupted.modules'))
+
+#~ 		BD
+
+###################
+# Load rxn data
+###################
+
+	# model_abs
+		# results_vadodaria
+		FVA_BD_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_abs/bd_lumped_rxns_fdr_abs.csv", header = T, sep = "\t")
+		FVA_BD_R_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_abs/bd_r_rxns_fdr_abs.csv", header = T, sep = "\t")
+		FVA_BD_NR_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_abs/bd_nr_rxns_fdr_abs.csv", header = T, sep = "\t")
+		MTA_BD_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_abs/bd_lumped_rxns_fdr.csv", header = T, sep = "\t")
+		MTA_BD_R_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_abs/bd_r_rxns_fdr.csv", header = T, sep = "\t")
+		MTA_BD_NR_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_abs/bd_nr_rxns_fdr.csv", header = T, sep = "\t")
 		
+	# model_norm_t1
+		# results_vadodaria
+		FVA_BD_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_norm_t1/bd_lumped_rxns_fdr_norm_t1.csv", header = T, sep = "\t")
+		FVA_BD_R_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_norm_t1/bd_r_rxns_fdr_norm_t1.csv", header = T, sep = "\t")
+		FVA_BD_NR_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_norm_t1/bd_nr_rxns_fdr_norm_t1.csv", header = T, sep = "\t")
+		MTA_BD_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t1/bd_lumped_rxns_fdr.csv", header = T, sep = "\t")
+		MTA_BD_R_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t1/bd_r_rxns_fdr.csv", header = T, sep = "\t")
+		MTA_BD_NR_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t1/bd_nr_rxns_fdr.csv", header = T, sep = "\t")
+
+	# model_norm_t2
+		# results_vadodaria
+		FVA_BD_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_norm_t2/bd_lumped_rxns_fdr_norm_t2.csv", header = T, sep = "\t")
+		FVA_BD_R_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_norm_t2/bd_r_rxns_fdr_norm_t2.csv", header = T, sep = "\t")
+		FVA_BD_NR_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_norm_t2/bd_nr_rxns_fdr_norm_t2.csv", header = T, sep = "\t")
+		MTA_BD_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t2/bd_lumped_rxns_fdr.csv", header = T, sep = "\t")
+		MTA_BD_R_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t2/bd_r_rxns_fdr.csv", header = T, sep = "\t")
+		MTA_BD_NR_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t2/bd_nr_rxns_fdr.csv", header = T, sep = "\t")
+
+###############################################
+# Backtracking - Modules to Rxns
+###############################################
 		
+		BD[,c(1:4)]
 		
+		x = strsplit(BD$disrupted.modules, "\\s+")
+
+	# Methionine and cysteine metabolism (BD_S1)
+	
+		DF_d1 = get(x[[1]][1])
+		DF_d2 = get(x[[1]][2])
+		DF_d1 = DF_d1 %>% dplyr::filter(subSystem == toString(BD$subSystem[[1]]))
+		DF_d2 = DF_d2 %>% dplyr::filter(subSystem == toString(BD$subSystem[[1]]))
+		DF_d1$disrupted.module <- rep(c(x[[1]][1]),times=nrow(DF_d1))
+		DF_d2$disrupted.module <- rep(c(x[[1]][2]),times=nrow(DF_d2))
 		
+		DF = RBIND(list(DF_d1, DF_d2))
+		DF <- DF %>% relocate(disrupted.module, .before = rxnList)
+		BD_S1 <- DF %>% relocate(subSystem, .before = disrupted.module)
+		write.table(BD_S1, "PlotResults/BD_S1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+		
+
