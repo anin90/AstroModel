@@ -621,6 +621,93 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		DF = RBIND(list(DF_d1, DF_d2))
 		DF <- DF %>% relocate(disrupted.module, .before = rxnList)
 		BD_S1 <- DF %>% relocate(subSystem, .before = disrupted.module)
+		BD_S1 <- subset(BD_S1, TRUE, c("subSystem", "disrupted.module", "rxnList"))
+					
 		write.table(BD_S1, "PlotResults/BD_S1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+
+
+	# Keratan sulfate degradation (BD_S2)
+	
+		DF_d1 = get(x[[2]][1])
+		DF_d2 = get(x[[2]][2])
+		DF_d1 = DF_d1 %>% dplyr::filter(subSystem == toString(BD$subSystem[[2]]))
+		DF_d2 = DF_d2 %>% dplyr::filter(subSystem_CB == toString(BD$subSystem[[2]]))
+		DF_d1$disrupted.module <- rep(c(x[[2]][1]),times=nrow(DF_d1))
+		DF_d2$disrupted.module <- rep(c(x[[2]][2]),times=nrow(DF_d2))
 		
+		DF_d1 <- subset(DF_d1, TRUE, c("subSystem", "disrupted.module", "rxnList"))
+		DF_d2 <- subset(DF_d2, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))
+		colnames(DF_d2) = c("subSystem", "disrupted.module", "rxnList")
+		BD_S2 = RBIND(list(DF_d1, DF_d2))
+				
+		write.table(BD_S2, "PlotResults/BD_S2.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+		
+	# Fatty acid oxidation (BD_S3)
+	
+		DF_d1 = get(x[[3]][1])
+		DF_d2 = get(x[[3]][2])
+		DF_d3 = get(x[[3]][3])
+		DF_d4 = get(x[[3]][4])
+		DF_d1 = DF_d1 %>% dplyr::filter(subSystem == toString(BD$subSystem[[3]]))
+		DF_d2 = DF_d2 %>% dplyr::filter(subSystem == toString(BD$subSystem[[3]]))
+		DF_d3 = DF_d3 %>% dplyr::filter(subSystem_CB == toString(BD$subSystem[[3]]))
+		DF_d4 = DF_d4 %>% dplyr::filter(subSystem_CB == toString(BD$subSystem[[3]]))
+		DF_d1$disrupted.module <- rep(c(x[[3]][1]),times=nrow(DF_d1))
+		DF_d2$disrupted.module <- rep(c(x[[3]][2]),times=nrow(DF_d2))
+		DF_d3$disrupted.module <- rep(c(x[[3]][3]),times=nrow(DF_d3))
+		DF_d4$disrupted.module <- rep(c(x[[3]][4]),times=nrow(DF_d4))
+
+		DF_d1 <- subset(DF_d1, TRUE, c("subSystem", "disrupted.module", "rxnList"))
+		DF_d2 <- subset(DF_d2, TRUE, c("subSystem", "disrupted.module", "rxnList"))
+		DF_d3 <- subset(DF_d3, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))
+		DF_d4 <- subset(DF_d4, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))
+		colnames(DF_d3) = c("subSystem", "disrupted.module", "rxnList")
+		colnames(DF_d4) = c("subSystem", "disrupted.module", "rxnList")
+		BD_S3 = RBIND(list(DF_d1, DF_d2, DF_d3, DF_d4))
+		
+		write.table(BD_S3, "PlotResults/BD_S3.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+		
+###############################################
+# Backtracking - Minerva Visualization
+###############################################
+
+	# Make Minerva-friendly file
+		
+		# Merge DFs for Minerva
+		DF = RBIND(list(BD_S1, BD_S2, BD_S3))
+		
+		# add 'r_' as prefix to Rxns
+		DF$rxnList = paste0('r_', DF$rxnList)
+		
+		dim(DF)
+		
+		# rm duplicates
+		DF <- DF[!duplicated(DF[,c('rxnList')]),]
+		
+		dim(DF)
+		
+		# add 'lineWidth'
+		DF$lineWidth <- rep(c("3"),times=nrow(DF))
+				
+		# add 'color'
+		DF$color <- rep(c("#0000FF"),times=nrow(DF))
+		
+		# slice data
+		DF <- subset(DF, TRUE, c("rxnList", "lineWidth", "color"))
+		
+		dim(DF)
+		
+		# rename colnames
+		colnames(DF) = c("reactionIdentifier", "lineWidth", "color")
+		
+		dim(DF)
+		
+		# write table
+		write.table(DF, "PlotResults/BD_Rxns.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+		
+		
+		
+
+
+
 

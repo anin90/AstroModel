@@ -1,16 +1,16 @@
-	subSystem	disrupted.module	rxnList	GPR	Fluxspan_a	Fluxspan_b	FluxSpanRatio	Flux	MetabolicUnits	Localization	RxnFormula
-1	Methionine and cysteine metabolism	FVA_BD_abs	HMR_6515	4357.1 or 7263.1	10	20	0.5	H	NA	[c]	so3[c] + mercppyr[c]  -> pyr[c] + tsul[c] 
-2	Methionine and cysteine metabolism	FVA_BD_abs	CYSTA	2805.1	20	37.5	0.533333333333333	H	NA	[c]	akg[c] + cys_L[c]  <=> glu_L[c] + mercppyr[c] 
-3	Methionine and cysteine metabolism	FVA_BD_abs	MCLACCYSR		10	20	0.5	H	NA	[c]	nad[c] + cys_L[c] + mercplac[c]  -> h[c] + nadh[c] + mercplaccys[c] 
-4	Methionine and cysteine metabolism	FVA_BD_abs	MCLOR	92483.1 or (3945.1 and 3939.1) or 55293.1 or 3948.2 or 3948.1 or 3945.1 or 160287.1 or 3939.1	10	20	0.5	H	NA	[c]	nad[c] + mercplac[c]  <=> h[c] + nadh[c] + mercppyr[c] 
-5	Methionine and cysteine metabolism	FVA_BD_abs	SFCYSc		10	20	0.5	H	NA	[c]	h[c] + so3[c] + cys_L[c]  <=> slfcys[c] 
-6	Methionine and cysteine metabolism	FVA_BD_abs	3SALATAi	2805.1	20	35	0.571428571428571	H	cysteine metabolism	[c]	h[c] + akg[c] + 3sala[c]  -> glu_L[c] + 3snpyr[c] 
-7	Methionine and cysteine metabolism	FVA_BD_abs	3SALATAim	2806.1	20	35	0.571428571428571	H	NA	[m]	h[m] + akg[m] + 3sala[m]  -> glu_L[m] + 3snpyr[m] 
-8	Methionine and cysteine metabolism	FVA_BD_abs	3SPYRSP		20	35	0.571428571428571	H	cysteine metabolism	[c]	h2o[c] + 3snpyr[c]  -> h[c] + pyr[c] + so3[c] 
-9	Methionine and cysteine metabolism	FVA_BD_abs	3SPYRSPm		20	35	0.571428571428571	H	NA	[m]	h2o[m] + 3snpyr[m]  -> h[m] + pyr[m] + so3[m] 
-10	Methionine and cysteine metabolism	FVA_BD_abs	r0595	4357.1 or 7263.1	20	35	0.571428571428571	H	NA	[c]	h[c] + so3[c] + mercppyr[c]  -> pyr[c] + HC01501[c] 
-11	Methionine and cysteine metabolism	FVA_BD_norm_t2	HMR_6515	4357.1 or 7263.1	10	20	0.5	H	NA	[c]	so3[c] + mercppyr[c]  -> pyr[c] + tsul[c] 
-12	Methionine and cysteine metabolism	FVA_BD_norm_t2	CYSTA	2805.1	20	40	0.5	H	NA	[c]	akg[c] + cys_L[c]  <=> glu_L[c] + mercppyr[c] 
-13	Methionine and cysteine metabolism	FVA_BD_norm_t2	MCLACCYSR		10	20	0.5	H	NA	[c]	nad[c] + cys_L[c] + mercplac[c]  -> h[c] + nadh[c] + mercplaccys[c] 
-14	Methionine and cysteine metabolism	FVA_BD_norm_t2	MCLOR	92483.1 or (3945.1 and 3939.1) or 55293.1 or 3948.2 or 3948.1 or 3945.1 or 160287.1 or 3939.1	10	20	0.5	H	NA	[c]	nad[c] + mercplac[c]  <=> h[c] + nadh[c] + mercppyr[c] 
-15	Methionine and cysteine metabolism	FVA_BD_norm_t2	SFCYSc		10	20	0.5	H	NA	[c]	h[c] + so3[c] + cys_L[c]  <=> slfcys[c] 
+	subSystem	disrupted.module	rxnList
+1	Methionine and cysteine metabolism	FVA_BD_abs	HMR_6515
+2	Methionine and cysteine metabolism	FVA_BD_abs	CYSTA
+3	Methionine and cysteine metabolism	FVA_BD_abs	MCLACCYSR
+4	Methionine and cysteine metabolism	FVA_BD_abs	MCLOR
+5	Methionine and cysteine metabolism	FVA_BD_abs	SFCYSc
+6	Methionine and cysteine metabolism	FVA_BD_abs	3SALATAi
+7	Methionine and cysteine metabolism	FVA_BD_abs	3SALATAim
+8	Methionine and cysteine metabolism	FVA_BD_abs	3SPYRSP
+9	Methionine and cysteine metabolism	FVA_BD_abs	3SPYRSPm
+10	Methionine and cysteine metabolism	FVA_BD_abs	r0595
+11	Methionine and cysteine metabolism	FVA_BD_norm_t2	HMR_6515
+12	Methionine and cysteine metabolism	FVA_BD_norm_t2	CYSTA
+13	Methionine and cysteine metabolism	FVA_BD_norm_t2	MCLACCYSR
+14	Methionine and cysteine metabolism	FVA_BD_norm_t2	MCLOR
+15	Methionine and cysteine metabolism	FVA_BD_norm_t2	SFCYSc
