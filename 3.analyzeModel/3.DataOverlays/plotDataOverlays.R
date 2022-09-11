@@ -235,9 +235,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		  
 		mat = t(mat)
 
-		write.table(mat, "PlotResults/Tbl_abs.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
+		write.table(mat, "PlotResults/plotDataOverlaysHyper_Tbl/Tbl_abs.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
 		
-		mat <- read.csv("PlotResults/Tbl_abs.csv", header = T, sep = "\t")
+		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_abs.csv", header = T, sep = "\t")
 
 		colnames(mat) = c("subSystem", "FVA_BD", "FVA_BD_R", "FVA_BD_NR", 
 							"MTA_BD", "MTA_BD_R", "MTA_BD_NR")
@@ -261,9 +261,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		  
 		mat = t(mat)
 
-		write.table(mat, "PlotResults/Tbl_norm_t1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
+		write.table(mat, "PlotResults/plotDataOverlaysHyper_Tbl/Tbl_norm_t1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
 		
-		mat <- read.csv("PlotResults/Tbl_norm_t1.csv", header = T, sep = "\t")
+		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_norm_t1.csv", header = T, sep = "\t")
 
 		colnames(mat) = c("subSystem", "FVA_BD", "FVA_BD_R", "FVA_BD_NR", 
 							"MTA_BD", "MTA_BD_R", "MTA_BD_NR")
@@ -287,9 +287,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		  
 		mat = t(mat)
 
-		write.table(mat, "PlotResults/Tbl_norm_t2.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
+		write.table(mat, "PlotResults/plotDataOverlaysHyper_Tbl/Tbl_norm_t2.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
 		
-		mat <- read.csv("PlotResults/Tbl_norm_t2.csv", header = T, sep = "\t")
+		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_norm_t2.csv", header = T, sep = "\t")
 
 		colnames(mat) = c("subSystem", "FVA_BD", "FVA_BD_R", "FVA_BD_NR", 
 							"MTA_BD", "MTA_BD_R", "MTA_BD_NR")
@@ -318,9 +318,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		  
 		mat = t(mat)
 
-		write.table(mat, "PlotResults/Tbl_all.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
+		write.table(mat, "PlotResults/plotDataOverlaysHyper_Tbl/Tbl_all.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
 		
-		mat <- read.csv("PlotResults/Tbl_all.csv", header = T, sep = "\t")
+		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_all.csv", header = T, sep = "\t")
 
 		colnames(mat) = c("subSystem", "FVA_BD_abs", "FVA_BD_R_abs", "FVA_BD_NR_abs", "MTA_BD_abs", "MTA_BD_R_abs", "MTA_BD_NR_abs",
 							"FVA_BD_norm_t1", "FVA_BD_R_norm_t1", "FVA_BD_NR_norm_t1", "MTA_BD_norm_t1", "MTA_BD_R_norm_t1", "MTA_BD_NR_norm_t1",
@@ -355,9 +355,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		  
 		mat = t(mat)
 
-		write.table(mat, "PlotResults/Tbl_bd.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
+		write.table(mat, "PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
 		
-		mat <- read.csv("PlotResults/Tbl_bd.csv", header = T, sep = "\t")
+		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd.csv", header = T, sep = "\t")
 
 		colnames(mat) = c("subSystem", "FVA_BD_abs", "FVA_BD_norm_t1", 
 							"FVA_BD_norm_t2", "MTA_BD_abs", 
@@ -375,7 +375,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		# filter subSystems disrupted by 2 or more methods
 		keep = rownames(mat)[rowSums(mat)>2];
 		mat_keep = mat[(row.names(mat) %in% keep),]
-		write.table(mat_keep, "PlotResults/Tbl_bd_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)	
+		write.table(mat_keep, "PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)	
 		
 	# model_bd_r
 
@@ -393,9 +393,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		  
 		mat = t(mat)
 
-		write.table(mat, "PlotResults/Tbl_bd_r.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
+		write.table(mat, "PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_r.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
 		
-		mat <- read.csv("PlotResults/Tbl_bd_r.csv", header = T, sep = "\t")
+		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_r.csv", header = T, sep = "\t")
 
 		colnames(mat) = c("subSystem", "FVA_BD_R_abs", "FVA_BD_R_norm_t1", 
 							"FVA_BD_R_norm_t2", "MTA_BD_R_abs", 
@@ -413,7 +413,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		# filter subSystems disrupted by 2 or more methods
 		keep = rownames(mat)[rowSums(mat)>2];
 		mat_keep = mat[(row.names(mat) %in% keep),]
-		write.table(mat_keep, "PlotResults/Tbl_bd_r_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)	
+		write.table(mat_keep, "PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_r_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)	
 
 	# model_bd_nr
 
@@ -431,9 +431,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		  
 		mat = t(mat)
 
-		write.table(mat, "PlotResults/Tbl_bd_nr.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
+		write.table(mat, "PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_nr.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
 		
-		mat <- read.csv("PlotResults/Tbl_bd_nr.csv", header = T, sep = "\t")
+		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_nr.csv", header = T, sep = "\t")
 
 		colnames(mat) = c("subSystem", "FVA_BD_NR_abs", "FVA_BD_NR_norm_t1", 
 							"FVA_BD_NR_norm_t2", "MTA_BD_NR_abs", 
@@ -451,7 +451,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		# filter subSystems disrupted by 2 or more methods
 		keep = rownames(mat)[rowSums(mat)>2];
 		mat_keep = mat[(row.names(mat) %in% keep),]
-		write.table(mat_keep, "PlotResults/Tbl_bd_nr_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+		write.table(mat_keep, "PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_nr_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 		
 		
 ###########################
@@ -459,9 +459,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 ###########################
 
 	# tbl_filt
-		BD_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/Tbl_bd_filt.csv", header = T, sep = "\t")
-		BD_R_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/Tbl_bd_r_filt.csv", header = T, sep = "\t")
-		BD_NR_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/Tbl_bd_nr_filt.csv", header = T, sep = "\t")
+		BD_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_filt.csv", header = T, sep = "\t")
+		BD_R_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_r_filt.csv", header = T, sep = "\t")
+		BD_NR_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_nr_filt.csv", header = T, sep = "\t")
 		
 				# bd	
 					df = data.frame("subSystem" = BD_tbl$X, 
@@ -495,9 +495,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		  
 		mat = t(mat)
 		
-		write.table(mat, "PlotResults/Tbl_mat_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
+		write.table(mat, "PlotResults/plotDataOverlaysHyper_Tbl/Tbl_mat_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=F)
 		
-		mat <- read.csv("PlotResults/Tbl_mat_filt.csv", header = T, sep = "\t")	
+		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_mat_filt.csv", header = T, sep = "\t")	
 		
 		mat <- mat[, c("name", "bd_lst", "bd_r_lst", "bd_nr_lst")]
 		
@@ -623,7 +623,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		BD_S1 <- DF %>% relocate(subSystem, .before = disrupted.module)
 		BD_S1 <- subset(BD_S1, TRUE, c("subSystem", "disrupted.module", "rxnList"))
 					
-		write.table(BD_S1, "PlotResults/BD_S1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+		write.table(BD_S1, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_S1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 
 
 	# Keratan sulfate degradation (BD_S2)
@@ -640,7 +640,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		colnames(DF_d2) = c("subSystem", "disrupted.module", "rxnList")
 		BD_S2 = RBIND(list(DF_d1, DF_d2))
 				
-		write.table(BD_S2, "PlotResults/BD_S2.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+		write.table(BD_S2, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_S2.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 		
 	# Fatty acid oxidation (BD_S3)
 	
@@ -665,45 +665,288 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		colnames(DF_d4) = c("subSystem", "disrupted.module", "rxnList")
 		BD_S3 = RBIND(list(DF_d1, DF_d2, DF_d3, DF_d4))
 		
-		write.table(BD_S3, "PlotResults/BD_S3.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+		write.table(BD_S3, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_S3.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 		
+	# ROS detoxification (BD_R_S1)
+	
+		DF_d1 = get(x[[4]][1])
+		DF_d2 = get(x[[4]][2])
+		DF_d1 = DF_d1 %>% dplyr::filter(subSystem == toString(BD$subSystem[[4]]))
+		DF_d2 = DF_d2 %>% dplyr::filter(subSystem_CBR == toString(BD$subSystem[[4]]))
+		DF_d1$disrupted.module <- rep(c(x[[4]][1]),times=nrow(DF_d1))
+		DF_d2$disrupted.module <- rep(c(x[[4]][2]),times=nrow(DF_d2))
+		
+		DF_d1 <- subset(DF_d1, TRUE, c("subSystem", "disrupted.module", "rxnList"))
+		DF_d2 <- subset(DF_d2, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))		
+		colnames(DF_d2) = c("subSystem", "disrupted.module", "rxnList")
+		BD_R_S1 = RBIND(list(DF_d1, DF_d2))
+		
+		write.table(BD_R_S1, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_R_S1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+		
+	# Drug metabolism (BD_R_S2)
+	
+		DF_d1 = get(x[[5]][1])
+		DF_d2 = get(x[[5]][2])
+		DF_d1 = DF_d1 %>% dplyr::filter(subSystem_CBR == toString(BD$subSystem[[5]]))
+		DF_d2 = DF_d2 %>% dplyr::filter(subSystem_CBR == toString(BD$subSystem[[5]]))
+		DF_d1$disrupted.module <- rep(c(x[[5]][1]),times=nrow(DF_d1))
+		DF_d2$disrupted.module <- rep(c(x[[5]][2]),times=nrow(DF_d2))
+		
+		DF_d1 <- subset(DF_d1, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))
+		DF_d2 <- subset(DF_d2, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))
+		colnames(DF_d1) = c("subSystem", "disrupted.module", "rxnList")
+		colnames(DF_d1) = c("subSystem", "disrupted.module", "rxnList")
+		BD_R_S2 = RBIND(list(DF_d1, DF_d2))
+		
+		write.table(BD_R_S2, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_R_S2.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+
+	# Transport, extracellular (BD_R_S3)
+	
+		DF_d1 = get(x[[6]][1])
+		DF_d2 = get(x[[6]][2])
+		DF_d3 = get(x[[6]][3])		
+		DF_d1 = DF_d1 %>% dplyr::filter(subSystem_CBR == toString(BD$subSystem[[6]]))
+		DF_d2 = DF_d2 %>% dplyr::filter(subSystem_CBR == toString(BD$subSystem[[6]]))
+		DF_d3 = DF_d3 %>% dplyr::filter(subSystem_CBR == toString(BD$subSystem[[6]]))
+		DF_d1$disrupted.module <- rep(c(x[[6]][1]),times=nrow(DF_d1))
+		DF_d2$disrupted.module <- rep(c(x[[6]][2]),times=nrow(DF_d2))
+		DF_d3$disrupted.module <- rep(c(x[[6]][3]),times=nrow(DF_d3))
+
+		DF_d1 <- subset(DF_d1, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))
+		DF_d2 <- subset(DF_d2, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))
+		DF_d3 <- subset(DF_d3, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))
+		colnames(DF_d1) = c("subSystem", "disrupted.module", "rxnList")
+		colnames(DF_d2) = c("subSystem", "disrupted.module", "rxnList")
+		colnames(DF_d3) = c("subSystem", "disrupted.module", "rxnList")
+		BD_R_S3 = RBIND(list(DF_d1, DF_d2, DF_d3))
+
+		write.table(BD_R_S3, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_R_S3.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+
+	# Cholesterol metabolism (BD_NR_S1)
+	
+		DF_d1 = get(x[[7]][1])
+		DF_d2 = get(x[[7]][2])
+		DF_d1 = DF_d1 %>% dplyr::filter(subSystem == toString(BD$subSystem[[7]]))
+		DF_d2 = DF_d2 %>% dplyr::filter(subSystem_CBNR == toString(BD$subSystem[[7]]))
+		DF_d1$disrupted.module <- rep(c(x[[7]][1]),times=nrow(DF_d1))
+		DF_d2$disrupted.module <- rep(c(x[[7]][2]),times=nrow(DF_d2))	
+				
+		DF_d1 <- subset(DF_d1, TRUE, c("subSystem", "disrupted.module", "rxnList"))
+		DF_d2 <- subset(DF_d2, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))	
+		colnames(DF_d2) = c("subSystem", "disrupted.module", "rxnList")
+		BD_NR_S1 = RBIND(list(DF_d1, DF_d2))
+
+		write.table(BD_NR_S1, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S1.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+
+	# Inositol phosphate metabolism (BD_NR_S2)
+	
+		DF_d1 = get(x[[8]][1])
+		DF_d2 = get(x[[8]][2])
+		DF_d1 = DF_d1 %>% dplyr::filter(subSystem == toString(BD$subSystem[[8]]))
+		DF_d2 = DF_d2 %>% dplyr::filter(subSystem_CBNR == toString(BD$subSystem[[8]]))
+		DF_d1$disrupted.module <- rep(c(x[[8]][1]),times=nrow(DF_d1))
+		DF_d2$disrupted.module <- rep(c(x[[8]][2]),times=nrow(DF_d2))	
+				
+		DF_d1 <- subset(DF_d1, TRUE, c("subSystem", "disrupted.module", "rxnList"))
+		DF_d2 <- subset(DF_d2, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))	
+		colnames(DF_d2) = c("subSystem", "disrupted.module", "rxnList")
+		BD_NR_S2 = RBIND(list(DF_d1, DF_d2))
+
+		write.table(BD_NR_S2, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S2.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+
+	# Fatty acid oxidation (BD_NR_S3)
+	
+		DF_d1 = get(x[[9]][1])
+		DF_d2 = get(x[[9]][2])
+		DF_d1 = DF_d1 %>% dplyr::filter(subSystem == toString(BD$subSystem[[9]]))
+		DF_d2 = DF_d2 %>% dplyr::filter(subSystem_CBNR == toString(BD$subSystem[[9]]))
+		DF_d1$disrupted.module <- rep(c(x[[9]][1]),times=nrow(DF_d1))
+		DF_d2$disrupted.module <- rep(c(x[[9]][2]),times=nrow(DF_d2))	
+				
+		DF_d1 <- subset(DF_d1, TRUE, c("subSystem", "disrupted.module", "rxnList"))
+		DF_d2 <- subset(DF_d2, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))	
+		colnames(DF_d2) = c("subSystem", "disrupted.module", "rxnList")
+		BD_NR_S3 = RBIND(list(DF_d1, DF_d2))
+
+		write.table(BD_NR_S3, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S3.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+
+	# Heparan sulfate degradation (BD_NR_S4)
+	
+		DF_d1 = get(x[[10]][1])
+		DF_d2 = get(x[[10]][2])
+		DF_d1 = DF_d1 %>% dplyr::filter(subSystem_CBNR == toString(BD$subSystem[[10]]))
+		DF_d2 = DF_d2 %>% dplyr::filter(subSystem_CBNR == toString(BD$subSystem[[10]]))
+		DF_d1$disrupted.module <- rep(c(x[[10]][1]),times=nrow(DF_d1))
+		DF_d2$disrupted.module <- rep(c(x[[10]][2]),times=nrow(DF_d2))	
+
+		DF_d1 <- subset(DF_d1, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))
+		DF_d2 <- subset(DF_d2, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))
+		colnames(DF_d1) = c("subSystem", "disrupted.module", "rxnList")
+		colnames(DF_d2) = c("subSystem", "disrupted.module", "rxnList")
+		BD_NR_S4 = RBIND(list(DF_d1, DF_d2))
+
+		write.table(BD_NR_S4, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S4.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+						
 ###############################################
 # Backtracking - Minerva Visualization
 ###############################################
 
 	# Make Minerva-friendly file
 		
-		# Merge DFs for Minerva
-		DF = RBIND(list(BD_S1, BD_S2, BD_S3))
+		# Final-subSystem-wise (n=14)
+			
+			# duplicate BD files
+			DF_1 = BD_S1
+			DF_2 = BD_S2
+			DF_3 = BD_S3
+			DF_4 = BD_R_S1
+			DF_5 = BD_R_S2
+			DF_6 = BD_R_S3
+			DF_7 = BD_NR_S1
+			DF_8 = BD_NR_S2
+			DF_9 = BD_NR_S3
+			DF_10 = BD_NR_S4
+			
+			# add 'r_' as prefix to Rxns
+			DF_1$rxnList = paste0('r_', DF_1$rxnList)
+			DF_2$rxnList = paste0('r_', DF_2$rxnList)
+			DF_3$rxnList = paste0('r_', DF_3$rxnList)
+			DF_4$rxnList = paste0('r_', DF_4$rxnList)
+			DF_5$rxnList = paste0('r_', DF_5$rxnList)
+			DF_6$rxnList = paste0('r_', DF_6$rxnList)
+			DF_7$rxnList = paste0('r_', DF_7$rxnList)
+			DF_8$rxnList = paste0('r_', DF_8$rxnList)
+			DF_9$rxnList = paste0('r_', DF_9$rxnList)
+			DF_10$rxnList = paste0('r_', DF_10$rxnList)
+						
+			# rm duplicates
+			DF_1 <- DF_1[!duplicated(DF_1[,c('rxnList')]),]
+			DF_2 <- DF_2[!duplicated(DF_2[,c('rxnList')]),]
+			DF_3 <- DF_3[!duplicated(DF_3[,c('rxnList')]),]
+			DF_4 <- DF_4[!duplicated(DF_4[,c('rxnList')]),]
+			DF_5 <- DF_5[!duplicated(DF_5[,c('rxnList')]),]
+			DF_6 <- DF_6[!duplicated(DF_6[,c('rxnList')]),]
+			DF_7 <- DF_7[!duplicated(DF_7[,c('rxnList')]),]
+			DF_8 <- DF_8[!duplicated(DF_8[,c('rxnList')]),]
+			DF_9 <- DF_9[!duplicated(DF_9[,c('rxnList')]),]
+			DF_10 <- DF_10[!duplicated(DF_10[,c('rxnList')]),]
+			
+			# add 'lineWidth'
+			DF_1$lineWidth <- rep(c("3"),times=nrow(DF_1))
+			DF_2$lineWidth <- rep(c("3"),times=nrow(DF_2))
+			DF_3$lineWidth <- rep(c("3"),times=nrow(DF_3))
+			DF_4$lineWidth <- rep(c("3"),times=nrow(DF_4))
+			DF_5$lineWidth <- rep(c("3"),times=nrow(DF_5))
+			DF_6$lineWidth <- rep(c("3"),times=nrow(DF_6))
+			DF_7$lineWidth <- rep(c("3"),times=nrow(DF_7))
+			DF_8$lineWidth <- rep(c("3"),times=nrow(DF_8))
+			DF_9$lineWidth <- rep(c("3"),times=nrow(DF_9))
+			DF_10$lineWidth <- rep(c("3"),times=nrow(DF_10))
+								
+			# add 'color'
+			DF_1$color <- rep(c("#0000FF"),times=nrow(DF_1))	#blue
+			DF_2$color <- rep(c("#0000FF"),times=nrow(DF_2))	#blue
+			DF_3$color <- rep(c("#0000FF"),times=nrow(DF_3))	#blue
+			DF_4$color <- rep(c("#00FF00"),times=nrow(DF_4))	#green
+			DF_5$color <- rep(c("#00FF00"),times=nrow(DF_5))	#green
+			DF_6$color <- rep(c("#00FF00"),times=nrow(DF_6))	#green
+			DF_7$color <- rep(c("#FF0000"),times=nrow(DF_7))	#red
+			DF_8$color <- rep(c("#FF0000"),times=nrow(DF_8))	#red
+			DF_9$color <- rep(c("#FF0000"),times=nrow(DF_9))	#red
+			DF_10$color <- rep(c("#FF0000"),times=nrow(DF_10))	#red
+			
+			# slice data
+			DF_1 <- subset(DF_1, TRUE, c("rxnList", "lineWidth", "color"))
+			DF_2 <- subset(DF_2, TRUE, c("rxnList", "lineWidth", "color"))
+			DF_3 <- subset(DF_3, TRUE, c("rxnList", "lineWidth", "color"))
+			DF_4 <- subset(DF_4, TRUE, c("rxnList", "lineWidth", "color"))
+			DF_5 <- subset(DF_5, TRUE, c("rxnList", "lineWidth", "color"))
+			DF_6 <- subset(DF_6, TRUE, c("rxnList", "lineWidth", "color"))
+			DF_7 <- subset(DF_7, TRUE, c("rxnList", "lineWidth", "color"))
+			DF_8 <- subset(DF_8, TRUE, c("rxnList", "lineWidth", "color"))
+			DF_9 <- subset(DF_9, TRUE, c("rxnList", "lineWidth", "color"))
+			DF_10 <- subset(DF_10, TRUE, c("rxnList", "lineWidth", "color"))
+			
+			# rename colnames
+			colnames(DF_1) = c("reactionIdentifier", "lineWidth", "color")
+			colnames(DF_2) = c("reactionIdentifier", "lineWidth", "color")
+			colnames(DF_3) = c("reactionIdentifier", "lineWidth", "color")
+			colnames(DF_4) = c("reactionIdentifier", "lineWidth", "color")
+			colnames(DF_5) = c("reactionIdentifier", "lineWidth", "color")
+			colnames(DF_6) = c("reactionIdentifier", "lineWidth", "color")
+			colnames(DF_7) = c("reactionIdentifier", "lineWidth", "color")
+			colnames(DF_8) = c("reactionIdentifier", "lineWidth", "color")
+			colnames(DF_9) = c("reactionIdentifier", "lineWidth", "color")
+			colnames(DF_10) = c("reactionIdentifier", "lineWidth", "color")
+			
+			dim(DF_1)
+			dim(DF_2)
+			dim(DF_3)
+			dim(DF_4)
+			dim(DF_5)
+			dim(DF_6)
+			dim(DF_7)
+			dim(DF_8)
+			dim(DF_9)
+			dim(DF_10)
+									
+			# write table
+			write.table(DF_1, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_1_BD_S1_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+			write.table(DF_2, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_2_BD_S2_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+			write.table(DF_3, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_3_BD_S3_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+			write.table(DF_4, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_4_BD_R_S1_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+			write.table(DF_5, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_5_BD_R_S2_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+			write.table(DF_6, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_6_BD_R_S3_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)		
+			write.table(DF_7, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_7_BD_NR_S1_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)		
+			write.table(DF_8, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_8_BD_NR_S2_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)		
+			write.table(DF_9, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_9_BD_NR_S3_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)		
+			write.table(DF_10, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_10_BD_NR_S4_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)		
 		
-		# add 'r_' as prefix to Rxns
-		DF$rxnList = paste0('r_', DF$rxnList)
+		# Final-phenotype-wise (n=3)
 		
-		dim(DF)
-		
-		# rm duplicates
-		DF <- DF[!duplicated(DF[,c('rxnList')]),]
-		
-		dim(DF)
-		
-		# add 'lineWidth'
-		DF$lineWidth <- rep(c("3"),times=nrow(DF))
-				
-		# add 'color'
-		DF$color <- rep(c("#0000FF"),times=nrow(DF))
-		
-		# slice data
-		DF <- subset(DF, TRUE, c("rxnList", "lineWidth", "color"))
-		
-		dim(DF)
-		
-		# rename colnames
-		colnames(DF) = c("reactionIdentifier", "lineWidth", "color")
-		
-		dim(DF)
-		
-		# write table
-		write.table(DF, "PlotResults/BD_Rxns.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+			# Merge DFs for Minerva
+			DF1 = RBIND(list(BD_S1, BD_S2, BD_S3))
+			DF2 = RBIND(list(BD_R_S1, BD_R_S2, BD_R_S3))
+			DF3 = RBIND(list(BD_NR_S1, BD_NR_S2, BD_NR_S3, BD_NR_S4))
+			
+			# add 'r_' as prefix to Rxns
+			DF1$rxnList = paste0('r_', DF1$rxnList)
+			DF2$rxnList = paste0('r_', DF2$rxnList)
+			DF3$rxnList = paste0('r_', DF3$rxnList)
+			
+			# rm duplicates
+			DF1 <- DF1[!duplicated(DF1[,c('rxnList')]),]
+			DF2 <- DF2[!duplicated(DF2[,c('rxnList')]),]
+			DF3 <- DF3[!duplicated(DF3[,c('rxnList')]),]
+			
+			# add 'lineWidth'
+			DF1$lineWidth <- rep(c("3"),times=nrow(DF1))
+			DF2$lineWidth <- rep(c("3"),times=nrow(DF2))
+			DF3$lineWidth <- rep(c("3"),times=nrow(DF3))
+					
+			# add 'color'
+			DF1$color <- rep(c("#0000FF"),times=nrow(DF1))	#blue
+			DF2$color <- rep(c("#00FF00"),times=nrow(DF2))	#green
+			DF3$color <- rep(c("#FF0000"),times=nrow(DF3))	#red
+			
+			# slice data
+			DF1 <- subset(DF1, TRUE, c("rxnList", "lineWidth", "color"))
+			DF2 <- subset(DF2, TRUE, c("rxnList", "lineWidth", "color"))
+			DF3 <- subset(DF3, TRUE, c("rxnList", "lineWidth", "color"))
+			
+			# rename colnames
+			colnames(DF1) = c("reactionIdentifier", "lineWidth", "color")
+			colnames(DF2) = c("reactionIdentifier", "lineWidth", "color")
+			colnames(DF3) = c("reactionIdentifier", "lineWidth", "color")
+			
+#~ 			dim(DF1)
+#~ 			dim(DF2)
+#~ 			dim(DF3)
+			
+			# write table
+			write.table(DF1, "PlotResults/BD_Rxns.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+			write.table(DF2, "PlotResults/BD_R_Rxns.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+			write.table(DF3, "PlotResults/BD_NR_Rxns.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 		
 		
 		

@@ -1,0 +1,42 @@
+subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula
+Drug metabolism	MTA_BD_R_norm_t1	CRVStu	NA	intercompartmental	crvs[e]  <=> crvs[c] 
+Drug metabolism	MTA_BD_R_norm_t1	CRVSthc	NA	intercompartmental	hco3[c] + crvs[e]  <=> hco3[e] + crvs[c] 
+Drug metabolism	MTA_BD_R_norm_t1	35DHPVStep	NA	intercompartmental	35dhpvs[c]  <=> 35dhpvs[e] 
+Drug metabolism	MTA_BD_R_norm_t1	35DHPVSthc	NA	intercompartmental	hco3[c] + 35dhpvs[e]  <=> hco3[e] + 35dhpvs[c] 
+Drug metabolism	MTA_BD_R_norm_t1	LSTNM7TDhc	NA	intercompartmental	lstnm7[e]  <=> lstnm7[c] 
+Drug metabolism	MTA_BD_R_norm_t1	LSTNM7thc	NA	intercompartmental	cl[c] + lstnm7[e]  <=> cl[e] + lstnm7[c] 
+Drug metabolism	MTA_BD_R_norm_t1	4HATVLACtep	NA	intercompartmental	4hatvlac[c]  <=> 4hatvlac[e] 
+Drug metabolism	MTA_BD_R_norm_t1	4HATVLACthc	NA	intercompartmental	hco3[c] + 4hatvlac[e]  <=> hco3[e] + 4hatvlac[c] 
+Drug metabolism	MTA_BD_R_norm_t1	6EPVStep	NA	intercompartmental	6epvs[c]  <=> 6epvs[e] 
+Drug metabolism	MTA_BD_R_norm_t1	6EPVSthc	NA	intercompartmental	hco3[c] + 6epvs[e]  <=> hco3[e] + 6epvs[c] 
+Drug metabolism	MTA_BD_R_norm_t1	RSVtev	NA	intercompartmental	rsv[c]  <=> rsv[e] 
+Drug metabolism	MTA_BD_R_norm_t1	RSVtu	NA	intercompartmental	hco3[c] + rsv[e]  <=> hco3[e] + rsv[c] 
+Drug metabolism	MTA_BD_R_norm_t1	LST4EXPTDhc	NA	intercompartmental	lst4exp[e]  <=> lst4exp[c] 
+Drug metabolism	MTA_BD_R_norm_t1	LST4EXPthc	NA	intercompartmental	cl[c] + lst4exp[e]  <=> cl[e] + lst4exp[c] 
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
+NA	MTA_BD_R_norm_t2	NA	NA	intercompartmental	NA
