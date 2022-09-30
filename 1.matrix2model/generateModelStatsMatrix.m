@@ -7,6 +7,7 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
 %% initialize variable 'k'
 k=1;
 
+%% Zhang et al.
 %% Primary
 
 %     % Primary_abs_1
@@ -112,6 +113,7 @@ k=1;
 %     % FastCore InFeasible
 %     % k = k+1;   
 
+%% Vadodaria et al.
 %% iPS_Ctrl
 
 %     % iPS_Ctrl_abs_1
@@ -492,8 +494,93 @@ k=1;
 %     % FastCore InFeasible
 %     % k = k+1;  
     
-%%
+%% Koskuvi et al.
+%% Control
 
+%     % iPS_SCZ_Ctrl_abs
+%     expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/1.Control/v1/abs/Koskuvi_Control.mat';
+%     data = importdata('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/1.Control/v1/abs/matrix2models_abs_v1.mat');
+%     model = data;
+%     modelStatsMat = printModelStats(model, expMat);
+%     modelStatsMatSol(k,:) = modelStatsMat;
+%     modelID{k,1} = 'iPS_SCZ_Ctrl_abs';
+%     k = k+1;
+% 
+%     % iPS_SCZ_Ctrl_norm_t1
+%     expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/1.Control/v1/norm_t1/Koskuvi_Control.mat';
+%     data = importdata('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/1.Control/v1/norm_t1/matrix2models_norm_t1_v1.mat');
+%     model = data;
+%     modelStatsMat = printModelStats(model, expMat);
+%     modelStatsMatSol(k,:) = modelStatsMat;
+%     modelID{k,1} = 'iPS_SCZ_Ctrl_norm_t1';
+%     k = k+1;
+% 
+%     % iPS_SCZ_Ctrl_norm_t2
+%     expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/1.Control/v1/norm_t2/Koskuvi_Control.mat';
+%     data = importdata('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/1.Control/v1/norm_t2/matrix2models_norm_t2_v1.mat');
+%     model = data;
+%     modelStatsMat = printModelStats(model, expMat);
+%     modelStatsMatSol(k,:) = modelStatsMat;
+%     modelID{k,1} = 'iPS_SCZ_Ctrl_norm_t2';
+%     k = k+1;
+
+%% HT
+
+%     % iPS_SCZ_HT_abs
+%     expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/2.HT/v1/abs/Koskuvi_HT.mat';
+%     data = importdata('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/2.HT/v1/abs/matrix2models_abs_v1.mat');
+%     model = data;
+%     modelStatsMat = printModelStats(model, expMat);
+%     modelStatsMatSol(k,:) = modelStatsMat;
+%     modelID{k,1} = 'iPS_SCZ_HT_abs';
+%     k = k+1;
+% 
+%     % iPS_SCZ_HT_norm_t1
+%     expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/2.HT/v1/norm_t1/Koskuvi_HT.mat';
+%     data = importdata('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/2.HT/v1/norm_t1/matrix2models_norm_t1_v1.mat');
+%     model = data;
+%     modelStatsMat = printModelStats(model, expMat);
+%     modelStatsMatSol(k,:) = modelStatsMat;
+%     modelID{k,1} = 'iPS_SCZ_HT_norm_t1';
+%     k = k+1;
+% 
+%     % iPS_SCZ_HT_norm_t2
+%     expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/2.HT/v1/norm_t2/Koskuvi_HT.mat';
+%     data = importdata('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/2.HT/v1/norm_t2/matrix2models_norm_t2_v1.mat');
+%     model = data;
+%     modelStatsMat = printModelStats(model, expMat);
+%     modelStatsMatSol(k,:) = modelStatsMat;
+%     modelID{k,1} = 'iPS_SCZ_HT_norm_t2';
+%     k = k+1;
+
+%% ST
+
+%     % iPS_SCZ_ST_abs
+%     expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/3.ST/v1/abs/Koskuvi_ST.mat';
+%     data = importdata('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/3.ST/v1/abs/matrix2models_abs_v1.mat');
+%     model = data;
+%     modelStatsMat = printModelStats(model, expMat);
+%     modelStatsMatSol(k,:) = modelStatsMat;
+%     modelID{k,1} = 'iPS_SCZ_ST_abs';
+%     k = k+1;
+% 
+%     % iPS_SCZ_ST_norm_t1
+%     expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/3.ST/v1/norm_t1/Koskuvi_ST.mat';
+%     data = importdata('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/3.ST/v1/norm_t1/matrix2models_norm_t1_v1.mat');
+%     model = data;
+%     modelStatsMat = printModelStats(model, expMat);
+%     modelStatsMatSol(k,:) = modelStatsMat;
+%     modelID{k,1} = 'iPS_SCZ_ST_norm_t1';
+%     k = k+1;
+% 
+%     % iPS_SCZ_ST_norm_t2
+%     expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/3.ST/v1/norm_t2/Koskuvi_ST.mat';
+%     data = importdata('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/3.ST/v1/norm_t2/matrix2models_norm_t2_v1.mat');
+%     model = data;
+%     modelStatsMat = printModelStats(model, expMat);
+%     modelStatsMatSol(k,:) = modelStatsMat;
+%     modelID{k,1} = 'iPS_SCZ_ST_norm_t2';
+%     k = k+1;
 
 %% Final Table    
 modelStatsMatSol = [modelID, modelStatsMatSol];
