@@ -1,0 +1,20 @@
+	subSystem	disrupted.module	rxnList
+1	Tyrosine metabolism	FVA_BD_NR_norm_t2	DCT
+2	Tyrosine metabolism	FVA_BD_NR_norm_t2	DOPAQNISO1
+3	Tyrosine metabolism	FVA_BD_NR_norm_t2	GGTe_1
+4	Tyrosine metabolism	FVA_BD_NR_norm_t2	RE1916C
+5	Tyrosine metabolism	FVA_BD_NR_norm_t2	RE3198C
+6	Tyrosine metabolism	FVA_BD_NR_norm_t2	TYRASE
+7	Tyrosine metabolism	MTA_BD_NR_abs	SALMCOM
+8	Tyrosine metabolism	MTA_BD_NR_abs	DOPAMT
+9	Tyrosine metabolism	MTA_BD_NR_abs	34DHPHAMT
+10	Tyrosine metabolism	MTA_BD_NR_abs	RE1916C
+11	Tyrosine metabolism	MTA_BD_NR_abs	RE1915C
+12	Tyrosine metabolism	MTA_BD_NR_abs	RE1918C
+13	Tyrosine metabolism	MTA_BD_NR_abs	RE2130C
+14	Tyrosine metabolism	MTA_BD_NR_abs	RE1919C
+15	Tyrosine metabolism	MTA_BD_NR_abs	RE1921C
+16	Tyrosine metabolism	MTA_BD_NR_abs	DACGST
+17	Tyrosine metabolism	MTA_BD_NR_abs	DCT
+18	Tyrosine metabolism	MTA_BD_NR_abs	TYRASE
+19	Tyrosine metabolism	MTA_BD_NR_abs	SFGTH
