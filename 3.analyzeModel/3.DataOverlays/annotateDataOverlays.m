@@ -122,6 +122,50 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S4.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
+    % BD_NR_S5
+    Tbl = readtable('BD_NR_S5.csv', 'Delimiter', '\t');
+    subSystem = Tbl.subSystem;
+    disrupted_module = Tbl.disrupted_module;
+    rxnList = Tbl.rxnList;
+    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    Tbl = cell2table(Tbl);
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S5.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+
+    % BD_NR_S6
+    Tbl = readtable('BD_NR_S6.csv', 'Delimiter', '\t');
+    subSystem = Tbl.subSystem;
+    disrupted_module = Tbl.disrupted_module;
+    rxnList = Tbl.rxnList;
+    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    Tbl = cell2table(Tbl);
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S6.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+
+    % BD_NR_S7
+    Tbl = readtable('BD_NR_S7.csv', 'Delimiter', '\t');
+    subSystem = Tbl.subSystem;
+    disrupted_module = Tbl.disrupted_module;
+    rxnList = Tbl.rxnList;
+    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    Tbl = cell2table(Tbl);
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S7.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+
+    % BD_NR_S8
+    Tbl = readtable('BD_NR_S8.csv', 'Delimiter', '\t');
+    subSystem = Tbl.subSystem;
+    disrupted_module = Tbl.disrupted_module;
+    rxnList = Tbl.rxnList;
+    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    Tbl = cell2table(Tbl);
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S8.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+    
 %% DF_X_BD_Minerva
 
     % DF_1_BD_S1_Minerva
@@ -174,6 +218,26 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     Tbl.Var1=[];
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_10_BD_NR_S4_Minerva.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
+    % DF_11_BD_NR_S5_Minerva
+    Tbl = readtable('DF_11_BD_NR_S5_Minerva.csv', 'Delimiter', '\t');
+    Tbl.Var1=[];
+    writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_11_BD_NR_S5_Minerva.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+
+    % DF_12_BD_NR_S6_Minerva
+    Tbl = readtable('DF_12_BD_NR_S6_Minerva.csv', 'Delimiter', '\t');
+    Tbl.Var1=[];
+    writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_12_BD_NR_S6_Minerva.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+
+    % DF_13_BD_NR_S7_Minerva
+    Tbl = readtable('DF_13_BD_NR_S7_Minerva.csv', 'Delimiter', '\t');
+    Tbl.Var1=[];
+    writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_13_BD_NR_S7_Minerva.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+
+    % DF_14_BD_NR_S8_Minerva
+    Tbl = readtable('DF_14_BD_NR_S8_Minerva.csv', 'Delimiter', '\t');
+    Tbl.Var1=[];
+    writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_14_BD_NR_S8_Minerva.csv', 'WriteVariableNames', true, 'Delimiter','\t');
+    
 %% Final_BD_Minerva
 
     % BD_Rxns

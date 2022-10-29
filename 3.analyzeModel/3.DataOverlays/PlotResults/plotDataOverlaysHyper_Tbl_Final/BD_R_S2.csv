@@ -1,42 +1,42 @@
-	subSystem	disrupted.module	rxnList	subSystem_CB	del_rxnID_KO
-1	Drug metabolism	MTA_BD_R_norm_t1	CRVStu	NA	NA
-2	Drug metabolism	MTA_BD_R_norm_t1	CRVSthc	NA	NA
-3	Drug metabolism	MTA_BD_R_norm_t1	35DHPVStep	NA	NA
-4	Drug metabolism	MTA_BD_R_norm_t1	35DHPVSthc	NA	NA
-5	Drug metabolism	MTA_BD_R_norm_t1	LSTNM7TDhc	NA	NA
-6	Drug metabolism	MTA_BD_R_norm_t1	LSTNM7thc	NA	NA
-7	Drug metabolism	MTA_BD_R_norm_t1	4HATVLACtep	NA	NA
-8	Drug metabolism	MTA_BD_R_norm_t1	4HATVLACthc	NA	NA
-9	Drug metabolism	MTA_BD_R_norm_t1	6EPVStep	NA	NA
-10	Drug metabolism	MTA_BD_R_norm_t1	6EPVSthc	NA	NA
-11	Drug metabolism	MTA_BD_R_norm_t1	RSVtev	NA	NA
-12	Drug metabolism	MTA_BD_R_norm_t1	RSVtu	NA	NA
-13	Drug metabolism	MTA_BD_R_norm_t1	LST4EXPTDhc	NA	NA
-14	Drug metabolism	MTA_BD_R_norm_t1	LST4EXPthc	NA	NA
-15	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	3ISPVStep
-16	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	3ISPVSthc
-17	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	4HATVACIDtep
-18	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	4HATVACIDthc
-19	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	TMDtd
-20	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	CRVStu
-21	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	CRVSthc
-22	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	4HATVLACtep
-23	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	4HATVLACthc
-24	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	TMDOATtev
-25	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	LSTNM7TDhc
-26	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	LSTNM7thc
-27	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	FVStu
-28	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	OXYPthc
-29	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	OXYPtepv
-30	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	PVStep
-31	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	TMDOATthc
-32	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	RSVtev
-33	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	RSVtu
-34	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	3HPVSTETCOAhcm
-35	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	3HPVSCOAitm
-36	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	3HPVSTETCOAitm
-37	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	LST4EXPTDhc
-38	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	LST4EXPthc
-39	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	LSTNRATt
-40	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	LSTNtd
-41	NA	MTA_BD_R_norm_t2	NA	Drug metabolism	TMDOATPtsc
+subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula
+Drug metabolism	MTA_BD_R_norm_t1	CRVStu	NA	intercompartmental	crvs[e]  <=> crvs[c] 
+Drug metabolism	MTA_BD_R_norm_t1	CRVSthc	NA	intercompartmental	hco3[c] + crvs[e]  <=> hco3[e] + crvs[c] 
+Drug metabolism	MTA_BD_R_norm_t1	35DHPVStep	NA	intercompartmental	35dhpvs[c]  <=> 35dhpvs[e] 
+Drug metabolism	MTA_BD_R_norm_t1	35DHPVSthc	NA	intercompartmental	hco3[c] + 35dhpvs[e]  <=> hco3[e] + 35dhpvs[c] 
+Drug metabolism	MTA_BD_R_norm_t1	LSTNM7TDhc	NA	intercompartmental	lstnm7[e]  <=> lstnm7[c] 
+Drug metabolism	MTA_BD_R_norm_t1	LSTNM7thc	NA	intercompartmental	cl[c] + lstnm7[e]  <=> cl[e] + lstnm7[c] 
+Drug metabolism	MTA_BD_R_norm_t1	4HATVLACtep	NA	intercompartmental	4hatvlac[c]  <=> 4hatvlac[e] 
+Drug metabolism	MTA_BD_R_norm_t1	4HATVLACthc	NA	intercompartmental	hco3[c] + 4hatvlac[e]  <=> hco3[e] + 4hatvlac[c] 
+Drug metabolism	MTA_BD_R_norm_t1	6EPVStep	NA	intercompartmental	6epvs[c]  <=> 6epvs[e] 
+Drug metabolism	MTA_BD_R_norm_t1	6EPVSthc	NA	intercompartmental	hco3[c] + 6epvs[e]  <=> hco3[e] + 6epvs[c] 
+Drug metabolism	MTA_BD_R_norm_t1	RSVtev	NA	intercompartmental	rsv[c]  <=> rsv[e] 
+Drug metabolism	MTA_BD_R_norm_t1	RSVtu	NA	intercompartmental	hco3[c] + rsv[e]  <=> hco3[e] + rsv[c] 
+Drug metabolism	MTA_BD_R_norm_t1	LST4EXPTDhc	NA	intercompartmental	lst4exp[e]  <=> lst4exp[c] 
+Drug metabolism	MTA_BD_R_norm_t1	LST4EXPthc	NA	intercompartmental	cl[c] + lst4exp[e]  <=> cl[e] + lst4exp[c] 
+Drug metabolism	MTA_BD_R_norm_t2	3ISPVStep	NA	intercompartmental	3ispvs[c]  <=> 3ispvs[e] 
+Drug metabolism	MTA_BD_R_norm_t2	3ISPVSthc	NA	intercompartmental	hco3[c] + 3ispvs[e]  <=> hco3[e] + 3ispvs[c] 
+Drug metabolism	MTA_BD_R_norm_t2	4HATVACIDtep	NA	intercompartmental	4hatvacid[c]  <=> 4hatvacid[e] 
+Drug metabolism	MTA_BD_R_norm_t2	4HATVACIDthc	NA	intercompartmental	hco3[c] + 4hatvacid[e]  <=> hco3[e] + 4hatvacid[c] 
+Drug metabolism	MTA_BD_R_norm_t2	TMDtd	NA	intercompartmental	tmd[e]  <=> tmd[c] 
+Drug metabolism	MTA_BD_R_norm_t2	CRVStu	NA	intercompartmental	crvs[e]  <=> crvs[c] 
+Drug metabolism	MTA_BD_R_norm_t2	CRVSthc	NA	intercompartmental	hco3[c] + crvs[e]  <=> hco3[e] + crvs[c] 
+Drug metabolism	MTA_BD_R_norm_t2	4HATVLACtep	NA	intercompartmental	4hatvlac[c]  <=> 4hatvlac[e] 
+Drug metabolism	MTA_BD_R_norm_t2	4HATVLACthc	NA	intercompartmental	hco3[c] + 4hatvlac[e]  <=> hco3[e] + 4hatvlac[c] 
+Drug metabolism	MTA_BD_R_norm_t2	TMDOATtev	NA	intercompartmental	cl[e] + tmd[c]  <=> cl[c] + tmd[e] 
+Drug metabolism	MTA_BD_R_norm_t2	LSTNM7TDhc	NA	intercompartmental	lstnm7[e]  <=> lstnm7[c] 
+Drug metabolism	MTA_BD_R_norm_t2	LSTNM7thc	NA	intercompartmental	cl[c] + lstnm7[e]  <=> cl[e] + lstnm7[c] 
+Drug metabolism	MTA_BD_R_norm_t2	FVStu	NA	intercompartmental	hco3[c] + fvs[e]  <=> hco3[e] + fvs[c] 
+Drug metabolism	MTA_BD_R_norm_t2	OXYPthc	NA	intercompartmental	oxyp[e]  <=> oxyp[c] 
+Drug metabolism	MTA_BD_R_norm_t2	OXYPtepv	NA	intercompartmental	h[c] + oxyp[c]  <=> h[e] + oxyp[e] 
+Drug metabolism	MTA_BD_R_norm_t2	PVStep	NA	intercompartmental	pvs[c]  <=> pvs[e] 
+Drug metabolism	MTA_BD_R_norm_t2	TMDOATthc	NA	intercompartmental	akg[c] + na1[e] + tmd[e]  <=> na1[c] + akg[e] + tmd[c] 
+Drug metabolism	MTA_BD_R_norm_t2	RSVtev	NA	intercompartmental	rsv[c]  <=> rsv[e] 
+Drug metabolism	MTA_BD_R_norm_t2	RSVtu	NA	intercompartmental	hco3[c] + rsv[e]  <=> hco3[e] + rsv[c] 
+Drug metabolism	MTA_BD_R_norm_t2	3HPVSTETCOAhcm	NA	[m]	2 h2o[m] + 2 nad[m] + 2 coa[m] + 2 fad[m] + 3hpvscoa[m]  -> o2[m] + 2 h[m] + 2 nadh[m] + 2 accoa[m] + 2 fadh2[m] + 3hpvstetcoa[m] 
+Drug metabolism	MTA_BD_R_norm_t2	3HPVSCOAitm	NA	intercompartmental	3hpvscoa[m]  <=> 3hpvscoa[c] 
+Drug metabolism	MTA_BD_R_norm_t2	3HPVSTETCOAitm	NA	intercompartmental	3hpvstetcoa[m]  <=> 3hpvstetcoa[c] 
+Drug metabolism	MTA_BD_R_norm_t2	LST4EXPTDhc	NA	intercompartmental	lst4exp[e]  <=> lst4exp[c] 
+Drug metabolism	MTA_BD_R_norm_t2	LST4EXPthc	NA	intercompartmental	cl[c] + lst4exp[e]  <=> cl[e] + lst4exp[c] 
+Drug metabolism	MTA_BD_R_norm_t2	LSTNRATt	NA	intercompartmental	cl[c] + lstn[e]  <=> cl[e] + lstn[c] 
+Drug metabolism	MTA_BD_R_norm_t2	LSTNtd	NA	intercompartmental	lstn[e]  <=> lstn[c] 
+Drug metabolism	MTA_BD_R_norm_t2	TMDOATPtsc	NA	intercompartmental	hco3[c] + tmd[e]  <=> hco3[e] + tmd[c] 

@@ -695,7 +695,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		DF_d1 <- subset(DF_d1, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))
 		DF_d2 <- subset(DF_d2, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))
 		colnames(DF_d1) = c("subSystem", "disrupted.module", "rxnList")
-		colnames(DF_d1) = c("subSystem", "disrupted.module", "rxnList")
+		colnames(DF_d2) = c("subSystem", "disrupted.module", "rxnList")
 		BD_R_S2 = RBIND(list(DF_d1, DF_d2))
 		
 		write.table(BD_R_S2, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_R_S2.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
@@ -803,15 +803,66 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 
 		write.table(BD_NR_S5, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S5.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 		
-		
-						
+	# N-glycan synthesis (BD_NR_S6)
+	
+		DF_d1 = get(x[[12]][1])
+		DF_d2 = get(x[[12]][2])
+		DF_d1 = DF_d1 %>% dplyr::filter(subSystem == toString(BD$subSystem[[12]]))
+		DF_d2 = DF_d2 %>% dplyr::filter(subSystem_CBNR == toString(BD$subSystem[[12]]))
+		DF_d1$disrupted.module <- rep(c(x[[12]][1]),times=nrow(DF_d1))
+		DF_d2$disrupted.module <- rep(c(x[[12]][2]),times=nrow(DF_d2))
+
+		DF_d1 <- subset(DF_d1, TRUE, c("subSystem", "disrupted.module", "rxnList"))
+		DF_d2 <- subset(DF_d2, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))	
+		colnames(DF_d2) = c("subSystem", "disrupted.module", "rxnList")
+		BD_NR_S6 = RBIND(list(DF_d1, DF_d2))
+
+		write.table(BD_NR_S6, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S6.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+
+	# Phosphatidylinositol phosphate metabolism (BD_NR_S7)
+	
+		DF_d1 = get(x[[13]][1])
+		DF_d2 = get(x[[13]][2])
+		DF_d1 = DF_d1 %>% dplyr::filter(subSystem == toString(BD$subSystem[[13]]))
+		DF_d2 = DF_d2 %>% dplyr::filter(subSystem_CBNR == toString(BD$subSystem[[13]]))
+		DF_d1$disrupted.module <- rep(c(x[[13]][1]),times=nrow(DF_d1))
+		DF_d2$disrupted.module <- rep(c(x[[13]][2]),times=nrow(DF_d2))
+
+		DF_d1 <- subset(DF_d1, TRUE, c("subSystem", "disrupted.module", "rxnList"))
+		DF_d2 <- subset(DF_d2, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))	
+		colnames(DF_d2) = c("subSystem", "disrupted.module", "rxnList")
+		BD_NR_S7 = RBIND(list(DF_d1, DF_d2))
+
+		write.table(BD_NR_S7, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S7.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+
+	# Keratan sulfate degradation (BD_NR_S8)
+	
+		DF_d1 = get(x[[14]][1])
+		DF_d2 = get(x[[14]][2])
+		DF_d3 = get(x[[14]][3])
+		DF_d1 = DF_d1 %>% dplyr::filter(subSystem == toString(BD$subSystem[[14]]))
+		DF_d2 = DF_d2 %>% dplyr::filter(subSystem_CBNR == toString(BD$subSystem[[14]]))
+		DF_d3 = DF_d3 %>% dplyr::filter(subSystem_CBNR == toString(BD$subSystem[[14]]))
+		DF_d1$disrupted.module <- rep(c(x[[14]][1]),times=nrow(DF_d1))
+		DF_d2$disrupted.module <- rep(c(x[[14]][2]),times=nrow(DF_d2))
+		DF_d3$disrupted.module <- rep(c(x[[14]][3]),times=nrow(DF_d3))
+
+		DF_d1 <- subset(DF_d1, TRUE, c("subSystem", "disrupted.module", "rxnList"))
+		DF_d2 <- subset(DF_d2, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))	
+		DF_d3 <- subset(DF_d3, TRUE, c("subSystem_CB", "disrupted.module", "del_rxnID_KO"))
+		colnames(DF_d2) = c("subSystem", "disrupted.module", "rxnList")
+		colnames(DF_d3) = c("subSystem", "disrupted.module", "rxnList")
+		BD_NR_S8 = RBIND(list(DF_d1, DF_d2, DF_d3))
+
+		write.table(BD_NR_S8, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S8.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)		
+										
 ###############################################
 # Backtracking - Minerva Visualization
 ###############################################
 
-	# Make Minerva-friendly file
-		
-		# Final-subSystem-wise (n=14)
+######################
+# Final-subSystem-wise (n=14)
+######################
 			
 			# duplicate BD files
 			DF_1 = BD_S1
@@ -825,6 +876,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 			DF_9 = BD_NR_S3
 			DF_10 = BD_NR_S4
 			DF_11 = BD_NR_S5
+			DF_12 = BD_NR_S6
+			DF_13 = BD_NR_S7
+			DF_14 = BD_NR_S8
 			
 			# add 'r_' as prefix to Rxns
 			DF_1$rxnList = paste0('r_', DF_1$rxnList)
@@ -838,6 +892,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 			DF_9$rxnList = paste0('r_', DF_9$rxnList)
 			DF_10$rxnList = paste0('r_', DF_10$rxnList)
 			DF_11$rxnList = paste0('r_', DF_11$rxnList)
+			DF_12$rxnList = paste0('r_', DF_12$rxnList)
+			DF_13$rxnList = paste0('r_', DF_13$rxnList)
+			DF_14$rxnList = paste0('r_', DF_14$rxnList)
 						
 			# rm duplicates
 			DF_1 <- DF_1[!duplicated(DF_1[,c('rxnList')]),]
@@ -851,6 +908,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 			DF_9 <- DF_9[!duplicated(DF_9[,c('rxnList')]),]
 			DF_10 <- DF_10[!duplicated(DF_10[,c('rxnList')]),]
 			DF_11 <- DF_11[!duplicated(DF_11[,c('rxnList')]),]
+			DF_12 <- DF_12[!duplicated(DF_12[,c('rxnList')]),]
+			DF_13 <- DF_13[!duplicated(DF_13[,c('rxnList')]),]
+			DF_14 <- DF_14[!duplicated(DF_14[,c('rxnList')]),]
 			
 			# add 'lineWidth'
 			DF_1$lineWidth <- rep(c("3"),times=nrow(DF_1))
@@ -864,6 +924,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 			DF_9$lineWidth <- rep(c("3"),times=nrow(DF_9))
 			DF_10$lineWidth <- rep(c("3"),times=nrow(DF_10))
 			DF_11$lineWidth <- rep(c("3"),times=nrow(DF_11))
+			DF_12$lineWidth <- rep(c("3"),times=nrow(DF_12))
+			DF_13$lineWidth <- rep(c("3"),times=nrow(DF_13))
+			DF_14$lineWidth <- rep(c("3"),times=nrow(DF_14))
 								
 			# add 'color'
 			DF_1$color <- rep(c("#0000FF"),times=nrow(DF_1))	#blue
@@ -877,7 +940,10 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 			DF_9$color <- rep(c("#FF0000"),times=nrow(DF_9))	#red
 			DF_10$color <- rep(c("#FF0000"),times=nrow(DF_10))	#red
 			DF_11$color <- rep(c("#FF0000"),times=nrow(DF_11))	#red
-			
+			DF_12$color <- rep(c("#FF0000"),times=nrow(DF_12))	#red
+			DF_13$color <- rep(c("#FF0000"),times=nrow(DF_13))	#red
+			DF_14$color <- rep(c("#FF0000"),times=nrow(DF_14))	#red
+						
 			# slice data
 			DF_1 <- subset(DF_1, TRUE, c("rxnList", "lineWidth", "color"))
 			DF_2 <- subset(DF_2, TRUE, c("rxnList", "lineWidth", "color"))
@@ -890,6 +956,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 			DF_9 <- subset(DF_9, TRUE, c("rxnList", "lineWidth", "color"))
 			DF_10 <- subset(DF_10, TRUE, c("rxnList", "lineWidth", "color"))
 			DF_11 <- subset(DF_11, TRUE, c("rxnList", "lineWidth", "color"))
+			DF_12 <- subset(DF_12, TRUE, c("rxnList", "lineWidth", "color"))
+			DF_13 <- subset(DF_13, TRUE, c("rxnList", "lineWidth", "color"))
+			DF_14 <- subset(DF_14, TRUE, c("rxnList", "lineWidth", "color"))
 			
 			# rename colnames
 			colnames(DF_1) = c("reactionIdentifier", "lineWidth", "color")
@@ -903,18 +972,10 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 			colnames(DF_9) = c("reactionIdentifier", "lineWidth", "color")
 			colnames(DF_10) = c("reactionIdentifier", "lineWidth", "color")
 			colnames(DF_11) = c("reactionIdentifier", "lineWidth", "color")
+			colnames(DF_12) = c("reactionIdentifier", "lineWidth", "color")
+			colnames(DF_13) = c("reactionIdentifier", "lineWidth", "color")
+			colnames(DF_14) = c("reactionIdentifier", "lineWidth", "color")
 			
-#~ 			dim(DF_1)
-#~ 			dim(DF_2)
-#~ 			dim(DF_3)
-#~ 			dim(DF_4)
-#~ 			dim(DF_5)
-#~ 			dim(DF_6)
-#~ 			dim(DF_7)
-#~ 			dim(DF_8)
-#~ 			dim(DF_9)
-#~ 			dim(DF_10)
-									
 			# write table
 			write.table(DF_1, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_1_BD_S1_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 			write.table(DF_2, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_2_BD_S2_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
@@ -927,13 +988,18 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 			write.table(DF_9, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_9_BD_NR_S3_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)		
 			write.table(DF_10, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_10_BD_NR_S4_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)		
 			write.table(DF_11, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_11_BD_NR_S5_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)		
-		
-		# Final-phenotype-wise (n=3)
+			write.table(DF_12, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_12_BD_NR_S6_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)		
+			write.table(DF_13, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_13_BD_NR_S7_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)		
+			write.table(DF_14, "PlotResults/plotDataOverlaysHyper_Tbl_Final/DF_14_BD_NR_S8_Minerva.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)		
+
+######################
+# Final-phenotype-wise (n=3)
+######################		
 		
 			# Merge DFs for Minerva
 			DF1 = RBIND(list(BD_S1, BD_S2, BD_S3))
 			DF2 = RBIND(list(BD_R_S1, BD_R_S2, BD_R_S3))
-			DF3 = RBIND(list(BD_NR_S1, BD_NR_S2, BD_NR_S3, BD_NR_S4, BD_NR_S5))
+			DF3 = RBIND(list(BD_NR_S1, BD_NR_S2, BD_NR_S3, BD_NR_S4, BD_NR_S5, BD_NR_S6, BD_NR_S7, BD_NR_S8))
 			
 			# add 'r_' as prefix to Rxns
 			DF1$rxnList = paste0('r_', DF1$rxnList)
