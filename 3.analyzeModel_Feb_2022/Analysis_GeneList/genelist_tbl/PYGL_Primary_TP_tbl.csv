@@ -1,6 +1,0 @@
-rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	PerturbationClass	Flux	MetabolicUnits	localization	rxnFormula
-GGNG	Starch and sucrose metabolism	(8908.1 and 2998.1) or (2998.1 and 2992.1) or (2997.1 and 2992.1) or (8908.1 and 2997.1)	38.3333333333333	25.5509641873278	1.50026954177897	Cascade	L	glycogen metabolism	[c]	Tyr_ggn[c] + 8 udpg[c]  -> 8 h[c] + 8 udp[c] + ggn[c] 
-GLBRAN	Starch and sucrose metabolism	2632.1	38.3333333333333	25.5509641873278	1.50026954177897	Cascade	L	glycogen metabolism	[c]	glygn1[c]  -> glygn2[c] 
-GLGNS1	Starch and sucrose metabolism	(8908.1 and 2997.1) or (2998.1 and 2992.1) or (2997.1 and 2992.1) or (8908.1 and 2998.1)	38.3333333333333	25.5509641873278	1.50026954177897	Cascade	L	glycogen metabolism	[c]	3 udpg[c] + ggn[c]  -> 3 h[c] + 3 udp[c] + glygn1[c] 
-GLPASE1	Starch and sucrose metabolism	5834.1 or 5837.1 or 5836.1	48.3333333333333	24.1666666666667	2	DirectMapping	L	glycogen metabolism	[c]	3 pi[c] + glygn2[c]  -> 3 g1p[c] + dxtrn[c] 
-GLPASE2	Starch and sucrose metabolism	5834.1 or 5836.1 or 5837.1	48.3333333333333	24.1666666666667	2	DirectMapping	L	glycogen metabolism	[c]	7 h2o[c] + glygn3[c]  -> 7 glc_D[c] + Tyr_ggn[c] 

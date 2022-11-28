@@ -1,3 +1,0 @@
-	X	rxnList	subSystem	GPR	FluxSpan_a	FluxSpan_b	Flux_Span_Ratio	Var7	Var8	Var9
-22	127	GLUDC	Glutamate metabolism	2571.1 or 2572.1 or 2571.2	334.874546773024	210.15663524293	1.59345217145263	L	glutamate degradation, cytosol/ Glutamate Decarboxylase	[c]
-241	539	PIPLC	Inositol phosphate metabolism	23236.2 or 5336.1 or 23007.1 or 113026.1 or 89869.1 or 84812.1 or 9651.1 or 5335.1 or 51196.1 or 257068.1 or 5332.2 or 5331.1 or 5335.2 or 5334.1 or 5332.1 or 5330.1 or 23236.1 or 5333.1	771.598984771574	504.69051907647	1.52885571574342	L	phospholipid metabolism/inositol, cytosol	[c]

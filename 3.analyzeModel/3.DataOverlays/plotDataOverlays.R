@@ -239,8 +239,11 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		
 		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_abs.csv", header = T, sep = "\t")
 
-		colnames(mat) = c("subSystem", "FVA_BD", "FVA_BD_R", "FVA_BD_NR", 
-							"MTA_BD", "MTA_BD_R", "MTA_BD_NR")
+		colnames(mat) = c("subSystem", "FVA_BD", "FVA_BD_NR", "FVA_BD_R", 
+							"MTA_BD", "MTA_BD_NR", "MTA_BD_R")
+
+		mat = subset(mat, TRUE, c("subSystem", "FVA_BD", "FVA_BD_R", "FVA_BD_NR", 
+							"MTA_BD", "MTA_BD_R", "MTA_BD_NR"))
 
 		row.names(mat) <- mat$subSystem
 		
@@ -265,8 +268,11 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		
 		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_norm_t1.csv", header = T, sep = "\t")
 
-		colnames(mat) = c("subSystem", "FVA_BD", "FVA_BD_R", "FVA_BD_NR", 
-							"MTA_BD", "MTA_BD_R", "MTA_BD_NR")
+		colnames(mat) = c("subSystem", "FVA_BD", "FVA_BD_NR", "FVA_BD_R", 
+							"MTA_BD", "MTA_BD_NR", "MTA_BD_R")
+
+		mat = subset(mat, TRUE, c("subSystem", "FVA_BD", "FVA_BD_R", "FVA_BD_NR", 
+							"MTA_BD", "MTA_BD_R", "MTA_BD_NR"))
 
 		row.names(mat) <- mat$subSystem
 		
@@ -291,8 +297,11 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		
 		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_norm_t2.csv", header = T, sep = "\t")
 
-		colnames(mat) = c("subSystem", "FVA_BD", "FVA_BD_R", "FVA_BD_NR", 
-							"MTA_BD", "MTA_BD_R", "MTA_BD_NR")
+		colnames(mat) = c("subSystem", "FVA_BD", "FVA_BD_NR", "FVA_BD_R", 
+							"MTA_BD", "MTA_BD_NR", "MTA_BD_R")
+
+		mat = subset(mat, TRUE, c("subSystem", "FVA_BD", "FVA_BD_R", "FVA_BD_NR", 
+							"MTA_BD", "MTA_BD_R", "MTA_BD_NR"))
 
 		row.names(mat) <- mat$subSystem
 		
@@ -301,7 +310,6 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		pheatmap(mat, cluster_rows=T, cluster_cols=F, display_numbers = round(mat,2), main = 'Norm_T2', 
 					color = c("white", "lightblue", "orange"), breaks = c(0, 0.99, 50, max(mat)), legend = F)
 					
-
 	# model_all
 
 		mat = lst(FVA_BD_abs$subSystem, FVA_BD_R_abs$subSystem, FVA_BD_NR_abs$subSystem, 
@@ -322,9 +330,19 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		
 		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_all.csv", header = T, sep = "\t")
 
-		colnames(mat) = c("subSystem", "FVA_BD_abs", "FVA_BD_R_abs", "FVA_BD_NR_abs", "MTA_BD_abs", "MTA_BD_R_abs", "MTA_BD_NR_abs",
-							"FVA_BD_norm_t1", "FVA_BD_R_norm_t1", "FVA_BD_NR_norm_t1", "MTA_BD_norm_t1", "MTA_BD_R_norm_t1", "MTA_BD_NR_norm_t1",
-							"FVA_BD_norm_t2", "FVA_BD_R_norm_t2", "FVA_BD_NR_norm_t2", "MTA_BD_norm_t2", "MTA_BD_R_norm_t2", "MTA_BD_NR_norm_t2")
+		colnames(mat) = c("subSystem", "FVA_BD_abs", "FVA_BD_norm_t1", "FVA_BD_norm_t2", 
+							"FVA_BD_NR_abs", "FVA_BD_NR_norm_t1", "FVA_BD_NR_norm_t2", 
+							"FVA_BD_R_abs", "FVA_BD_R_norm_t1", "FVA_BD_R_norm_t2", 
+						"MTA_BD_abs", "MTA_BD_norm_t1", "MTA_BD_norm_t2", 
+						"MTA_BD_NR_abs", "MTA_BD_NR_norm_t1", "MTA_BD_NR_norm_t2", 
+						"MTA_BD_R_abs", "MTA_BD_R_norm_t1", "MTA_BD_R_norm_t2")
+
+		mat = subset(mat, TRUE, c("subSystem", "FVA_BD_abs", "FVA_BD_R_abs", "FVA_BD_NR_abs", 
+							"MTA_BD_abs", "MTA_BD_R_abs", "MTA_BD_NR_abs", 
+							"FVA_BD_norm_t1", "FVA_BD_R_norm_t1", "FVA_BD_NR_norm_t1", 
+							"MTA_BD_norm_t1", "MTA_BD_R_norm_t1", "MTA_BD_NR_norm_t1", 
+							"FVA_BD_norm_t2",  "FVA_BD_R_norm_t2", "FVA_BD_NR_norm_t2", 
+						"MTA_BD_norm_t2", "MTA_BD_R_norm_t2", "MTA_BD_NR_norm_t2"))
 
 		row.names(mat) <- mat$subSystem
 		
@@ -337,7 +355,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		mat = mat[order(mat$Total),]
 		dotchart(mat$Total, labels = row.names(mat), cex = 0.7, bg = "blue", 
 			xlab = "Number of disrupted modules", main = "All")
-			
+
 
 	# model_bd
 
@@ -359,9 +377,11 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		
 		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd.csv", header = T, sep = "\t")
 
-		colnames(mat) = c("subSystem", "FVA_BD_abs", "FVA_BD_norm_t1", 
-							"FVA_BD_norm_t2", "MTA_BD_abs", 
-							"MTA_BD_norm_t1", "MTA_BD_norm_t2")
+		colnames(mat) = c("subSystem", "FVA_BD_abs", "FVA_BD_norm_t1", "FVA_BD_norm_t2", 
+							"MTA_BD_abs", "MTA_BD_norm_t1", "MTA_BD_norm_t2")
+
+		mat = subset(mat, TRUE, c("subSystem", "FVA_BD_abs", "FVA_BD_norm_t1", "FVA_BD_norm_t2", 
+							"MTA_BD_abs", "MTA_BD_norm_t1", "MTA_BD_norm_t2"))
 
 		row.names(mat) <- mat$subSystem
 		
@@ -397,9 +417,11 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		
 		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_r.csv", header = T, sep = "\t")
 
-		colnames(mat) = c("subSystem", "FVA_BD_R_abs", "FVA_BD_R_norm_t1", 
-							"FVA_BD_R_norm_t2", "MTA_BD_R_abs", 
-							"MTA_BD_R_norm_t1", "MTA_BD_R_norm_t2")
+		colnames(mat) = c("subSystem", "FVA_BD_R_abs", "FVA_BD_R_norm_t1", "FVA_BD_R_norm_t2", 
+							"MTA_BD_R_abs", "MTA_BD_R_norm_t1", "MTA_BD_R_norm_t2")
+
+		mat = subset(mat, TRUE, c("subSystem", "FVA_BD_R_abs", "FVA_BD_R_norm_t1", "FVA_BD_R_norm_t2", 
+							"MTA_BD_R_abs", "MTA_BD_R_norm_t1", "MTA_BD_R_norm_t2"))
 
 		row.names(mat) <- mat$subSystem
 		
@@ -435,9 +457,11 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		
 		mat <- read.csv("PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_nr.csv", header = T, sep = "\t")
 
-		colnames(mat) = c("subSystem", "FVA_BD_NR_abs", "FVA_BD_NR_norm_t1", 
-							"FVA_BD_NR_norm_t2", "MTA_BD_NR_abs", 
-							"MTA_BD_NR_norm_t1", "MTA_BD_NR_norm_t2")
+		colnames(mat) = c("subSystem", "FVA_BD_NR_abs", "FVA_BD_NR_norm_t1", "FVA_BD_NR_norm_t2", 
+							"MTA_BD_NR_abs", "MTA_BD_NR_norm_t1", "MTA_BD_NR_norm_t2")
+
+		mat = subset(mat, TRUE, c("subSystem", "FVA_BD_NR_abs", "FVA_BD_NR_norm_t1", "FVA_BD_NR_norm_t2", 
+							"MTA_BD_NR_abs", "MTA_BD_NR_norm_t1", "MTA_BD_NR_norm_t2"))
 
 		row.names(mat) <- mat$subSystem
 		
@@ -452,7 +476,6 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		keep = rownames(mat)[rowSums(mat)>2];
 		mat_keep = mat[(row.names(mat) %in% keep),]
 		write.table(mat_keep, "PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_nr_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
-		
 		
 ###########################
 # subSystem - Module matrix
@@ -512,6 +535,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 			scale_y_continuous(breaks=c(0:1:10)) + theme(aspect.ratio=1) +
 			xlab("") + ylab("# of Disrupted Modules") + labs(fill = "Phenotype") +
 			theme(axis.text.y=element_text(size=rel(1.1)))	
+			
 
 ###############################################
 # Backtracking - subSystems to Modules
@@ -1040,9 +1064,3 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 			write.table(DF2, "PlotResults/BD_R_Rxns.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 			write.table(DF3, "PlotResults/BD_NR_Rxns.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 		
-		
-		
-
-
-
-

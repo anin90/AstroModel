@@ -1,2 +1,0 @@
-rxnList	subSystem	GPR	fluxspan_a	fluxspan_b	FluxSpanRatio	PerturbationClass	Flux	MetabolicUnits	localization	rxnFormula
-GBA	Sphingolipid metabolism	2629.2 or 2629.3 or 2629.4 or 2629.5 or 2629.1	364.166666666667	182.083333333333	2	DirectMapping	L	NA	[c]	h2o[c] + gluside_hs[c]  -> glc_D[c] + crm_hs[c] 
