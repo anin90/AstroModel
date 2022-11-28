@@ -68,6 +68,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		# results_lithium
 		Lanz_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Lanz_vs_Ctrl_abs.csv", header = T, sep = "\t")
 		Rivera_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Rivera_vs_Ctrl_abs.csv", header = T, sep = "\t")
+		Akkouh_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Akkouh_vs_Ctrl_abs.csv", header = T, sep = "\t")
 		
 	# model_norm_t1
 		# background
@@ -86,6 +87,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		# results_lithium
 		Lanz_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Lanz_vs_Ctrl_norm_t1.csv", header = T, sep = "\t")
 		Rivera_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Rivera_vs_Ctrl_norm_t1.csv", header = T, sep = "\t")
+		Akkouh_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Akkouh_vs_Ctrl_norm_t1.csv", header = T, sep = "\t")
 
 	# model_norm_t2
 		# background
@@ -104,6 +106,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		# results_lithium
 		Lanz_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Lanz_vs_Ctrl_norm_t2.csv", header = T, sep = "\t")
 		Rivera_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Rivera_vs_Ctrl_norm_t2.csv", header = T, sep = "\t")
+		Akkouh_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Akkouh_vs_Ctrl_norm_t2.csv", header = T, sep = "\t")
 
 ############################
 # BD vs Lithium
@@ -111,7 +114,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 	
 	# model_abs
 
-		x = list(Lanz = Lanz_abs$Var1, Rivera = Rivera_abs$Var1,
+		x = list(Lanz = Lanz_abs$Var1, Rivera = Rivera_abs$Var1, Akkouh = Akkouh_abs$Var1,
 					FVA_BD = FVA_BD_abs$rxnList, FVA_BD_R = FVA_BD_R_abs$rxnList, FVA_BD_NR = FVA_BD_NR_abs$rxnList,
 						MTA_BD = MTA_BD_abs$del_rxnID_KO, MTA_BD_R = MTA_BD_R_abs$del_rxnID_KO, MTA_BD_NR = MTA_BD_NR_abs$del_rxnID_KO)
 
@@ -126,11 +129,10 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		color = c("green", "orange"), breaks = c(0, 0.05, 1), legend = F)
 
 		M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
-#~ 		M.int
 	
 	# model_norm_t1
 
-		x = list(Lanz = Lanz_norm_t1$Var1, Rivera = Rivera_norm_t1$Var1,
+		x = list(Lanz = Lanz_norm_t1$Var1, Rivera = Rivera_norm_t1$Var1, Akkouh = Akkouh_norm_t1$Var1,
 					FVA_BD = FVA_BD_norm_t1$rxnList, FVA_BD_R = FVA_BD_R_norm_t1$rxnList, FVA_BD_NR = FVA_BD_NR_norm_t1$rxnList,
 						MTA_BD = MTA_BD_norm_t1$del_rxnID_KO, MTA_BD_R = MTA_BD_R_norm_t1$del_rxnID_KO, MTA_BD_NR = MTA_BD_NR_norm_t1$del_rxnID_KO)
 
@@ -145,11 +147,10 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		color = c("green", "orange"), breaks = c(0, 0.05, 1), legend = F)
 		
 		M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
-#~ 		M.int
 	
 	# model_norm_t2
 
-		x = list(Lanz = Lanz_norm_t2$Var1, Rivera = Rivera_norm_t2$Var1,
+		x = list(Lanz = Lanz_norm_t2$Var1, Rivera = Rivera_norm_t2$Var1, Akkouh = Akkouh_norm_t2$Var1,
 					FVA_BD = FVA_BD_norm_t2$rxnList, FVA_BD_R = FVA_BD_R_norm_t2$rxnList, FVA_BD_NR = FVA_BD_NR_norm_t2$rxnList,
 						MTA_BD = MTA_BD_norm_t2$del_rxnID_KO, MTA_BD_R = MTA_BD_R_norm_t2$del_rxnID_KO, MTA_BD_NR = MTA_BD_NR_norm_t2$del_rxnID_KO)
 
@@ -164,19 +165,18 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		color = c("green", "orange"), breaks = c(0, 0.05, 1), legend = F)
 		
 		M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
-#~ 		M.int
 
 	# model_all
 
-		x = list(Lanz_abs = Lanz_abs$Var1, Rivera_abs = Rivera_abs$Var1,
+		x = list(Lanz_abs = Lanz_abs$Var1, Rivera_abs = Rivera_abs$Var1, Akkouh_abs = Akkouh_abs$Var1,
 					FVA_BD_abs = FVA_BD_abs$rxnList, FVA_BD_R_abs = FVA_BD_R_abs$rxnList, FVA_BD_NR_abs = FVA_BD_NR_abs$rxnList,
 						MTA_BD_abs = MTA_BD_abs$del_rxnID_KO, MTA_BD_R_abs = MTA_BD_R_abs$del_rxnID_KO, MTA_BD_NR_abs = MTA_BD_NR_abs$del_rxnID_KO,
 				
-				Lanz_norm_t1 = Lanz_norm_t1$Var1, Rivera_norm_t1 = Rivera_norm_t1$Var1,
+				Lanz_norm_t1 = Lanz_norm_t1$Var1, Rivera_norm_t1 = Rivera_norm_t1$Var1, Akkouh_norm_t1 = Akkouh_norm_t1$Var1,
 					FVA_BD_norm_t1 = FVA_BD_norm_t1$rxnList, FVA_BD_R_norm_t1 = FVA_BD_R_norm_t1$rxnList, FVA_BD_NR_norm_t1 = FVA_BD_NR_norm_t1$rxnList,
 						MTA_BD_norm_t1 = MTA_BD_norm_t1$del_rxnID_KO, MTA_BD_R_norm_t1 = MTA_BD_R_norm_t1$del_rxnID_KO, MTA_BD_NR_norm_t1 = MTA_BD_NR_norm_t1$del_rxnID_KO,
 						
-				Lanz_norm_t2 = Lanz_norm_t2$Var1, Rivera_norm_t2 = Rivera_norm_t2$Var1,
+				Lanz_norm_t2 = Lanz_norm_t2$Var1, Rivera_norm_t2 = Rivera_norm_t2$Var1, Akkouh_norm_t2 = Akkouh_norm_t2$Var1,
 					FVA_BD_norm_t2 = FVA_BD_norm_t2$rxnList, FVA_BD_R_norm_t2 = FVA_BD_R_norm_t2$rxnList, FVA_BD_NR_norm_t2 = FVA_BD_NR_norm_t2$rxnList,
 						MTA_BD_norm_t2 = MTA_BD_norm_t2$del_rxnID_KO, MTA_BD_R_norm_t2 = MTA_BD_R_norm_t2$del_rxnID_KO, MTA_BD_NR_norm_t2 = MTA_BD_NR_norm_t2$del_rxnID_KO)
 
@@ -194,7 +194,6 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		color = c("green", "orange"), breaks = c(0, 0.05, 1), legend = F)
 		
 		M.int <- hyper_matrix(x, background);	M.int[lower.tri(M.int)] <- NA;	
-#~ 		M.int
 
 ###################################
 # BD significance across methods

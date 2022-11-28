@@ -21,9 +21,9 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
     writetable(Tbl,'AnalysisFiles/Rivera_vs_Ctrl_abs.csv','WriteVariableNames', true, 'Delimiter','\t');    
     
-%     dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_abs, 'Akkouh_Li.mat');
-%     Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
-%     writetable(Tbl,'AnalysisFiles/Akkouh_vs_Ctrl_abs.csv','WriteVariableNames', true, 'Delimiter','\t');   
+    dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_abs, 'Akkouh_Li.mat');
+    Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
+    writetable(Tbl,'AnalysisFiles/Akkouh_vs_Ctrl_abs.csv','WriteVariableNames', true, 'Delimiter','\t');   
 
 %% model_norm_t1:
 
@@ -35,9 +35,9 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
     writetable(Tbl,'AnalysisFiles/Rivera_vs_Ctrl_norm_t1.csv','WriteVariableNames', true, 'Delimiter','\t');    
     
-%     dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_norm_t1, 'Akkouh_Li.mat');
-%     Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
-%     writetable(Tbl,'AnalysisFiles/Akkouh_vs_Ctrl_norm_t1.csv','WriteVariableNames', true, 'Delimiter','\t');   
+    dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_norm_t1, 'Akkouh_Li.mat');
+    Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
+    writetable(Tbl,'AnalysisFiles/Akkouh_vs_Ctrl_norm_t1.csv','WriteVariableNames', true, 'Delimiter','\t');   
 
 %% model_norm_t2:
 
@@ -49,12 +49,12 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
     writetable(Tbl,'AnalysisFiles/Rivera_vs_Ctrl_norm_t2.csv','WriteVariableNames', true, 'Delimiter','\t');    
     
-%     dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_norm_t2, 'Akkouh_Li.mat');
-%     Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
-%     writetable(Tbl,'AnalysisFiles/Akkouh_vs_Ctrl_norm_t2.csv','WriteVariableNames', true, 'Delimiter','\t');   
+    dat = mapDiffExpToRxns(iAstro_iPS_Ctrl_TP_norm_t2, 'Akkouh_Li.mat');
+    Tbl = table(vertcat(union(dat.rxnList_down, dat.rxnList_up)));
+    writetable(Tbl,'AnalysisFiles/Akkouh_vs_Ctrl_norm_t2.csv','WriteVariableNames', true, 'Delimiter','\t');   
 
 %%
-clear all
+clearvars
 
 %%
 toc;
