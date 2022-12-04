@@ -40,7 +40,7 @@ This pipeline implements the method described in
 			* matrix2models_norm_t2_v12.mat (Models_fpkm_norm_t1) #output
 			
     2.Vadodaria/ (#v3 implements the method described in manuscript)
-		(Below mentioned only for "Control_Untreated". Data & codes available for 
+		(Below mentioned only for "Control_Untreated". Data & codes for 
 		"BD_Untreated", "BD_Responder_Untreated" and "BD_NonResponder_Untreated" 
 		are available under 2.Vadodaria/)
 		* v3/abs/
