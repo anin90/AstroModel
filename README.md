@@ -21,19 +21,19 @@ This pipeline implements the method described in [this manuscript](https://anin9
 5. ~5 GB space, and more space will be required depending on the number of models that are built
 
 ## Running instructions:
-0. prepareExpressionMatrix/ - <ins>Transcriptome processing & QC</ins>.
+0. prepareExpressionMatrix/ - <ins>Pre-processing and QC of transcriptomes</ins>.
    * Test
    * Test
    * Test
-1. matrix2model/ - <ins>Extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore)</ins>.
+1. matrix2model/ - <ins>Integration of phenotype-specific transcriptomes with Recon3D</ins>.
    * Test
    * Test
    * Test
-2. expandModel/ - <ins>Expand draft (only iMAT) by adding literature curated and nutrient media constraints</ins>.
+2. expandModel/ - <ins>Expansion of draft models (only iMAT)</ins>.
    * Test
    * Test
    * Test
-3. analyzeModel/ - <ins>Analyze models using FVA & MTA to identify reactions disrupted in BD, BD-Responder & BD-NonResponder</ins>.
+3. analyzeModel/ - <ins>Identifying disrupted reactions & subSystems in BD metabolic models.</ins>.
    * Test
    * Test
    * Test
