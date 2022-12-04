@@ -23,7 +23,9 @@ This pipeline implements the method described in
 
 ## Input files and directory tree
 ````````````
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 1.matrix2model/	#extract draft models using MEMs
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
     1.Zhang/ 
 		(#v12 implements the method described in manuscript)
@@ -60,18 +62,28 @@ This pipeline implements the method described in
     
     3.Koskuvi/
 
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 2.expandModel/	#expand draft models using literature driven- and nutrient media constraints
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
     1.Zhang/
     2.Vadodaria/
     3.Koskuvi/
 
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 3.analyzeModel/	#analyze models using FVA & MTA
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 	1.Vadodaria/
 	2.Koskuvi/
 
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 4.modelComparison/	#compare models with predecessors  
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-5.generateFigures/	#reproduce figures for manuscript  
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+5.generateFigures/	#reproduce figures for manuscript
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ````````````
 
