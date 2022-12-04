@@ -29,36 +29,39 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
     1.Zhang/ 
 		(#v12 implements the method described in manuscript)
+		
 		* v12/abs/
 			* GSE73721_HMA_CTX.mat (ExpressionMatrix) #data
 			* matrix2models_abs.m (MEMs_fpkm_abs) #code
 			* matrix2models_abs_v12.mat (Models_fpkm_abs) #output
 		* v12/norm_t1/
 			* GSE73721_HMA_CTX.mat (ExpressionMatrix) #data
-			* matrix2models_norm_t1.m (MEMs_fpkm_abs) #code
+			* matrix2models_norm_t1.m (MEMs_fpkm_norm_t1) #code
 			* matrix2models_norm_t1_v12.mat (Models_fpkm_norm_t1) #output	
 		* v12/norm_t2/
 			* GSE73721_HMA_CTX.mat (ExpressionMatrix) #data
-			* matrix2models_norm_t2.m (MEMs_fpkm_abs) #code
+			* matrix2models_norm_t2.m (MEMs_fpkm_norm_t2) #code
 			* matrix2models_norm_t2_v12.mat (Models_fpkm_norm_t1) #output
 			
     2.Vadodaria/
 		(#v3 implements the method described in manuscript)
+		
 		(Below mentioned only for "Control_Untreated". In similar logic, data & codes for 
 		"BD_Untreated", "BD_Responder_Untreated" and "BD_NonResponder_Untreated" 
 		are available under 2.Vadodaria/)
+		
 		* v3/abs/
 			* Vadodaria_Control_Untreated.mat (ExpressionMatrix) #data
 			* matrix2models_abs_vadodaria.m (MEMs_fpkm_abs) #code
 			* matrix2models_abs_v3.mat (Models_fpkm_abs) #output
 		* v3/norm_t1/
 			* Vadodaria_Control_Untreated.mat (ExpressionMatrix) #data
-			* matrix2models_norm_t1_vadodaria.m (MEMs_fpkm_abs) #code
-			* matrix2models_norm_t1_v3.mat (Models_fpkm_abs) #output
+			* matrix2models_norm_t1_vadodaria.m (MEMs_fpkm_norm_t1) #code
+			* matrix2models_norm_t1_v3.mat (Models_fpkm_norm_t1) #output
 		* v3/norm_t2/
 			* Vadodaria_Control_Untreated.mat (ExpressionMatrix) #data
-			* matrix2models_norm_t2_vadodaria.m (MEMs_fpkm_abs) #code
-			* matrix2models_norm_t2_v3.mat (Models_fpkm_abs) #output
+			* matrix2models_norm_t2_vadodaria.m (MEMs_fpkm_norm_t2) #code
+			* matrix2models_norm_t2_v3.mat (Models_fpkm_norm_t2) #output
     
     3.Koskuvi/
 
