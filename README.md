@@ -23,71 +23,23 @@ This pipeline implements the method described in [this manuscript](https://anin9
 ## Running instructions:
 1. prepareExpressionMatrix/ #transcriptome processing & QC:
    * Test
-   * Test 
+   * Test
    * Test
 2. matrix2model/ #extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore):
    * Test
-   * Test 
-   * Test 
+   * Test
+   * Test
 3. analyzeModel/ #analyze models using FVA & MTA:
-   * Test 
-   * Test 
-   * Test 
+   * Test
+   * Test
+   * Test
 4. modelComparison/ #compare model statistics:
-   * Test 
-   * Test 
-   * Test 
+   * Test
+   * Test
+   * Test
 5. generateFigures/ #generate figures for manuscript
-   * Test 
-   * Test 
-   * Test 
-   
-## Results:
-
-## Files (data, code and output) and directory tree:
-````````````
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-0.prepareExpressionMatrix/ #transcriptome processing & QC
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-1.matrix2model/ #extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore)
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-   * 1.Zhang/			
-   * 2.Vadodaria/
-   * 3.Koskuvi/
-   * modelStatsMatFiles/
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-2.expandModel/ #expand draft models (only 'iMAT')
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-   * 1.Zhang/
-   * 2.Vadodaria/
-   * 3.Koskuvi/
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-3.analyzeModel/ #analyze models using FVA & MTA
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-   * 1.Vadodaria/
-   * 2.Koskuvi/
-   * 3.DataOverlays/
-   * 4.ModelFnTests/
-   * Annotations/
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-4.modelComparison/ #compare model statistics  
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-5.generateFigures/ #generate figures for manuscript
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
-````````````
-
+   * Test
+   * Test
+   * Test
 
 
