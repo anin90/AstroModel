@@ -22,25 +22,25 @@ This pipeline implements the method described in [this manuscript](https://anin9
 
 ## Running instructions:
 1. prepareExpressionMatrix/ #transcriptome processing & QC:
-   * 
-   * 
-   * 
+   * Test
+   * Test 
+   * Test
 2. matrix2model/ #extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore):
-   * 
-   * 
-   * 
+   * Test
+   * Test 
+   * Test 
 3. analyzeModel/ #analyze models using FVA & MTA:
-   * 
-   * 
-   * 
+   * Test 
+   * Test 
+   * Test 
 4. modelComparison/ #compare model statistics:
-   * 
-   * 
-   * 
+   * Test 
+   * Test 
+   * Test 
 5. generateFigures/ #generate figures for manuscript
-   * 
-   * 
-   * 
+   * Test 
+   * Test 
+   * Test 
    
 ## Results:
 
