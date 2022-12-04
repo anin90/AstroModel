@@ -21,15 +21,19 @@ This pipeline implements the method described in [this manuscript](https://anin9
 5. ~5 GB space, and more space will be required depending on the number of models that are built
 
 ## Running instructions:
-1. prepareExpressionMatrix/ #transcriptome processing & QC:
+0. prepareExpressionMatrix/ #transcriptome processing & QC:
    * Test
    * Test
    * Test
-2. matrix2model/ #extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore):
+1. matrix2model/ #extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore):
    * Test
    * Test
    * Test
-3. analyzeModel/ #analyze models using FVA & MTA:
+2. expandModel/ #expand draft (only iMAT) by adding literature curated and nutrient media constraints.
+   * Test
+   * Test
+   * Test
+3. analyzeModel/ #analyze models using FVA & MTA to identify reactions disrupted in BD, BD_R & BD_NR.
    * Test
    * Test
    * Test
@@ -41,5 +45,3 @@ This pipeline implements the method described in [this manuscript](https://anin9
    * Test
    * Test
    * Test
-
-
