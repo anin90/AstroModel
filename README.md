@@ -30,27 +30,27 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 1.matrix2model/ #extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore)
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-   * Zhang/			
-   * Vadodaria/
-   * Koskuvi/
+   * 1.Zhang/			
+   * 2.Vadodaria/
+   * 3.Koskuvi/
    * modelStatsMatFiles/
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 2.expandModel/ #expand draft models (only 'iMAT')
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-   * Zhang/
-   * Vadodaria/
-   * Koskuvi/
+   * 1.Zhang/
+   * 2.Vadodaria/
+   * 3.Koskuvi/
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 3.analyzeModel/ #analyze models using FVA & MTA
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-   * Vadodaria/
-   * Koskuvi/
-   * DataOverlays/
-   * ModelFnTests/
+   * 1.Vadodaria/
+   * 2.Koskuvi/
+   * 3.DataOverlays/
+   * 4.ModelFnTests/
    * Annotations/
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
