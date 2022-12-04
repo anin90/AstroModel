@@ -20,6 +20,30 @@ This pipeline implements the method described in [this manuscript](https://anin9
    * Cufflinks ()
 5. ~5 GB space, and more space will be required depending on the number of models that are built
 
+## Running instructions:
+1. prepareExpressionMatrix/ #transcriptome processing & QC:
+   * 
+   * 
+   * 
+2. matrix2model/ #extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore):
+   * 
+   * 
+   * 
+3. analyzeModel/ #analyze models using FVA & MTA:
+   * 
+   * 
+   * 
+4. modelComparison/ #compare model statistics:
+   * 
+   * 
+   * 
+5. generateFigures/ #generate figures for manuscript
+   * 
+   * 
+   * 
+   
+## Results:
+
 ## Files (data, code and output) and directory tree:
 ````````````
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -65,11 +89,5 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ````````````
 
-## Configuration:
 
-## Running instructions:
-   * Inputs preparation:
-   * Run pipeline:
-
-## Results:
 
