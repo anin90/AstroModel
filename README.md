@@ -1,7 +1,6 @@
 # AstroModel
 This pipeline implements the method described in 
 [IDENTIFYING METABOLIC FLUXES ASSOCIATED WITH LITHIUM RESPONSE IN BIPOLAR DISORDER](https://anin90.github.io/).
-This pipeline runs on a Linux machine only.
 
 ## Requirements
 1. MATLAB (R2015b+):
@@ -19,12 +18,12 @@ This pipeline runs on a Linux machine only.
    * Cutadapt ()
    * HISAT2 ()
    * Samtools ()
-   * Cufflinks ()   
+   * Cufflinks ()
 5. ~5 GB space, and more space will be required depending on the number of models that are built
 
 ## Input files and directory tree
 Directory names can be changed in the [configuration](#configuration) file
-```
+````````````
 1.matrix2model/	#extract draft models using MEMs
     1.Zhang/
     2.Vadodaria/
@@ -43,7 +42,7 @@ Directory names can be changed in the [configuration](#configuration) file
 
 5.generateFigures/	#reproduce figures for manuscript  
 
-```
+````````````
 
 ## Configuration
 
