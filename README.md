@@ -73,8 +73,9 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 		(#phenotype- iPS-derived astrocytes from monozygotic twin pairs discordant 
 		for schizophrenia and healthy subjects)
 		
-		(#Below mentioned only for "1.Control"  (healthy controls). In similar logic, data & codes for 
-		"2.HT" (healthy-twin) and "3.ST" (schizophrenia-twin) are available under "3.Koskuvi/")
+		(#Below mentioned only for "1.Control"  (healthy controls). In similar logic, 
+		data & codes for "2.HT" (healthy-twin) and "3.ST" (schizophrenia-twin) are 
+		available under "3.Koskuvi/")
 
 		(#v1 implements the method described in manuscript)
 
