@@ -44,7 +44,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 			
     2.Vadodaria/
 		(#v3 implements the method described in manuscript)
-		(Below mentioned only for "Control_Untreated". Data & codes for 
+		(Below mentioned only for "Control_Untreated". In similar logic, data & codes for 
 		"BD_Untreated", "BD_Responder_Untreated" and "BD_NonResponder_Untreated" 
 		are available under 2.Vadodaria/)
 		* v3/abs/
