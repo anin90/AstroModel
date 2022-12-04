@@ -21,11 +21,11 @@ This pipeline implements the method described in [this manuscript](https://anin9
 5. ~5 GB space, and more space will be required depending on the number of models that are built
 
 ## Running instructions:
-0. prepareExpressionMatrix/ - <ins>Transcriptome processing & QC</ins>:
+0. prepareExpressionMatrix/ - <ins>Transcriptome processing & QC</ins>.
    * Test
    * Test
    * Test
-1. matrix2model/ - <ins>Extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore)</ins>:
+1. matrix2model/ - <ins>Extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore)</ins>.
    * Test
    * Test
    * Test
@@ -37,11 +37,11 @@ This pipeline implements the method described in [this manuscript](https://anin9
    * Test
    * Test
    * Test
-4. modelComparison/ - <ins>Compare model statistics</ins>:
+4. modelComparison/ - <ins>Compare model statistics</ins>.
    * Test
    * Test
    * Test
-5. generateFigures/ - <ins>Generate figures for manuscript</ins>:
+5. generateFigures/ - <ins>Generate figures for manuscript</ins>.
    * Test
    * Test
    * Test
