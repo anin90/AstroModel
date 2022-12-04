@@ -1,14 +1,13 @@
 # AstroModel
 This pipeline implements the method described in 
-[IDENTIFYING METABOLIC FLUXES ASSOCIATED WITH LITHIUM RESPONSE IN BIPOLAR DISORDER](https://gbds2022.com/wp-content/uploads/2022/10/3.-Identifying-Metabolic_Anirudh-S.-Chellappa-Abstract_GBDS_2022.pdf),
+[IDENTIFYING METABOLIC FLUXES ASSOCIATED WITH LITHIUM RESPONSE IN BIPOLAR DISORDER](https://anin90.github.io/).
 This pipeline runs on a Linux machine only.
 
 ## Requirements
 1. MATLAB (R2015b+) packages:
-   * COBRA Toolbox (v3.0)
    * Gurobi optimizer ()
+   * COBRA Toolbox (v3.0)
    * [Metabolic Transformation Algorithm (MTA)](https://github.com/ImNotaGit/MTA)
-   * matplotlib (3.3.3+)
 2. R (3.6.3+) packages:
    * pacman ()
    * pacman::p_load(affy, pheatmap, RColorBrewer, dplyr, tidyverse, annotate, rat2302.db, mouse4302.db, homologene, 
