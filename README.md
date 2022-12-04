@@ -51,11 +51,8 @@ Directory names can be changed in the [configuration](#configuration) file
 ## Configuration
 
 ## Running instructions
-
-### Inputs preparation
-
-### Run pipeline
+   * Inputs preparation
+   * Run pipeline
 
 ## Results
 
-Footer
