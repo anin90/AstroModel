@@ -41,7 +41,8 @@ This pipeline implements the method described in
 			
     2.Vadodaria/ (#v3 implements the method described in manuscript)
 		(Below mentioned only for "Control_Untreated". Data & codes available for 
-			"BD_Untreated", "BD_Responder_Untreated" and "BD_NonResponder_Untreated" are available under 2.Vadodaria/)
+		"BD_Untreated", "BD_Responder_Untreated" and "BD_NonResponder_Untreated" 
+		are available under 2.Vadodaria/)
 		* v3/abs/
 			* Vadodaria_Control_Untreated.mat (ExpressionMatrix) #data
 			* matrix2models_abs_vadodaria.m (MEMs_fpkm_abs) #code
