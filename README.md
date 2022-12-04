@@ -49,9 +49,9 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 		(#phenotype- iPS-derived astrocytes from BD patients and controls)
 		
-		(#Below mentioned only for "1.Control_Untreated". In similar logic, data & codes for 
-		"2.BD_Untreated", "3.BD_Responder_Untreated" and "4.BD_NonResponder_Untreated" 
-		are available under "2.Vadodaria/")
+		(#Below mentioned only for "1.Control_Untreated". In similar logic, 
+		data & codes for "2.BD_Untreated", "3.BD_Responder_Untreated" 
+		and "4.BD_NonResponder_Untreated" are available under "2.Vadodaria/")
 				
 		(#v3 implements the method described in manuscript)
 		
