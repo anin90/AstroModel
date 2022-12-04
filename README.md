@@ -1,4 +1,4 @@
-## Astrocyte metabolic modeling - IDENTIFYING METABOLIC FLUXES ASSOCIATED WITH LITHIUM RESPONSE IN BIPOLAR DISORDER.
+## Astrocyte metabolic modeling - Identifying metabolic fluxes associated with lithium response in bipolar disorder.
 This pipeline implements the method described in [this manuscript](https://anin90.github.io/).
 
 ## Requirements:
