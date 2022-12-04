@@ -4,11 +4,11 @@ This pipeline implements the method described in
 This pipeline runs on a Linux machine only.
 
 ## Requirements
-1. MATLAB (R2015b+) packages:
+1. MATLAB (R2015b+):
    * Gurobi optimizer ()
    * COBRA Toolbox (v3.0)
    * [Metabolic Transformation Algorithm (MTA)](https://github.com/ImNotaGit/MTA)
-2. R (3.6.3+) packages:
+2. R (3.6.3+):
    * pacman ()
    * pacman::p_load(affy, pheatmap, RColorBrewer, dplyr, tidyverse, annotate, rat2302.db, mouse4302.db, homologene, 
 							readxl, oligo, limma, mogene20sttranscriptcluster.db, qvalue, GEOquery, tidyr, tibble, splitstackshape, gplots, 
@@ -20,7 +20,7 @@ This pipeline runs on a Linux machine only.
    * HISAT2 ()
    * Samtools ()
    * Cufflinks ()   
-5. ~50 GB space, and more space will be required depending on the number of models that are built
+5. ~5 GB space, and more space will be required depending on the number of models that are built
 
 ## Input files and directory tree
 Directory names can be changed in the [configuration](#configuration) file
