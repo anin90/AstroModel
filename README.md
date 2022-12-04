@@ -25,8 +25,20 @@ This pipeline implements the method described in
 Directory names can be changed in the [configuration](#configuration) file
 ````````````
 1.matrix2model/	#extract draft models using MEMs
+
     1.Zhang/
+		* v12/abs/
+			* GSE73721_HMA_CTX.mat
+			* matrix2models_abs.m
+		* v12/norm_t1/
+			* GSE73721_HMA_CTX.mat
+			* matrix2models_norm_t1.m
+		* v12/norm_t2/
+			* GSE73721_HMA_CTX.mat
+			* matrix2models_norm_t2.m
+			
     2.Vadodaria/
+    
     3.Koskuvi/
 
 2.expandModel/	#expand draft models using literature driven- and nutrient media constraints
