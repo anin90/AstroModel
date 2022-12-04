@@ -21,7 +21,7 @@ This pipeline implements the method described in [this manuscript](https://anin9
 5. ~5 GB space, and more space will be required depending on the number of models that are built
 
 ## Running instructions:
-0. prepareExpressionMatrix/ #transcriptome processing & QC:
+0. prepareExpressionMatrix/ - Transcriptome processing & QC:
    * Test
    * Test
    * Test
