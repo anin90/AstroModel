@@ -30,7 +30,6 @@ Directory names can be changed in the [configuration](#configuration) file
     1.Zhang/
     2.Vadodaria/
     3.Koskuvi/
-	modelStatsMatFiles
 
 2.expandModel/	#expand draft models using literature driven- and nutrient media constraints  
     1.Zhang/
@@ -38,9 +37,8 @@ Directory names can be changed in the [configuration](#configuration) file
     3.Koskuvi/
 
 3.analyzeModel/	#analyze models using FVA & MTA  
-    1.Zhang/
-    2.Vadodaria/
-    3.Koskuvi/
+	1.Vadodaria/
+    2.Koskuvi/
 
 4.modelComparison/	#compare models with predecessors  
 
