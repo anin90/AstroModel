@@ -1,8 +1,7 @@
-# AstroModel
-This pipeline implements the method described in 
-[IDENTIFYING METABOLIC FLUXES ASSOCIATED WITH LITHIUM RESPONSE IN BIPOLAR DISORDER](https://anin90.github.io/).
+# Astrocyte metabolic modeling - IDENTIFYING METABOLIC FLUXES ASSOCIATED WITH LITHIUM RESPONSE IN BIPOLAR DISORDER.
+This pipeline implements the method described in [this manuscript](https://anin90.github.io/).
 
-## Requirements
+## Requirements:
 1. MATLAB (R2015b+):
    * Gurobi optimizer ()
    * COBRA Toolbox (v3.0)
@@ -21,7 +20,7 @@ This pipeline implements the method described in
    * Cufflinks ()
 5. ~5 GB space, and more space will be required depending on the number of models that are built
 
-## Files (data, code and output) and directory tree
+## Files (data, code and output) and directory tree:
 ````````````
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 0.prepareExpressionMatrix/ #transcriptome processing & QC
@@ -121,11 +120,11 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ````````````
 
-## Configuration
+## Configuration:
 
-## Running instructions
-   * Inputs preparation
-   * Run pipeline
+## Running instructions:
+   * Inputs preparation:
+   * Run pipeline:
 
-## Results
+## Results:
 
