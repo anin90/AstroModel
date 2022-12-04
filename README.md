@@ -26,17 +26,17 @@ This pipeline runs on a Linux machine only.
 ## Input files and directory tree
 Directory names can be changed in the [configuration](#configuration) file
 ```
-1.matrix2model/	#extract draft models using MEMs 
+1.matrix2model/	#extract draft models using MEMs
     1.Zhang/
     2.Vadodaria/
     3.Koskuvi/
 
-2.expandModel/	#expand draft models using literature driven- and nutrient media constraints  
+2.expandModel/	#expand draft models using literature driven- and nutrient media constraints
     1.Zhang/
     2.Vadodaria/
     3.Koskuvi/
 
-3.analyzeModel/	#analyze models using FVA & MTA  
+3.analyzeModel/	#analyze models using FVA & MTA
 	1.Vadodaria/
 	2.Koskuvi/
 
