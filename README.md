@@ -21,13 +21,15 @@ This pipeline implements the method described in
    * Cufflinks ()
 5. ~5 GB space, and more space will be required depending on the number of models that are built
 
-## Input files and directory tree
+## Files (data, code and output) and directory tree
 ````````````
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 1.matrix2model/	#extract draft models using MEMs
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-    1.Zhang/ 
+    1.Zhang/
+
+		(#phenotype- primary astrocytes)
 		(#v12 implements the method described in manuscript)
 		
 		* v12/abs/
@@ -44,11 +46,14 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 			* matrix2models_norm_t2_v12.mat (Models_fpkm_norm_t1) #output
 			
     2.Vadodaria/
-		(#v3 implements the method described in manuscript)
 		
-		(Below mentioned only for "Control_Untreated". In similar logic, data & codes for 
+		(#Below mentioned only for "Control_Untreated". In similar logic, data & codes for 
 		"BD_Untreated", "BD_Responder_Untreated" and "BD_NonResponder_Untreated" 
 		are available under 2.Vadodaria/)
+		
+		(#phenotype- iPS-derived astrocytes from BD patients and controls)
+		
+		(#v3 implements the method described in manuscript)
 		
 		* v3/abs/
 			* Vadodaria_Control_Untreated.mat (ExpressionMatrix) #data
@@ -64,6 +69,28 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 			* matrix2models_norm_t2_v3.mat (Models_fpkm_norm_t2) #output
     
     3.Koskuvi/
+		
+		(#Below mentioned only for "Control". In similar logic, data & codes for 
+		"HT (healthy-twin)" and "ST (schizophrenia-twin)"
+		are available under 2.Vadodaria/)
+
+		(#phenotype- iPS-derived astrocytes from monozygotic twin pairs discordant 
+		for schizophrenia and healthy subjects)
+		
+		(#v1 implements the method described in manuscript)
+
+		* v1/abs/
+			* Koskuvi_Control.mat (ExpressionMatrix) #data
+			* matrix2models_abs_koskuvi.m (MEMs_fpkm_abs) #code
+			* matrix2models_abs_v1.mat (Models_fpkm_abs) #output
+		* v1/norm_t1/
+			* Koskuvi_Control.mat (ExpressionMatrix) #data
+			* matrix2models_norm_t1_koskuvi.m (MEMs_fpkm_norm_t1) #code
+			* matrix2models_norm_t1_v1.mat (Models_fpkm_norm_t1) #output
+		* v1/norm_t2/
+			* Koskuvi_Control.mat (ExpressionMatrix) #data
+			* matrix2models_norm_t2_koskuvi.m (MEMs_fpkm_norm_t2) #code
+			* matrix2models_norm_t2_v1.mat (Models_fpkm_norm_t2) #output
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 2.expandModel/	#expand draft models using literature & nutrient media constraints
