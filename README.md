@@ -22,7 +22,6 @@ This pipeline implements the method described in
 5. ~5 GB space, and more space will be required depending on the number of models that are built
 
 ## Input files and directory tree
-Directory names can be changed in the [configuration](#configuration) file
 ````````````
 1.matrix2model/	#extract draft models using MEMs
 
@@ -40,7 +39,21 @@ Directory names can be changed in the [configuration](#configuration) file
 			* matrix2models_norm_t2.m (MEMs_fpkm_abs) #code
 			* matrix2models_norm_t2_v12.mat (Models_fpkm_norm_t1) #output
 			
-    2.Vadodaria/
+    2.Vadodaria/ (#v3 implements the method described in manuscript)
+		(Below mentioned only for "Control_Untreated". Data & codes available for 
+			"BD_Untreated", "BD_Responder_Untreated" and "BD_NonResponder_Untreated" are available under 2.Vadodaria/)
+		* v3/abs/
+			* Vadodaria_Control_Untreated.mat (ExpressionMatrix) #data
+			* matrix2models_abs_vadodaria.m (MEMs_fpkm_abs) #code
+			* matrix2models_abs_v3.mat (Models_fpkm_abs) #output
+		* v3/norm_t1/
+			* Vadodaria_Control_Untreated.mat (ExpressionMatrix) #data
+			* matrix2models_norm_t1_vadodaria.m (MEMs_fpkm_abs) #code
+			* matrix2models_norm_t1_v3.mat (Models_fpkm_abs) #output
+		* v3/norm_t2/
+			* Vadodaria_Control_Untreated.mat (ExpressionMatrix) #data
+			* matrix2models_norm_t2_vadodaria.m (MEMs_fpkm_abs) #code
+			* matrix2models_norm_t2_v3.mat (Models_fpkm_abs) #output
     
     3.Koskuvi/
 
