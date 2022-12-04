@@ -38,7 +38,7 @@ Directory names can be changed in the [configuration](#configuration) file
 
 3.analyzeModel/	#analyze models using FVA & MTA  
 	1.Vadodaria/
-    2.Koskuvi/
+	2.Koskuvi/
 
 4.modelComparison/	#compare models with predecessors  
 
