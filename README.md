@@ -25,23 +25,23 @@ This pipeline implements the method described in [this manuscript](https://anin9
    * Test
    * Test
    * Test
-1. matrix2model/ #extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore):
+1. matrix2model/ <ins>Extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore)</ins>:
    * Test
    * Test
    * Test
-2. expandModel/ #expand draft (only iMAT) by adding literature curated and nutrient media constraints.
+2. expandModel/ <ins>Expand draft (only iMAT) by adding literature curated and nutrient media constraints</ins>.
    * Test
    * Test
    * Test
-3. analyzeModel/ #analyze models using FVA & MTA to identify reactions disrupted in BD, BD_R & BD_NR.
+3. analyzeModel/ <ins>Analyze models using FVA & MTA to identify reactions disrupted in BD, BD_R & BD_NR</ins>.
    * Test
    * Test
    * Test
-4. modelComparison/ #compare model statistics:
+4. modelComparison/ <ins>Compare model statistics</ins>:
    * Test
    * Test
    * Test
-5. generateFigures/ #generate figures for manuscript
+5. generateFigures/ <ins>Generate figures for manuscript</ins>:
    * Test
    * Test
    * Test
