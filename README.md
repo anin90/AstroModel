@@ -26,16 +26,19 @@ Directory names can be changed in the [configuration](#configuration) file
 ````````````
 1.matrix2model/	#extract draft models using MEMs
 
-    1.Zhang/
+    1.Zhang/  (#v12 implements the method described in manuscript)
 		* v12/abs/
-			* GSE73721_HMA_CTX.mat
-			* matrix2models_abs.m
+			* GSE73721_HMA_CTX.mat (ExpressionMatrix) #data
+			* matrix2models_abs.m (MEMs_fpkm_abs) #code
+			* matrix2models_abs_v12.mat (Models_fpkm_abs) #output
 		* v12/norm_t1/
-			* GSE73721_HMA_CTX.mat
-			* matrix2models_norm_t1.m
+			* GSE73721_HMA_CTX.mat (ExpressionMatrix) #data
+			* matrix2models_norm_t1.m (MEMs_fpkm_abs) #code
+			* matrix2models_norm_t1_v12.mat (Models_fpkm_norm_t1) #output	
 		* v12/norm_t2/
-			* GSE73721_HMA_CTX.mat
-			* matrix2models_norm_t2.m
+			* GSE73721_HMA_CTX.mat (ExpressionMatrix) #data
+			* matrix2models_norm_t2.m (MEMs_fpkm_abs) #code
+			* matrix2models_norm_t2_v12.mat (Models_fpkm_norm_t1) #output
 			
     2.Vadodaria/
     
