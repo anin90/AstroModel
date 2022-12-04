@@ -1,6 +1,6 @@
 # AstroModel
 This pipeline implements the method described in 
-[IDENTIFYING METABOLIC FLUXES ASSOCIATED WITH LITHIUM RESPONSE IN BIPOLAR DISORDER](file:///home/anirudh/Downloads/3.-Identifying-Metabolic_Anirudh-S.-Chellappa-Abstract_GBDS_2022.pdf), 
+[IDENTIFYING METABOLIC FLUXES ASSOCIATED WITH LITHIUM RESPONSE IN BIPOLAR DISORDER](https://gbds2022.com/wp-content/uploads/2022/10/3.-Identifying-Metabolic_Anirudh-S.-Chellappa-Abstract_GBDS_2022.pdf),
 This pipeline runs on a Linux machine only.
 
 ## Requirements
