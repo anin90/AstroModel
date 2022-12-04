@@ -25,7 +25,8 @@ This pipeline implements the method described in
 ````````````
 1.matrix2model/	#extract draft models using MEMs
 
-    1.Zhang/  (#v12 implements the method described in manuscript)
+    1.Zhang/ 
+		(#v12 implements the method described in manuscript)
 		* v12/abs/
 			* GSE73721_HMA_CTX.mat (ExpressionMatrix) #data
 			* matrix2models_abs.m (MEMs_fpkm_abs) #code
@@ -39,7 +40,8 @@ This pipeline implements the method described in
 			* matrix2models_norm_t2.m (MEMs_fpkm_abs) #code
 			* matrix2models_norm_t2_v12.mat (Models_fpkm_norm_t1) #output
 			
-    2.Vadodaria/ (#v3 implements the method described in manuscript)
+    2.Vadodaria/
+		(#v3 implements the method described in manuscript)
 		(Below mentioned only for "Control_Untreated". Data & codes for 
 		"BD_Untreated", "BD_Responder_Untreated" and "BD_NonResponder_Untreated" 
 		are available under 2.Vadodaria/)
