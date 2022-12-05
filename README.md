@@ -53,10 +53,24 @@ cd AstroModel/
 ```
 
 ### 3. analyzeModel/ - <ins>Identifying disrupted reactions & subSystems in BD.</ins>.
-   * Test
-   * Test
-   * Test
-   
+ ```
+## getRxns disrupted in BD-lumped, BD-responders and BD-nonResponders: 
+		run AstroModel/3.analyzeModel/1.Vadodaria/FSr_Ctrl/analyzeCtrl.m
+		run AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/analyzeBD.m
+		run AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/annotateRxnSubsystems.m
+
+## rxn filtering criteria and rxn set enrichment analysis (RSEA):	('xxx' - abs/norm_t1/norm_t2)	
+	#FVA:
+		Rscript AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/sliceImportantDisruptions_xxx.R
+		run AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/annotateImportantDisruptions_xxx.m
+		Rscript AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/identifyFdrSignificantDisruptions_xxx.R
+		run AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/annotateFinalTable_xxx.m
+		Rscript AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/plotFinalTable_xxx.R
+	#MTA:
+		 run AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/runMTA.m
+		 Rscript AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/analyzeMTAscores_xxx.R
+```
+ 
 ### 4. modelComparison/ - <ins>Compare model statistics</ins>.
    * Test
    * Test
