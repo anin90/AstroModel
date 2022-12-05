@@ -56,7 +56,7 @@ cd AstroModel/
 [T,rxnAbsent] = Test4CuratedRxns(model, filename)
 ```
 
-### 3. analyzeModel/ - <ins>Identifying disrupted reactions & subSystems in BD metabolic models.</ins>.
+### 3. analyzeModel/ - <ins>Identifying disrupted reactions & subSystems in BD.</ins>.
    * Test
    * Test
    * Test
