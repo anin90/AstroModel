@@ -56,14 +56,14 @@ cd AstroModel/
 
 <ins>Vadodaria</ins>:
    * Run FVA & MTA to identify reactions disrupted in "BD-lumped", "BD-Responders" and "BD-NonResponders":
-		   ```
-		#FVA:
-			run AstroModel/3.analyzeModel/1.Vadodaria/FSr_Ctrl/analyzeCtrl.m
-			run AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/analyzeBD.m
-			run AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/annotateRxnSubsystems.m
-		#MTA:
-			 run AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/runMTA.m
-	   ```
+```
+	#FVA:
+		run AstroModel/3.analyzeModel/1.Vadodaria/FSr_Ctrl/analyzeCtrl.m
+		run AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/analyzeBD.m
+		run AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/annotateRxnSubsystems.m
+	#MTA:
+		 run AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/runMTA.m
+ ```
 ## Filtering reactions relavant to phenotype-of-interest and 
 ## Reaction-set enrichment analysis (RSEA),
 ## ('xxx' - abs/norm_t1/norm_t2)	
