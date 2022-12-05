@@ -3,18 +3,22 @@ This pipeline implements the method described in [this manuscript](https://anin9
 
 ## Requirements:
 1. MATLAB (R2015b+):
-   * Gurobi optimizer ()
-   * COBRA Toolbox (v3.0)
+   * [Gurobi optimizer](https://www.gurobi.com/downloads/licenses/) (obtain license)
+	   ```shell
+	   cd /opt/gurobi9.5.2_linux64/gurobi952
+	   ./grbgetkey "licenseID"
+		```
+   * [COBRA Toolbox (v3.0)](https://opencobra.github.io/cobratoolbox/stable/installation.html)
    * [Metabolic Transformation Algorithm (MTA)](https://github.com/ImNotaGit/MTA)
 2. R (3.6.3+):
    * pacman ()
-   ```r
-   ## check for missing required packages, install them.
-   pacman::p_load(affy, pheatmap, RColorBrewer, dplyr, tidyverse, annotate, rat2302.db, mouse4302.db, homologene, 
-		readxl, oligo, limma, mogene20sttranscriptcluster.db, qvalue, GEOquery, tidyr, tibble, splitstackshape, gplots, 
-		ggplot2, ggfortify, reshape2, factoextra, plot.matrix, VennDiagram, ggvenn, plotrix, pheatmap, magrittr, venn, 
-		mgsub, gsubfn, readxl, openxlsx, UpSetR, qvalue, GEOquery, TeachingDemos, sm, org.Hs.eg.db, data.table)
-	```						
+	   ```r
+	   ## check for missing required packages, install them.
+	   pacman::p_load(affy, pheatmap, RColorBrewer, dplyr, tidyverse, annotate, rat2302.db, mouse4302.db, homologene, 
+			readxl, oligo, limma, mogene20sttranscriptcluster.db, qvalue, GEOquery, tidyr, tibble, splitstackshape, gplots, 
+			ggplot2, ggfortify, reshape2, factoextra, plot.matrix, VennDiagram, ggvenn, plotrix, pheatmap, magrittr, venn, 
+			mgsub, gsubfn, readxl, openxlsx, UpSetR, qvalue, GEOquery, TeachingDemos, sm, org.Hs.eg.db, data.table)
+		```						
 4. NGS analysis tools: 
    * FastQC ()
    * Cutadapt ()
