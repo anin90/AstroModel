@@ -54,35 +54,37 @@ cd AstroModel/
 
 ### 3. analyzeModel/ - <ins>Identifying disrupted reactions & subSystems in BD.</ins>.
 
-<ins>Vadodaria</ins>:
    * Run FVA & MTA to identify reactions disrupted in "BD-lumped", "BD-Responders" and "BD-NonResponders":
 ```
-	#FVA:
-		run AstroModel/3.analyzeModel/1.Vadodaria/FSr_Ctrl/analyzeCtrl.m
-		run AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/analyzeBD.m
-		run AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/annotateRxnSubsystems.m
-	#MTA:
-		 run AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/runMTA.m
+#FVA:
+	run AstroModel/3.analyzeModel/1.Vadodaria/FSr_Ctrl/analyzeCtrl.m
+	run AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/analyzeBD.m
+	run AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/annotateRxnSubsystems.m
+#MTA:
+	run AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/runMTA.m
  ```
-## Filtering reactions relavant to phenotype-of-interest and 
-## Reaction-set enrichment analysis (RSEA),
-## ('xxx' - abs/norm_t1/norm_t2)	
-	#FVA:
-		Rscript AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/sliceImportantDisruptions_xxx.R
-		run AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/annotateImportantDisruptions_xxx.m
-		Rscript AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/identifyFdrSignificantDisruptions_xxx.R
-		run AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/annotateFinalTable_xxx.m
-		Rscript AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/plotFinalTable_xxx.R
-	#MTA:
-		 Rscript AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/analyzeMTAscores_xxx.R
 
-## Identifying disruptions that are significant across modules.
-		 run AstroModel/3.analyzeModel/3.DataOverlays/generateDataOverlays.m
-		 Rscript  AstroModel/3.analyzeModel/3.DataOverlays/plotDataOverlays.R 
-		 run  AstroModel/3.analyzeModel/3.DataOverlays/annotateDataOverlays.m 
-		 Rscript  AstroModel/3.analyzeModel/3.DataOverlays/filterDataOverlays.R 
+   * Filtering reactions relavant to phenotype-of-interest and Reaction-set enrichment analysis (RSEA). 
 ```
- 
+## ('xxx' - abs/norm_t1/norm_t2)	
+#FVA:
+	Rscript AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/sliceImportantDisruptions_xxx.R
+	run AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/annotateImportantDisruptions_xxx.m
+	Rscript AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/identifyFdrSignificantDisruptions_xxx.R
+	run AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/annotateFinalTable_xxx.m
+	Rscript AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/plotFinalTable_xxx.R
+#MTA:
+	Rscript AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/analyzeMTAscores_xxx.R
+```
+
+   * Identifying disruptions that are significant across modules.
+```
+	run AstroModel/3.analyzeModel/3.DataOverlays/generateDataOverlays.m
+	Rscript  AstroModel/3.analyzeModel/3.DataOverlays/plotDataOverlays.R
+	run  AstroModel/3.analyzeModel/3.DataOverlays/annotateDataOverlays.m
+	Rscript  AstroModel/3.analyzeModel/3.DataOverlays/filterDataOverlays.R 
+```
+
 ### 4. modelComparison/ - <ins>Compare model statistics</ins>.
    * Test
    * Test
