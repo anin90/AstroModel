@@ -51,8 +51,10 @@ cd AstroModel/
 #FVA:
 	cd 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
 	run analyzeCtrl.m
+	
 	cd 3.analyzeModel/1.Vadodaria/FSr_BD/
 	run analyzeBD.m
+	
 	cd 3.analyzeModel/Annotations/AnnotateRxnSubsystems/
 	run annotateRxnSubsystems.m
 #MTA:
