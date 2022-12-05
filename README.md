@@ -47,7 +47,7 @@ cd AstroModel/
 [modelStats] = printModelStats(model, expMat)
 ```
 
-### 2. expandModel/ - <ins>Expansion of draft models (only iMAT)</ins>.
+### 2. expandModel/ - <ins>Expansion of draft models</ins>.
 ```matlab
 # test
 [model_EXP_Unconstrained, fluxInconsistentRxns_non_media, model_EXP_Constrained, fluxInconsistentRxns_media] = expandModel_Primary(model)
