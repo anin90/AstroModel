@@ -47,13 +47,17 @@ cd AstroModel/
 ### 3. analyzeModel/ - <ins>Identifying disrupted reactions & subSystems in BD.</ins>
 
    * Run FVA & MTA to identify reactions disrupted in "BD-lumped", "BD-Responders" and "BD-NonResponders".
-```
+```matlab
 #FVA:
-	run 3.analyzeModel/1.Vadodaria/FSr_Ctrl/analyzeCtrl.m
-	run 3.analyzeModel/1.Vadodaria/FSr_BD/analyzeBD.m
-	run 3.analyzeModel/Annotations/AnnotateRxnSubsystems/annotateRxnSubsystems.m
+	cd 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
+	run analyzeCtrl.m
+	cd 3.analyzeModel/1.Vadodaria/FSr_BD/
+	run analyzeBD.m
+	cd 3.analyzeModel/Annotations/AnnotateRxnSubsystems/
+	run annotateRxnSubsystems.m
 #MTA:
-	run 3.analyzeModel/1.Vadodaria/MTA_BD/runMTA.m
+	cd 3.analyzeModel/1.Vadodaria/MTA_BD/
+	run runMTA.m
  ```
 
    * Filtering reactions relavant to phenotype-of-interest and Reaction-set enrichment analysis (RSEA). 
