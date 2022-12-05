@@ -78,7 +78,7 @@ cd AstroModel/
 ```
 
    * Identifying disruptions that are significant across modules.
-```
+```matlab
 	cd 3.analyzeModel/3.DataOverlays/
 	run generateDataOverlays.m
 	Rscript plotDataOverlays.R
