@@ -25,10 +25,10 @@ This pipeline implements the method described in [this manuscript](https://anin9
 
 ## Running instructions:
 ### Clone this repository:
-		```shell
-		git clone https://github.com/anin90/AstroModel
-		cd AstroModel/
-		```
+```shell
+git clone https://github.com/anin90/AstroModel
+cd AstroModel/
+```
 ### 0. prepareExpressionMatrix/ - <ins>Pre-processing and QC of transcriptomes</ins>.
    * Test
    * Test
