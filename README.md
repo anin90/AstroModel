@@ -63,24 +63,27 @@ cd AstroModel/
  ```
 
    * Filtering reactions relavant to phenotype-of-interest and Reaction-set enrichment analysis (RSEA). 
-```
+```matlab
 ## ('xxx' - abs/norm_t1/norm_t2)	
 #FVA:
-	Rscript 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/sliceImportantDisruptions_xxx.R
-	run 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/annotateImportantDisruptions_xxx.m
-	Rscript 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/identifyFdrSignificantDisruptions_xxx.R
-	run 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/annotateFinalTable_xxx.m
-	Rscript 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/plotFinalTable_xxx.R
+	cd 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/
+	Rscript sliceImportantDisruptions_xxx.R
+	run annotateImportantDisruptions_xxx.m
+	Rscript identifyFdrSignificantDisruptions_xxx.R
+	run PlotResults/annotateFinalTable_xxx.m
+	Rscript plotFinalTable_xxx.R
 #MTA:
-	Rscript 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/analyzeMTAscores_xxx.R
+	cd 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/
+	Rscript analyzeMTAscores_xxx.R
 ```
 
    * Identifying disruptions that are significant across modules.
 ```
-	run 3.analyzeModel/3.DataOverlays/generateDataOverlays.m
-	Rscript 3.analyzeModel/3.DataOverlays/plotDataOverlays.R
-	run 3.analyzeModel/3.DataOverlays/annotateDataOverlays.m
-	Rscript 3.analyzeModel/3.DataOverlays/filterDataOverlays.R 
+	cd 3.analyzeModel/3.DataOverlays/
+	run generateDataOverlays.m
+	Rscript plotDataOverlays.R
+	run annotateDataOverlays.m
+	Rscript filterDataOverlays.R 
 ```
 
 ### 4. modelComparison/ - <ins>Compare model statistics</ins>.
