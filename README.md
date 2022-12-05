@@ -38,9 +38,9 @@ cd AstroModel/
    * Test
    * Test
 1. matrix2model/ - <ins>Integration of phenotype-specific transcriptomes with Recon3D</ins>.
-	   ```matlab
-	   [iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_abs(filename)
-		```
+```matlab
+[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_abs(filename)
+```
    * Test
 	   ```matlab
 	   [modelStats] = printModelStats(model, expMat)
