@@ -35,22 +35,14 @@ cd AstroModel/
    * Test
    
 ### 1. matrix2model/ - <ins>Integration of phenotype-specific transcriptomes with Recon3D</ins>.
-```matlab
-# test
-[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_abs(filename)
-
-# test
-[modelStats] = printModelStats(model, expMat)
-```
+   * Test
+   * Test
+   * Test
 
 ### 2. expandModel/ - <ins>Expansion of draft models</ins>.
-```matlab
-# test
-[model_EXP_Unconstrained, fluxInconsistentRxns_non_media, model_EXP_Constrained, fluxInconsistentRxns_media] = expandModel_Primary(model)
-
-# test
-[T,rxnAbsent] = Test4CuratedRxns(model, filename)
-```
+   * Test
+   * Test
+   * Test
 
 ### 3. analyzeModel/ - <ins>Identifying disrupted reactions & subSystems in BD.</ins>.
 
