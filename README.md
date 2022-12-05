@@ -46,7 +46,7 @@ cd AstroModel/
 
 ### 3. analyzeModel/ - <ins>Identifying disrupted reactions & subSystems in BD.</ins>.
 
-   * Run FVA & MTA to identify reactions disrupted in "BD-lumped", "BD-Responders" and "BD-NonResponders":
+   * Run FVA & MTA to identify reactions disrupted in "BD-lumped", "BD-Responders" and "BD-NonResponders".
 ```
 #FVA:
 	run 3.analyzeModel/1.Vadodaria/FSr_Ctrl/analyzeCtrl.m
@@ -72,9 +72,9 @@ cd AstroModel/
    * Identifying disruptions that are significant across modules.
 ```
 	run 3.analyzeModel/3.DataOverlays/generateDataOverlays.m
-	Rscript  3.analyzeModel/3.DataOverlays/plotDataOverlays.R
-	run  3.analyzeModel/3.DataOverlays/annotateDataOverlays.m
-	Rscript  3.analyzeModel/3.DataOverlays/filterDataOverlays.R 
+	Rscript 3.analyzeModel/3.DataOverlays/plotDataOverlays.R
+	run 3.analyzeModel/3.DataOverlays/annotateDataOverlays.m
+	Rscript 3.analyzeModel/3.DataOverlays/filterDataOverlays.R 
 ```
 
 ### 4. modelComparison/ - <ins>Compare model statistics</ins>.
