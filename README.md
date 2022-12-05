@@ -19,20 +19,16 @@ This pipeline implements the method described in [this manuscript](https://anin9
 			ggplot2, ggfortify, reshape2, factoextra, plot.matrix, VennDiagram, ggvenn, plotrix, pheatmap, magrittr, venn, 
 			mgsub, gsubfn, readxl, openxlsx, UpSetR, qvalue, GEOquery, TeachingDemos, sm, org.Hs.eg.db, data.table)
 		```						
-4. NGS analysis tools: 
-   * FastQC ()
-   * Cutadapt ()
-   * HISAT2 ()
-   * Samtools ()
-   * Cufflinks ()
+4. NGS analysis tools: FastQC (), Cutadapt (), HISAT2 (), Samtools (), Cufflinks ()
+
 5. ~5 GB space, and more space will be required depending on the number of models that are built
 
 ## Running instructions:
 ### Clone this repository:
-```shell
-git clone https://github.com/anin90/AstroModel
-cd AstroModel/
-```
+		```shell
+		git clone https://github.com/anin90/AstroModel
+		cd AstroModel/
+		```
 ### 0. prepareExpressionMatrix/ - <ins>Pre-processing and QC of transcriptomes</ins>.
    * Test
    * Test
