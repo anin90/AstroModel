@@ -44,7 +44,7 @@ cd AstroModel/
    * Test
    * Test
 
-### 3. analyzeModel/ - <ins>Identifying disrupted reactions & subSystems in BD.</ins>.
+### 3. analyzeModel/ - <ins>Identifying disrupted reactions & subSystems in BD.</ins>
 
    * Run FVA & MTA to identify reactions disrupted in "BD-lumped", "BD-Responders" and "BD-NonResponders".
 ```
