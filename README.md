@@ -8,10 +8,13 @@ This pipeline implements the method described in [this manuscript](https://anin9
    * [Metabolic Transformation Algorithm (MTA)](https://github.com/ImNotaGit/MTA)
 2. R (3.6.3+):
    * pacman ()
-   * pacman::p_load(affy, pheatmap, RColorBrewer, dplyr, tidyverse, annotate, rat2302.db, mouse4302.db, homologene, 
+   ```r
+   ## check for missing required packages, install them.
+   pacman::p_load(affy, pheatmap, RColorBrewer, dplyr, tidyverse, annotate, rat2302.db, mouse4302.db, homologene, 
 							readxl, oligo, limma, mogene20sttranscriptcluster.db, qvalue, GEOquery, tidyr, tibble, splitstackshape, gplots, 
 							ggplot2, ggfortify, reshape2, factoextra, plot.matrix, VennDiagram, ggvenn, plotrix, pheatmap, magrittr, venn, 
 							mgsub, gsubfn, readxl, openxlsx, UpSetR, qvalue, GEOquery, TeachingDemos, sm, org.Hs.eg.db, data.table)
+	```						
 4. NGS analysis tools: 
    * FastQC ()
    * Cutadapt ()
