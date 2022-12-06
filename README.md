@@ -89,7 +89,7 @@ cd AstroModel/
 ```matlab
 	## Output colnames: 'model_ID', 'modelMets', 'modelRxns', 'modelGenes', 'fluxInconsistentRxns',
 	## Output colnames: 'coreRxns', 'overlapCoreRxns', 'overlapCoreRxnsPrct', 'astroModelLewisRxns',
-	## Output colnames: 'overlapLewis', overlapLewisPrct'
+	## Output colnames: 'overlapLewis', 'overlapLewisPrct'
 	
 	cd 1.matrix2model/
 	run generateModelStatsMatrix.m
