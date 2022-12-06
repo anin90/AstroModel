@@ -40,11 +40,13 @@ cd AstroModel/
 ## (replace 'xxx' with 'abs' (or) 'norm_t1' (or) 'norm_t2', 
 ##  to generate results for the respective models)	
 
+## Zhang
 	## Zhang: Primary_astrocyte
 	## Input 'filename': expressionMatrix (i.e., GSE73721_HMA_CTX.mat)
 		cd  1.matrix2model/1.Zhang/v12/xxx/
 		[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx(filename)
 		
+## Vadodaria
 	## Vadodaria: iPS_Ctrl
 	## Input 'filename': expressionMatrix (i.e., Vadodaria_Control_Untreated.mat)
 		cd  1.matrix2model/2.Vadodaria/1.Control_Untreated/v3/xxx/
@@ -65,6 +67,7 @@ cd AstroModel/
 		cd  1.matrix2model/2.Vadodaria/4.BD_NonResponder_Untreated/v3/xxx/
 		[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx_vadodaria(filename)
 	
+## Koskuvi
 	## Koskuvi: Healthy Control
 	## Input 'filename': expressionMatrix (i.e., Koskuvi_Control.mat)
 		cd  1.matrix2model/3.Koskuvi/1.Control/v1/xxx/
