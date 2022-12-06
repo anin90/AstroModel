@@ -87,7 +87,12 @@ cd AstroModel/
 ```
    * Generate model statistics
 ```matlab
-
+	## Output colnames: 'model_ID', 'modelMets', 'modelRxns', 'modelGenes', 'fluxInconsistentRxns',
+	## Output colnames: 'coreRxns', 'overlapCoreRxns', 'overlapCoreRxnsPrct', 'astroModelLewisRxns',
+	## Output colnames: 'overlapLewis', overlapLewisPrct'
+	
+	cd 1.matrix2model/
+	run generateModelStatsMatrix.m
 ```
 
 ### 2. expandModel/ - <ins>Expansion of draft models</ins>.
