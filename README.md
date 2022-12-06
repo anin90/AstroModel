@@ -64,7 +64,8 @@ cd AstroModel/
 
    * Filtering reactions relavant to phenotype-of-interest and Reaction-set enrichment analysis (RSEA). 
 ```matlab
-## ('xxx' - abs/norm_t1/norm_t2)	
+## (replace 'xxx' with 'abs' (or) 'norm_t1' (or) 'norm_t2', 
+##  to generate results for the respective models)	
 #FVA:
 	cd 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/
 	Rscript sliceImportantDisruptions_xxx.R
