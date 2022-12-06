@@ -87,9 +87,11 @@ cd AstroModel/
 ```
    * Generate model statistics
 ```matlab
-	## Output colnames: 'model_ID', 'modelMets', 'modelRxns', 'modelGenes', 'fluxInconsistentRxns',
-	## Output colnames: 'coreRxns', 'overlapCoreRxns', 'overlapCoreRxnsPrct', 'astroModelLewisRxns',
-	## Output colnames: 'overlapLewis', 'overlapLewisPrct'
+	## Generate model statistics for all draft models 
+	## Output: 1.matrix2model/modelStatsMatFiles/modelStatsMatSol_YYY.csv (YYY: phenotype)
+	## Output colname: 'model_ID', 'modelMets', 'modelRxns', 'modelGenes', 'fluxInconsistentRxns',
+	## Output colname: 'coreRxns', 'overlapCoreRxns', 'overlapCoreRxnsPrct', 'astroModelLewisRxns',
+	## Output colname: 'overlapLewis', 'overlapLewisPrct'
 	
 	cd 1.matrix2model/
 	run generateModelStatsMatrix.m
