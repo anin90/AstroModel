@@ -45,12 +45,40 @@ cd AstroModel/
 		cd  1.matrix2model/1.Zhang/v12/xxx/
 		[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx(filename)
 		
-	#Vadodaria: iPS_Ctrl
+	## Vadodaria: iPS_Ctrl
 	## Input 'filename': expressionMatrix (i.e., Vadodaria_Control_Untreated.mat)
-		cd  1.matrix2model/1.Zhang/v12/xxx/
-		[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx(filename)
+		cd  1.matrix2model/2.Vadodaria/1.Control_Untreated/v3/xxx/
+		[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx_vadodaria(filename)
+
+	## Vadodaria: iPS_BD
+	## Input 'filename': expressionMatrix (i.e., Vadodaria_BD_Untreated.mat)
+		cd  1.matrix2model/2.Vadodaria/2.BD_Untreated/v3/xxx/
+		[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx_vadodaria(filename)
+
+	## Vadodaria: iPS_BD_R
+	## Input 'filename': expressionMatrix (i.e., Vadodaria_BD_Untreated_Responder.mat)
+		cd  1.matrix2model/2.Vadodaria/3.BD_Responder_Untreated/v3/xxx/
+		[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx_vadodaria(filename)
+
+	## Vadodaria: iPS_BD_NR
+	## Input 'filename': expressionMatrix (i.e., Vadodaria_BD_Untreated_NonResponder.mat)
+		cd  1.matrix2model/2.Vadodaria/4.BD_NonResponder_Untreated/v3/xxx/
+		[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx_vadodaria(filename)
 	
-#Koskuvi:
+	## Koskuvi: Healthy Control
+	## Input 'filename': expressionMatrix (i.e., Koskuvi_Control.mat)
+		cd  1.matrix2model/3.Koskuvi/1.Control/v1/xxx/
+		[iMAT_model_TP] = matrix2models_xxx_koskuvi(filename)
+
+	## Koskuvi: Healthy Twin
+	## Input 'filename': expressionMatrix (i.e., Koskuvi_HT.mat)
+		cd  1.matrix2model/3.Koskuvi/2.HT/v1/xxx/
+		[iMAT_model_TP] = matrix2models_xxx_koskuvi(filename)
+
+	## Koskuvi: Schiz Twin
+	## Input 'filename': expressionMatrix (i.e., Koskuvi_ST.mat)
+		cd  1.matrix2model/3.Koskuvi/3.ST/v1/xxx/
+		[iMAT_model_TP] = matrix2models_xxx_koskuvi(filename)
 
 ```
    * Generate model statistics
