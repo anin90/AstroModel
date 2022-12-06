@@ -35,9 +35,28 @@ cd AstroModel/
    * Test
    
 ### 1. matrix2model/ - <ins>Integration of phenotype-specific transcriptomes with Recon3D</ins>.
-   * Test
-   * Test
-   * Test
+   * Extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore)
+```matlab
+## (replace 'xxx' with 'abs' (or) 'norm_t1' (or) 'norm_t2', 
+##  to generate results for the respective models)	
+
+	## Zhang: Primary_astrocyte
+	## Input 'filename': expressionMatrix (i.e., GSE73721_HMA_CTX.mat)
+		cd  1.matrix2model/1.Zhang/v12/xxx/
+		[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx(filename)
+		
+	#Vadodaria: iPS_Ctrl
+	## Input 'filename': expressionMatrix (i.e., Vadodaria_Control_Untreated.mat)
+		cd  1.matrix2model/1.Zhang/v12/xxx/
+		[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx(filename)
+	
+#Koskuvi:
+
+```
+   * Generate model statistics
+```matlab
+
+```
 
 ### 2. expandModel/ - <ins>Expansion of draft models</ins>.
    * Test
