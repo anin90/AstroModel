@@ -90,6 +90,7 @@ cd AstroModel/
    * Generate model statistics
 ```matlab
 ## Generate model statistics for all draft models:
+## script: generateModelStatsMatrix.m
 ## Output dir: 1.matrix2model/modelStatsMatFiles/
 ## Output filename: modelStatsMatSol_YYY.csv (YYY: phenotype)
 ## Output colname: 'model_ID', 'modelMets', 'modelRxns', 'modelGenes', 'fluxInconsistentRxns',
@@ -110,10 +111,11 @@ cd AstroModel/
    * Run FVA & MTA to identify reactions disrupted in "BD-lumped", "BD-Responders" and "BD-NonResponders".
 ```matlab
 # Print 'rxnID' & 'subSystems' for each model:
+## script: annotateRxnSubsystems.m
 ## Output dir: 3.analyzeModel/Annotations/AnnotateRxnSubsystems/
 ## Output filename: Rxns_model_xxx.csv
-## where 'model' ~ Primary_Ctrl, iPS_Ctrl, iPS_BD, iPS_BD_R, iPS_BD_NR
-## where 'xxx' ~ abs (or) norm_t1 (or) norm_t2
+## where 'model' ~ Primary_Ctrl/iPS_Ctrl/iPS_BD/iPS_BD_R/iPS_BD_NR
+## where 'xxx' ~ abs/norm_t1/norm_t2
 ## Output colname: 'Rxn', 'SubSystem'
 	
 	cd 3.analyzeModel/Annotations/AnnotateRxnSubsystems/
@@ -123,21 +125,25 @@ cd AstroModel/
 ## Run FVA & identify rxns with 
 ## FSr >1.5 & <0.8 between iPS-Ctrl & Primary_Ctrl models, and those
 ## Unchanged between iPS-Ctrl & Primary_Ctrl model,
+## script: analyzeCtrl.m
 ## Output dir: 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
 ## Output filename: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_Primary_TP_xxx.csv (iPS-Ctrl vs Primary-Ctrl)
 ## Output filename: UnChanged_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_Primary_TP_xxx.csv (iPS-Ctrl vs Primary-Ctrl)
 ## Output filename: iAstro_FluxDiff_iPSCtrl_vs_Primary.mat
+## Output colname: 'm' (i.e., 'rxnID')
 	
 	cd 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
 	run analyzeCtrl.m
 
 ## Run FVA & identify rxns with FSr >1.5 & <0.8 
 ## between IPS-Ctrl & (IPS-Ctrl-BD; IPS-Ctrl-BD_R; BD_NR):
+## script: analyzeBD.m
 ## Output dir: 3.analyzeModel/1.Vadodaria/FSr_BD/
 ## Output filename: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_TP_xxx.csv (iPS-Ctrl vs iPS-BD)
 ## Output filename: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_R_TP_xxx.csv (iPS-Ctrl vs iPS-BD_R)
 ## Output filename: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_NR_TP_xxx.csv (iPS-Ctrl vs iPS-BD_NR)
 ## Output filename: iAstro_FluxDiff_BD.mat
+## Output colname: 'm' (i.e., 'rxnID')
 	
 	cd 3.analyzeModel/1.Vadodaria/FSr_BD/
 	run analyzeBD.m
@@ -150,6 +156,7 @@ cd AstroModel/
 ## For either runs, the top 20% predictions were first identified, 
 ## and subsequently their union set were considered 
 ## for downstream analysis.
+## script: runMTA.m
 ## Output dir: 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_xxx/
 ## Output filename: Vadodaria_Ctrl_to_BD_a.csv (Ctrl_to_BD) (ignore files with '_b')
 ## Output filename: Vadodaria_BD_to_Ctrl_a.csv (BD_to_Ctrl) (ignore files with '_b')
@@ -162,10 +169,19 @@ cd AstroModel/
 
    * Filtering reactions relavant to phenotype-of-interest and Reaction-set enrichment analysis (RSEA). 
 ```matlab
-## where 'xxx' ~ abs (or) norm_t1 (or) norm_t2
+## where 'xxx' ~ abs/norm_t1/norm_t2
 
 #FVA:
-	
+## script: sliceImportantDisruptions_xxx.R
+## script: annotateImportantDisruptions_xxx.m
+## script: identifyFdrSignificantDisruptions_xxx.R
+## script: annotateFinalTable_xxx.m
+## Output dir: 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_xxx/
+## Output filename: *_rxns_fdr_xxx.csv (*bd_lumped/bd_r/bd_nr)
+## Output filename: *_subSystem_fdr_xxx.csv (*bd_lumped/bd_r/bd_nr)
+## Output colname: 'rxnList', 'subSystem', 'GPR', 'Fluxspan_a', 'Fluxspan_b'
+## Output colname: 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'Localization', 'RxnFormula'
+ 	
 	cd 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/
 	Rscript sliceImportantDisruptions_xxx.R
 	run annotateImportantDisruptions_xxx.m
