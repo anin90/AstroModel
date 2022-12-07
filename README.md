@@ -193,6 +193,7 @@ cd AstroModel/
 ## script-3: identifyFdrSignificantDisruptions_xxx.R
 ## script-4: annotateFinalTable_xxx.m
 ## script-5: plotFinalTable_xxx.R
+## replace 'xxx' with abs/norm_t1/norm_t2, to generate results for the respective models.
 ## Output-dir-1: 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_xxx/
 ## Output-dir-2: 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_xxx/
 ## Output-dir-2 filename-1: *_rxns_fdr_xxx.csv
@@ -216,16 +217,16 @@ cd AstroModel/
 ## Run reaction-set enrichment analysis (RSEA),
 ## Keep subsystems (& rxns) with fdr.p.value<0.05:
 ## script: analyzeMTAscores_xxx.R
-## Output-dir-1: 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_xxx
-## Output-dir-2: 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_all_xxx
-## Output-dir-3: 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_xxx
-## Output-dir-4: 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_xxx
-## Output-dir-4 filename-1: *_rxns_fdr_xxx.csv
-## Output-dir-4 filename-2: *_subSystem_fdr_xxx.csv
+## replace 'xxx' with abs/norm_t1/norm_t2, to generate results for the respective models.
+## Output-dir-1: 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_all_xxx
+## Output-dir-2: 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_xxx
+## Output-dir-3: 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_xxx
+## Output-dir-3 filename-1: *_rxns_fdr_xxx.csv
+## Output-dir-3 filename-2: *_subSystem_fdr_xxx.csv
 ## where * ~ bd_lumped/bd_r/bd_nr
 ## where 'xxx' ~ abs/norm_t1/norm_t2
-## Output-dir-4 filename-1 colname: 'del_rxnID_KO', 'prctile_^', 'subSystem_^',
-## Output-dir-4 filename-1 colname: 'prctile_^', 'MetabolicUnits_^', 'Localization_^',
+## Output-dir-3 filename-1 colname: 'del_rxnID_KO', 'prctile_^', 'subSystem_^',
+## Output-dir-3 filename-1 colname: 'prctile_^', 'MetabolicUnits_^', 'Localization_^',
 ## where ^ ~ iPS-Ctrl (C); Primary-Ctrl (P); iPS-BD (B); iPS-BD-R (BR); iPS-BD-NR (BNR);
 ## e.g., 'bd_lumped_rxns_fdr.csv', consists the list of rxns whose knockout transformed 
 ## source state (iPS-Ctrl) to target state (iPS-BD).
