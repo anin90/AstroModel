@@ -123,9 +123,9 @@ cd AstroModel/
 ## FSr >1.5 & <0.8 between iPS-Ctrl & Primary_Ctrl models, and those
 ## Unchanged between iPS-Ctrl & Primary_Ctrl model,
 ## Output dir: 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
-## Output filename-1: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_Primary_TP_xxx.csv
-## Output filename-2: UnChanged_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_Primary_TP_xxx.csv
-## Output filename-3: iAstro_FluxDiff_iPSCtrl_vs_Primary.mat
+## Output filename: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_Primary_TP_xxx.csv (iPS-Ctrl vs Primary-Ctrl)
+## Output filename: <ins>UnChanged_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_Primary_TP_xxx.csv (iPS-Ctrl vs Primary-Ctrl)<ins>
+## Output filename: iAstro_FluxDiff_iPSCtrl_vs_Primary.mat
 	
 	cd 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
 	run analyzeCtrl.m
@@ -133,10 +133,10 @@ cd AstroModel/
 ## Run FVA & identify rxns with FSr >1.5 & <0.8 
 ## between IPS-Ctrl & (IPS-Ctrl-BD; IPS-Ctrl-BD_R; BD_NR):
 ## Output dir: 3.analyzeModel/1.Vadodaria/FSr_BD/
-## Output filename-1: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_TP_xxx.csv (iPS-Ctrl vs iPS-BD)
-## Output filename-2: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_R_TP_xxx.csv (iPS-Ctrl vs iPS-BD_R)
-## Output filename-3: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_NR_TP_xxx.csv (iPS-Ctrl vs iPS-BD_NR)
-## Output filename-4: iAstro_FluxDiff_BD.mat
+## Output filename: <ins>FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_TP_xxx.csv (iPS-Ctrl vs iPS-BD)<ins>
+## Output filename: <ins>FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_R_TP_xxx.csv (iPS-Ctrl vs iPS-BD_R)<ins>
+## Output filename: <ins>FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_NR_TP_xxx.csv (iPS-Ctrl vs iPS-BD_NR)<ins>
+## Output filename: iAstro_FluxDiff_BD.mat
 	
 	cd 3.analyzeModel/1.Vadodaria/FSr_BD/
 	run analyzeBD.m
