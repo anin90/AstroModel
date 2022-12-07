@@ -189,6 +189,7 @@ cd AstroModel/
 ## script-2: annotateImportantDisruptions_xxx.m
 ## script-3: identifyFdrSignificantDisruptions_xxx.R
 ## script-4: annotateFinalTable_xxx.m
+## script-5: plotFinalTable_xxx.R
 ## Output-dir-1: 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_xxx/
 ## Output-dir-2: 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_xxx/
 ## Output-dir-2 filename-1: *_rxns_fdr_xxx.csv
@@ -198,7 +199,7 @@ cd AstroModel/
 ## Output-dir-2 filename-1 colname: 'rxnList', 'subSystem', 'GPR', 'Fluxspan_a', 'Fluxspan_b'
 ## Output-dir-2 filename-1 colname: 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'Localization', 'RxnFormula'
 ## Output-dir-2 filename-2 colname: 'subSystem', 'n.x', 'n.y', 'p.val', 'p.val.fdr'
-## Total no. of output files: 42 (after running script.1-4)
+## Total no. of output files: 42 (after running script.1-5)
  	
 	cd 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/
 	Rscript sliceImportantDisruptions_xxx.R
