@@ -37,6 +37,7 @@ cd AstroModel/
 ### 1. matrix2model/ - <ins>Integration of phenotype-specific transcriptomes with Recon3D</ins>.
    * Extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore)
 ```matlab
+## Generate draft metabolic models for Zhang, Vadodaria and Koskuvi phenotypes. 
 ## Input 'filename': expressionMatrix
 ## Function: matrix2models_xxx()
 ## Output: draft models generated using MEMs (n=4).
@@ -90,7 +91,6 @@ cd AstroModel/
 ## Input 'filename': 'Koskuvi_ST.mat'
 	cd  1.matrix2model/3.Koskuvi/3.ST/v1/xxx/
 	[iMAT_model_TP] = matrix2models_xxx_koskuvi(filename)
-
 ```
    * Generate model statistics
 ```matlab
@@ -114,7 +114,7 @@ cd AstroModel/
 
 ### 3. analyzeModel/ - <ins>Identifying disrupted reactions & subSystems in BD.</ins>
 
-   * Run FVA & MTA to identify reactions disrupted in "BD-lumped", "BD-Responders" and "BD-NonResponders".
+   * Step-1: Run FVA & MTA to identify reactions disrupted in "BD-lumped", "BD-Responders" and "BD-NonResponders".
 ```matlab
 # Print 'rxnID' & 'subSystems' for each model:
 ## script: annotateRxnSubsystems.m
@@ -181,10 +181,13 @@ cd AstroModel/
 	run runMTA.m
  ```
 
-   * Filtering reactions relavant to phenotype-of-interest and Reaction-set enrichment analysis (RSEA). 
+   * Step-2: Filtering reactions relavant to phenotype-of-interest and Reaction-set enrichment analysis (RSEA). 
 ```matlab
 
 #FVA:
+## Filter reactions relavant to phenotype-of-interest (BD, BD_R, BD_NR),
+## Run reaction-set enrichment analysis (RSEA),
+## Keep subsystems (& rxns) with fdr.p.value<0.05:
 ## script-1: sliceImportantDisruptions_xxx.R
 ## script-2: annotateImportantDisruptions_xxx.m
 ## script-3: identifyFdrSignificantDisruptions_xxx.R
@@ -209,12 +212,29 @@ cd AstroModel/
 	Rscript plotFinalTable_xxx.R
 	
 #MTA:
+## Filter reactions relavant to phenotype-of-interest (BD, BD_R, BD_NR),
+## Run reaction-set enrichment analysis (RSEA),
+## Keep subsystems (& rxns) with fdr.p.value<0.05:
+## script: analyzeMTAscores_xxx.R
+## Output-dir-1: 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_xxx
+## Output-dir-2: 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_all_xxx
+## Output-dir-3: 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_xxx
+## Output-dir-4: 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_xxx
+## Output-dir-4 filename-1: *_rxns_fdr_xxx.csv
+## Output-dir-4 filename-2: *_subSystem_fdr_xxx.csv
+## where * ~ bd_lumped/bd_r/bd_nr
+## where 'xxx' ~ abs/norm_t1/norm_t2
+## Output-dir-4 filename-1 colname: 'del_rxnID_KO', 'prctile_^', 'subSystem_^',
+## Output-dir-4 filename-1 colname: 'prctile_^', 'MetabolicUnits_^', 'Localization_^',
+## where ^ ~ iPS-Ctrl (C); Primary-Ctrl (P); iPS-BD (B); iPS-BD-R (BR); iPS-BD-NR (BNR);
+## e.g., 'bd_lumped_rxns_fdr.csv', consists the list of rxns whose knockout transformed 
+## source state (iPS-Ctrl) to target state (iPS-BD).
 
 	cd 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/
 	Rscript analyzeMTAscores_xxx.R
 ```
 
-   * Identifying disruptions that are significant across modules.
+   * Step-3: Identifying disruptions that are significant across modules.
 ```matlab
 	cd 3.analyzeModel/3.DataOverlays/
 	run generateDataOverlays.m
