@@ -130,9 +130,9 @@ cd AstroModel/
 	run annotateRxnSubsystems.m
 	
 #FVA:
-## Run FVA & identify rxns with 
-## FSr >1.5 & <0.8 between iPS-Ctrl & Primary_Ctrl models, and those
-## Unchanged between iPS-Ctrl & Primary_Ctrl model,
+## Run FVA & identify rxns with FSr >1.5 & <0.8 
+## between iPS-Ctrl & Primary_Ctrl models, and those
+## Unchanged between iPS-Ctrl & Primary_Ctrl model:
 ## script: analyzeCtrl.m
 ## Output dir: 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
 ## Output filename: FSR_iAstro_model-1_TP_xxx_vs_iAstro_model-2_xxx.csv
