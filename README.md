@@ -35,7 +35,7 @@ cd AstroModel/
    * Test
    
 ### 1. matrix2model/ - <ins>Integration of phenotype-specific transcriptomes with Recon3D</ins>.
-   * Extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore)
+   * Step-1: Extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore)
 ```matlab
 ## Generate draft metabolic models for Zhang, Vadodaria and Koskuvi phenotypes. 
 ## Input 'filename': expressionMatrix
@@ -87,7 +87,7 @@ cd AstroModel/
 	cd  1.matrix2model/3.Koskuvi/3.ST/v1/xxx/
 	[iMAT_model_TP] = matrix2models_xxx_koskuvi(filename)
 ```
-   * Generate model statistics
+   * Step-2: Generate model statistics
 ```matlab
 ## Generate model statistics for all draft models:
 ## script: generateModelStatsMatrix.m
