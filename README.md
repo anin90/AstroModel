@@ -45,50 +45,45 @@ cd AstroModel/
 ##  to generate models for the respective fpkm thresholding).
 
 ## Zhang
-## Primary_Ctrl
-## Input 'filename': 'GSE73721_HMA_CTX.mat'
+	## Primary_Ctrl
+	## Input 'filename': 'GSE73721_HMA_CTX.mat'
 	cd  1.matrix2model/1.Zhang/v12/xxx/
 	[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx(filename)
 		
 ## Vadodaria
-## iPS_Ctrl
-## Input 'filename': 'Vadodaria_Control_Untreated.mat'
+	## iPS_Ctrl
+	## Input 'filename': 'Vadodaria_Control_Untreated.mat'
 	cd  1.matrix2model/2.Vadodaria/1.Control_Untreated/v3/xxx/
 	[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx_vadodaria(filename)
 
-## Vadodaria
-## iPS_BD
-## Input 'filename': 'Vadodaria_BD_Untreated.mat'
+	## iPS_BD
+	## Input 'filename': 'Vadodaria_BD_Untreated.mat'
 	cd  1.matrix2model/2.Vadodaria/2.BD_Untreated/v3/xxx/
 	[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx_vadodaria(filename)
 
-## Vadodaria
-## iPS_BD_R
-## Input 'filename': 'Vadodaria_BD_Untreated_Responder.mat'
+	## iPS_BD_R
+	## Input 'filename': 'Vadodaria_BD_Untreated_Responder.mat'
 	cd  1.matrix2model/2.Vadodaria/3.BD_Responder_Untreated/v3/xxx/
 	[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx_vadodaria(filename)
 
-## Vadodaria
-## iPS_BD_NR
-## Input 'filename': 'Vadodaria_BD_Untreated_NonResponder.mat'
+	## iPS_BD_NR
+	## Input 'filename': 'Vadodaria_BD_Untreated_NonResponder.mat'
 	cd  1.matrix2model/2.Vadodaria/4.BD_NonResponder_Untreated/v3/xxx/
 	[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx_vadodaria(filename)
 
 ## Koskuvi
-## Healthy Control
-## Input 'filename': 'Koskuvi_Control.mat'
+	## Healthy Control
+	## Input 'filename': 'Koskuvi_Control.mat'
 	cd  1.matrix2model/3.Koskuvi/1.Control/v1/xxx/
 	[iMAT_model_TP] = matrix2models_xxx_koskuvi(filename)
 
-## Koskuvi
-## Healthy Twin
-## Input 'filename': 'Koskuvi_HT.mat'
+	## Healthy Twin
+	## Input 'filename': 'Koskuvi_HT.mat'
 	cd  1.matrix2model/3.Koskuvi/2.HT/v1/xxx/
 	[iMAT_model_TP] = matrix2models_xxx_koskuvi(filename)
 
-## Koskuvi
-## Schiz Twin
-## Input 'filename': 'Koskuvi_ST.mat'
+	## Schiz Twin
+	## Input 'filename': 'Koskuvi_ST.mat'
 	cd  1.matrix2model/3.Koskuvi/3.ST/v1/xxx/
 	[iMAT_model_TP] = matrix2models_xxx_koskuvi(filename)
 ```
