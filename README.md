@@ -113,6 +113,7 @@ cd AstroModel/
 ## Output dir: 3.analyzeModel/Annotations/AnnotateRxnSubsystems/
 ## Output filename: Rxns_model_xxx.csv
 ## where 'model' ~ Primary_Ctrl, iPS_Ctrl, iPS_BD, iPS_BD_R, iPS_BD_NR
+## where 'xxx' ~ 'abs' (or) 'norm_t1' (or) 'norm_t2'
 ## Output colname: 'Rxn', 'SubSystem'
 	
 	cd 3.analyzeModel/Annotations/AnnotateRxnSubsystems/
@@ -161,8 +162,7 @@ cd AstroModel/
 
    * Filtering reactions relavant to phenotype-of-interest and Reaction-set enrichment analysis (RSEA). 
 ```matlab
-## (replace 'xxx' with 'abs' (or) 'norm_t1' (or) 'norm_t2', 
-##  to generate models for the respective fpkm thresholding).
+## where 'xxx' ~ 'abs' (or) 'norm_t1' (or) 'norm_t2'
 
 #FVA:
 	
