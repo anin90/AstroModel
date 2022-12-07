@@ -179,7 +179,6 @@ cd AstroModel/
 
    * Filtering reactions relavant to phenotype-of-interest and Reaction-set enrichment analysis (RSEA). 
 ```matlab
-## where 'xxx' ~ abs/norm_t1/norm_t2
 
 #FVA:
 ## script: sliceImportantDisruptions_xxx.R
@@ -190,6 +189,7 @@ cd AstroModel/
 ## Output-1 filename: *_rxns_fdr_xxx.csv
 ## Output-2 filename: *_subSystem_fdr_xxx.csv
 ## where * ~ bd_lumped/bd_r/bd_nr
+## where 'xxx' ~ abs/norm_t1/norm_t2
 ## Output-1 colname: 'rxnList', 'subSystem', 'GPR', 'Fluxspan_a', 'Fluxspan_b'
 ## Output-1 colname: 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'Localization', 'RxnFormula'
 ## Output-2 colname: 'subSystem', 'n.x', 'n.y', 'p.val', 'p.val.fdr'
