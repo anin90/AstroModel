@@ -37,12 +37,14 @@ cd AstroModel/
 ### 1. matrix2model/ - <ins>Integration of phenotype-specific transcriptomes with Recon3D</ins>.
    * Extract draft models using "MEMs" (iMAT, GIMME, MBA, FastCore)
 ```matlab
-## (replace 'xxx' with 'abs' (or) 'norm_t1' (or) 'norm_t2', 
-##  to generate results for the respective models).
 ## Input 'filename': expressionMatrix
+## Function: matrix2models_xxx()
+## Output: draft models generated using MEMs (n=4).
+## (replace 'xxx' with 'abs' (or) 'norm_t1' (or) 'norm_t2', 
+##  to generate models for the respective fpkm thresholding).
 
 ## Zhang
-	## Primary_astrocyte
+	## Primary_Ctrl
 	## Input 'filename': 'GSE73721_HMA_CTX.mat'
 	cd  1.matrix2model/1.Zhang/v12/xxx/
 	[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx(filename)
@@ -88,7 +90,8 @@ cd AstroModel/
    * Generate model statistics
 ```matlab
 ## Generate model statistics for all draft models 
-## Output: 1.matrix2model/modelStatsMatFiles/modelStatsMatSol_YYY.csv (YYY: phenotype)
+## Output dir: 1.matrix2model/modelStatsMatFiles/
+## Output filename: modelStatsMatSol_YYY.csv (YYY: phenotype)
 ## Output colname: 'model_ID', 'modelMets', 'modelRxns', 'modelGenes', 'fluxInconsistentRxns',
 ## Output colname: 'coreRxns', 'overlapCoreRxns', 'overlapCoreRxnsPrct', 'astroModelLewisRxns',
 ## Output colname: 'overlapLewis', 'overlapLewisPrct'
@@ -106,15 +109,37 @@ cd AstroModel/
 
    * Run FVA & MTA to identify reactions disrupted in "BD-lumped", "BD-Responders" and "BD-NonResponders".
 ```matlab
+# Print 'rxnID' & 'subSystems' for each model:
+	## Output dir: 3.analyzeModel/Annotations/AnnotateRxnSubsystems/
+	## Output filename: Rxns_model_xxx.csv
+	## where 'model' ~ Primary_Ctrl, iPS_Ctrl, iPS_BD, iPS_BD_R, iPS_BD_NR
+	## Output colname: 'Rxn', 'SubSystem'
+	
+	cd 3.analyzeModel/Annotations/AnnotateRxnSubsystems/
+	run annotateRxnSubsystems.m
+	
 #FVA:
+	## Run FVA & identify rxns with 
+	## FSr >1.5 & <0.8 between iPS-Ctrl & Primary_Ctrl models, and those
+	## Unchanged between iPS-Ctrl & Primary_Ctrl model,
+	## Output dir: 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
+	## Output filename-1: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_Primary_TP_xxx.csv
+	## Output filename-2: UnChanged_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_Primary_TP_xxx.csv
+	## Output filename-3: iAstro_FluxDiff_iPSCtrl_vs_Primary.mat
+	
 	cd 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
 	run analyzeCtrl.m
+
+	## Run FVA & identify rxns with FSr >1.5 & <0.8 between IPS-Ctrl & (IPS-Ctrl-BD; IPS-Ctrl-BD_R; BD_NR)
+	## Output dir: 3.analyzeModel/1.Vadodaria/FSr_BD/
+	## Output filename-1: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_TP_xxx.csv (iPS-Ctrl vs iPS-BD)
+	## Output filename-2: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_R_TP_xxx.csv (iPS-Ctrl vs iPS-BD_R)
+	## Output filename-3: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_NR_TP_xxx.csv (iPS-Ctrl vs iPS-BD_NR)
+	## Output filename-4: iAstro_FluxDiff_BD.mat
 	
 	cd 3.analyzeModel/1.Vadodaria/FSr_BD/
 	run analyzeBD.m
 	
-	cd 3.analyzeModel/Annotations/AnnotateRxnSubsystems/
-	run annotateRxnSubsystems.m
 #MTA:
 	cd 3.analyzeModel/1.Vadodaria/MTA_BD/
 	run runMTA.m
@@ -123,7 +148,7 @@ cd AstroModel/
    * Filtering reactions relavant to phenotype-of-interest and Reaction-set enrichment analysis (RSEA). 
 ```matlab
 ## (replace 'xxx' with 'abs' (or) 'norm_t1' (or) 'norm_t2', 
-##  to generate results for the respective models)	
+##  to generate models for the respective fpkm thresholding).
 
 #FVA:
 	cd 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/
