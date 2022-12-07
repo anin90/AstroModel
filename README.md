@@ -130,7 +130,8 @@ cd AstroModel/
 	cd 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
 	run analyzeCtrl.m
 
-## Run FVA & identify rxns with FSr >1.5 & <0.8 between IPS-Ctrl & (IPS-Ctrl-BD; IPS-Ctrl-BD_R; BD_NR)
+## Run FVA & identify rxns with FSr >1.5 & <0.8 
+## between IPS-Ctrl & (IPS-Ctrl-BD; IPS-Ctrl-BD_R; BD_NR):
 ## Output dir: 3.analyzeModel/1.Vadodaria/FSr_BD/
 ## Output filename-1: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_TP_xxx.csv (iPS-Ctrl vs iPS-BD)
 ## Output filename-2: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_R_TP_xxx.csv (iPS-Ctrl vs iPS-BD_R)
