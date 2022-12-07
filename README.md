@@ -73,7 +73,6 @@ cd AstroModel/
 	cd  1.matrix2model/2.Vadodaria/4.BD_NonResponder_Untreated/v3/xxx/
 	[iMAT_model_TP, GIMME_model_TP, MBA_model_TP, FastCore_model_TP] = matrix2models_xxx_vadodaria(filename)
 
-## Vadodaria	
 ## Koskuvi
 ## Healthy Control
 ## Input 'filename': 'Koskuvi_Control.mat'
