@@ -101,6 +101,7 @@ cd AstroModel/
 ## Output colname: 'model_ID', 'modelMets', 'modelRxns', 'modelGenes', 'fluxInconsistentRxns',
 ## Output colname: 'coreRxns', 'overlapCoreRxns', 'overlapCoreRxnsPrct', 'astroModelLewisRxns',
 ## Output colname: 'overlapLewis', 'overlapLewisPrct'
+## Total no. of output files: 1 (though we provided results by datasets & phenotypes in separate tables [n=6])
 	
 	cd 1.matrix2model/
 	run generateModelStatsMatrix.m
@@ -118,10 +119,12 @@ cd AstroModel/
 # Print 'rxnID' & 'subSystems' for each model:
 ## script: annotateRxnSubsystems.m
 ## Output dir: 3.analyzeModel/Annotations/AnnotateRxnSubsystems/
+## Output files: (total; n=15)
 ## Output filename: Rxns_model_TP_xxx.csv
 ## where 'model' ~ Primary_Ctrl/iPS_Ctrl/iPS_BD/iPS_BD_R/iPS_BD_NR
 ## where 'xxx' ~ abs/norm_t1/norm_t2
 ## Output colname: 'Rxn', 'SubSystem'
+## Total no. of output files: 15
 	
 	cd 3.analyzeModel/Annotations/AnnotateRxnSubsystems/
 	run annotateRxnSubsystems.m
@@ -132,13 +135,13 @@ cd AstroModel/
 ## Unchanged between iPS-Ctrl & Primary_Ctrl model,
 ## script: analyzeCtrl.m
 ## Output dir: 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
-## Output filename: iAstro_FluxDiff_iPSCtrl_vs_Primary.mat
 ## Output filename: FSR_iAstro_model-1_TP_xxx_vs_iAstro_model-2_xxx.csv
 ## Output filename: UnChanged_iAstro_model-1_TP_xxx_vs_iAstro_model-2_TP_xxx.csv
 ## where 'model-1' ~ iPS-Ctrl
 ## where 'model-2' ~ Primary_Ctrl
 ## where 'xxx' ~ abs/norm_t1/norm_t2
 ## Output colname: 'm' (i.e., 'rxnID')
+## Total no. of output files: 7
 	
 	cd 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
 	run analyzeCtrl.m
@@ -147,12 +150,12 @@ cd AstroModel/
 ## between IPS-Ctrl & (IPS-Ctrl-BD; IPS-Ctrl-BD_R; BD_NR):
 ## script: analyzeBD.m
 ## Output dir: 3.analyzeModel/1.Vadodaria/FSr_BD/
-## Output filename: iAstro_FluxDiff_BD.mat
 ## Output filename: FSR_iAstro_model-1_TP_xxx_vs_iAstro_model-2_TP_xxx.csv
 ## where 'model-1' ~ iPS-Ctrl
 ## where 'model-2' ~ iPS-BD/iPS-BD_R/iPS-BD_NR
 ## where 'xxx' ~ abs/norm_t1/norm_t2
 ## Output colname: 'm' (i.e., 'rxnID')
+## Total no. of output files: 10
 	
 	cd 3.analyzeModel/1.Vadodaria/FSr_BD/
 	run analyzeBD.m
@@ -172,6 +175,7 @@ cd AstroModel/
 ## where 'x' ~ Ctrl and 'y' ~ BD/BD_R/BD_NR
 ## Output colname: 'del_rxnID_KO', 'mta_score', 'alt_score', 'subSystem', 
 ## Output colname: 'GPR', 'MetabolicUnits', 'Localization'
+## Total no. of output files: 30 (after ignoring files with '_b')
 
 	cd 3.analyzeModel/1.Vadodaria/MTA_BD/
 	run runMTA.m
@@ -181,18 +185,20 @@ cd AstroModel/
 ```matlab
 
 #FVA:
-## script: sliceImportantDisruptions_xxx.R
-## script: annotateImportantDisruptions_xxx.m
-## script: identifyFdrSignificantDisruptions_xxx.R
-## script: annotateFinalTable_xxx.m
-## Output dir: 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_xxx/
-## Output-1 filename: *_rxns_fdr_xxx.csv
-## Output-2 filename: *_subSystem_fdr_xxx.csv
+## script-1: sliceImportantDisruptions_xxx.R
+## script-2: annotateImportantDisruptions_xxx.m
+## script-3: identifyFdrSignificantDisruptions_xxx.R
+## script-4: annotateFinalTable_xxx.m
+## Output-dir-1: 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_xxx/
+## Output-dir-2: 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_xxx/
+## Output-dir-2 filename-1: *_rxns_fdr_xxx.csv
+## Output-dir-2 filename-2: *_subSystem_fdr_xxx.csv
 ## where * ~ bd_lumped/bd_r/bd_nr
 ## where 'xxx' ~ abs/norm_t1/norm_t2
-## Output-1 colname: 'rxnList', 'subSystem', 'GPR', 'Fluxspan_a', 'Fluxspan_b'
-## Output-1 colname: 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'Localization', 'RxnFormula'
-## Output-2 colname: 'subSystem', 'n.x', 'n.y', 'p.val', 'p.val.fdr'
+## Output-dir-2 filename-1 colname: 'rxnList', 'subSystem', 'GPR', 'Fluxspan_a', 'Fluxspan_b'
+## Output-dir-2 filename-1 colname: 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'Localization', 'RxnFormula'
+## Output-dir-2 filename-2 colname: 'subSystem', 'n.x', 'n.y', 'p.val', 'p.val.fdr'
+## Total no. of output files: 42 (after running script.1-4)
  	
 	cd 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/
 	Rscript sliceImportantDisruptions_xxx.R
