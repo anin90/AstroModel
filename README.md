@@ -103,10 +103,56 @@ cd AstroModel/
 ```
 
 ### 2. expandModel/ - <ins>Expansion of draft models</ins>.
-   * Test
-   * Test
-   * Test
 
+   * Step-1: Expansion of the reconstructions through manual curation of literature & imposing experimental nutrient uptake constraints
+```matlab
+## Expand draft metabolic models (only iMAT) for Zhang, Vadodaria and Koskuvi phenotypes. 
+## Input: iMAT models (iMAT_model_TP) from previous steps.
+## Function: expandModel_YYY.m
+## where 'YYY' ~ Primary/
+## Output-1: 'model_EXP_Constrained' #expanded model, constrained for nutrient media.
+## Output-2: 'fluxInconsistentRxns_media' #fluxInconsistent reactions in model, subject to nutrient media.
+
+## Zhang
+	## Primary_Ctrl
+	## Input 'model': load 'iMAT_model_TP' from 1.matrix2model/1.Zhang/v12/xxx/matrix2models_xxx_v12.mat
+	## where 'xxx' ~ abs/norm_t1/norm_t2
+	cd  2.expandModel/1.Zhang/v12/v12_1/
+	function[~, ~, model_EXP_Constrained, fluxInconsistentRxns_media] = expandModel_Primary(model)
+	
+## Vadodaria
+	## iPS_Ctrl
+	## Input 'model': load 'iMAT_model_TP' from 1.matrix2model/2.Vadodaria/1.Control_Untreated/v3/xxx/ matrix2models_xxx_v3.mat
+	## where 'xxx' ~ abs/norm_t1/norm_t2
+	cd  2.expandModel/2.Vadodaria/1.Control_Untreated/v3_1/
+	function[~, ~, model_EXP_Constrained, fluxInconsistentRxns_media] =  expandModel_Ctrl(model)
+
+	## iPS_BD
+	## Input 'model': load 'iMAT_model_TP' from 1.matrix2model/2.Vadodaria/2.BD_Untreated/v3/xxx/matrix2models_xxx_v3.mat
+	## where 'xxx' ~ abs/norm_t1/norm_t2
+	cd  2.expandModel/2.Vadodaria/2.BD_Untreated/v3_1/
+	function[~, ~, model_EXP_Constrained, fluxInconsistentRxns_media] =  expandModel_BD(model)
+
+	## iPS_BD_R
+	## Input 'model': load 'iMAT_model_TP' from 1.matrix2model/2.Vadodaria/2.BD_Responder_Untreated/v3/xxx/matrix2models_xxx_v3.mat
+	## where 'xxx' ~ abs/norm_t1/norm_t2
+	cd  2.expandModel/2.Vadodaria/3.BD_Responder_Untreated/v3_1/
+	function[~, ~, model_EXP_Constrained, fluxInconsistentRxns_media] =  expandModel_BD_R(model)
+
+	## iPS_BD_NR
+	## Input 'model': load 'iMAT_model_TP' from 1.matrix2model/2.Vadodaria/2.BD_NonResponder_Untreated/v3/xxx/matrix2models_xxx_v3.mat
+	## where 'xxx' ~ abs/norm_t1/norm_t2
+	cd  2.expandModel/2.Vadodaria/3.BD_NonResponder_Untreated/v3_1/
+	function[~, ~, model_EXP_Constrained, fluxInconsistentRxns_media] =  expandModel_BD_NR(model)
+
+## Koskuvi
+	
+```
+   * Step-2: Test for non-zero flux through curated reactions subject to constraints.
+```matlab
+
+
+```
 ### 3. analyzeModel/ - <ins>Identifying disrupted reactions & subSystems in BD.</ins>
 
    * Step-1: Run FVA & MTA to identify reactions disrupted in "BD-lumped", "BD-Responders" and "BD-NonResponders".
