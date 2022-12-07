@@ -118,7 +118,7 @@ cd AstroModel/
 # Print 'rxnID' & 'subSystems' for each model:
 ## script: annotateRxnSubsystems.m
 ## Output dir: 3.analyzeModel/Annotations/AnnotateRxnSubsystems/
-## Output filename: Rxns_model_xxx.csv
+## Output filename: Rxns_model_TP_xxx.csv
 ## where 'model' ~ Primary_Ctrl/iPS_Ctrl/iPS_BD/iPS_BD_R/iPS_BD_NR
 ## where 'xxx' ~ abs/norm_t1/norm_t2
 ## Output colname: 'Rxn', 'SubSystem'
@@ -132,9 +132,12 @@ cd AstroModel/
 ## Unchanged between iPS-Ctrl & Primary_Ctrl model,
 ## script: analyzeCtrl.m
 ## Output dir: 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
-## Output filename: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_Primary_TP_xxx.csv (iPS-Ctrl vs Primary-Ctrl)
-## Output filename: UnChanged_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_Primary_TP_xxx.csv (iPS-Ctrl vs Primary-Ctrl)
 ## Output filename: iAstro_FluxDiff_iPSCtrl_vs_Primary.mat
+## Output filename: FSR_iAstro_model-1_TP_xxx_vs_iAstro_model-2_xxx.csv
+## Output filename: UnChanged_iAstro_model-1_TP_xxx_vs_iAstro_model-2_TP_xxx.csv
+## where 'model-1' ~ iPS-Ctrl
+## where 'model-2' ~ Primary_Ctrl
+## where 'xxx' ~ abs/norm_t1/norm_t2
 ## Output colname: 'm' (i.e., 'rxnID')
 	
 	cd 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
@@ -144,10 +147,11 @@ cd AstroModel/
 ## between IPS-Ctrl & (IPS-Ctrl-BD; IPS-Ctrl-BD_R; BD_NR):
 ## script: analyzeBD.m
 ## Output dir: 3.analyzeModel/1.Vadodaria/FSr_BD/
-## Output filename: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_TP_xxx.csv (iPS-Ctrl vs iPS-BD)
-## Output filename: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_R_TP_xxx.csv (iPS-Ctrl vs iPS-BD_R)
-## Output filename: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_NR_TP_xxx.csv (iPS-Ctrl vs iPS-BD_NR)
 ## Output filename: iAstro_FluxDiff_BD.mat
+## Output filename: FSR_iAstro_model-1_TP_xxx_vs_iAstro_model-2_TP_xxx.csv
+## where 'model-1' ~ iPS-Ctrl
+## where 'model-2' ~ iPS-BD/iPS-BD_R/iPS-BD_NR
+## where 'xxx' ~ abs/norm_t1/norm_t2
 ## Output colname: 'm' (i.e., 'rxnID')
 	
 	cd 3.analyzeModel/1.Vadodaria/FSr_BD/
@@ -163,8 +167,9 @@ cd AstroModel/
 ## for downstream analysis.
 ## script: runMTA.m
 ## Output dir: 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_xxx/
-## Output filename: Vadodaria_Ctrl_to_BD_a.csv (Ctrl_to_BD) (ignore files with '_b')
-## Output filename: Vadodaria_BD_to_Ctrl_a.csv (BD_to_Ctrl) (ignore files with '_b')
+## Output-1 filename: Vadodaria_x_to_y_a.csv (ignore files with '_b')
+## Output-2 filename: Vadodaria_y_to_x_a.csv (ignore files with '_b')
+## where 'x' ~ Ctrl and 'y' ~ BD/BD_R/BD_NR
 ## Output colname: 'del_rxnID_KO', 'mta_score', 'alt_score', 'subSystem', 
 ## Output colname: 'GPR', 'MetabolicUnits', 'Localization'
 
@@ -182,10 +187,12 @@ cd AstroModel/
 ## script: identifyFdrSignificantDisruptions_xxx.R
 ## script: annotateFinalTable_xxx.m
 ## Output dir: 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_xxx/
-## Output filename: *_rxns_fdr_xxx.csv (*bd_lumped/bd_r/bd_nr)
-## Output filename: *_subSystem_fdr_xxx.csv (*bd_lumped/bd_r/bd_nr)
-## Output colname: 'rxnList', 'subSystem', 'GPR', 'Fluxspan_a', 'Fluxspan_b'
-## Output colname: 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'Localization', 'RxnFormula'
+## Output-1 filename: *_rxns_fdr_xxx.csv
+## Output-2 filename: *_subSystem_fdr_xxx.csv
+## where * ~ bd_lumped/bd_r/bd_nr
+## Output-1 colname: 'rxnList', 'subSystem', 'GPR', 'Fluxspan_a', 'Fluxspan_b'
+## Output-1 colname: 'FluxSpanRatio', 'Flux', 'MetabolicUnits', 'Localization', 'RxnFormula'
+## Output-2 colname: 'subSystem', 'n.x', 'n.y', 'p.val', 'p.val.fdr'
  	
 	cd 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/
 	Rscript sliceImportantDisruptions_xxx.R
