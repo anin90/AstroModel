@@ -124,7 +124,7 @@ cd AstroModel/
 ## Unchanged between iPS-Ctrl & Primary_Ctrl model,
 ## Output dir: 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
 ## Output filename: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_Primary_TP_xxx.csv (iPS-Ctrl vs Primary-Ctrl)
-## Output filename: <ins>UnChanged_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_Primary_TP_xxx.csv (iPS-Ctrl vs Primary-Ctrl)<ins>
+## Output filename: UnChanged_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_Primary_TP_xxx.csv (iPS-Ctrl vs Primary-Ctrl)
 ## Output filename: iAstro_FluxDiff_iPSCtrl_vs_Primary.mat
 	
 	cd 3.analyzeModel/1.Vadodaria/FSr_Ctrl/
@@ -133,17 +133,30 @@ cd AstroModel/
 ## Run FVA & identify rxns with FSr >1.5 & <0.8 
 ## between IPS-Ctrl & (IPS-Ctrl-BD; IPS-Ctrl-BD_R; BD_NR):
 ## Output dir: 3.analyzeModel/1.Vadodaria/FSr_BD/
-## Output filename: <ins>FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_TP_xxx.csv (iPS-Ctrl vs iPS-BD)<ins>
-## Output filename: <ins>FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_R_TP_xxx.csv (iPS-Ctrl vs iPS-BD_R)<ins>
-## Output filename: <ins>FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_NR_TP_xxx.csv (iPS-Ctrl vs iPS-BD_NR)<ins>
+## Output filename: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_TP_xxx.csv (iPS-Ctrl vs iPS-BD)
+## Output filename: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_R_TP_xxx.csv (iPS-Ctrl vs iPS-BD_R)
+## Output filename: FSR_iAstro_iPS_Ctrl_TP_xxx_vs_iAstro_iPS_BD_NR_TP_xxx.csv (iPS-Ctrl vs iPS-BD_NR)
 ## Output filename: iAstro_FluxDiff_BD.mat
 	
 	cd 3.analyzeModel/1.Vadodaria/FSr_BD/
 	run analyzeBD.m
 	
 #MTA:
-cd 3.analyzeModel/1.Vadodaria/MTA_BD/
-run runMTA.m
+## Run MTA twice by swapping the source and the target states. 
+## E.g., in order to identify the reactions relavant to BD, we 
+## identified the reactions 'whose knockout' transformed 
+## i) “iPS-Control” to “iPS-BD”, and ii) “iPS-BD” to “iPS-Control”. 
+## For either runs, the top 20% predictions were first identified, 
+## and subsequently their union set were considered 
+## for downstream analysis.
+## Output dir: 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_xxx/
+## Output filename: Vadodaria_Ctrl_to_BD_a.csv (Ctrl_to_BD) (ignore files with '_b')
+## Output filename: Vadodaria_BD_to_Ctrl_a.csv (BD_to_Ctrl) (ignore files with '_b')
+## Output colname: 'del_rxnID_KO', 'mta_score', 'alt_score', 'subSystem', 
+## Output colname: 'GPR', 'MetabolicUnits', 'Localization'
+
+	cd 3.analyzeModel/1.Vadodaria/MTA_BD/
+	run runMTA.m
  ```
 
    * Filtering reactions relavant to phenotype-of-interest and Reaction-set enrichment analysis (RSEA). 
@@ -158,6 +171,7 @@ run runMTA.m
 	Rscript identifyFdrSignificantDisruptions_xxx.R
 	run PlotResults/annotateFinalTable_xxx.m
 	Rscript plotFinalTable_xxx.R
+	
 #MTA:
 	cd 3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/
 	Rscript analyzeMTAscores_xxx.R
