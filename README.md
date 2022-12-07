@@ -106,54 +106,63 @@ cd AstroModel/
 
    * Step-1: Expansion of the reconstructions through manual curation of literature & imposing experimental nutrient uptake constraints
 ```matlab
-## Expand draft metabolic models (only iMAT) for Zhang, Vadodaria and Koskuvi phenotypes. 
-## Input: iMAT models (iMAT_model_TP) from previous steps.
-## Function: expandModel_YYY.m
-## where 'YYY' ~ Primary/
+## Expand draft metabolic models (only iMAT) for Zhang, Vadodaria and Koskuvi phenotypes.
+## Test for non-zero flux through curated reactions subject to constraints.
+## Function-1: expandModel_YYY.m 
+## Function-1 input, 'model': iMAT models (iMAT_model_TP) from previous steps.
+## Function-2: Test4CuratedRxns.m
+## Function-2 input, 'filename': rxnList_curated.csv.
+## where 'YYY' ~ Primary/Ctrl/BD/BD_R/BD_NR
 ## Output-1: 'model_EXP_Constrained' #expanded model, constrained for nutrient media.
 ## Output-2: 'fluxInconsistentRxns_media' #fluxInconsistent reactions in model, subject to nutrient media.
 
 ## Zhang
 	## Primary_Ctrl
 	## Input 'model': load 'iMAT_model_TP' from 1.matrix2model/1.Zhang/v12/xxx/matrix2models_xxx_v12.mat
+	## Input 'filename': rxnList_curated.csv
 	## where 'xxx' ~ abs/norm_t1/norm_t2
 	cd  2.expandModel/1.Zhang/v12/v12_1/
 	function[~, ~, model_EXP_Constrained, fluxInconsistentRxns_media] = expandModel_Primary(model)
-	
+	function[T,rxnAbsent] = Test4CuratedRxns(model_EXP_Constrained, filename);
+
 ## Vadodaria
 	## iPS_Ctrl
 	## Input 'model': load 'iMAT_model_TP' from 1.matrix2model/2.Vadodaria/1.Control_Untreated/v3/xxx/ matrix2models_xxx_v3.mat
+	## Input 'filename': rxnList_curated.csv
 	## where 'xxx' ~ abs/norm_t1/norm_t2
 	cd  2.expandModel/2.Vadodaria/1.Control_Untreated/v3_1/
 	function[~, ~, model_EXP_Constrained, fluxInconsistentRxns_media] =  expandModel_Ctrl(model)
+	function[T,rxnAbsent] = Test4CuratedRxns(model_EXP_Constrained, filename);
 
 	## iPS_BD
 	## Input 'model': load 'iMAT_model_TP' from 1.matrix2model/2.Vadodaria/2.BD_Untreated/v3/xxx/matrix2models_xxx_v3.mat
+	## Input 'filename': rxnList_curated.csv
 	## where 'xxx' ~ abs/norm_t1/norm_t2
 	cd  2.expandModel/2.Vadodaria/2.BD_Untreated/v3_1/
 	function[~, ~, model_EXP_Constrained, fluxInconsistentRxns_media] =  expandModel_BD(model)
-
+	function[T,rxnAbsent] = Test4CuratedRxns(model_EXP_Constrained, filename);
+	
 	## iPS_BD_R
 	## Input 'model': load 'iMAT_model_TP' from 1.matrix2model/2.Vadodaria/2.BD_Responder_Untreated/v3/xxx/matrix2models_xxx_v3.mat
+	## Input 'filename': rxnList_curated.csv
 	## where 'xxx' ~ abs/norm_t1/norm_t2
 	cd  2.expandModel/2.Vadodaria/3.BD_Responder_Untreated/v3_1/
 	function[~, ~, model_EXP_Constrained, fluxInconsistentRxns_media] =  expandModel_BD_R(model)
-
+	function[T,rxnAbsent] = Test4CuratedRxns(model_EXP_Constrained, filename);
+	
 	## iPS_BD_NR
 	## Input 'model': load 'iMAT_model_TP' from 1.matrix2model/2.Vadodaria/2.BD_NonResponder_Untreated/v3/xxx/matrix2models_xxx_v3.mat
+	## Input 'filename': rxnList_curated.csv
 	## where 'xxx' ~ abs/norm_t1/norm_t2
 	cd  2.expandModel/2.Vadodaria/3.BD_NonResponder_Untreated/v3_1/
 	function[~, ~, model_EXP_Constrained, fluxInconsistentRxns_media] =  expandModel_BD_NR(model)
-
+	function[T,rxnAbsent] = Test4CuratedRxns(model_EXP_Constrained, filename);
+	
 ## Koskuvi
 	
 ```
-   * Step-2: Test for non-zero flux through curated reactions subject to constraints.
-```matlab
 
-
-```
-   * Step-3: Save final models.
+   * Step-2: Save final models.
 ```matlab
 
 
