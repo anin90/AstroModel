@@ -1,0 +1,29 @@
+	FVA_BD_NR_abs	FVA_BD_NR_norm_t1	FVA_BD_NR_norm_t2	MTA_BD_NR_abs	MTA_BD_NR_norm_t1	MTA_BD_NR_norm_t2	Total
+Biotin metabolism	1	0	0	0	0	0	1
+Fatty acid synthesis	1	0	0	0	0	0	1
+Glutamate metabolism	1	0	0	0	0	0	1
+Glycolysis/gluconeogenesis	1	0	0	0	0	0	1
+Propanoate metabolism	1	0	0	0	0	0	1
+Pyrimidine catabolism	1	0	0	0	0	0	1
+Vitamin B6 metabolism	1	0	0	0	0	0	1
+Chondroitin sulfate degradation	0	0	0	1	0	0	1
+Keratan sulfate synthesis	0	0	0	1	0	0	1
+Aminosugar metabolism	0	1	0	0	0	0	1
+Arginine and proline metabolism	0	0	0	0	1	0	1
+CoA synthesis	0	0	0	0	1	0	1
+Methionine and cysteine metabolism	0	0	0	0	1	0	1
+Peptide metabolism	0	0	0	0	1	0	1
+Phenylalanine metabolism	0	0	1	0	0	0	1
+Tetrahydrobiopterin metabolism	0	0	1	0	0	0	1
+Transport, endoplasmic reticular	0	0	1	0	0	0	1
+Transport, nuclear	0	0	1	0	0	0	1
+Transport, extracellular	0	0	0	0	0	1	1
+Transport, lysosomal	0	0	0	0	0	1	1
+Cholesterol metabolism	1	0	0	1	0	0	2
+Inositol phosphate metabolism	1	0	0	0	1	0	2
+Fatty acid oxidation	0	0	1	1	0	0	2
+Heparan sulfate degradation	0	0	0	1	0	1	2
+Tyrosine metabolism	0	0	1	1	0	0	2
+N-glycan synthesis	0	1	0	0	0	1	2
+Phosphatidylinositol phosphate metabolism	0	1	0	0	0	1	2
+Keratan sulfate degradation	0	1	0	1	0	1	3
