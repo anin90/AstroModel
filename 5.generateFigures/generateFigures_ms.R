@@ -140,3 +140,8 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 			xlab("") + ylab("# of Disrupted Modules") + 
 			geom_hline(yintercept =2, linetype="dashed", color = c("red"))
 		plot + facet_grid(. ~ variable)
+
+#gwas status -2022
+# Fig.2.
+		df <- data.frame(dose=rep(c("0k", "50k", "100k", "150k", "200k", "250k", "300k"),2),
+						len=c(0, 20, 27, ))
