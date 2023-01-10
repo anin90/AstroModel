@@ -96,7 +96,7 @@ setwd("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/A
 	dat = colSums(fpkm_redone_subset_anno_filt[,3:ncol(fpkm_redone_subset_anno_filt)]>=0.1)
 	dotchart(dat,xlab="#Genes with FPKM >= 0.1",cex=.7)
 
-	# subset only Veh, Li and Val
+	# subset only Ctrl_NIH1, Ctrl_Fam, BD, BD_R, BD_NR
 		# Veh
 		fpkm_redone_subset_anno_filt_Ctrl_NIH1_Veh = subset(fpkm_redone_subset_anno_filt, TRUE, c("SYMBOL", "ENTREZID",
 											"Ctrl_NIH1.Veh.R1","Ctrl_NIH1.Veh.R2")) #Ctrl_NIH
