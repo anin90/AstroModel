@@ -1,4 +1,4 @@
-function[iMAT_model_TP] = matrix2models_abs_koskuvi(filename)
+function[iMAT_model_TP] = matrix2models_abs_biju(filename)
 tic;
 
 %%
