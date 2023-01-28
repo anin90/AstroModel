@@ -18,6 +18,7 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     % I: fluxConsistency
     fluxConsistency = verifyModel(model,'fluxConsistency',true); 
     fluxInconsistentRxns = length(model.rxns(fluxConsistency.fluxConsistency.consistentReactionBool~=1));
+    fluxInconsistentRxnsPrct = (fluxInconsistentRxns/modelRxns)*100;
     
     % II: CoreRxns
     coreRxns =  printCoreRxns(expMat);
@@ -30,8 +31,8 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     overlapLewisPrct = (overlapLewis/astroModelLewisRxns)*100;
    
 %% Final Table
-modelStats = table(modelMets, modelRxns, modelGenes, fluxInconsistentRxns, length(coreRxns), overlapCoreRxns, overlapCoreRxnsPrct, astroModelLewisRxns, overlapLewis, overlapLewisPrct);
-modelStats.Properties.VariableNames = {'modelMets', 'modelRxns', 'modelGenes', 'fluxInconsistentRxns', 'coreRxns', 'overlapCoreRxns', 'overlapCoreRxnsPrct', 'astroModelLewisRxns', 'overlapLewis', 'overlapLewisPrct'};
+modelStats = table(modelMets, modelRxns, modelGenes, fluxInconsistentRxns, fluxInconsistentRxnsPrct, length(coreRxns), overlapCoreRxns, overlapCoreRxnsPrct, astroModelLewisRxns, overlapLewis, overlapLewisPrct);
+modelStats.Properties.VariableNames = {'modelMets', 'modelRxns', 'modelGenes', 'fluxInconsistentRxns', 'fluxInconsistentRxnsPrct', 'coreRxns', 'overlapCoreRxns', 'overlapCoreRxnsPrct', 'astroModelLewisRxns', 'overlapLewis', 'overlapLewisPrct'};
 
 %%
 tEnd = toc(tStart);

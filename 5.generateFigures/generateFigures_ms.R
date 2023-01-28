@@ -106,10 +106,15 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 			geom_hline(yintercept =2, linetype="dashed", color = c("red"))
 		plot + facet_grid(. ~ variable)
 
+		svg("1.ManuscriptFigs/1a.svg")
+		plot + facet_grid(. ~ variable)
+		dev.off() 
+
 #disrupted in >2 modules/phenotype-of-interest
 # Fig.1e	
 		mat <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_mat_filt.csv", header = T, sep = "\t")	
 		mat <- mat[, c("name", "bd_lst", "bd_r_lst", "bd_nr_lst")]
+		mat
 		colnames(mat) = c("subSystem", "BD", "BD_R", "BD_NR")
 		mm2 <- melt(mat, id="subSystem")
 		plot = ggplot(mm2, aes(x=reorder(subSystem, -value), y=value, fill=variable)) + 
@@ -140,8 +145,17 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 			xlab("") + ylab("# of Disrupted Modules") + 
 			geom_hline(yintercept =2, linetype="dashed", color = c("red"))
 		plot + facet_grid(. ~ variable)
+		
+		svg("1.ManuscriptFigs/1e.svg")
+		plot + facet_grid(. ~ variable)
+		dev.off() 
 
-#gwas status -2022
-# Fig.2.
-		df <- data.frame(dose=rep(c("0k", "50k", "100k", "150k", "200k", "250k", "300k"),2),
-						len=c(0, 20, 27, ))
+#Rxns belonging to the subSystems-disrupted in >2 modules/phenotype-of-interest
+		BD <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/BD_Rxns.csv", header = T, sep = "\t")
+		BD_R <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/BD_R_Rxns.csv", header = T, sep = "\t")
+		BD_NR <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/BD_NR_Rxns.csv", header = T, sep = "\t")
+
+		head(BD)		
+		dim(BD)
+		dim(BD_R)
+		dim(BD_NR)
