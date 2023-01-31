@@ -87,6 +87,111 @@ k=1;
     modelID{k,4} = 'iMAT';
     k = k+1;
     
+%% iPS_BD
+
+    % Vadodaria_BD_abs_iMAT
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/2.Vadodaria/2.BD_Untreated/v3/abs/Vadodaria_BD_Untreated.mat';
+    model = iAstro_iPS_BD_TP_abs;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Vadodaria';
+    modelID{k,2} = 'BD';
+    modelID{k,3} = 'abs';
+    modelID{k,4} = 'iMAT';
+    k = k+1;
+
+    % Vadodaria_BD_norm_t1_iMAT
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/2.Vadodaria/2.BD_Untreated/v3/norm_t1/Vadodaria_BD_Untreated.mat';
+    model = iAstro_iPS_BD_TP_norm_t1;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Vadodaria';
+    modelID{k,2} = 'BD';
+    modelID{k,3} = 'norm_t1';
+    modelID{k,4} = 'iMAT';
+    k = k+1;
+    
+    % Vadodaria_BD_norm_t2_iMAT
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/2.Vadodaria/2.BD_Untreated/v3/norm_t2/Vadodaria_BD_Untreated.mat';
+    model = iAstro_iPS_BD_TP_norm_t2;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Vadodaria';
+    modelID{k,2} = 'BD';
+    modelID{k,3} = 'norm_t2';
+    modelID{k,4} = 'iMAT';
+    k = k+1;    
+
+%% iPS_BD_R
+
+    % Vadodaria_BD_R_abs_iMAT
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/2.Vadodaria/3.BD_Responder_Untreated/v3/abs/Vadodaria_BD_Untreated_Responder.mat';
+    model = iAstro_iPS_BD_R_TP_abs;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Vadodaria';
+    modelID{k,2} = 'BD_R';
+    modelID{k,3} = 'abs';
+    modelID{k,4} = 'iMAT';
+    k = k+1;
+
+    % Vadodaria_BD_R_norm_t1_iMAT
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/2.Vadodaria/3.BD_Responder_Untreated/v3/norm_t1/Vadodaria_BD_Untreated_Responder.mat';
+    model = iAstro_iPS_BD_R_TP_norm_t1;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Vadodaria';
+    modelID{k,2} = 'BD_R';
+    modelID{k,3} = 'norm_t1';
+    modelID{k,4} = 'iMAT';
+    k = k+1;
+    
+    % Vadodaria_BD_R_norm_t2_iMAT
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/2.Vadodaria/3.BD_Responder_Untreated/v3/norm_t2/Vadodaria_BD_Untreated_Responder.mat';
+    model = iAstro_iPS_BD_R_TP_norm_t2;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Vadodaria';
+    modelID{k,2} = 'BD_R';
+    modelID{k,3} = 'norm_t2';
+    modelID{k,4} = 'iMAT';
+    k = k+1;    
+
+%% iPS_BD_NR
+
+    % Vadodaria_BD_NR_abs_iMAT
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/2.Vadodaria/4.BD_NonResponder_Untreated/v3/abs/Vadodaria_BD_Untreated_NonResponder.mat';
+    model = iAstro_iPS_BD_NR_TP_abs;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Vadodaria';
+    modelID{k,2} = 'BD_NR';
+    modelID{k,3} = 'abs';
+    modelID{k,4} = 'iMAT';
+    k = k+1;
+
+    % Vadodaria_BD_NR_norm_t1_iMAT
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/2.Vadodaria/4.BD_NonResponder_Untreated/v3/norm_t1/Vadodaria_BD_Untreated_NonResponder.mat';
+    model = iAstro_iPS_BD_NR_TP_norm_t1;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Vadodaria';
+    modelID{k,2} = 'BD_NR';
+    modelID{k,3} = 'norm_t1';
+    modelID{k,4} = 'iMAT';
+    k = k+1;
+    
+    % Vadodaria_BD_NR_norm_t2_iMAT
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/2.Vadodaria/4.BD_NonResponder_Untreated/v3/norm_t2/Vadodaria_BD_Untreated_NonResponder.mat';
+    model = iAstro_iPS_BD_NR_TP_norm_t2;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Vadodaria';
+    modelID{k,2} = 'BD_NR';
+    modelID{k,3} = 'norm_t2';
+    modelID{k,4} = 'iMAT';
+    k = k+1;    
+    
 %% Final Table    
 modelStatsMatSol = [modelID, modelStatsMatSol];
 modelStatsMatSol.Properties.VariableNames{1} = 'Dataset';

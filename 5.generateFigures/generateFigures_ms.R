@@ -5,11 +5,21 @@
 #~ install.packages("openxlsx")
 #~ install.packages("gridExtra")
 #~ install.packages("patchwork")
+#~ install.packages("cowplot")
 pacman::p_load(affy, pheatmap, RColorBrewer, dplyr, tidyverse, annotate, rat2302.db, mouse4302.db, homologene, 
 readxl, oligo, limma, mogene20sttranscriptcluster.db, qvalue, GEOquery, tidyr, tibble, splitstackshape, gplots, 
 ggplot2, ggfortify, reshape2, factoextra, plot.matrix, VennDiagram, ggvenn, plotrix, pheatmap, magrittr, venn, 
 mgsub, gsubfn, readxl, openxlsx, UpSetR, qvalue, GEOquery, TeachingDemos, sm, org.Hs.eg.db, data.table, gridExtra,
-patchwork)
+patchwork, cowplot)
+
+	# Add a common legend for multiple ggplot2 graphs
+			library(gridExtra)
+			get_legend<-function(myggplot){
+			  tmp <- ggplot_gtable(ggplot_build(myggplot))
+			  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+			  legend <- tmp$grobs[[leg]]
+			  return(legend)
+			}
 
 setwd("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/5.generateFigures")
 
@@ -159,3 +169,136 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 		dim(BD)
 		dim(BD_R)
 		dim(BD_NR)
+
+###########################
+# Fig.2 - compare model stats
+###########################
+# Load data
+		modelStats_pre = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/modelStatsMatFiles/modelStatsMatSol.csv", header = T, sep = "\t")
+		modelStats_post = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/4.modelComparison/modelStatsMatFilesFinal/modelStatsMatSolFinal.csv", header = T, sep = "\t")
+
+# Fig.2 - test
+		ggplot(modelStats_post, aes(x=Phenotype, y=fluxInconsistentRxnsPrct, fill=Dataset)) + 
+			geom_bar(stat="identity", position=position_dodge(), width = 0.5, color="black")+
+			scale_fill_manual(values=c('#999999','#E69F00')) +
+			theme_classic() + theme(aspect.ratio=1) + xlab("") + ylab("fluxInconsistentRxnsPrct") +
+			coord_flip() + facet_grid(. ~ ExpThreshold)
+			
+		ggplot(modelStats_post, aes(x=Phenotype, y=fluxInconsistentRxnsPrct, fill=ExpThreshold)) + 
+			geom_bar(stat="identity", position=position_dodge(), width = 0.5, color="black")+
+			scale_fill_manual(values=c("#999999", "#E69F00", "#56B4E9")) +
+			theme_classic() + theme(aspect.ratio=1) + xlab("") + ylab("fluxInconsistentRxnsPrct") +
+			coord_flip()
+
+# Fig.2a-g
+		# merge colNames to create modelID (pre expansion)
+		pre = modelStats_pre
+		pre$Model_ID <- paste(pre$Dataset, pre$Phenotype, pre$ExpThreshold, pre$MEM, sep="_")
+		pre <- pre %>% relocate(Model_ID, .before = Dataset)
+		
+		# merge colNames to create modelID (post expansion)
+		post = modelStats_post
+		post$Model_ID <- paste(post$Dataset, post$Phenotype, post$ExpThreshold, post$MEM, sep="_")
+		post <- post %>% relocate(Model_ID, .before = Dataset)
+
+		# merge pre- & post- exansion modelStats
+		dat = merge(pre,post, by.x = "Model_ID", by.y = "Model_ID")
+
+				# plot the "Number of modelRxns" - pre & post
+				mat <- dat[, c("Model_ID", "Dataset.x", "Phenotype.x", "ExpThreshold.x", "MEM.x", "modelRxns.x", "modelRxns.y")]
+				colnames(mat) = c("Model_ID", "Dataset", "Phenotype", "ExpThreshold", "MEM", "preExpansion", "postExpansion")
+				mat = mat %>% pivot_longer(cols=c('preExpansion', 'postExpansion'), names_to='stage', values_to='modelRxns')
+				mat
+				
+						a = ggplot(mat, aes(x=stage, y=modelRxns, fill = Phenotype)) +
+							geom_boxplot(position=position_dodge(0.5), width = 0.5, color="black")+
+							geom_dotplot(binaxis='y', stackdir='center', position=position_dodge(0.5)) + 
+							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("# of rxns in model") + 
+							coord_flip()
+						
+						b = ggplot(mat, aes(x=stage, y=modelRxns, fill = Phenotype)) +
+							geom_boxplot(fill="white", width = 0.5, color="black")+
+							geom_dotplot(binaxis='y', stackdir='center', position=position_dodge(0.5)) + 
+							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("# of rxns in model") + 
+							coord_flip()
+							
+						c = ggplot(mat, aes(x=stage, y=modelRxns, fill = Phenotype)) +
+							geom_boxplot(fill="white", width = 0.5, color="black")+
+							geom_point(aes(shape=ExpThreshold, color=Phenotype), size=4, position=position_dodge(0.5)) +
+							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("# of rxns in model") + 
+							coord_flip()
+
+						svg("1.ManuscriptFigs/2c.svg")
+						c
+						dev.off()
+
+				# plot the "Number of modelMets" - pre & post
+				mat <- dat[, c("Model_ID", "Dataset.x", "Phenotype.x", "ExpThreshold.x", "MEM.x", "modelMets.x", "modelMets.y")]
+				colnames(mat) = c("Model_ID", "Dataset", "Phenotype", "ExpThreshold", "MEM", "preExpansion", "postExpansion")
+				mat = mat %>% pivot_longer(cols=c('preExpansion', 'postExpansion'), names_to='stage', values_to='modelMets')
+				mat
+
+						d = ggplot(mat, aes(x=stage, y=modelMets, fill = Phenotype)) +
+							geom_boxplot(fill="white", width = 0.5, color="black")+
+							geom_point(aes(shape=ExpThreshold, color=Phenotype), size=4, position=position_dodge(0.5)) +
+							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("# of mets in model") + 
+							coord_flip()
+
+						svg("1.ManuscriptFigs/2d.svg")
+						d
+						dev.off()
+
+				# plot the "Number of fluxInconsistentRxnsPrct" - pre & post
+				mat <- dat[, c("Model_ID", "Dataset.x", "Phenotype.x", "ExpThreshold.x", "MEM.x", "fluxInconsistentRxnsPrct.x", "fluxInconsistentRxnsPrct.y")]
+				colnames(mat) = c("Model_ID", "Dataset", "Phenotype", "ExpThreshold", "MEM", "preExpansion", "postExpansion")
+				mat = mat %>% pivot_longer(cols=c('preExpansion', 'postExpansion'), names_to='stage', values_to='fluxInconsistentRxnsPrct')
+				mat
+
+						e = ggplot(mat, aes(x=stage, y=fluxInconsistentRxnsPrct, fill = Phenotype)) +
+							geom_boxplot(fill="white", width = 0.5, color="black")+
+							geom_point(aes(shape=ExpThreshold, color=Phenotype), size=4, position=position_dodge(0.5)) +
+							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("% of fluxInconsistent rxns in model") + 
+							coord_flip()
+
+						svg("1.ManuscriptFigs/2e.svg")
+						e
+						dev.off()
+
+				# plot the "Number of overlapCoreRxnsPrct" - pre & post
+				mat <- dat[, c("Model_ID", "Dataset.x", "Phenotype.x", "ExpThreshold.x", "MEM.x", "overlapCoreRxnsPrct.x", "overlapCoreRxnsPrct.y")]
+				colnames(mat) = c("Model_ID", "Dataset", "Phenotype", "ExpThreshold", "MEM", "preExpansion", "postExpansion")
+				mat = mat %>% pivot_longer(cols=c('preExpansion', 'postExpansion'), names_to='stage', values_to='overlapCoreRxnsPrct')
+				mat
+
+						f = ggplot(mat, aes(x=stage, y=overlapCoreRxnsPrct, fill = Phenotype)) +
+							geom_boxplot(fill="white", width = 0.5, color="black")+
+							geom_point(aes(shape=ExpThreshold, color=Phenotype), size=4, position=position_dodge(0.5)) +
+							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("% of core rxns in model") + 
+							coord_flip()
+
+						svg("1.ManuscriptFigs/2f.svg")
+						f
+						dev.off()
+
+				# plot the "Number of overlapLewisPrct" - pre & post
+				mat <- dat[, c("Model_ID", "Dataset.x", "Phenotype.x", "ExpThreshold.x", "MEM.x", "overlapLewisPrct.x", "overlapLewisPrct.y")]
+				colnames(mat) = c("Model_ID", "Dataset", "Phenotype", "ExpThreshold", "MEM", "preExpansion", "postExpansion")
+				mat = mat %>% pivot_longer(cols=c('preExpansion', 'postExpansion'), names_to='stage', values_to='overlapLewisPrct')
+				mat
+
+						g = ggplot(mat, aes(x=stage, y=overlapLewisPrct, fill = Phenotype)) +
+							geom_boxplot(fill="white", width = 0.5, color="black")+
+							geom_point(aes(shape=ExpThreshold, color=Phenotype), size=4, position=position_dodge(0.5)) +
+							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("% of astrocytic rxns, from Lewis et al. 2010, in model") + 
+							coord_flip()
+
+						svg("1.ManuscriptFigs/2g.svg")
+						g
+						dev.off()
+
+				plot_grid(a, b, labels=c("a.)", "b.)"), ncol = 1, nrow = 2)
+				plot_grid(c, d, labels=c("c.)", "d.)"), ncol = 1, nrow = 2)
+				plot_grid(e, f, labels=c("e.)", "f.)"), ncol = 1, nrow = 2)
+				plot_grid(g, labels=c("g.)"), ncol = 1, nrow = 2)
+								
+
