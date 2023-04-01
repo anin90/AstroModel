@@ -176,6 +176,7 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 # Load data
 		modelStats_pre = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/modelStatsMatFiles/modelStatsMatSol.csv", header = T, sep = "\t")
 		modelStats_post = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/4.modelComparison/modelStatsMatFilesFinal/modelStatsMatSolFinal.csv", header = T, sep = "\t")
+		modelStats_predecessor = read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/4.modelComparison/predecessorModel/predecessorModelComparison.csv", header = T, sep = "\t")
 
 # Fig.2 - test
 		ggplot(modelStats_post, aes(x=Phenotype, y=fluxInconsistentRxnsPrct, fill=Dataset)) + 
@@ -190,7 +191,8 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 			theme_classic() + theme(aspect.ratio=1) + xlab("") + ylab("fluxInconsistentRxnsPrct") +
 			coord_flip()
 
-# Fig.2a-g
+# Fig.2a-e ------Compare models pre & post expansion------
+
 		# merge colNames to create modelID (pre expansion)
 		pre = modelStats_pre
 		pre$Model_ID <- paste(pre$Dataset, pre$Phenotype, pre$ExpThreshold, pre$MEM, sep="_")
@@ -208,97 +210,247 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 				mat <- dat[, c("Model_ID", "Dataset.x", "Phenotype.x", "ExpThreshold.x", "MEM.x", "modelRxns.x", "modelRxns.y")]
 				colnames(mat) = c("Model_ID", "Dataset", "Phenotype", "ExpThreshold", "MEM", "preExpansion", "postExpansion")
 				mat = mat %>% pivot_longer(cols=c('preExpansion', 'postExpansion'), names_to='stage', values_to='modelRxns')
-				mat
 				
-						a = ggplot(mat, aes(x=stage, y=modelRxns, fill = Phenotype)) +
+						a1 = ggplot(mat, aes(x=stage, y=modelRxns, fill = Phenotype)) +
 							geom_boxplot(position=position_dodge(0.5), width = 0.5, color="black")+
 							geom_dotplot(binaxis='y', stackdir='center', position=position_dodge(0.5)) + 
 							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("# of rxns in model") + 
+							theme(text = element_text(size = 18)) +					
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
 							coord_flip()
 						
-						b = ggplot(mat, aes(x=stage, y=modelRxns, fill = Phenotype)) +
+						a2 = ggplot(mat, aes(x=stage, y=modelRxns, fill = Phenotype)) +
 							geom_boxplot(fill="white", width = 0.5, color="black")+
 							geom_dotplot(binaxis='y', stackdir='center', position=position_dodge(0.5)) + 
 							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("# of rxns in model") + 
+							theme(text = element_text(size = 18)) +
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
 							coord_flip()
 							
-						c = ggplot(mat, aes(x=stage, y=modelRxns, fill = Phenotype)) +
+						a = ggplot(mat, aes(x=stage, y=modelRxns, fill = Phenotype)) +
 							geom_boxplot(fill="white", width = 0.5, color="black")+
 							geom_point(aes(shape=ExpThreshold, color=Phenotype), size=4, position=position_dodge(0.5)) +
 							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("# of rxns in model") + 
+							theme(text = element_text(size = 18)) +
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
 							coord_flip()
 
-						svg("1.ManuscriptFigs/2c.svg")
-						c
+						svg("1.ManuscriptFigs/2a.svg")
+						a
 						dev.off()
 
 				# plot the "Number of modelMets" - pre & post
 				mat <- dat[, c("Model_ID", "Dataset.x", "Phenotype.x", "ExpThreshold.x", "MEM.x", "modelMets.x", "modelMets.y")]
 				colnames(mat) = c("Model_ID", "Dataset", "Phenotype", "ExpThreshold", "MEM", "preExpansion", "postExpansion")
 				mat = mat %>% pivot_longer(cols=c('preExpansion', 'postExpansion'), names_to='stage', values_to='modelMets')
-				mat
 
-						d = ggplot(mat, aes(x=stage, y=modelMets, fill = Phenotype)) +
+						b = ggplot(mat, aes(x=stage, y=modelMets, fill = Phenotype)) +
 							geom_boxplot(fill="white", width = 0.5, color="black")+
 							geom_point(aes(shape=ExpThreshold, color=Phenotype), size=4, position=position_dodge(0.5)) +
 							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("# of mets in model") + 
+							theme(text = element_text(size = 18)) +
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
+							scale_y_continuous(breaks = seq(3800, 4200, by = 200)) + 
 							coord_flip()
 
-						svg("1.ManuscriptFigs/2d.svg")
-						d
+						svg("1.ManuscriptFigs/2b.svg")
+						b
 						dev.off()
 
 				# plot the "Number of fluxInconsistentRxnsPrct" - pre & post
 				mat <- dat[, c("Model_ID", "Dataset.x", "Phenotype.x", "ExpThreshold.x", "MEM.x", "fluxInconsistentRxnsPrct.x", "fluxInconsistentRxnsPrct.y")]
 				colnames(mat) = c("Model_ID", "Dataset", "Phenotype", "ExpThreshold", "MEM", "preExpansion", "postExpansion")
 				mat = mat %>% pivot_longer(cols=c('preExpansion', 'postExpansion'), names_to='stage', values_to='fluxInconsistentRxnsPrct')
-				mat
 
-						e = ggplot(mat, aes(x=stage, y=fluxInconsistentRxnsPrct, fill = Phenotype)) +
+						c = ggplot(mat, aes(x=stage, y=fluxInconsistentRxnsPrct, fill = Phenotype)) +
 							geom_boxplot(fill="white", width = 0.5, color="black")+
 							geom_point(aes(shape=ExpThreshold, color=Phenotype), size=4, position=position_dodge(0.5)) +
 							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("% of fluxInconsistent rxns in model") + 
+							theme(text = element_text(size = 18)) +
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
 							coord_flip()
 
-						svg("1.ManuscriptFigs/2e.svg")
-						e
+						svg("1.ManuscriptFigs/2c.svg")
+						c
 						dev.off()
 
 				# plot the "Number of overlapCoreRxnsPrct" - pre & post
 				mat <- dat[, c("Model_ID", "Dataset.x", "Phenotype.x", "ExpThreshold.x", "MEM.x", "overlapCoreRxnsPrct.x", "overlapCoreRxnsPrct.y")]
 				colnames(mat) = c("Model_ID", "Dataset", "Phenotype", "ExpThreshold", "MEM", "preExpansion", "postExpansion")
 				mat = mat %>% pivot_longer(cols=c('preExpansion', 'postExpansion'), names_to='stage', values_to='overlapCoreRxnsPrct')
-				mat
 
-						f = ggplot(mat, aes(x=stage, y=overlapCoreRxnsPrct, fill = Phenotype)) +
+						d = ggplot(mat, aes(x=stage, y=overlapCoreRxnsPrct, fill = Phenotype)) +
 							geom_boxplot(fill="white", width = 0.5, color="black")+
 							geom_point(aes(shape=ExpThreshold, color=Phenotype), size=4, position=position_dodge(0.5)) +
 							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("% of core rxns in model") + 
+							theme(text = element_text(size = 18)) +
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
 							coord_flip()
 
-						svg("1.ManuscriptFigs/2f.svg")
-						f
+						svg("1.ManuscriptFigs/2d.svg")
+						d
 						dev.off()
 
 				# plot the "Number of overlapLewisPrct" - pre & post
 				mat <- dat[, c("Model_ID", "Dataset.x", "Phenotype.x", "ExpThreshold.x", "MEM.x", "overlapLewisPrct.x", "overlapLewisPrct.y")]
 				colnames(mat) = c("Model_ID", "Dataset", "Phenotype", "ExpThreshold", "MEM", "preExpansion", "postExpansion")
 				mat = mat %>% pivot_longer(cols=c('preExpansion', 'postExpansion'), names_to='stage', values_to='overlapLewisPrct')
-				mat
 
-						g = ggplot(mat, aes(x=stage, y=overlapLewisPrct, fill = Phenotype)) +
+						e = ggplot(mat, aes(x=stage, y=overlapLewisPrct, fill = Phenotype)) +
 							geom_boxplot(fill="white", width = 0.5, color="black")+
 							geom_point(aes(shape=ExpThreshold, color=Phenotype), size=4, position=position_dodge(0.5)) +
 							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("% of astrocytic rxns, from Lewis et al. 2010, in model") + 
+							theme(text = element_text(size = 18)) +
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
 							coord_flip()
 
+						svg("1.ManuscriptFigs/2e.svg")
+						e
+						dev.off()
+
+# Fig.2f-g ------Compare models (postExpansion) with predecessors------
+
+				# plot the "Number of modelRxns" - only post
+				mat <- dat[, c("Model_ID", "Dataset.x", "Phenotype.x", "ExpThreshold.x", "MEM.x", "modelRxns.y")]
+				colnames(mat) = c("Model_ID", "Dataset", "Phenotype", "ExpThreshold", "MEM", "postExpansion")
+				mat_Rxns = mat %>% pivot_longer(cols=c('postExpansion'), names_to='stage', values_to='modelRxns')
+				
+				# plot the "Number of modelMets" - only post
+				mat <- dat[, c("Model_ID", "Dataset.x", "Phenotype.x", "ExpThreshold.x", "MEM.x", "modelMets.y")]
+				colnames(mat) = c("Model_ID", "Dataset", "Phenotype", "ExpThreshold", "MEM", "postExpansion")
+				mat_Mets = mat %>% pivot_longer(cols=c('postExpansion'), names_to='stage', values_to='modelMets')
+				
+				# compare modelStats of "Chellappa" vs "Predecessors"
+				mat = modelStats_predecessor %>% 
+																		add_row(Model_Source = rep(c('Chellappa. (2023)'), nrow(mat_Rxns)),
+																		Model_Source_Anno = rep(c('This Study'), nrow(mat_Rxns)),
+																		Phenotype = mat_Rxns$"Phenotype",
+																		modelRxns = mat_Rxns$"modelRxns",
+																		modelMets = mat_Mets$"modelMets")
+
+						# of rxns														
+						f = ggplot(mat, aes(x=Model_Source_Anno, y=modelRxns, fill = Model_Source)) +
+							geom_boxplot(fill="white", width = 0.5, color="black")+
+							geom_dotplot(binaxis='y', stackdir='center', position=position_dodge(0.5)) + 
+							scale_fill_discrete(breaks=c('Chellappa. (2023)', 'Baloni. (2020)', 'Martín-Jiménez. (2017)', 'DiNuzzo. (2017)', 'Lewis. (2010)', 'Çakir. (2007)')) +
+							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("# of rxns in model") + 
+							theme(text = element_text(size = 18)) +
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
+							scale_y_continuous(breaks = seq(0, 6000, by = 2000)) + 
+							coord_flip()
+
+						svg("1.ManuscriptFigs/2f.svg")
+						f
+						dev.off()
+																				
+						# of mets														
+						g = ggplot(mat, aes(x=Model_Source_Anno, y=modelMets, fill = Model_Source)) +
+							geom_boxplot(fill="white", width = 0.5, color="black")+
+							geom_dotplot(binaxis='y', stackdir='center', position=position_dodge(0.5)) + 
+							scale_fill_discrete(breaks=c('Chellappa. (2023)', 'Baloni. (2020)', 'Martín-Jiménez. (2017)', 'DiNuzzo. (2017)', 'Lewis. (2010)', 'Çakir. (2007)')) +
+							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("# of mets in model") + 
+							theme(text = element_text(size = 18)) +
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
+							scale_y_continuous(breaks = seq(0, 6000, by = 2000)) + 
+							coord_flip()
+							
 						svg("1.ManuscriptFigs/2g.svg")
 						g
 						dev.off()
 
-				plot_grid(a, b, labels=c("a.)", "b.)"), ncol = 1, nrow = 2)
-				plot_grid(c, d, labels=c("c.)", "d.)"), ncol = 1, nrow = 2)
-				plot_grid(e, f, labels=c("e.)", "f.)"), ncol = 1, nrow = 2)
-				plot_grid(g, labels=c("g.)"), ncol = 1, nrow = 2)
-								
+# Fig.3 ------Compare models - Koskuvi. (2022) vs Biju. (2020)------
+
+					# merge colNames to create modelID (pre expansion)
+					pre = modelStats_pre
+					pre$Model_ID <- paste(pre$Dataset, pre$Phenotype, pre$ExpThreshold, pre$MEM, sep="_")
+					pre <- pre %>% relocate(Model_ID, .before = Dataset)
+
+					# subset only Koskuvi and Biju models (pre expansion)
+					pre = pre %>% filter(grepl('Koskuvi|Biju', Model_ID))
+					mat = pre
+					
+						# of rxns
+						h = ggplot(mat, aes(x=Dataset, y=modelRxns, fill = ExpThreshold)) +
+							geom_boxplot(fill="white", width = 0.5, color="black")+
+							geom_dotplot(binaxis='y', stackdir='center', position=position_dodge(0.5)) + 
+							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("# of rxns in model") + 
+							theme(text = element_text(size = 18)) +
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
+							coord_flip()
+
+						svg("1.ManuscriptFigs/3a.svg")
+						h
+						dev.off()
+
+						# of mets
+						i = ggplot(mat, aes(x=Dataset, y=modelMets, fill = ExpThreshold)) +
+							geom_boxplot(fill="white", width = 0.5, color="black")+
+							geom_dotplot(binaxis='y', stackdir='center', position=position_dodge(0.5)) + 
+							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("# of mets in model") + 
+							theme(text = element_text(size = 18)) +
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
+							coord_flip()
+
+						svg("1.ManuscriptFigs/3b.svg")
+						i
+						dev.off()
+
+						# % of fluxInconsistent rxns in model
+						j = ggplot(mat, aes(x=Dataset, y=fluxInconsistentRxnsPrct, fill = ExpThreshold)) +
+							geom_boxplot(fill="white", width = 0.5, color="black")+
+							geom_dotplot(binaxis='y', stackdir='center', position=position_dodge(0.5)) + 
+							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("% of fluxInconsistent rxns in model") + 
+							theme(text = element_text(size = 18)) +
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
+							coord_flip()
+
+						svg("1.ManuscriptFigs/3c.svg")
+						j
+						dev.off()
+
+						# % of fluxInconsistent rxns in model
+						k = ggplot(mat, aes(x=Dataset, y=overlapCoreRxnsPrct, fill = ExpThreshold)) +
+							geom_boxplot(fill="white", width = 0.5, color="black")+
+							geom_dotplot(binaxis='y', stackdir='center', position=position_dodge(0.5)) + 
+							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("% of core rxns in model") + 
+							theme(text = element_text(size = 18)) +
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
+							coord_flip()
+
+						svg("1.ManuscriptFigs/3d.svg")
+						k
+						dev.off()
+
+						# % of fluxInconsistent rxns in model
+						l = ggplot(mat, aes(x=Dataset, y=overlapLewisPrct, fill = ExpThreshold)) +
+							geom_boxplot(fill="white", width = 0.5, color="black")+
+							geom_dotplot(binaxis='y', stackdir='center', position=position_dodge(0.5)) + 
+							theme_classic() + theme(aspect.ratio=0.5) + xlab("") + ylab("% of astrocytic rxns, from Lewis et al. 2010, in model") + 
+							theme(text = element_text(size = 18)) +
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
+							coord_flip()
+
+						svg("1.ManuscriptFigs/3e.svg")
+						l
+						dev.off()
+
+				# plotGrid
+				plot_grid(a1, a2, labels=c("a1.)", "a2.)"), ncol = 1, nrow = 2)
+				plot_grid(a, b, labels=c("2a.)", "2b.)"), ncol = 1, nrow = 2)
+				plot_grid(c, d, labels=c("2c.)", "2d.)"), ncol = 1, nrow = 2)
+				plot_grid(e, labels=c("2e.)"), ncol = 1, nrow = 2)
+				plot_grid(f, g, labels=c("2f.)", "2g.)"), ncol = 1, nrow = 2)
+				plot_grid(h, i, labels=c("3a.)", "3b.)"), ncol = 1, nrow = 2)
+				plot_grid(j, k, labels=c("3c.)", "3d.)"), ncol = 1, nrow = 2)
+				plot_grid(l, labels=c("3e.)"), ncol = 1, nrow = 2)
+
+				# patchwork
+				x1 =	 (a +theme(legend.position="none")) / 
+							(b+theme(legend.position="none")) | 
+							((c +theme(legend.position="none")) / 
+							(d+theme(legend.position="none"))) + plot_layout(guides = "collect")
+
+				svg("1.ManuscriptFigs/Fig2.svg")
+				x1
+				dev.off()
 
