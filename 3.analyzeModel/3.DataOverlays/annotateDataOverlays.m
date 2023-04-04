@@ -13,10 +13,10 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     subSystem = Tbl.subSystem;
     disrupted_module = Tbl.disrupted_module;
     rxnList = Tbl.rxnList;
-    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
-    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
-    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_S1.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
     % BD_S2
@@ -24,10 +24,10 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     subSystem = Tbl.subSystem;
     disrupted_module = Tbl.disrupted_module;
     rxnList = Tbl.rxnList;
-    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
-    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
-    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_S2.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
     % BD_S3
@@ -35,10 +35,10 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     subSystem = Tbl.subSystem;
     disrupted_module = Tbl.disrupted_module;
     rxnList = Tbl.rxnList;
-    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
-    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
-    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_S3.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
 %% BD_R
@@ -48,10 +48,10 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     subSystem = Tbl.subSystem;
     disrupted_module = Tbl.disrupted_module;
     rxnList = Tbl.rxnList;
-    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
-    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
-    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_R_S1.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
     % BD_R_S2
@@ -59,10 +59,10 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     subSystem = Tbl.subSystem;
     disrupted_module = Tbl.disrupted_module;
     rxnList = Tbl.rxnList;
-    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
-    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
-    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_R_S2.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
     % BD_R_S3
@@ -70,10 +70,10 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     subSystem = Tbl.subSystem;
     disrupted_module = Tbl.disrupted_module;
     rxnList = Tbl.rxnList;
-    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
-    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
-    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_R_S3.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
 %% BD_NR
@@ -83,10 +83,10 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     subSystem = Tbl.subSystem;
     disrupted_module = Tbl.disrupted_module;
     rxnList = Tbl.rxnList;
-    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
-    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
-    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S1.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
     % BD_NR_S2
@@ -94,10 +94,10 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     subSystem = Tbl.subSystem;
     disrupted_module = Tbl.disrupted_module;
     rxnList = Tbl.rxnList;
-    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
-    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
-    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S2.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
     % BD_NR_S3
@@ -105,10 +105,10 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     subSystem = Tbl.subSystem;
     disrupted_module = Tbl.disrupted_module;
     rxnList = Tbl.rxnList;
-    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
-    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
-    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S3.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
     % BD_NR_S4
@@ -116,10 +116,10 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     subSystem = Tbl.subSystem;
     disrupted_module = Tbl.disrupted_module;
     rxnList = Tbl.rxnList;
-    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
-    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
-    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S4.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
     % BD_NR_S5
@@ -127,10 +127,10 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     subSystem = Tbl.subSystem;
     disrupted_module = Tbl.disrupted_module;
     rxnList = Tbl.rxnList;
-    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
-    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
-    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S5.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
     % BD_NR_S6
@@ -138,10 +138,10 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     subSystem = Tbl.subSystem;
     disrupted_module = Tbl.disrupted_module;
     rxnList = Tbl.rxnList;
-    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
-    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
-    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S6.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
     % BD_NR_S7
@@ -149,10 +149,10 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     subSystem = Tbl.subSystem;
     disrupted_module = Tbl.disrupted_module;
     rxnList = Tbl.rxnList;
-    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
-    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
-    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S7.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
     % BD_NR_S8
@@ -160,10 +160,10 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     subSystem = Tbl.subSystem;
     disrupted_module = Tbl.disrupted_module;
     rxnList = Tbl.rxnList;
-    [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList);
-    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula];
+    [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList);
+    Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
-    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula'};
+    Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_S8.csv', 'WriteVariableNames', true, 'Delimiter','\t');
     
 %% DF_X_BD_Minerva

@@ -1,20 +1,20 @@
-subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula
-Tyrosine metabolism	FVA_BD_NR_norm_t2	DCT	NA	[c]	L_dpchrm[c]  <=> 56dihindlcrbxlt[c] 
-Tyrosine metabolism	FVA_BD_NR_norm_t2	DOPAQNISO1	NA	[c]	dopaqn[c]  <=> h[c] + 2c23dh56dhoxin[c] 
-Tyrosine metabolism	FVA_BD_NR_norm_t2	GGTe_1	NA	[e]	h2o[e] + CE5026[e]  <=> glu_L[e] + 5cysgly34dhphe[e] 
-Tyrosine metabolism	FVA_BD_NR_norm_t2	RE1916C	NA	[c]	gthrd[c] + dopaqn[c]  <=> CE5026[c] 
-Tyrosine metabolism	FVA_BD_NR_norm_t2	RE3198C	NA	[c]	h[c] + nadh[c] + L_dpchrm[c]  <=> nad[c] + 2c23dh56dhoxin[c] 
-Tyrosine metabolism	FVA_BD_NR_norm_t2	TYRASE	NA	[c]	56dihindlcrbxlt[c]  -> melanin[c] 
-Tyrosine metabolism	MTA_BD_NR_abs	SALMCOM	tyrosine metabolism	[c]	amet[c] + nrpphr[c]  -> h[c] + ahcys[c] + normete_L[c] 
-Tyrosine metabolism	MTA_BD_NR_abs	DOPAMT	NA	[c]	amet[c] + dopa[c]  -> h[c] + ahcys[c] + 3moxtyr[c] 
-Tyrosine metabolism	MTA_BD_NR_abs	34DHPHAMT	NA	[c]	34dhpha[c] + amet[c]  -> h[c] + ahcys[c] + homoval[c] 
-Tyrosine metabolism	MTA_BD_NR_abs	RE1916C	NA	intercompartmental	gthrd[c] + dopaqn[c]  <=> CE5026[c] 
-Tyrosine metabolism	MTA_BD_NR_abs	RE1915C	NA	[c]	cys_L[c] + dopaqn[c]  <=> CE1261[c] 
-Tyrosine metabolism	MTA_BD_NR_abs	RE1918C	NA	[c]	dopa[c] + acald[c]  <=> h2o[c] + C09642[c] 
-Tyrosine metabolism	MTA_BD_NR_abs	RE2130C	NA	[c]	dopa[c] + fald[c]  <=> h2o[c] + CE2172[c] 
-Tyrosine metabolism	MTA_BD_NR_abs	RE1919C	NA	[c]	pyr[c] + dopa[c]  <=> h2o[c] + CE5626[c] 
-Tyrosine metabolism	MTA_BD_NR_abs	RE1921C	NA	[c]	CE5626[c]  <=> 2 h[c] + co2[c] + CE5629[c] 
-Tyrosine metabolism	MTA_BD_NR_abs	DACGST	NA	[c]	gthrd[c] + 23dh1i56dio[c]  <=> 4glu56dihdind[c] 
-Tyrosine metabolism	MTA_BD_NR_abs	DCT	NA	intercompartmental	L_dpchrm[c]  <=> 56dihindlcrbxlt[c] 
-Tyrosine metabolism	MTA_BD_NR_abs	TYRASE	NA	intercompartmental	56dihindlcrbxlt[c]  -> melanin[c] 
-Tyrosine metabolism	MTA_BD_NR_abs	SFGTH	NA	[c]	h2o[c] + Sfglutth[c]  -> h[c] + for[c] + gthrd[c] 
+subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula	rxnName	rxnECNumbers
+Tyrosine metabolism	FVA_BD_NR_norm_t2	DCT	NA	[c]	L_dpchrm[c]  <=> 56dihindlcrbxlt[c] 	Dopachrome Tautomerase	5.3.3.12
+Tyrosine metabolism	FVA_BD_NR_norm_t2	DOPAQNISO1	NA	[c]	dopaqn[c]  <=> h[c] + 2c23dh56dhoxin[c] 	Dopaquinone Isomerase 1	2.4.1.130
+Tyrosine metabolism	FVA_BD_NR_norm_t2	GGTe_1	NA	[e]	h2o[e] + CE5026[e]  <=> glu_L[e] + 5cysgly34dhphe[e] 	Gamma-Glutamyltransferase	2.3.2.2
+Tyrosine metabolism	FVA_BD_NR_norm_t2	RE1916C	NA	[c]	gthrd[c] + dopaqn[c]  <=> CE5026[c] 	Glutathione Transferase	2.5.1.18
+Tyrosine metabolism	FVA_BD_NR_norm_t2	RE3198C	NA	[c]	h[c] + nadh[c] + L_dpchrm[c]  <=> nad[c] + 2c23dh56dhoxin[c] 	RE3198C	
+Tyrosine metabolism	FVA_BD_NR_norm_t2	TYRASE	NA	[c]	56dihindlcrbxlt[c]  -> melanin[c] 	Tyrosinase	
+Tyrosine metabolism	MTA_BD_NR_abs	SALMCOM	tyrosine metabolism	[c]	amet[c] + nrpphr[c]  -> h[c] + ahcys[c] + normete_L[c] 	S-Adenosyl-L-Methionine:Catechol O-Methyltransferase	2.1.1.6
+Tyrosine metabolism	MTA_BD_NR_abs	DOPAMT	NA	[c]	amet[c] + dopa[c]  -> h[c] + ahcys[c] + 3moxtyr[c] 	Dopamine:Amet O-Methyltransferase	2.1.1.6
+Tyrosine metabolism	MTA_BD_NR_abs	34DHPHAMT	NA	[c]	34dhpha[c] + amet[c]  -> h[c] + ahcys[c] + homoval[c] 	3, 4-Dihydroxyphenylacetate:Amet O-Methyltransferase	2.1.1.6
+Tyrosine metabolism	MTA_BD_NR_abs	RE1916C	NA	intercompartmental	gthrd[c] + dopaqn[c]  <=> CE5026[c] 	Glutathione Transferase	2.5.1.18
+Tyrosine metabolism	MTA_BD_NR_abs	RE1915C	NA	[c]	cys_L[c] + dopaqn[c]  <=> CE1261[c] 	RE1915C	1.1.1.184
+Tyrosine metabolism	MTA_BD_NR_abs	RE1918C	NA	[c]	dopa[c] + acald[c]  <=> h2o[c] + C09642[c] 	RE1918C	
+Tyrosine metabolism	MTA_BD_NR_abs	RE2130C	NA	[c]	dopa[c] + fald[c]  <=> h2o[c] + CE2172[c] 	RE2130C	2.7.1.68
+Tyrosine metabolism	MTA_BD_NR_abs	RE1919C	NA	[c]	pyr[c] + dopa[c]  <=> h2o[c] + CE5626[c] 	RE1919C	
+Tyrosine metabolism	MTA_BD_NR_abs	RE1921C	NA	[c]	CE5626[c]  <=> 2 h[c] + co2[c] + CE5629[c] 	Aromatic-L-Amino-Acid Decarboxylase	4.1.1.28
+Tyrosine metabolism	MTA_BD_NR_abs	DACGST	NA	[c]	gthrd[c] + 23dh1i56dio[c]  <=> 4glu56dihdind[c] 	2, 3-Dihydro-1H-Indole-5, 6-Dione Glutathione Conjugation	2.5.1.18
+Tyrosine metabolism	MTA_BD_NR_abs	DCT	NA	intercompartmental	L_dpchrm[c]  <=> 56dihindlcrbxlt[c] 	Dopachrome Tautomerase	5.3.3.12
+Tyrosine metabolism	MTA_BD_NR_abs	TYRASE	NA	intercompartmental	56dihindlcrbxlt[c]  -> melanin[c] 	Tyrosinase	
+Tyrosine metabolism	MTA_BD_NR_abs	SFGTH	NA	[c]	h2o[c] + Sfglutth[c]  -> h[c] + for[c] + gthrd[c] 	S-Formylglutathione Hydralase	3.1.2.12

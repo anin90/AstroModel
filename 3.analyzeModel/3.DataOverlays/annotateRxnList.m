@@ -1,4 +1,4 @@
-function [rxnList, MetabolicUnits, Localization, RxnFormula] = annotateRxnList(rxnList)
+function [rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers] = annotateRxnList(rxnList)
 
 %%
 tStart = tic;
@@ -59,6 +59,15 @@ model = Recon3DModel_MetabolicUnits;
         [RxnFormula{i}] = printRxnFormula(model, rxnList{i})';
     end
     RxnFormula = RxnFormula';
+
+    % Reaction Name/ECNumbers
+    for i = 1:length(rxnList);
+        [tmp{i},~] = find(ismember(model.rxns,rxnList{i}));
+        [RxnName{i}] = model.rxnNames(tmp{i});
+        [RxnECNumbers{i}] = model.rxnECNumbers(tmp{i});
+    end
+    RxnName = RxnName';
+    RxnECNumbers = RxnECNumbers';
 
 %%
 tEnd = toc(tStart);

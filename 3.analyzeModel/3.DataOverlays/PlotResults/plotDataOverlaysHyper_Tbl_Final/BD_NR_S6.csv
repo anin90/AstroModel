@@ -1,7 +1,7 @@
-subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula
-N-glycan synthesis	FVA_BD_NR_norm_t1	DOLMANP_Uter	NA	intercompartmental	0.1 dolmanp_U[c]  -> 0.1 dolmanp_U[r] 
-N-glycan synthesis	FVA_BD_NR_norm_t1	DOLPMT3_Uer	NA	[c]	gdpmann[c] + 0.1 dolp_U[c]  -> gdp[c] + 0.1 dolmanp_U[c] 
-N-glycan synthesis	FVA_BD_NR_norm_t1	DOLPMT4_Uer	NA	intercompartmental	0.1 dolp_U[r]  -> 0.1 dolp_U[c] 
-N-glycan synthesis	MTA_BD_NR_norm_t2	DOLMANP_Uter	NA	intercompartmental	0.1 dolmanp_U[c]  -> 0.1 dolmanp_U[r] 
-N-glycan synthesis	MTA_BD_NR_norm_t2	DOLPMT3_Uer	NA	intercompartmental	gdpmann[c] + 0.1 dolp_U[c]  -> gdp[c] + 0.1 dolmanp_U[c] 
-N-glycan synthesis	MTA_BD_NR_norm_t2	DOLPMT4_Uer	NA	intercompartmental	0.1 dolp_U[r]  -> 0.1 dolp_U[c] 
+subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula	rxnName	rxnECNumbers
+N-glycan synthesis	FVA_BD_NR_norm_t1	DOLMANP_Uter	NA	intercompartmental	0.1 dolmanp_U[c]  -> 0.1 dolmanp_U[r] 	Dolichol-Phosphate Mannose Flippase (Uterus)	3.1.4.48
+N-glycan synthesis	FVA_BD_NR_norm_t1	DOLPMT3_Uer	NA	[c]	gdpmann[c] + 0.1 dolp_U[c]  -> gdp[c] + 0.1 dolmanp_U[c] 	Dolichyl-Phosphate-Mannose-Glycolipid Alpha-Mannosyltransferase (Uterus)	2.4.1.130
+N-glycan synthesis	FVA_BD_NR_norm_t1	DOLPMT4_Uer	NA	intercompartmental	0.1 dolp_U[r]  -> 0.1 dolp_U[c] 	Dolichyl-Phosphate-Mannose-Glycolipid Alpha-Mannosyltransferase (Uterus)	2.4.1.130
+N-glycan synthesis	MTA_BD_NR_norm_t2	DOLMANP_Uter	NA	intercompartmental	0.1 dolmanp_U[c]  -> 0.1 dolmanp_U[r] 	Dolichol-Phosphate Mannose Flippase (Uterus)	3.1.4.48
+N-glycan synthesis	MTA_BD_NR_norm_t2	DOLPMT3_Uer	NA	intercompartmental	gdpmann[c] + 0.1 dolp_U[c]  -> gdp[c] + 0.1 dolmanp_U[c] 	Dolichyl-Phosphate-Mannose-Glycolipid Alpha-Mannosyltransferase (Uterus)	2.4.1.130
+N-glycan synthesis	MTA_BD_NR_norm_t2	DOLPMT4_Uer	NA	intercompartmental	0.1 dolp_U[r]  -> 0.1 dolp_U[c] 	Dolichyl-Phosphate-Mannose-Glycolipid Alpha-Mannosyltransferase (Uterus)	2.4.1.130

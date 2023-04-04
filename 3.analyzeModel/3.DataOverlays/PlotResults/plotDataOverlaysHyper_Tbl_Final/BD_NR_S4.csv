@@ -1,17 +1,17 @@
-subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula
-Heparan sulfate degradation	MTA_BD_NR_abs	HSPASEly	NA	[l]	h2o[l] + hspg[l]  -> Ser_Gly_Ala_X_Gly[l] + hs[l] 
-Heparan sulfate degradation	MTA_BD_NR_abs	HS3ly	heparan sulphate degradation, lysosome	[l]	h2o[l] + hs_deg12[l]  -> h[l] + so4[l] + hs_deg13[l] 
-Heparan sulfate degradation	MTA_BD_NR_abs	S6TASE3ly	NA	[l]	h2o[l] + hs_deg11[l]  <=> h[l] + so4[l] + hs_deg12[l] 
-Heparan sulfate degradation	MTA_BD_NR_abs	S3TASE1ly	NA	[l]	h2o[l] + hs_deg10[l]  <=> h[l] + so4[l] + hs_deg11[l] 
-Heparan sulfate degradation	MTA_BD_NR_abs	S2TASE1ly	NA	[l]	h2o[l] + hs_deg15[l]  -> h[l] + so4[l] + hs_deg16[l] 
-Heparan sulfate degradation	MTA_BD_NR_abs	GLCNACASE5ly	heparan sulphate degradation, lysosome	[l]	h2o[l] + hs_deg24[l]  -> acgam[l] + hs_deg25[l] 
-Heparan sulfate degradation	MTA_BD_NR_abs	S3TASE3ly	NA	[l]	h2o[l] + hs_deg23[l]  <=> h[l] + so4[l] + hs_deg24[l] 
-Heparan sulfate degradation	MTA_BD_NR_abs	GLCNACASE4ly	heparan sulphate degradation, lysosome	[l]	h2o[l] + hs_deg20[l]  -> acgam[l] + hs_deg21[l] 
-Heparan sulfate degradation	MTA_BD_NR_abs	HSAT4ly	NA	intercompartmental	accoa[c] + hs_deg19[l]  -> coa[c] + h[l] + hs_deg20[l] 
-Heparan sulfate degradation	MTA_BD_NR_norm_t2	HS4ly	heparan sulphate degradation, lysosome	[l]	h2o[l] + hs_deg18[l]  -> h[l] + so4[l] + hs_deg19[l] 
-Heparan sulfate degradation	MTA_BD_NR_norm_t2	S3TASE2ly	NA	[l]	h2o[l] + hs_deg17[l]  <=> h[l] + so4[l] + hs_deg18[l] 
-Heparan sulfate degradation	MTA_BD_NR_norm_t2	HS3ly	heparan sulphate degradation, lysosome	intercompartmental	h2o[l] + hs_deg12[l]  -> h[l] + so4[l] + hs_deg13[l] 
-Heparan sulfate degradation	MTA_BD_NR_norm_t2	S6TASE3ly	NA	intercompartmental	h2o[l] + hs_deg11[l]  <=> h[l] + so4[l] + hs_deg12[l] 
-Heparan sulfate degradation	MTA_BD_NR_norm_t2	S2TASE1ly	NA	intercompartmental	h2o[l] + hs_deg15[l]  -> h[l] + so4[l] + hs_deg16[l] 
-Heparan sulfate degradation	MTA_BD_NR_norm_t2	LINKDEG1ly	NA	[l]	3 h2o[l] + hs_deg25[l]  -> 2 gal[l] + glcur[l] + xyl_D[l] 
-Heparan sulfate degradation	MTA_BD_NR_norm_t2	HSAT2ly	NA	intercompartmental	accoa[c] + hs_deg7[l]  -> coa[c] + h[l] + hs_deg8[l] 
+subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula	rxnName	rxnECNumbers
+Heparan sulfate degradation	MTA_BD_NR_abs	HSPASEly	NA	[l]	h2o[l] + hspg[l]  -> Ser_Gly_Ala_X_Gly[l] + hs[l] 	Heparan Sulfate Proteoglycan Protease, Lysosomal (Endosome)	1.1.1.62
+Heparan sulfate degradation	MTA_BD_NR_abs	HS3ly	heparan sulphate degradation, lysosome	[l]	h2o[l] + hs_deg12[l]  -> h[l] + so4[l] + hs_deg13[l] 	Heparan-N-Sulfatase, Lysosomal	3.10.1.1
+Heparan sulfate degradation	MTA_BD_NR_abs	S6TASE3ly	NA	[l]	h2o[l] + hs_deg11[l]  <=> h[l] + so4[l] + hs_deg12[l] 	N-Acetylglucosamine-6-Sulfatase, Lysosomal	3.1.6.14
+Heparan sulfate degradation	MTA_BD_NR_abs	S3TASE1ly	NA	[l]	h2o[l] + hs_deg10[l]  <=> h[l] + so4[l] + hs_deg11[l] 	N-Acetylglucosamine-3-Sulfatase, Lysosomal	3.1.6.15
+Heparan sulfate degradation	MTA_BD_NR_abs	S2TASE1ly	NA	[l]	h2o[l] + hs_deg15[l]  -> h[l] + so4[l] + hs_deg16[l] 	Iduronate-2-Sulfatase, Lysosomal	3.1.6.13
+Heparan sulfate degradation	MTA_BD_NR_abs	GLCNACASE5ly	heparan sulphate degradation, lysosome	[l]	h2o[l] + hs_deg24[l]  -> acgam[l] + hs_deg25[l] 	Alpha-N-Acetylglucosaminidase, Lysosomal	3.2.1.50
+Heparan sulfate degradation	MTA_BD_NR_abs	S3TASE3ly	NA	[l]	h2o[l] + hs_deg23[l]  <=> h[l] + so4[l] + hs_deg24[l] 	N-Acetylglucosamine-3-Sulfatase, Lysosomal	3.1.6.15
+Heparan sulfate degradation	MTA_BD_NR_abs	GLCNACASE4ly	heparan sulphate degradation, lysosome	[l]	h2o[l] + hs_deg20[l]  -> acgam[l] + hs_deg21[l] 	Alpha-N-Acetylglucosaminidase, Lysosomal	3.2.1.50
+Heparan sulfate degradation	MTA_BD_NR_abs	HSAT4ly	NA	intercompartmental	accoa[c] + hs_deg19[l]  -> coa[c] + h[l] + hs_deg20[l] 	Heparan-Glucosaminide N-Acetyltransferase, Lysosomal	2.3.1.78
+Heparan sulfate degradation	MTA_BD_NR_norm_t2	HS4ly	heparan sulphate degradation, lysosome	[l]	h2o[l] + hs_deg18[l]  -> h[l] + so4[l] + hs_deg19[l] 	Heparan-N-Sulfatase, Lysosomal	3.10.1.1
+Heparan sulfate degradation	MTA_BD_NR_norm_t2	S3TASE2ly	NA	[l]	h2o[l] + hs_deg17[l]  <=> h[l] + so4[l] + hs_deg18[l] 	N-Acetylglucosamine-3-Sulfatase, Lysosomal	3.1.6.15
+Heparan sulfate degradation	MTA_BD_NR_norm_t2	HS3ly	heparan sulphate degradation, lysosome	intercompartmental	h2o[l] + hs_deg12[l]  -> h[l] + so4[l] + hs_deg13[l] 	Heparan-N-Sulfatase, Lysosomal	3.10.1.1
+Heparan sulfate degradation	MTA_BD_NR_norm_t2	S6TASE3ly	NA	intercompartmental	h2o[l] + hs_deg11[l]  <=> h[l] + so4[l] + hs_deg12[l] 	N-Acetylglucosamine-6-Sulfatase, Lysosomal	3.1.6.14
+Heparan sulfate degradation	MTA_BD_NR_norm_t2	S2TASE1ly	NA	intercompartmental	h2o[l] + hs_deg15[l]  -> h[l] + so4[l] + hs_deg16[l] 	Iduronate-2-Sulfatase, Lysosomal	3.1.6.13
+Heparan sulfate degradation	MTA_BD_NR_norm_t2	LINKDEG1ly	NA	[l]	3 h2o[l] + hs_deg25[l]  -> 2 gal[l] + glcur[l] + xyl_D[l] 	Degradation of Proteoglycan Linkage Region, Lysosomal	
+Heparan sulfate degradation	MTA_BD_NR_norm_t2	HSAT2ly	NA	intercompartmental	accoa[c] + hs_deg7[l]  -> coa[c] + h[l] + hs_deg8[l] 	Heparan-Glucosaminide N-Acetyltransferase, Lysosomal	2.3.1.78
