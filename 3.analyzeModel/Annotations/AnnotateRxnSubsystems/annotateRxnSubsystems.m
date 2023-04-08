@@ -14,6 +14,9 @@ writetable(table(iAstro_iPS_Ctrl_TP_abs.rxns, [iAstro_iPS_Ctrl_TP_abs.subSystems
 writetable(table(iAstro_iPS_BD_TP_abs.rxns, [iAstro_iPS_BD_TP_abs.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_BD_TP_abs.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
 writetable(table(iAstro_iPS_BD_R_TP_abs.rxns, [iAstro_iPS_BD_R_TP_abs.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_BD_R_TP_abs.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
 writetable(table(iAstro_iPS_BD_NR_TP_abs.rxns, [iAstro_iPS_BD_NR_TP_abs.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_BD_NR_TP_abs.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
+writetable(table(iAstro_iPS_SCZ_Ctrl_TP_abs.rxns, [iAstro_iPS_SCZ_Ctrl_TP_abs.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_SCZ_Ctrl_TP_abs.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
+writetable(table(iAstro_iPS_SCZ_HT_TP_abs.rxns, [iAstro_iPS_SCZ_HT_TP_abs.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_SCZ_HT_TP_abs.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
+writetable(table(iAstro_iPS_SCZ_ST_TP_abs.rxns, [iAstro_iPS_SCZ_ST_TP_abs.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_SCZ_ST_TP_abs.csv', 'WriteVariableNames', true, 'Delimiter', '\t'); 
 
 % norm_t1
 writetable(table(iAstro_Primary_TP_norm_t1.rxns, [iAstro_Primary_TP_norm_t1.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_Primary_TP_norm_t1.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
@@ -21,6 +24,9 @@ writetable(table(iAstro_iPS_Ctrl_TP_norm_t1.rxns, [iAstro_iPS_Ctrl_TP_norm_t1.su
 writetable(table(iAstro_iPS_BD_TP_norm_t1.rxns, [iAstro_iPS_BD_TP_norm_t1.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_BD_TP_norm_t1.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
 writetable(table(iAstro_iPS_BD_R_TP_norm_t1.rxns, [iAstro_iPS_BD_R_TP_norm_t1.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_BD_R_TP_norm_t1.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
 writetable(table(iAstro_iPS_BD_NR_TP_norm_t1.rxns, [iAstro_iPS_BD_NR_TP_norm_t1.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_BD_NR_TP_norm_t1.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
+writetable(table(iAstro_iPS_SCZ_Ctrl_TP_norm_t1.rxns, [iAstro_iPS_SCZ_Ctrl_TP_norm_t1.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_SCZ_Ctrl_TP_norm_t1.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
+writetable(table(iAstro_iPS_SCZ_HT_TP_norm_t1.rxns, [iAstro_iPS_SCZ_HT_TP_norm_t1.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_SCZ_HT_TP_norm_t1.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
+writetable(table(iAstro_iPS_SCZ_ST_TP_norm_t1.rxns, [iAstro_iPS_SCZ_ST_TP_norm_t1.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_SCZ_ST_TP_norm_t1.csv', 'WriteVariableNames', true, 'Delimiter', '\t'); 
 
 % norm_t2
 writetable(table(iAstro_Primary_TP_norm_t2.rxns, [iAstro_Primary_TP_norm_t2.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_Primary_TP_norm_t2.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
@@ -28,5 +34,8 @@ writetable(table(iAstro_iPS_Ctrl_TP_norm_t2.rxns, [iAstro_iPS_Ctrl_TP_norm_t2.su
 writetable(table(iAstro_iPS_BD_TP_norm_t2.rxns, [iAstro_iPS_BD_TP_norm_t2.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_BD_TP_norm_t2.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
 writetable(table(iAstro_iPS_BD_R_TP_norm_t2.rxns, [iAstro_iPS_BD_R_TP_norm_t2.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_BD_R_TP_norm_t2.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
 writetable(table(iAstro_iPS_BD_NR_TP_norm_t2.rxns, [iAstro_iPS_BD_NR_TP_norm_t2.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_BD_NR_TP_norm_t2.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
+writetable(table(iAstro_iPS_SCZ_Ctrl_TP_norm_t2.rxns, [iAstro_iPS_SCZ_Ctrl_TP_norm_t2.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_SCZ_Ctrl_TP_norm_t2.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
+writetable(table(iAstro_iPS_SCZ_HT_TP_norm_t2.rxns, [iAstro_iPS_SCZ_HT_TP_norm_t2.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_SCZ_HT_TP_norm_t2.csv', 'WriteVariableNames', true, 'Delimiter', '\t');
+writetable(table(iAstro_iPS_SCZ_ST_TP_norm_t2.rxns, [iAstro_iPS_SCZ_ST_TP_norm_t2.subSystems{:}]', 'VariableNames',{'Rxn','SubSystem'}), 'Rxns_iPS_SCZ_ST_TP_norm_t2.csv', 'WriteVariableNames', true, 'Delimiter', '\t'); 
 
 %%
