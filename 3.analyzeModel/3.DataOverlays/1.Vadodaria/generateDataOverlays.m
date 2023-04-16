@@ -10,6 +10,7 @@ clear File FileName FolderName
 
 %% add path to dependencies:
 addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/')
+addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays')
 
 %% model_abs:
 

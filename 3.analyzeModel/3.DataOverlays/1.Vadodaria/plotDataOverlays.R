@@ -8,7 +8,7 @@ readxl, oligo, limma, mogene20sttranscriptcluster.db, qvalue, GEOquery, tidyr, t
 ggplot2, ggfortify, reshape2, factoextra, plot.matrix, VennDiagram, ggvenn, plotrix, pheatmap, magrittr, venn, 
 mgsub, gsubfn, readxl, openxlsx, UpSetR, qvalue, GEOquery, TeachingDemos, sm, org.Hs.eg.db, data.table) 
 
-setwd("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays")
+setwd("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria")
 
 pdf("PlotResults/plotDataOverlaysHyper.pdf")
 
@@ -66,9 +66,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		MTA_BD_R_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_abs/bd_r_rxns_fdr.csv", header = T, sep = "\t")
 		MTA_BD_NR_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_abs/bd_nr_rxns_fdr.csv", header = T, sep = "\t")
 		# results_lithium
-		Lanz_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Lanz_vs_Ctrl_abs.csv", header = T, sep = "\t")
-		Rivera_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Rivera_vs_Ctrl_abs.csv", header = T, sep = "\t")
-		Akkouh_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Akkouh_vs_Ctrl_abs.csv", header = T, sep = "\t")
+		Lanz_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/AnalysisFiles/Lanz_vs_Ctrl_abs.csv", header = T, sep = "\t")
+		Rivera_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/AnalysisFiles/Rivera_vs_Ctrl_abs.csv", header = T, sep = "\t")
+		Akkouh_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/AnalysisFiles/Akkouh_vs_Ctrl_abs.csv", header = T, sep = "\t")
 		
 	# model_norm_t1
 		# background
@@ -85,9 +85,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		MTA_BD_R_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t1/bd_r_rxns_fdr.csv", header = T, sep = "\t")
 		MTA_BD_NR_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t1/bd_nr_rxns_fdr.csv", header = T, sep = "\t")
 		# results_lithium
-		Lanz_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Lanz_vs_Ctrl_norm_t1.csv", header = T, sep = "\t")
-		Rivera_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Rivera_vs_Ctrl_norm_t1.csv", header = T, sep = "\t")
-		Akkouh_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Akkouh_vs_Ctrl_norm_t1.csv", header = T, sep = "\t")
+		Lanz_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/AnalysisFiles/Lanz_vs_Ctrl_norm_t1.csv", header = T, sep = "\t")
+		Rivera_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/AnalysisFiles/Rivera_vs_Ctrl_norm_t1.csv", header = T, sep = "\t")
+		Akkouh_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/AnalysisFiles/Akkouh_vs_Ctrl_norm_t1.csv", header = T, sep = "\t")
 
 	# model_norm_t2
 		# background
@@ -104,9 +104,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		MTA_BD_R_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t2/bd_r_rxns_fdr.csv", header = T, sep = "\t")
 		MTA_BD_NR_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_significant_norm_t2/bd_nr_rxns_fdr.csv", header = T, sep = "\t")
 		# results_lithium
-		Lanz_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Lanz_vs_Ctrl_norm_t2.csv", header = T, sep = "\t")
-		Rivera_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Rivera_vs_Ctrl_norm_t2.csv", header = T, sep = "\t")
-		Akkouh_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/AnalysisFiles/Akkouh_vs_Ctrl_norm_t2.csv", header = T, sep = "\t")
+		Lanz_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/AnalysisFiles/Lanz_vs_Ctrl_norm_t2.csv", header = T, sep = "\t")
+		Rivera_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/AnalysisFiles/Rivera_vs_Ctrl_norm_t2.csv", header = T, sep = "\t")
+		Akkouh_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/AnalysisFiles/Akkouh_vs_Ctrl_norm_t2.csv", header = T, sep = "\t")
 
 ############################
 # BD vs Lithium
@@ -481,9 +481,9 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 ###########################
 
 	# tbl_filt
-		BD_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_filt.csv", header = T, sep = "\t")
-		BD_R_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_r_filt.csv", header = T, sep = "\t")
-		BD_NR_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_nr_filt.csv", header = T, sep = "\t")
+		BD_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_filt.csv", header = T, sep = "\t")
+		BD_R_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_r_filt.csv", header = T, sep = "\t")
+		BD_NR_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_nr_filt.csv", header = T, sep = "\t")
 		
 				# bd	
 					df = data.frame("subSystem" = BD_tbl$X, 
