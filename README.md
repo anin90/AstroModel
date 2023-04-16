@@ -247,8 +247,6 @@ cd AstroModel/
 ## script-1: sliceImportantDisruptions_xxx.R
 ## script-2: annotateImportantDisruptions_xxx.m
 ## script-3: identifyFdrSignificantDisruptions_xxx.R
-## script-4: annotateFinalTable_xxx.m
-## script-5: plotFinalTable_xxx.R
 ## replace 'xxx' with abs/norm_t1/norm_t2, to generate results for the respective models.
 ## Output-dir-1: 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_xxx/
 ## Output-dir-2: 3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_xxx/
@@ -265,8 +263,6 @@ cd AstroModel/
 	Rscript sliceImportantDisruptions_xxx.R
 	run annotateImportantDisruptions_xxx.m
 	Rscript identifyFdrSignificantDisruptions_xxx.R
-	run PlotResults/annotateFinalTable_xxx.m
-	Rscript plotFinalTable_xxx.R
 	
 #MTA:
 ## Filter reactions relavant to phenotype-of-interest (BD, BD_R, BD_NR),
@@ -293,7 +289,7 @@ cd AstroModel/
 
    * Step-3: Identifying disruptions that are significant across modules.
 ```matlab
-	cd 3.analyzeModel/3.DataOverlays/
+	cd 3.analyzeModel/3.DataOverlays/1.Vadodaria/
 	run generateDataOverlays.m
 	Rscript plotDataOverlays.R
 	run annotateDataOverlays.m
@@ -301,11 +297,17 @@ cd AstroModel/
 ```
 
 ### 4. modelComparison/ - <ins>Compare model statistics</ins>.
-   * Test
-   * Test
-   * Test
+
+   * Generate model statistics
+```matlab
+	cd 4.modelComparison/
+	run generateModelStatsMatrixFinal.m
+```
    
 ### 5. generateFigures/ - <ins>Generate figures for manuscript</ins>.
-   * Test
-   * Test
-   * Test
+
+   * Generate manuscript figures
+```matlab
+	cd 5.generateFigures/
+	Rscript generateFigures_ms.R
+```
