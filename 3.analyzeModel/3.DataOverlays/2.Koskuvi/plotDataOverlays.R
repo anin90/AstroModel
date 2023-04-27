@@ -321,11 +321,10 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 
 	# tbl_filt
 		ST_tbl <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/2.Koskuvi/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_st_filt.csv", header = T, sep = "\t")
-
 				# st	
 					df = data.frame("subSystem" = ST_tbl$X, 
 								"disruptedBy" = c(ST_tbl$Total))
-								
+			
 					st_lst = rep(df$subSystem, df$disruptedBy)
 
 		mat = lst(st_lst) %>% 
@@ -358,7 +357,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 ###############################################
 # Backtracking - subSystems to Modules
 ###############################################
-		
+
 	# st	
 	
 		DF = ST_tbl
@@ -373,7 +372,8 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 		
 		ST <- ST %>% relocate(Phenotype, .before = X)
 
-		setnames(ST, old = c('X','Total', 'DisruptedModule'), new = c('subSystem','No.of.disrupted.modules', 'disrupted.modules'))
+		setnames(ST, old = c('X','Total', 'DisruptedModule'), new = c('subSystem','No.of.disrupted.modules', 'disrupted.modules'))		
+
 
 ###################
 # Load rxn data
@@ -398,7 +398,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 # Backtracking - Modules to Rxns
 ###############################################
 
-		ST[,c(1:4)]
+#~ 		ST[,c(1:4)]
 
 		x = strsplit(ST$disrupted.modules, "\\s+")
 		
@@ -514,8 +514,59 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 			# write table
 			write.table(DF1, "PlotResults/ST_Rxns.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 
+###############################################
+# subSystem 'pval' & 'disupted by' plot
+###############################################
 
+	# st_subSystem_pval
+	
+					# results_koskuvi_subsystem_all
+						FVA_ST_subsystem_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/FSr_ST/PlotResults/st_tbl_abs/ST_subsystem_all_abs.csv", header = T, sep = "\t")
+						MTA_ST_subsystem_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/MTA_ST/PlotResults/mta_tbl_prctile_top_abs/ST_subsystem_all.csv", header = T, sep = "\t")
+						FVA_ST_subsystem_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/FSr_ST/PlotResults/st_tbl_norm_t1/ST_subsystem_all_norm_t1.csv", header = T, sep = "\t")
+						MTA_ST_subsystem_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/MTA_ST/PlotResults/mta_tbl_prctile_top_norm_t1/ST_subsystem_all.csv", header = T, sep = "\t")
+						FVA_ST_subsystem_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/FSr_ST/PlotResults/st_tbl_norm_t2/ST_subsystem_all_norm_t2.csv", header = T, sep = "\t")
+						MTA_ST_subsystem_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/MTA_ST/PlotResults/mta_tbl_prctile_top_norm_t2/ST_subsystem_all.csv", header = T, sep = "\t")
+	
+					# model_all [i.e., ST - subSystem.fdr.pval]
+	
+						ST_1 <- subset(FVA_ST_subsystem_abs, TRUE, c("subSystem", "p.val.fdr"))
+						ST_2 <- subset(MTA_ST_subsystem_abs, TRUE, c("subSystem_SC", "p.val.fdr"))
+						ST_3 <- subset(FVA_ST_subsystem_norm_t1, TRUE, c("subSystem", "p.val.fdr"))
+						ST_4 <- subset(MTA_ST_subsystem_norm_t1, TRUE, c("subSystem_SC", "p.val.fdr"))
+						ST_5 <- subset(FVA_ST_subsystem_norm_t2, TRUE, c("subSystem", "p.val.fdr"))
+						ST_6 <- subset(MTA_ST_subsystem_norm_t2, TRUE, c("subSystem_SC", "p.val.fdr"))
+						colnames(ST_2) = c("subSystem", "p.val.fdr")
+						colnames(ST_4) = c("subSystem", "p.val.fdr")
+						colnames(ST_6) = c("subSystem", "p.val.fdr")
 
+						ST_x <- merge(ST_1, ST_2, by.x = "subSystem", by.y = "subSystem", all=T)
+						ST_x <- merge(ST_x, ST_3, by.x = "subSystem", by.y = "subSystem", all=T)
+						ST_x <- merge(ST_x, ST_4, by.x = "subSystem", by.y = "subSystem", all=T)
+						ST_x <- merge(ST_x, ST_5, by.x = "subSystem", by.y = "subSystem", all=T)
+						ST_x <- merge(ST_x, ST_6, by.x = "subSystem", by.y = "subSystem", all=T)
+						colnames(ST_x) = c("subSystem", "FVA_abs.p.val.fdr", "MTA_abs.p.val.fdr",
+															"FVA_norm_t1.p.val.fdr", "MTA_norm_t1.p.val.fdr",
+															"FVA_norm_t2.p.val.fdr", "MTA_norm_t2.p.val.fdr")
+						
+					# filter for significance (fdr.p.value <= 0.05) in atleat 2 of six modules		
+						ST_x[,2:7][is.na(ST_x[,2:7])] <- 0
+						ST_x$rowMeans = rowMeans(ST_x[,2:7], na.rm=TRUE)
+						ST_x[,2:7][ST_x[,2:7] == 0] <- NA
+						ST_x_filt = ST_x[rowSums(ST_x[2:7] <= 0.05, na.rm=TRUE) > 2, ]
+						setdiff(ST$subSystem, ST_x_filt$subSystem)
+						setdiff(ST_x_filt$subSystem, ST$subSystem)
+						ST_subSystem_pval <- merge(ST, ST_x_filt, by.x = "subSystem", by.y = "subSystem")
+						ST_subSystem_pval
+						
+						mm = ST_subSystem_pval
+						ggplot(mm, aes(x=subSystem, y=-log10(rowMeans), fill=Phenotype)) + 
+							geom_bar(stat="identity", color="black", width = 0.7) + theme_classic() +
+							scale_fill_manual(values=c("#339cff")) + 
+							coord_flip() +
+							scale_y_continuous(breaks=c(0:1:10)) + theme(aspect.ratio=1) +
+							xlab("") + ylab("median.p.val.fdr") + labs(fill = "Phenotype") +
+							theme(axis.text.y=element_text(size=rel(1.1)))
 
 
 

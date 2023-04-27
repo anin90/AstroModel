@@ -254,4 +254,7 @@ pdf("mta_tbl_prctile_top_abs/analyzeMTAscores_abs.pdf")
 	write.table(ST_subsystem_fdr, "mta_tbl_prctile_top_significant_abs/ST_subsystem_fdr.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 	ST_rxns_fdr = st_rxns[st_rxns$subSystem_SC %in% ST_subsystem_fdr$subSystem_SC,]
 	write.table(ST_rxns_fdr, "mta_tbl_prctile_top_significant_abs/ST_rxns_fdr.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
+	#write all subsystems to csv
+	ST_subsystem_all = combStat
+	write.table(ST_subsystem_all, "mta_tbl_prctile_top_abs/ST_subsystem_all.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 

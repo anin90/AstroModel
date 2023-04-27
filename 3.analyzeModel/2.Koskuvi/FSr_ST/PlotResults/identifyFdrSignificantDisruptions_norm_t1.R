@@ -63,6 +63,9 @@ ST <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobra
 	write.table(ST_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/FSr_ST/PlotResults/st_tbl_significant_norm_t1/ST_subsystem_fdr_norm_t1.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 	ST_rxns_fdr = ST[ST$subSystem %in% ST_subsystem_fdr$subSystem,]
 	write.table(ST_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/FSr_ST/PlotResults/st_tbl_significant_norm_t1/ST_rxns_fdr_norm_t1.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
+	#write all subsystems to csv
+	ST_subsystem_all = combStat
+	write.table(ST_subsystem_all, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/FSr_ST/PlotResults/st_tbl_norm_t1/ST_subsystem_all_norm_t1.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 
 # Fig.2: Number of rxns per compartment (st_rxns)
 	#2a: all.98
