@@ -1,36 +1,36 @@
-subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula	rxnName	rxnECNumbers
-Inositol phosphate metabolism	FVA_BD_NR_abs	HMR_6549	NA	[c]	h2o[c] + pail34p_hs[c]  -> pi[c] + pail3p_hs[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	HMR_6564	NA	[c]	h2o[c] + mi1345p[c]  -> pi[c] + mi145p[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	HMR_6580	NA	[g]	atp[g] + pail_hs[g]  -> h[g] + adp[g] + pail5p_hs[g] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	HMR_6584	NA	[g]	h2o[g] + pail5p_hs[g]  -> pi[g] + pail_hs[g] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	HMR_7652	NA	[c]	atp[c] + minohp[c]  -> adp[c] + ppmi12346p[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	MI1345PP	NA	[c]	h2o[c] + mi1345p[c]  -> pi[c] + mi134p[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	MI134PP	NA	[c]	h2o[c] + mi134p[c]  -> pi[c] + mi34p[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	MI145PK	NA	[c]	atp[c] + mi145p[c]  -> h[c] + adp[c] + mi1345p[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	MI14P4P	NA	[c]	h2o[c] + mi14p[c]  -> pi[c] + mi1p_D[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	MI14PP	NA	[c]	h2o[c] + mi14p[c]  -> pi[c] + mi4p_D[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	MI1PP	phospholipid metabolism/inositol, cytosol	[c]	h2o[c] + mi1p_D[c]  -> pi[c] + inost[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	MI1PS	phospholipid metabolism/inositol, cytosol	[c]	g6p[c]  -> mi1p_D[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	MI34PP	NA	[c]	h2o[c] + mi34p[c]  -> pi[c] + mi3p_D[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	MI3PP	NA	[c]	h2o[c] + mi3p_D[c]  -> pi[c] + inost[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	MI4PP	NA	[c]	h2o[c] + mi4p_D[c]  -> pi[c] + inost[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	PI345P5P	NA	[c]	h2o[c] + pail345p_hs[c]  -> pi[c] + pail34p_hs[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	PI34P5K	NA	[c]	atp[c] + pail34p_hs[c]  -> h[c] + adp[c] + pail345p_hs[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	PI3P4K	NA	[c]	atp[c] + pail3p_hs[c]  -> h[c] + adp[c] + pail34p_hs[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	PI3P5K	NA	[c]	atp[c] + pail3p_hs[c]  -> h[c] + adp[c] + pail35p_hs[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	PI45P3K	NA	[c]	atp[c] + pail45p_hs[c]  -> h[c] + adp[c] + pail345p_hs[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	PI4P3K	NA	[c]	atp[c] + pail4p_hs[c]  -> h[c] + adp[c] + pail34p_hs[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	PI5P4K	new to recon	[c]	atp[c] + pail5p_hs[c]  -> h[c] + adp[c] + pail45p_hs[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	PIK3	NA	[c]	atp[c] + pail_hs[c]  -> h[c] + adp[c] + pail3p_hs[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	PIPLC	phospholipid metabolism/inositol, cytosol	[c]	h2o[c] + pail_hs[c]  -> h[c] + dag_hs[c] + mi1p_D[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	PMI12346PH	NA	[c]	h2o[c] + ppmi12346p[c]  -> h[c] + pi[c] + minohp[c] 		
-Inositol phosphate metabolism	FVA_BD_NR_abs	PMI12346PHn	NA	[n]	h2o[n] + ppmi12346p[n]  -> h[n] + minohp[n] + pi[n] 		
-Inositol phosphate metabolism	MTA_BD_NR_norm_t1	PMI12346PHn	NA	intercompartmental	h2o[n] + ppmi12346p[n]  -> h[n] + minohp[n] + pi[n] 		
-Inositol phosphate metabolism	MTA_BD_NR_norm_t1	MI1345PKc	NA	intercompartmental	NA		
-Inositol phosphate metabolism	MTA_BD_NR_norm_t1	MI13456PK	NA	intercompartmental	NA		
-Inositol phosphate metabolism	MTA_BD_NR_norm_t1	MI145PK	NA	intercompartmental	atp[c] + mi145p[c]  -> h[c] + adp[c] + mi1345p[c] 		
-Inositol phosphate metabolism	MTA_BD_NR_norm_t1	MI1PP	phospholipid metabolism/inositol, cytosol	intercompartmental	h2o[c] + mi1p_D[c]  -> pi[c] + inost[c] 		
-Inositol phosphate metabolism	MTA_BD_NR_norm_t1	HMR_7652	NA	intercompartmental	atp[c] + minohp[c]  -> adp[c] + ppmi12346p[c] 		
-Inositol phosphate metabolism	MTA_BD_NR_norm_t1	MI145PP	NA	[c]	h2o[c] + mi145p[c]  -> pi[c] + mi14p[c] 		
-Inositol phosphate metabolism	MTA_BD_NR_norm_t1	PIPLC	phospholipid metabolism/inositol, cytosol	intercompartmental	h2o[c] + pail_hs[c]  -> h[c] + dag_hs[c] + mi1p_D[c] 		
-Inositol phosphate metabolism	MTA_BD_NR_norm_t1	MI14P4P	NA	intercompartmental	h2o[c] + mi14p[c]  -> pi[c] + mi1p_D[c] 		
+	subSystem	disrupted.module	rxnList
+1	Inositol phosphate metabolism	FVA_BD_NR_abs	HMR_6549
+2	Inositol phosphate metabolism	FVA_BD_NR_abs	HMR_6564
+3	Inositol phosphate metabolism	FVA_BD_NR_abs	HMR_6580
+4	Inositol phosphate metabolism	FVA_BD_NR_abs	HMR_6584
+5	Inositol phosphate metabolism	FVA_BD_NR_abs	HMR_7652
+6	Inositol phosphate metabolism	FVA_BD_NR_abs	MI1345PP
+7	Inositol phosphate metabolism	FVA_BD_NR_abs	MI134PP
+8	Inositol phosphate metabolism	FVA_BD_NR_abs	MI145PK
+9	Inositol phosphate metabolism	FVA_BD_NR_abs	MI14P4P
+10	Inositol phosphate metabolism	FVA_BD_NR_abs	MI14PP
+11	Inositol phosphate metabolism	FVA_BD_NR_abs	MI1PP
+12	Inositol phosphate metabolism	FVA_BD_NR_abs	MI1PS
+13	Inositol phosphate metabolism	FVA_BD_NR_abs	MI34PP
+14	Inositol phosphate metabolism	FVA_BD_NR_abs	MI3PP
+15	Inositol phosphate metabolism	FVA_BD_NR_abs	MI4PP
+16	Inositol phosphate metabolism	FVA_BD_NR_abs	PI345P5P
+17	Inositol phosphate metabolism	FVA_BD_NR_abs	PI34P5K
+18	Inositol phosphate metabolism	FVA_BD_NR_abs	PI3P4K
+19	Inositol phosphate metabolism	FVA_BD_NR_abs	PI3P5K
+20	Inositol phosphate metabolism	FVA_BD_NR_abs	PI45P3K
+21	Inositol phosphate metabolism	FVA_BD_NR_abs	PI4P3K
+22	Inositol phosphate metabolism	FVA_BD_NR_abs	PI5P4K
+23	Inositol phosphate metabolism	FVA_BD_NR_abs	PIK3
+24	Inositol phosphate metabolism	FVA_BD_NR_abs	PIPLC
+25	Inositol phosphate metabolism	FVA_BD_NR_abs	PMI12346PH
+26	Inositol phosphate metabolism	FVA_BD_NR_abs	PMI12346PHn
+27	Inositol phosphate metabolism	MTA_BD_NR_norm_t1	PMI12346PHn
+28	Inositol phosphate metabolism	MTA_BD_NR_norm_t1	MI1345PKc
+29	Inositol phosphate metabolism	MTA_BD_NR_norm_t1	MI13456PK
+30	Inositol phosphate metabolism	MTA_BD_NR_norm_t1	MI145PK
+31	Inositol phosphate metabolism	MTA_BD_NR_norm_t1	MI1PP
+32	Inositol phosphate metabolism	MTA_BD_NR_norm_t1	HMR_7652
+33	Inositol phosphate metabolism	MTA_BD_NR_norm_t1	MI145PP
+34	Inositol phosphate metabolism	MTA_BD_NR_norm_t1	PIPLC
+35	Inositol phosphate metabolism	MTA_BD_NR_norm_t1	MI14P4P

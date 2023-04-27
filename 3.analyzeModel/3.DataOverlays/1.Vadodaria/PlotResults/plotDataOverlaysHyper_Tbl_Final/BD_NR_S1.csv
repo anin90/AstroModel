@@ -1,114 +1,114 @@
-subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula	rxnName	rxnECNumbers
-Cholesterol metabolism	FVA_BD_NR_abs	HMGCOASim	cholesterol synthesis	[m]	h2o[m] + accoa[m] + aacoa[m]  -> h[m] + coa[m] + hmgcoa[m] 	Hydroxymethylglutaryl Coenzyme A Synthase (Ir)	4.1.3.5
-Cholesterol metabolism	FVA_BD_NR_abs	HMGLm	ketogenesis	[m]	hmgcoa[m]  -> accoa[m] + acac[m] 	Hydroxymethylglutaryl Coenzyme A Lyase	4.1.3.4
-Cholesterol metabolism	FVA_BD_NR_abs	HMGLx	ketogenesis	[x]	hmgcoa[x]  -> accoa[x] + acac[x] 	Hydroxymethylglutaryl Coenzyme A Lyase	4.1.3.4
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3625	NA	[r]	chsterol[r] + ddcacoa[r]  -> coa[r] + M01498[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3626	NA	[r]	chsterol[r] + M03050[r]  -> coa[r] + M01510[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3627	NA	[r]	chsterol[r] + tdcoa[r]  -> coa[r] + M01501[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3628	NA	[r]	chsterol[r] + M00129[r]  -> coa[r] + M01487[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3629	NA	[r]	chsterol[r] + HC10784[r]  -> coa[r] + M01479[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3630	NA	[r]	chsterol[r] + M01141[r]  -> coa[r] + M01470[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3631	NA	[r]	chsterol[r] + ptdcacoa[r]  -> coa[r] + M01506[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3633	NA	[r]	chsterol[r] + M01191[r]  -> coa[r] + M01477[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3635	NA	[r]	chsterol[r] + hpdcacoa[r]  -> coa[r] + M01495[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3636	NA	[r]	chsterol[r] + M00004[r]  -> coa[r] + M01454[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3637	NA	[r]	chsterol[r] + M01237[r]  -> coa[r] + M01485[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3639	NA	[r]	chsterol[r] + M00020[r]  -> coa[r] + M01464[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3640	NA	[r]	chsterol[r] + vacccoa[r]  -> coa[r] + M01489[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3642	NA	[r]	chsterol[r] + M00127[r]  -> coa[r] + M01486[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3644	NA	[r]	chsterol[r] + lneldccoa[r]  -> coa[r] + M01474[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3645	NA	[r]	chsterol[r] + M02612[r]  -> coa[r] + M01502[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3646	NA	[r]	chsterol[r] + arachcoa[r]  -> coa[r] + M01492[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3647	NA	[r]	chsterol[r] + M00018[r]  -> coa[r] + M01463[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3648	NA	[r]	chsterol[r] + CE5151[r]  -> coa[r] + M01458[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3649	NA	[r]	chsterol[r] + M01236[r]  -> coa[r] + M01484[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3650	NA	[r]	chsterol[r] + M00123[r]  -> coa[r] + M01481[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3651	NA	[r]	chsterol[r] + M00101[r]  -> coa[r] + M01469[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3652	NA	[r]	chsterol[r] + M02052[r]  -> coa[r] + M01494[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3654	NA	[r]	chsterol[r] + CE5155[r]  -> coa[r] + M01462[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3655	NA	[r]	chsterol[r] + M00006[r]  -> coa[r] + M01457[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3656	NA	[r]	chsterol[r] + M03047[r]  -> coa[r] + M01509[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3657	NA	[r]	chsterol[r] + ttccoa[r]  -> coa[r] + M01508[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3658	NA	[r]	chsterol[r] + nrvnccoa[r]  -> coa[r] + M01465[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3659	NA	[r]	chsterol[r] + hexccoa[r]  -> coa[r] + M01496[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3660	NA	[r]	chsterol[r] + M02112[r]  -> coa[r] + M01497[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3663	NA	[r]	chsterol[r] + eicostetcoa[r]  -> coa[r] + M01480[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3665	NA	[r]	chsterol[r] + clpndcoa[r]  -> coa[r] + M01475[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3666	NA	[r]	chsterol[r] + tetpent3coa[r]  -> coa[r] + M01482[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3667	NA	[r]	chsterol[r] + tethex3coa[r]  -> coa[r] + M01471[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3668	NA	[r]	chsterol[r] + c226coa[r]  -> coa[r] + M01466[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3669	NA	[r]	chsterol[r] + M00012[r]  -> coa[r] + M01455[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3670	NA	[r]	chsterol[r] + M00343[r]  -> coa[r] + M01460[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3677	NA	[r]	chsterol[r] + adrncoa[r]  -> coa[r] + M01476[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3678	NA	[r]	chsterol[r] + tettet6coa[r]  -> coa[r] + M01483[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3679	NA	[r]	chsterol[r] + tetpent6coa[r]  -> coa[r] + M01472[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3680	NA	[r]	chsterol[r] + dcsptn1coa[r]  -> coa[r] + M01467[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3681	NA	[r]	chsterol[r] + CE4843[r]  -> coa[r] + M01456[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3682	NA	[r]	chsterol[r] + M00023[r]  -> coa[r] + M01461[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3684	NA	[r]	h2o[r] + M01498[r]  -> h[r] + chsterol[r] + ddca[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3685	NA	[r]	h2o[r] + M01510[r]  -> h[r] + chsterol[r] + M03051[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3686	NA	[r]	h2o[r] + M01501[r]  -> h[r] + chsterol[r] + ttdca[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3687	NA	[r]	h2o[r] + M01487[r]  -> h[r] + chsterol[r] + ttdcea[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3688	NA	[r]	h2o[r] + M01479[r]  -> h[r] + chsterol[r] + M00117[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3689	NA	[r]	h2o[r] + M01470[r]  -> h[r] + chsterol[r] + M02745[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3690	NA	[r]	h2o[r] + M01506[r]  -> h[r] + chsterol[r] + ptdca[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3692	NA	[r]	h2o[r] + M01477[r]  -> h[r] + chsterol[r] + M01197[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3694	NA	[r]	h2o[r] + M01495[r]  -> h[r] + chsterol[r] + hpdca[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3695	NA	[r]	h2o[r] + M01454[r]  -> h[r] + chsterol[r] + M00003[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3696	NA	[r]	h2o[r] + M01485[r]  -> h[r] + chsterol[r] + M01238[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3698	NA	[r]	h2o[r] + M01464[r]  -> h[r] + chsterol[r] + M00019[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3699	NA	[r]	h2o[r] + M01489[r]  -> h[r] + chsterol[r] + vacc[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3701	NA	[r]	h2o[r] + M01486[r]  -> h[r] + chsterol[r] + elaid[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3703	NA	[r]	h2o[r] + M01474[r]  -> h[r] + chsterol[r] + lneldc[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3704	NA	[r]	h2o[r] + M01502[r]  -> h[r] + chsterol[r] + M02613[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3705	NA	[r]	h2o[r] + M01492[r]  -> h[r] + chsterol[r] + arach[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3706	NA	[r]	h2o[r] + M01463[r]  -> h[r] + chsterol[r] + M00017[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3707	NA	[r]	h2o[r] + M01458[r]  -> h[r] + chsterol[r] + CE2510[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3708	NA	[r]	h2o[r] + M01484[r]  -> h[r] + chsterol[r] + M01235[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3709	NA	[r]	h2o[r] + M01481[r]  -> h[r] + chsterol[r] + M01207[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3710	NA	[r]	h2o[r] + M01469[r]  -> chsterol[r] + M02457[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3711	NA	[r]	h2o[r] + M01494[r]  -> h[r] + chsterol[r] + M02053[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3713	NA	[r]	h2o[r] + M01462[r]  -> h[r] + chsterol[r] + doco13ac[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3714	NA	[r]	h2o[r] + M01457[r]  -> h[r] + chsterol[r] + M01582[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3715	NA	[r]	h2o[r] + M01509[r]  -> h[r] + chsterol[r] + M03045[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3716	NA	[r]	h2o[r] + M01508[r]  -> h[r] + chsterol[r] + lgnc[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3717	NA	[r]	h2o[r] + M01465[r]  -> h[r] + chsterol[r] + nrvnc[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3718	NA	[r]	h2o[r] + M01496[r]  -> h[r] + chsterol[r] + hexc[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3719	NA	[r]	h2o[r] + M01497[r]  -> h[r] + chsterol[r] + M03153[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3722	NA	[r]	h2o[r] + M01480[r]  -> h[r] + chsterol[r] + eicostet[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3724	NA	[r]	h2o[r] + M01475[r]  -> h[r] + chsterol[r] + clpnd[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3725	NA	[r]	h2o[r] + M01482[r]  -> h[r] + chsterol[r] + tetpent3[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3726	NA	[r]	h2o[r] + M01471[r]  -> h[r] + chsterol[r] + tethex3[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3727	NA	[r]	h2o[r] + M01466[r]  -> h[r] + chsterol[r] + crvnc[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3728	NA	[r]	h2o[r] + M01455[r]  -> h[r] + chsterol[r] + M00010[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3729	NA	[r]	h2o[r] + M01460[r]  -> h[r] + chsterol[r] + M00341[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3736	NA	[r]	h2o[r] + M01476[r]  -> h[r] + chsterol[r] + adrn[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3737	NA	[r]	h2o[r] + M01483[r]  -> h[r] + chsterol[r] + tettet6[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3738	NA	[r]	h2o[r] + M01472[r]  -> h[r] + chsterol[r] + tetpent6[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3739	NA	[r]	h2o[r] + M01467[r]  -> h[r] + chsterol[r] + dcsptn1[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3740	NA	[r]	h2o[r] + M01456[r]  -> h[r] + chsterol[r] + M00008[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	FVA_BD_NR_abs	HMR_3741	NA	[r]	h2o[r] + M01461[r]  -> h[r] + chsterol[r] + M00021[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_3669	NA	intercompartmental	chsterol[r] + M00012[r]  -> coa[r] + M01455[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_3728	NA	intercompartmental	h2o[r] + M01455[r]  -> h[r] + chsterol[r] + M00010[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_3645	NA	intercompartmental	chsterol[r] + M02612[r]  -> coa[r] + M01502[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_3704	NA	intercompartmental	h2o[r] + M01502[r]  -> h[r] + chsterol[r] + M02613[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_3660	NA	intercompartmental	chsterol[r] + M02112[r]  -> coa[r] + M01497[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_3719	NA	intercompartmental	h2o[r] + M01497[r]  -> h[r] + chsterol[r] + M03153[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_3659	NA	intercompartmental	chsterol[r] + hexccoa[r]  -> coa[r] + M01496[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_3718	NA	intercompartmental	h2o[r] + M01496[r]  -> h[r] + chsterol[r] + hexc[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_3631	NA	intercompartmental	chsterol[r] + ptdcacoa[r]  -> coa[r] + M01506[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_3690	NA	intercompartmental	h2o[r] + M01506[r]  -> h[r] + chsterol[r] + ptdca[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_3636	NA	intercompartmental	chsterol[r] + M00004[r]  -> coa[r] + M01454[r] 	Acyl Coenzyme A:Cholesterol O-Acyltransferase	EC:2.3.1.26
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_3695	NA	intercompartmental	h2o[r] + M01454[r]  -> h[r] + chsterol[r] + M00003[r] 	Steryl-Ester Acylhydrolase	EC:3.1.1.13
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_1543	NA	[c]	o2[c] + h[c] + nadph[c] + CE2314[c]  -> h2o[c] + nadp[c] + M00962[c] 	Methylsterol Monooxygenase	EC:1.14.13.72
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_1544	NA	[c]	o2[c] + h[c] + nadph[c] + M00962[c]  -> 2 h2o[c] + nadp[c] + M00958[c] 	Methylsterol Monooxygenase	EC:1.14.13.72
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_1545	NA	[c]	o2[c] + h[c] + nadph[c] + M00958[c]  -> h2o[c] + nadp[c] + M00954[c] 	Methylsterol Monooxygenase	EC:1.14.13.72
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_1546	NA	[c]	nadp[c] + M00954[c]  -> h[c] + nadph[c] + co2[c] + M00966[c] 	3Beta-Hydroxysteroid-4Alpha-Carboxylate 3-Dehydrogenase (Decarboxylating)	EC:1.1.1.170
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_1550	NA	[c]	o2[c] + h[c] + nadph[c] + M00960[c]  -> h2o[c] + nadp[c] + M00956[c] 	Methylsterol Monooxygenase	EC:1.14.13.72
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_1549	NA	[c]	o2[c] + h[c] + nadph[c] + M00964[c]  -> 2 h2o[c] + nadp[c] + M00960[c] 	Methylsterol Monooxygenase	EC:1.14.13.72
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_1548	NA	[c]	o2[c] + h[c] + nadph[c] + M00967[c]  -> h2o[c] + nadp[c] + M00964[c] 	Methylsterol Monooxygenase	EC:1.14.13.72
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_1551	NA	[c]	nadp[c] + M00956[c]  -> h[c] + nadph[c] + co2[c] + M01068[c] 	3Beta-Hydroxysteroid-4Alpha-Carboxylate 3-Dehydrogenase (Decarboxylating)	EC:1.1.1.170
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_1547	NA	[c]	h[c] + nadph[c] + M00966[c]  -> nadp[c] + M00967[c] 	3Beta-Hydroxysteroid 3-Dehydrogenase	EC:1.1.1.270
-Cholesterol metabolism	MTA_BD_NR_abs	RE3136C	NA	[c]	zymstnl[c]  <=> lthstrl[c] 	Cholestenol Delta-Isomerase	5.3.3.5
-Cholesterol metabolism	MTA_BD_NR_abs	HMR_1552	NA	[c]	h[c] + nadph[c] + M01068[c]  -> nadp[c] + zymstnl[c] 	3Beta-Hydroxysteroid 3-Dehydrogenase	EC:1.1.1.270
-Cholesterol metabolism	MTA_BD_NR_abs	r0783	cholesterol synthesis	[r]	nadp[r] + lthstrl[r]  <=> h[r] + nadph[r] + chlstol[r] 	Lanosterol D24-Reductase	1.3.1.72
+	subSystem	disrupted.module	rxnList
+1	Cholesterol metabolism	FVA_BD_NR_abs	HMGCOASim
+2	Cholesterol metabolism	FVA_BD_NR_abs	HMGLm
+3	Cholesterol metabolism	FVA_BD_NR_abs	HMGLx
+4	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3625
+5	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3626
+6	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3627
+7	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3628
+8	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3629
+9	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3630
+10	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3631
+11	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3633
+12	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3635
+13	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3636
+14	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3637
+15	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3639
+16	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3640
+17	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3642
+18	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3644
+19	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3645
+20	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3646
+21	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3647
+22	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3648
+23	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3649
+24	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3650
+25	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3651
+26	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3652
+27	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3654
+28	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3655
+29	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3656
+30	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3657
+31	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3658
+32	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3659
+33	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3660
+34	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3663
+35	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3665
+36	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3666
+37	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3667
+38	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3668
+39	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3669
+40	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3670
+41	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3677
+42	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3678
+43	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3679
+44	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3680
+45	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3681
+46	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3682
+47	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3684
+48	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3685
+49	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3686
+50	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3687
+51	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3688
+52	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3689
+53	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3690
+54	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3692
+55	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3694
+56	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3695
+57	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3696
+58	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3698
+59	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3699
+60	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3701
+61	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3703
+62	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3704
+63	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3705
+64	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3706
+65	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3707
+66	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3708
+67	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3709
+68	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3710
+69	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3711
+70	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3713
+71	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3714
+72	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3715
+73	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3716
+74	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3717
+75	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3718
+76	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3719
+77	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3722
+78	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3724
+79	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3725
+80	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3726
+81	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3727
+82	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3728
+83	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3729
+84	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3736
+85	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3737
+86	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3738
+87	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3739
+88	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3740
+89	Cholesterol metabolism	FVA_BD_NR_abs	HMR_3741
+90	Cholesterol metabolism	MTA_BD_NR_abs	HMR_3669
+91	Cholesterol metabolism	MTA_BD_NR_abs	HMR_3728
+92	Cholesterol metabolism	MTA_BD_NR_abs	HMR_3645
+93	Cholesterol metabolism	MTA_BD_NR_abs	HMR_3704
+94	Cholesterol metabolism	MTA_BD_NR_abs	HMR_3660
+95	Cholesterol metabolism	MTA_BD_NR_abs	HMR_3719
+96	Cholesterol metabolism	MTA_BD_NR_abs	HMR_3659
+97	Cholesterol metabolism	MTA_BD_NR_abs	HMR_3718
+98	Cholesterol metabolism	MTA_BD_NR_abs	HMR_3631
+99	Cholesterol metabolism	MTA_BD_NR_abs	HMR_3690
+100	Cholesterol metabolism	MTA_BD_NR_abs	HMR_3636
+101	Cholesterol metabolism	MTA_BD_NR_abs	HMR_3695
+102	Cholesterol metabolism	MTA_BD_NR_abs	HMR_1543
+103	Cholesterol metabolism	MTA_BD_NR_abs	HMR_1544
+104	Cholesterol metabolism	MTA_BD_NR_abs	HMR_1545
+105	Cholesterol metabolism	MTA_BD_NR_abs	HMR_1546
+106	Cholesterol metabolism	MTA_BD_NR_abs	HMR_1550
+107	Cholesterol metabolism	MTA_BD_NR_abs	HMR_1549
+108	Cholesterol metabolism	MTA_BD_NR_abs	HMR_1548
+109	Cholesterol metabolism	MTA_BD_NR_abs	HMR_1551
+110	Cholesterol metabolism	MTA_BD_NR_abs	HMR_1547
+111	Cholesterol metabolism	MTA_BD_NR_abs	RE3136C
+112	Cholesterol metabolism	MTA_BD_NR_abs	HMR_1552
+113	Cholesterol metabolism	MTA_BD_NR_abs	r0783

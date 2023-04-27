@@ -1,45 +1,45 @@
-subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula	rxnName	rxnECNumbers
-Keratan sulfate degradation	FVA_BD_norm_t2	GALASE16ly	NA	[l]	2 h2o[l] + ksii_core2_deg2[l]  -> 2 gal[l] + ksii_core2_deg3[l] 	Beta-Galactosidase, Lysosomal	3.2.1.23
-Keratan sulfate degradation	FVA_BD_norm_t2	GALASE17ly	NA	[l]	h2o[l] + ksii_core2_deg5[l]  -> gal[l] + ksii_core2_deg6[l] 	Beta-Galactosidase, Lysosomal	3.2.1.23
-Keratan sulfate degradation	FVA_BD_norm_t2	GALASE18ly	NA	[l]	h2o[l] + ksii_core2_deg8[l]  -> gal[l] + ksii_core2_deg9[l] 	Beta-Galactosidase, Lysosomal	3.2.1.23
-Keratan sulfate degradation	FVA_BD_norm_t2	GALASE19ly	NA	[l]	h2o[l] + f1a[l]  -> gal[l] + core6[l] 	Beta-Galactosidase, Lysosomal	3.2.1.18
-Keratan sulfate degradation	FVA_BD_norm_t2	GALASE20ly	NA	[l]	2 h2o[l] + ksii_core4_deg2[l]  -> 2 gal[l] + ksii_core4_deg3[l] 	Beta-Galactosidase, Lysosomal	3.2.1.23
-Keratan sulfate degradation	FVA_BD_norm_t2	NACHEX23ly	NA	[l]	h2o[l] + ksii_core2_deg4[l]  -> acgam[l] + ksii_core2_deg5[l] 	Beta-N-Acetylhexosaminidase, Lysosomal	3.2.1.52
-Keratan sulfate degradation	FVA_BD_norm_t2	NACHEX24ly	NA	[l]	h2o[l] + ksii_core2_deg7[l]  -> acgam[l] + ksii_core2_deg8[l] 	Beta-N-Acetylhexosaminidase, Lysosomal	3.2.1.52
-Keratan sulfate degradation	FVA_BD_norm_t2	NACHEX25ly	NA	[l]	h2o[l] + ksii_core2_deg9[l]  -> acgam[l] + f1a[l] 	Beta-N-Acetylhexosaminidase, Lysosomal	3.2.1.52
-Keratan sulfate degradation	FVA_BD_norm_t2	NACHEX26ly	chondroitin sulphate degradation, lysosome	[l]	2 h2o[l] + ksii_core4_deg4[l]  -> 2 acgam[l] + ksii_core2_deg5[l] 	Beta-N-Acetylhexosaminidase, Lysosomal	3.2.1.52
-Keratan sulfate degradation	FVA_BD_norm_t2	NAGA2ly	NA	[l]	h[l] + udp[l] + Tn_antigen[l]  -> Ser_Thr[l] + udpacgal[l] 	N-Acetylgalactosaminidase, Alpha-	3.2.1.49
-Keratan sulfate degradation	FVA_BD_norm_t2	NAGLCAly	NA	[l]	h2o[l] + core6[l]  -> acgam[l] + Tn_antigen[l] 	N-Acetylglucosaminidase, Lysosomal	
-Keratan sulfate degradation	FVA_BD_norm_t2	S6TASE22ly	NA	[l]	h2o[l] + ksii_core2_deg1[l]  <=> h[l] + so4[l] + ksii_core2_deg2[l] 	Galactose-6-Sulfate Sulfatase, Lysosomal	3.1.6.4
-Keratan sulfate degradation	FVA_BD_norm_t2	S6TASE23ly	NA	[l]	h2o[l] + ksii_core2_deg3[l]  <=> h[l] + so4[l] + ksii_core2_deg4[l] 	N-Acetylglucosamine-6-Sulfatase, Lysosomal	3.1.6.14
-Keratan sulfate degradation	FVA_BD_norm_t2	S6TASE24ly	NA	[l]	h2o[l] + ksii_core2_deg6[l]  <=> h[l] + so4[l] + ksii_core2_deg7[l] 	N-Acetylglucosamine-6-Sulfatase, Lysosomal	3.1.6.14
-Keratan sulfate degradation	FVA_BD_norm_t2	S6TASE25ly	chondroitin degradation, lysosome	[l]	h2o[l] + ksii_core4_deg1[l]  <=> h[l] + so4[l] + ksii_core4_deg2[l] 	Galactose-6-Sulfate Sulfatase, Lysosomal	3.1.6.4
-Keratan sulfate degradation	FVA_BD_norm_t2	S6TASE26ly	chondroitin degradation, lysosome	[l]	h2o[l] + ksii_core4_deg3[l]  <=> h[l] + so4[l] + ksii_core4_deg4[l] 	N-Acetylglucosamine-6-Sulfatase, Lysosomal	3.1.6.14
-Keratan sulfate degradation	FVA_BD_norm_t2	SIAASE3ly	NA	[l]	h2o[l] + ksii_core2[l]  -> acnam[l] + ksii_core2_deg1[l] 	Sialidase, Lysosomal	3.2.1.18
-Keratan sulfate degradation	FVA_BD_norm_t2	SIAASE4ly	chondroitin degradation, lysosome	[l]	h2o[l] + ksii_core4[l]  -> acnam[l] + ksii_core4_deg1[l] 	Sialidase, Lysosomal	3.2.1.18
-Keratan sulfate degradation	MTA_BD_abs	GALASE3ly	NA	[l]	2 h2o[l] + ksi_deg5[l]  -> 2 gal[l] + ksi_deg6[l] 	Beta-Galactosidase, Lysosomal	3.2.1.23
-Keratan sulfate degradation	MTA_BD_abs	S6TASE10ly	NA	[l]	h2o[l] + ksi_deg4[l]  <=> h[l] + so4[l] + ksi_deg5[l] 	Galactose-6-Sulfate Sulfatase, Lysosomal	3.1.6.4
-Keratan sulfate degradation	MTA_BD_abs	S6TASE11ly	NA	[l]	h2o[l] + ksi_deg6[l]  <=> h[l] + so4[l] + ksi_deg7[l] 	N-Acetylglucosamine-6-Sulfatase, Lysosomal	3.1.6.14
-Keratan sulfate degradation	MTA_BD_abs	GALASE17ly	NA	intercompartmental	h2o[l] + ksii_core2_deg5[l]  -> gal[l] + ksii_core2_deg6[l] 	Beta-Galactosidase, Lysosomal	3.2.1.23
-Keratan sulfate degradation	MTA_BD_abs	GALASE18ly	NA	intercompartmental	h2o[l] + ksii_core2_deg8[l]  -> gal[l] + ksii_core2_deg9[l] 	Beta-Galactosidase, Lysosomal	3.2.1.23
-Keratan sulfate degradation	MTA_BD_abs	NACHEX24ly	NA	intercompartmental	h2o[l] + ksii_core2_deg7[l]  -> acgam[l] + ksii_core2_deg8[l] 	Beta-N-Acetylhexosaminidase, Lysosomal	3.2.1.52
-Keratan sulfate degradation	MTA_BD_abs	NACHEX25ly	NA	intercompartmental	h2o[l] + ksii_core2_deg9[l]  -> acgam[l] + f1a[l] 	Beta-N-Acetylhexosaminidase, Lysosomal	3.2.1.52
-Keratan sulfate degradation	MTA_BD_abs	GALASE11ly	NA	[l]	h2o[l] + ksi_deg29[l]  -> gal[l] + ksi_deg30[l] 	Beta-Galactosidase, Lysosomal	3.2.1.23
-Keratan sulfate degradation	MTA_BD_abs	NACHEX17ly	NA	[l]	h2o[l] + ksi_deg28[l]  -> acgam[l] + ksi_deg29[l] 	Beta-N-Acetylhexosaminidase, Lysosomal	3.2.1.52
-Keratan sulfate degradation	MTA_BD_abs	S6TASE19ly	NA	[l]	h2o[l] + ksi_deg30[l]  <=> h[l] + so4[l] + ksi_deg31[l] 	N-Acetylglucosamine-6-Sulfatase, Lysosomal	3.1.6.14
-Keratan sulfate degradation	MTA_BD_abs	GALASE20ly	NA	intercompartmental	2 h2o[l] + ksii_core4_deg2[l]  -> 2 gal[l] + ksii_core4_deg3[l] 	Beta-Galactosidase, Lysosomal	3.2.1.23
-Keratan sulfate degradation	MTA_BD_abs	NACHEX26ly	chondroitin sulphate degradation, lysosome	intercompartmental	2 h2o[l] + ksii_core4_deg4[l]  -> 2 acgam[l] + ksii_core2_deg5[l] 	Beta-N-Acetylhexosaminidase, Lysosomal	3.2.1.52
-Keratan sulfate degradation	MTA_BD_abs	S6TASE25ly	chondroitin degradation, lysosome	intercompartmental	h2o[l] + ksii_core4_deg1[l]  <=> h[l] + so4[l] + ksii_core4_deg2[l] 	Galactose-6-Sulfate Sulfatase, Lysosomal	3.1.6.4
-Keratan sulfate degradation	MTA_BD_abs	S6TASE26ly	chondroitin degradation, lysosome	intercompartmental	h2o[l] + ksii_core4_deg3[l]  <=> h[l] + so4[l] + ksii_core4_deg4[l] 	N-Acetylglucosamine-6-Sulfatase, Lysosomal	3.1.6.14
-Keratan sulfate degradation	MTA_BD_abs	SIAASE4ly	chondroitin degradation, lysosome	intercompartmental	h2o[l] + ksii_core4[l]  -> acnam[l] + ksii_core4_deg1[l] 	Sialidase, Lysosomal	3.2.1.18
-Keratan sulfate degradation	MTA_BD_abs	S6TASE24ly	NA	intercompartmental	h2o[l] + ksii_core2_deg6[l]  <=> h[l] + so4[l] + ksii_core2_deg7[l] 	N-Acetylglucosamine-6-Sulfatase, Lysosomal	3.1.6.14
-Keratan sulfate degradation	MTA_BD_abs	SIAASE3ly	NA	intercompartmental	h2o[l] + ksii_core2[l]  -> acnam[l] + ksii_core2_deg1[l] 	Sialidase, Lysosomal	3.2.1.18
-Keratan sulfate degradation	MTA_BD_abs	GALASE13ly	NA	[l]	h2o[l] + ksi_deg35[l]  -> gal[l] + ksi_deg36[l] 	Beta-Galactosidase, Lysosomal	3.2.1.23
-Keratan sulfate degradation	MTA_BD_abs	NACHEX19ly	NA	[l]	h2o[l] + ksi_deg34[l]  -> acgam[l] + ksi_deg35[l] 	Beta-N-Acetylhexosaminidase, Lysosomal	3.2.1.52
-Keratan sulfate degradation	MTA_BD_abs	S6TASE20ly	NA	[l]	h2o[l] + ksi_deg33[l]  <=> h[l] + so4[l] + ksi_deg34[l] 	N-Acetylglucosamine-6-Sulfatase, Lysosomal	3.1.6.14
-Keratan sulfate degradation	MTA_BD_abs	GALASE5ly	NA	[l]	h2o[l] + ksi_deg11[l]  -> gal[l] + ksi_deg12[l] 	Beta-Galactosidase, Lysosomal	3.2.1.23
-Keratan sulfate degradation	MTA_BD_abs	NACHEX11ly	NA	[l]	h2o[l] + ksi_deg10[l]  -> acgam[l] + ksi_deg11[l] 	Beta-N-Acetylhexosaminidase, Lysosomal	3.2.1.52
-Keratan sulfate degradation	MTA_BD_abs	S6TASE13ly	NA	[l]	h2o[l] + ksi_deg12[l]  <=> h[l] + so4[l] + ksi_deg13[l] 	N-Acetylglucosamine-6-Sulfatase, Lysosomal	3.1.6.14
-Keratan sulfate degradation	MTA_BD_abs	GALASE10ly	NA	[l]	h2o[l] + ksi_deg26[l]  -> gal[l] + ksi_deg27[l] 	Beta-Galactosidase, Lysosomal	3.2.1.23
-Keratan sulfate degradation	MTA_BD_abs	NACHEX16ly	NA	[l]	h2o[l] + ksi_deg25[l]  -> acgam[l] + ksi_deg26[l] 	Beta-N-Acetylhexosaminidase, Lysosomal	3.2.1.52
-Keratan sulfate degradation	MTA_BD_abs	S6TASE18ly	NA	[l]	h2o[l] + ksi_deg27[l]  <=> h[l] + so4[l] + ksi_deg28[l] 	N-Acetylglucosamine-6-Sulfatase, Lysosomal	3.1.6.14
+	subSystem	disrupted.module	rxnList
+1	Keratan sulfate degradation	FVA_BD_norm_t2	GALASE16ly
+2	Keratan sulfate degradation	FVA_BD_norm_t2	GALASE17ly
+3	Keratan sulfate degradation	FVA_BD_norm_t2	GALASE18ly
+4	Keratan sulfate degradation	FVA_BD_norm_t2	GALASE19ly
+5	Keratan sulfate degradation	FVA_BD_norm_t2	GALASE20ly
+6	Keratan sulfate degradation	FVA_BD_norm_t2	NACHEX23ly
+7	Keratan sulfate degradation	FVA_BD_norm_t2	NACHEX24ly
+8	Keratan sulfate degradation	FVA_BD_norm_t2	NACHEX25ly
+9	Keratan sulfate degradation	FVA_BD_norm_t2	NACHEX26ly
+10	Keratan sulfate degradation	FVA_BD_norm_t2	NAGA2ly
+11	Keratan sulfate degradation	FVA_BD_norm_t2	NAGLCAly
+12	Keratan sulfate degradation	FVA_BD_norm_t2	S6TASE22ly
+13	Keratan sulfate degradation	FVA_BD_norm_t2	S6TASE23ly
+14	Keratan sulfate degradation	FVA_BD_norm_t2	S6TASE24ly
+15	Keratan sulfate degradation	FVA_BD_norm_t2	S6TASE25ly
+16	Keratan sulfate degradation	FVA_BD_norm_t2	S6TASE26ly
+17	Keratan sulfate degradation	FVA_BD_norm_t2	SIAASE3ly
+18	Keratan sulfate degradation	FVA_BD_norm_t2	SIAASE4ly
+19	Keratan sulfate degradation	MTA_BD_abs	GALASE3ly
+20	Keratan sulfate degradation	MTA_BD_abs	S6TASE10ly
+21	Keratan sulfate degradation	MTA_BD_abs	S6TASE11ly
+22	Keratan sulfate degradation	MTA_BD_abs	GALASE17ly
+23	Keratan sulfate degradation	MTA_BD_abs	GALASE18ly
+24	Keratan sulfate degradation	MTA_BD_abs	NACHEX24ly
+25	Keratan sulfate degradation	MTA_BD_abs	NACHEX25ly
+26	Keratan sulfate degradation	MTA_BD_abs	GALASE11ly
+27	Keratan sulfate degradation	MTA_BD_abs	NACHEX17ly
+28	Keratan sulfate degradation	MTA_BD_abs	S6TASE19ly
+29	Keratan sulfate degradation	MTA_BD_abs	GALASE20ly
+30	Keratan sulfate degradation	MTA_BD_abs	NACHEX26ly
+31	Keratan sulfate degradation	MTA_BD_abs	S6TASE25ly
+32	Keratan sulfate degradation	MTA_BD_abs	S6TASE26ly
+33	Keratan sulfate degradation	MTA_BD_abs	SIAASE4ly
+34	Keratan sulfate degradation	MTA_BD_abs	S6TASE24ly
+35	Keratan sulfate degradation	MTA_BD_abs	SIAASE3ly
+36	Keratan sulfate degradation	MTA_BD_abs	GALASE13ly
+37	Keratan sulfate degradation	MTA_BD_abs	NACHEX19ly
+38	Keratan sulfate degradation	MTA_BD_abs	S6TASE20ly
+39	Keratan sulfate degradation	MTA_BD_abs	GALASE5ly
+40	Keratan sulfate degradation	MTA_BD_abs	NACHEX11ly
+41	Keratan sulfate degradation	MTA_BD_abs	S6TASE13ly
+42	Keratan sulfate degradation	MTA_BD_abs	GALASE10ly
+43	Keratan sulfate degradation	MTA_BD_abs	NACHEX16ly
+44	Keratan sulfate degradation	MTA_BD_abs	S6TASE18ly

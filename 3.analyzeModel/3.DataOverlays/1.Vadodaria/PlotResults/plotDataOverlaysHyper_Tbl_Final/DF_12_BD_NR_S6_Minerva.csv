@@ -1,4 +1,4 @@
-reactionIdentifier	lineWidth	color
-r_DOLMANP_Uter	3	#FF0000
-r_DOLPMT3_Uer	3	#FF0000
-r_DOLPMT4_Uer	3	#FF0000
+	reactionIdentifier	lineWidth	color
+1	r_DOLMANP_Uter	3	#FF0000
+2	r_DOLPMT3_Uer	3	#FF0000
+3	r_DOLPMT4_Uer	3	#FF0000

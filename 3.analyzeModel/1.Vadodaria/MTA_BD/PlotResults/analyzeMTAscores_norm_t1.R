@@ -13,39 +13,39 @@ pdf("mta_tbl_prctile_top_norm_t1/analyzeMTAscores_norm_t1.pdf")
 ###################  
 
 # Specifying the path name
-	path <- "/home/anirudh/Downloads/papers_to_read/msb202110260-sup-0007-tableev6.xlsx"
-	sheets <- openxlsx::getSheetNames(path)
-	data_frame <- lapply(sheets, openxlsx::read.xlsx, xlsxFile=path)
-	names(data_frame) <- sheets
+#~ 	path <- "/home/anirudh/Downloads/papers_to_read/msb202110260-sup-0007-tableev6.xlsx"
+#~ 	sheets <- openxlsx::getSheetNames(path)
+#~ 	data_frame <- lapply(sheets, openxlsx::read.xlsx, xlsxFile=path)
+#~ 	names(data_frame) <- sheets
 
 # Load sheets
-	NHBE = data_frame$"NHBE"
-	Calu_3 = data_frame$"Calu-3"
-	A549 = data_frame$"A549"
-	Vero = data_frame$"Vero"
-	T293 = data_frame$"293T"
-	Caco_2 = data_frame$"Caco-2"
-	Swab.Butler = data_frame$"Swab.Butler"
-	Swab.Lieberman = data_frame$"Swab.Lieberman"
-	BALF = data_frame$"BALF"
-	SC.Liao = data_frame$"SC.Liao"
-	SC.Chua.Basal = data_frame$"SC.Chua.Basal"
-	SC.Chua.Ciliated = data_frame$"SC.Chua.Ciliated"
+#~ 	NHBE = data_frame$"NHBE"
+#~ 	Calu_3 = data_frame$"Calu-3"
+#~ 	A549 = data_frame$"A549"
+#~ 	Vero = data_frame$"Vero"
+#~ 	T293 = data_frame$"293T"
+#~ 	Caco_2 = data_frame$"Caco-2"
+#~ 	Swab.Butler = data_frame$"Swab.Butler"
+#~ 	Swab.Lieberman = data_frame$"Swab.Lieberman"
+#~ 	BALF = data_frame$"BALF"
+#~ 	SC.Liao = data_frame$"SC.Liao"
+#~ 	SC.Chua.Basal = data_frame$"SC.Chua.Basal"
+#~ 	SC.Chua.Ciliated = data_frame$"SC.Chua.Ciliated"
 
 # Histogram mta_score
-	par(mfrow=c(4,3))
-	hist(NHBE$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="NHBE")
-	hist(Calu_3$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="Calu-3")
-	hist(A549$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="A549")
-	hist(Vero$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="Vero")
-	hist(T293$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="293T")
-	hist(Caco_2$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="Caco-2")
-	hist(Swab.Butler$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="Swab.Butler")
-	hist(Swab.Lieberman$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="Swab.Lieberman")
-	hist(BALF$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="BALF")
-	hist(SC.Liao$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="SC.Liao")
-	hist(SC.Chua.Basal$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="SC.Chua.Basal")
-	hist(SC.Chua.Ciliated$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="SC.Chua.Ciliated")
+#~ 	par(mfrow=c(4,3))
+#~ 	hist(NHBE$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="NHBE")
+#~ 	hist(Calu_3$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="Calu-3")
+#~ 	hist(A549$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="A549")
+#~ 	hist(Vero$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="Vero")
+#~ 	hist(T293$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="293T")
+#~ 	hist(Caco_2$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="Caco-2")
+#~ 	hist(Swab.Butler$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="Swab.Butler")
+#~ 	hist(Swab.Lieberman$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="Swab.Lieberman")
+#~ 	hist(BALF$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="BALF")
+#~ 	hist(SC.Liao$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="SC.Liao")
+#~ 	hist(SC.Chua.Basal$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="SC.Chua.Basal")
+#~ 	hist(SC.Chua.Ciliated$score, xlab = "score", ylab = "freq", col=rgb(1,0,0,0.5), border = "blue", breaks=30, main="SC.Chua.Ciliated")
 
 #######################
 #~ Load vadodaria_mta
@@ -369,6 +369,9 @@ pdf("mta_tbl_prctile_top_norm_t1/analyzeMTAscores_norm_t1.pdf")
 	write.table(bd_lumped_subsystem_fdr, "mta_tbl_prctile_top_significant_norm_t1/bd_lumped_subsystem_fdr.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 	bd_lumped_rxns_fdr = bd_lumped[bd_lumped$subSystem_BC %in% bd_lumped_subsystem_fdr$subSystem_BC,]
 	write.table(bd_lumped_rxns_fdr, "mta_tbl_prctile_top_significant_norm_t1/bd_lumped_rxns_fdr.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
+	#write all subsystems to csv
+	BD_subsystem_all = combStat
+	write.table(BD_subsystem_all, "mta_tbl_prctile_top_norm_t1/BD_subsystem_all.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 	
 # Fig.4: Number of rxns per subSystem (bd_responder)
 	iPS_BD_R_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_R_TP_norm_t1.csv", header = T, sep = "\t")
@@ -399,6 +402,9 @@ pdf("mta_tbl_prctile_top_norm_t1/analyzeMTAscores_norm_t1.pdf")
 	write.table(bd_r_subsystem_fdr, "mta_tbl_prctile_top_significant_norm_t1/bd_r_subsystem_fdr.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 	bd_r_rxns_fdr = bd_responder[bd_responder$subSystem_BRC %in% bd_r_subsystem_fdr$subSystem_BRC,]
 	write.table(bd_r_rxns_fdr, "mta_tbl_prctile_top_significant_norm_t1/bd_r_rxns_fdr.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
+	#write all subsystems to csv
+	BD_R_subsystem_all = combStat
+	write.table(BD_R_subsystem_all, "mta_tbl_prctile_top_norm_t1/BD_R_subsystem_all.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 
 # Fig.5: Number of rxns per subSystem (bd_nonresponder)
 	iPS_BD_NR_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_NR_TP_norm_t1.csv", header = T, sep = "\t")
@@ -429,6 +435,9 @@ pdf("mta_tbl_prctile_top_norm_t1/analyzeMTAscores_norm_t1.pdf")
 	write.table(bd_nr_subsystem_fdr, "mta_tbl_prctile_top_significant_norm_t1/bd_nr_subsystem_fdr.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 	bd_nr_rxns_fdr = bd_nonresponder[bd_nonresponder$subSystem_BNRC %in% bd_nr_subsystem_fdr$subSystem_BNRC,]
 	write.table(bd_nr_rxns_fdr, "mta_tbl_prctile_top_significant_norm_t1/bd_nr_rxns_fdr.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
+	#write all subsystems to csv
+	BD_NR_subsystem_all = combStat
+	write.table(BD_NR_subsystem_all, "mta_tbl_prctile_top_norm_t1/BD_NR_subsystem_all.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 
 
 # Fig.9: venn rxns (fdr.significant)

@@ -47,6 +47,12 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 	  return(combination)
 	}
 
+		RBIND <- function(datalist) {
+					  require(plyr)
+					  temp <- rbind.fill(datalist)
+					  temp
+					}
+
 ###################
 # Load rxn data
 ###################
@@ -1063,3 +1069,51 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 			write.table(DF2, "PlotResults/BD_R_Rxns.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 			write.table(DF3, "PlotResults/BD_NR_Rxns.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 		
+###############################################
+# subSystem 'pval' & 'disupted by' plot
+###############################################
+
+	# bd_subSystem_pval
+	
+					# results_koskuvi_subsystem_all
+						FVA_subsystem_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_abs/BD_subsystem_all_abs.csv", header = T, sep = "\t")
+						MTA_subsystem_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_abs/BD_subsystem_all.csv", header = T, sep = "\t")
+						FVA_subsystem_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_norm_t1/BD_subsystem_all_norm_t1.csv", header = T, sep = "\t")
+						MTA_subsystem_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_norm_t1/BD_subsystem_all.csv", header = T, sep = "\t")
+						FVA_subsystem_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_norm_t2/BD_subsystem_all_norm_t2.csv", header = T, sep = "\t")
+						MTA_subsystem_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_norm_t2/BD_subsystem_all.csv", header = T, sep = "\t")
+
+					# model_all [i.e., BD - subSystem.fdr.pval]
+	
+						mod_1 <- subset(FVA_subsystem_abs, TRUE, c("subSystem", "p.val.fdr"))
+						mod_2 <- subset(MTA_subsystem_abs, TRUE, c("subSystem_BC", "p.val.fdr"))
+						mod_3 <- subset(FVA_subsystem_norm_t1, TRUE, c("subSystem", "p.val.fdr"))
+						mod_4 <- subset(MTA_subsystem_norm_t1, TRUE, c("subSystem_BC", "p.val.fdr"))
+						mod_5 <- subset(FVA_subsystem_norm_t2, TRUE, c("subSystem", "p.val.fdr"))
+						mod_6 <- subset(MTA_subsystem_norm_t2, TRUE, c("subSystem_BC", "p.val.fdr"))
+						colnames(mod_2) = c("subSystem", "p.val.fdr")
+						colnames(mod_4) = c("subSystem", "p.val.fdr")
+						colnames(mod_6) = c("subSystem", "p.val.fdr")
+
+						mod_x <- merge(mod_1, mod_2, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_3, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_4, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_5, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_6, by.x = "subSystem", by.y = "subSystem", all=T)
+						colnames(mod_x) = c("subSystem", "FVA_abs.p.val.fdr", "MTA_abs.p.val.fdr",
+															"FVA_norm_t1.p.val.fdr", "MTA_norm_t1.p.val.fdr",
+															"FVA_norm_t2.p.val.fdr", "MTA_norm_t2.p.val.fdr")
+
+					# filter for significance (fdr.p.value <= 0.05) in atleat 2 of six modules		
+						mod_x[,2:7][is.na(mod_x[,2:7])] <- 0
+						mod_x$rowMeans = rowMeans(mod_x[,2:7], na.rm=TRUE)
+						mod_x[,2:7][mod_x[,2:7] == 0] <- NA
+						mod_x_filt = mod_x[rowSums(mod_x[2:7] <= 0.05, na.rm=TRUE) >= 2, ]
+						setdiff(BD$subSystem, mod_x_filt$subSystem)
+						setdiff(mod_x_filt$subSystem, BD$subSystem)
+#~ 						BD_subSystem_pval <- merge(BD, mod_x_filt, by.x = "subSystem", by.y = "subSystem")
+#~ 						BD_subSystem_pval
+
+
+
+

@@ -521,42 +521,42 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 	# st_subSystem_pval
 	
 					# results_koskuvi_subsystem_all
-						FVA_ST_subsystem_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/FSr_ST/PlotResults/st_tbl_abs/ST_subsystem_all_abs.csv", header = T, sep = "\t")
-						MTA_ST_subsystem_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/MTA_ST/PlotResults/mta_tbl_prctile_top_abs/ST_subsystem_all.csv", header = T, sep = "\t")
-						FVA_ST_subsystem_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/FSr_ST/PlotResults/st_tbl_norm_t1/ST_subsystem_all_norm_t1.csv", header = T, sep = "\t")
-						MTA_ST_subsystem_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/MTA_ST/PlotResults/mta_tbl_prctile_top_norm_t1/ST_subsystem_all.csv", header = T, sep = "\t")
-						FVA_ST_subsystem_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/FSr_ST/PlotResults/st_tbl_norm_t2/ST_subsystem_all_norm_t2.csv", header = T, sep = "\t")
-						MTA_ST_subsystem_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/MTA_ST/PlotResults/mta_tbl_prctile_top_norm_t2/ST_subsystem_all.csv", header = T, sep = "\t")
+						FVA_subsystem_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/FSr_ST/PlotResults/st_tbl_abs/ST_subsystem_all_abs.csv", header = T, sep = "\t")
+						MTA_subsystem_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/MTA_ST/PlotResults/mta_tbl_prctile_top_abs/ST_subsystem_all.csv", header = T, sep = "\t")
+						FVA_subsystem_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/FSr_ST/PlotResults/st_tbl_norm_t1/ST_subsystem_all_norm_t1.csv", header = T, sep = "\t")
+						MTA_subsystem_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/MTA_ST/PlotResults/mta_tbl_prctile_top_norm_t1/ST_subsystem_all.csv", header = T, sep = "\t")
+						FVA_subsystem_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/FSr_ST/PlotResults/st_tbl_norm_t2/ST_subsystem_all_norm_t2.csv", header = T, sep = "\t")
+						MTA_subsystem_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/2.Koskuvi/MTA_ST/PlotResults/mta_tbl_prctile_top_norm_t2/ST_subsystem_all.csv", header = T, sep = "\t")
 	
 					# model_all [i.e., ST - subSystem.fdr.pval]
 	
-						ST_1 <- subset(FVA_ST_subsystem_abs, TRUE, c("subSystem", "p.val.fdr"))
-						ST_2 <- subset(MTA_ST_subsystem_abs, TRUE, c("subSystem_SC", "p.val.fdr"))
-						ST_3 <- subset(FVA_ST_subsystem_norm_t1, TRUE, c("subSystem", "p.val.fdr"))
-						ST_4 <- subset(MTA_ST_subsystem_norm_t1, TRUE, c("subSystem_SC", "p.val.fdr"))
-						ST_5 <- subset(FVA_ST_subsystem_norm_t2, TRUE, c("subSystem", "p.val.fdr"))
-						ST_6 <- subset(MTA_ST_subsystem_norm_t2, TRUE, c("subSystem_SC", "p.val.fdr"))
-						colnames(ST_2) = c("subSystem", "p.val.fdr")
-						colnames(ST_4) = c("subSystem", "p.val.fdr")
-						colnames(ST_6) = c("subSystem", "p.val.fdr")
+						mod_1 <- subset(FVA_subsystem_abs, TRUE, c("subSystem", "p.val.fdr"))
+						mod_2 <- subset(MTA_subsystem_abs, TRUE, c("subSystem_SC", "p.val.fdr"))
+						mod_3 <- subset(FVA_subsystem_norm_t1, TRUE, c("subSystem", "p.val.fdr"))
+						mod_4 <- subset(MTA_subsystem_norm_t1, TRUE, c("subSystem_SC", "p.val.fdr"))
+						mod_5 <- subset(FVA_subsystem_norm_t2, TRUE, c("subSystem", "p.val.fdr"))
+						mod_6 <- subset(MTA_subsystem_norm_t2, TRUE, c("subSystem_SC", "p.val.fdr"))
+						colnames(mod_2) = c("subSystem", "p.val.fdr")
+						colnames(mod_4) = c("subSystem", "p.val.fdr")
+						colnames(mod_6) = c("subSystem", "p.val.fdr")
 
-						ST_x <- merge(ST_1, ST_2, by.x = "subSystem", by.y = "subSystem", all=T)
-						ST_x <- merge(ST_x, ST_3, by.x = "subSystem", by.y = "subSystem", all=T)
-						ST_x <- merge(ST_x, ST_4, by.x = "subSystem", by.y = "subSystem", all=T)
-						ST_x <- merge(ST_x, ST_5, by.x = "subSystem", by.y = "subSystem", all=T)
-						ST_x <- merge(ST_x, ST_6, by.x = "subSystem", by.y = "subSystem", all=T)
-						colnames(ST_x) = c("subSystem", "FVA_abs.p.val.fdr", "MTA_abs.p.val.fdr",
+						mod_x <- merge(mod_1, mod_2, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_3, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_4, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_5, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_6, by.x = "subSystem", by.y = "subSystem", all=T)
+						colnames(mod_x) = c("subSystem", "FVA_abs.p.val.fdr", "MTA_abs.p.val.fdr",
 															"FVA_norm_t1.p.val.fdr", "MTA_norm_t1.p.val.fdr",
 															"FVA_norm_t2.p.val.fdr", "MTA_norm_t2.p.val.fdr")
 						
 					# filter for significance (fdr.p.value <= 0.05) in atleat 2 of six modules		
-						ST_x[,2:7][is.na(ST_x[,2:7])] <- 0
-						ST_x$rowMeans = rowMeans(ST_x[,2:7], na.rm=TRUE)
-						ST_x[,2:7][ST_x[,2:7] == 0] <- NA
-						ST_x_filt = ST_x[rowSums(ST_x[2:7] <= 0.05, na.rm=TRUE) > 2, ]
-						setdiff(ST$subSystem, ST_x_filt$subSystem)
-						setdiff(ST_x_filt$subSystem, ST$subSystem)
-						ST_subSystem_pval <- merge(ST, ST_x_filt, by.x = "subSystem", by.y = "subSystem")
+						mod_x[,2:7][is.na(mod_x[,2:7])] <- 0
+						mod_x$rowMeans = rowMeans(mod_x[,2:7], na.rm=TRUE)
+						mod_x[,2:7][mod_x[,2:7] == 0] <- NA
+						mod_x_filt = mod_x[rowSums(mod_x[2:7] <= 0.05, na.rm=TRUE) > 2, ]
+						setdiff(ST$subSystem, mod_x$subSystem)
+						setdiff(mod_x$subSystem, ST$subSystem)
+						ST_subSystem_pval <- merge(ST, mod_x, by.x = "subSystem", by.y = "subSystem")
 						ST_subSystem_pval
 						
 						mm = ST_subSystem_pval

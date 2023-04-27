@@ -81,6 +81,9 @@ bd_nonresponder <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/A
 	write.table(bd_lumped_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_abs/bd_lumped_subsystem_fdr_abs.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 	bd_lumped_rxns_fdr = bd_lumped[bd_lumped$subSystem %in% bd_lumped_subsystem_fdr$subSystem,]
 	write.table(bd_lumped_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_abs/bd_lumped_rxns_fdr_abs.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
+	#write all subsystems to csv
+	BD_subsystem_all = combStat
+	write.table(BD_subsystem_all, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_abs/BD_subsystem_all_abs.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 
 # Fig.4: Number of rxns per subSystem (bd_responder)
 	iPS_BD_R_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_R_TP_abs.csv", header = T, sep = "\t")
@@ -111,6 +114,9 @@ bd_nonresponder <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/A
 	write.table(bd_r_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_abs/bd_r_subsystem_fdr_abs.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 	bd_r_rxns_fdr = bd_responder[bd_responder$subSystem %in% bd_r_subsystem_fdr$subSystem,]
 	write.table(bd_r_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_abs/bd_r_rxns_fdr_abs.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
+	#write all subsystems to csv
+	BD_R_subsystem_all = combStat
+	write.table(BD_R_subsystem_all, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_abs/BD_R_subsystem_all_abs.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 
 # Fig.5: Number of rxns per subSystem (bd_nonresponder)
 	iPS_BD_NR_TP <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/Annotations/AnnotateRxnSubsystems/Rxns_iPS_BD_NR_TP_abs.csv", header = T, sep = "\t")
@@ -141,6 +147,9 @@ bd_nonresponder <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/A
 	write.table(bd_nr_subsystem_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_abs/bd_nr_subsystem_fdr_abs.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 	bd_nr_rxns_fdr = bd_nonresponder[bd_nonresponder$subSystem %in% bd_nr_subsystem_fdr$subSystem,]
 	write.table(bd_nr_rxns_fdr, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_significant_abs/bd_nr_rxns_fdr_abs.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
+	#write all subsystems to csv
+	BD_NR_subsystem_all = combStat
+	write.table(BD_NR_subsystem_all, "/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_abs/BD_NR_subsystem_all_abs.csv", sep = "\t", quote = FALSE, row.names = F, col.names=T)
 
 # Fig.6: Number of rxns per compartment (bd_lumped)
 	#6a: all.209
