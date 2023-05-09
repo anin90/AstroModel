@@ -1075,7 +1075,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 
 	# bd_subSystem_pval
 	
-					# results_koskuvi_subsystem_all
+					# results_vadodaria_subsystem_all
 						FVA_subsystem_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_abs/BD_subsystem_all_abs.csv", header = T, sep = "\t")
 						MTA_subsystem_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_abs/BD_subsystem_all.csv", header = T, sep = "\t")
 						FVA_subsystem_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_norm_t1/BD_subsystem_all_norm_t1.csv", header = T, sep = "\t")
@@ -1105,14 +1105,120 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 															"FVA_norm_t2.p.val.fdr", "MTA_norm_t2.p.val.fdr")
 
 					# filter for significance (fdr.p.value <= 0.05) in atleat 2 of six modules		
-						mod_x[,2:7][is.na(mod_x[,2:7])] <- 0
+						mod_x[,2:7][is.na(mod_x[,2:7])] <- 1
 						mod_x$rowMeans = rowMeans(mod_x[,2:7], na.rm=TRUE)
-						mod_x[,2:7][mod_x[,2:7] == 0] <- NA
+						mod_x[,2:7][mod_x[,2:7] == 1] <- NA
 						mod_x_filt = mod_x[rowSums(mod_x[2:7] <= 0.05, na.rm=TRUE) >= 2, ]
-						setdiff(BD$subSystem, mod_x_filt$subSystem)
-						setdiff(mod_x_filt$subSystem, BD$subSystem)
-#~ 						BD_subSystem_pval <- merge(BD, mod_x_filt, by.x = "subSystem", by.y = "subSystem")
-#~ 						BD_subSystem_pval
+						pheno_bd = filter(BD, BD$Phenotype == 'BD')
+						setdiff(pheno_bd$subSystem, mod_x_filt$subSystem)
+						setdiff(mod_x_filt$subSystem, pheno_bd$subSystem)
+						BD_subSystem_pval <- merge(pheno_bd, mod_x_filt, by.x = "subSystem", by.y = "subSystem")
+						BD_subSystem_pval <- subset(BD_subSystem_pval, TRUE, c("subSystem", "Phenotype", "No.of.disrupted.modules", 
+																"disrupted.modules", "FVA_abs.p.val.fdr", "MTA_abs.p.val.fdr", 
+																"FVA_norm_t1.p.val.fdr", "MTA_norm_t1.p.val.fdr",
+																"FVA_norm_t2.p.val.fdr", "MTA_norm_t2.p.val.fdr", "rowMeans"))
+						BD_subSystem_pval <- BD_subSystem_pval %>% relocate(Phenotype, .before = subSystem)
+						BD_subSystem_pval
+						write.table(BD_subSystem_pval, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_subSystem_pval.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+
+	# bd_r_subSystem_pval
+	
+					# results_vadodaria_subsystem_all
+						FVA_subsystem_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_abs/BD_R_subsystem_all_abs.csv", header = T, sep = "\t")
+						MTA_subsystem_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_abs/BD_R_subsystem_all.csv", header = T, sep = "\t")
+						FVA_subsystem_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_norm_t1/BD_R_subsystem_all_norm_t1.csv", header = T, sep = "\t")
+						MTA_subsystem_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_norm_t1/BD_R_subsystem_all.csv", header = T, sep = "\t")
+						FVA_subsystem_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_norm_t2/BD_R_subsystem_all_norm_t2.csv", header = T, sep = "\t")
+						MTA_subsystem_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_norm_t2/BD_R_subsystem_all.csv", header = T, sep = "\t")
+
+					# model_all [i.e., BD_R - subSystem.fdr.pval]
+	
+						mod_1 <- subset(FVA_subsystem_abs, TRUE, c("subSystem", "p.val.fdr"))
+						mod_2 <- subset(MTA_subsystem_abs, TRUE, c("subSystem_BRC", "p.val.fdr"))
+						mod_3 <- subset(FVA_subsystem_norm_t1, TRUE, c("subSystem", "p.val.fdr"))
+						mod_4 <- subset(MTA_subsystem_norm_t1, TRUE, c("subSystem_BRC", "p.val.fdr"))
+						mod_5 <- subset(FVA_subsystem_norm_t2, TRUE, c("subSystem", "p.val.fdr"))
+						mod_6 <- subset(MTA_subsystem_norm_t2, TRUE, c("subSystem_BRC", "p.val.fdr"))
+						colnames(mod_2) = c("subSystem", "p.val.fdr")
+						colnames(mod_4) = c("subSystem", "p.val.fdr")
+						colnames(mod_6) = c("subSystem", "p.val.fdr")
+
+						mod_x <- merge(mod_1, mod_2, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_3, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_4, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_5, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_6, by.x = "subSystem", by.y = "subSystem", all=T)
+						colnames(mod_x) = c("subSystem", "FVA_abs.p.val.fdr", "MTA_abs.p.val.fdr",
+															"FVA_norm_t1.p.val.fdr", "MTA_norm_t1.p.val.fdr",
+															"FVA_norm_t2.p.val.fdr", "MTA_norm_t2.p.val.fdr")
+
+					# filter for significance (fdr.p.value <= 0.05) in atleat 2 of six modules		
+						mod_x[,2:7][is.na(mod_x[,2:7])] <- 1
+						mod_x$rowMeans = rowMeans(mod_x[,2:7], na.rm=TRUE)
+						mod_x[,2:7][mod_x[,2:7] == 1] <- NA
+						mod_x_filt = mod_x[rowSums(mod_x[2:7] <= 0.05, na.rm=TRUE) >= 2, ]
+						pheno_bd = filter(BD, BD$Phenotype == 'BD_R')
+						setdiff(pheno_bd$subSystem, mod_x_filt$subSystem)
+						setdiff(mod_x_filt$subSystem, pheno_bd$subSystem)
+						BD_R_subSystem_pval <- merge(pheno_bd, mod_x_filt, by.x = "subSystem", by.y = "subSystem")
+						BD_R_subSystem_pval <- subset(BD_R_subSystem_pval, TRUE, c("subSystem", "Phenotype", "No.of.disrupted.modules", 
+																"disrupted.modules", "FVA_abs.p.val.fdr", "MTA_abs.p.val.fdr", 
+																"FVA_norm_t1.p.val.fdr", "MTA_norm_t1.p.val.fdr",
+																"FVA_norm_t2.p.val.fdr", "MTA_norm_t2.p.val.fdr", "rowMeans"))
+						BD_R_subSystem_pval <- BD_R_subSystem_pval %>% relocate(Phenotype, .before = subSystem)
+						BD_R_subSystem_pval
+						write.table(BD_R_subSystem_pval, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_R_subSystem_pval.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+
+	# bd_nr_subSystem_pval
+	
+					# results_vadodaria_subsystem_all
+						FVA_subsystem_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_abs/BD_NR_subsystem_all_abs.csv", header = T, sep = "\t")
+						MTA_subsystem_abs <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_abs/BD_NR_subsystem_all.csv", header = T, sep = "\t")
+						FVA_subsystem_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_norm_t1/BD_NR_subsystem_all_norm_t1.csv", header = T, sep = "\t")
+						MTA_subsystem_norm_t1 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_norm_t1/BD_NR_subsystem_all.csv", header = T, sep = "\t")
+						FVA_subsystem_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/FSr_BD/PlotResults/bd_tbl_norm_t2/BD_NR_subsystem_all_norm_t2.csv", header = T, sep = "\t")
+						MTA_subsystem_norm_t2 <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/1.Vadodaria/MTA_BD/PlotResults/mta_tbl_prctile_top_norm_t2/BD_NR_subsystem_all.csv", header = T, sep = "\t")
+
+					# model_all [i.e., BD_NR - subSystem.fdr.pval]
+	
+						mod_1 <- subset(FVA_subsystem_abs, TRUE, c("subSystem", "p.val.fdr"))
+						mod_2 <- subset(MTA_subsystem_abs, TRUE, c("subSystem_BNRC", "p.val.fdr"))
+						mod_3 <- subset(FVA_subsystem_norm_t1, TRUE, c("subSystem", "p.val.fdr"))
+						mod_4 <- subset(MTA_subsystem_norm_t1, TRUE, c("subSystem_BNRC", "p.val.fdr"))
+						mod_5 <- subset(FVA_subsystem_norm_t2, TRUE, c("subSystem", "p.val.fdr"))
+						mod_6 <- subset(MTA_subsystem_norm_t2, TRUE, c("subSystem_BNRC", "p.val.fdr"))
+						colnames(mod_2) = c("subSystem", "p.val.fdr")
+						colnames(mod_4) = c("subSystem", "p.val.fdr")
+						colnames(mod_6) = c("subSystem", "p.val.fdr")
+
+						mod_x <- merge(mod_1, mod_2, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_3, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_4, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_5, by.x = "subSystem", by.y = "subSystem", all=T)
+						mod_x <- merge(mod_x, mod_6, by.x = "subSystem", by.y = "subSystem", all=T)
+						colnames(mod_x) = c("subSystem", "FVA_abs.p.val.fdr", "MTA_abs.p.val.fdr",
+															"FVA_norm_t1.p.val.fdr", "MTA_norm_t1.p.val.fdr",
+															"FVA_norm_t2.p.val.fdr", "MTA_norm_t2.p.val.fdr")
+
+					# filter for significance (fdr.p.value <= 0.05) in atleat 2 of six modules		
+						mod_x[,2:7][is.na(mod_x[,2:7])] <- 1
+						mod_x$rowMeans = rowMeans(mod_x[,2:7], na.rm=TRUE)
+						mod_x[,2:7][mod_x[,2:7] == 1] <- NA
+						mod_x_filt = mod_x[rowSums(mod_x[2:7] <= 0.05, na.rm=TRUE) >= 2, ]
+						pheno_bd = filter(BD, BD$Phenotype == 'BD_NR')
+						setdiff(pheno_bd$subSystem, mod_x_filt$subSystem)
+						setdiff(mod_x_filt$subSystem, pheno_bd$subSystem)
+						BD_NR_subSystem_pval <- merge(pheno_bd, mod_x_filt, by.x = "subSystem", by.y = "subSystem")
+						BD_NR_subSystem_pval <- subset(BD_NR_subSystem_pval, TRUE, c("subSystem", "Phenotype", "No.of.disrupted.modules", 
+																"disrupted.modules", "FVA_abs.p.val.fdr", "MTA_abs.p.val.fdr", 
+																"FVA_norm_t1.p.val.fdr", "MTA_norm_t1.p.val.fdr",
+																"FVA_norm_t2.p.val.fdr", "MTA_norm_t2.p.val.fdr", "rowMeans"))
+						BD_NR_subSystem_pval <- BD_NR_subSystem_pval %>% relocate(Phenotype, .before = subSystem)
+						BD_NR_subSystem_pval
+						write.table(BD_NR_subSystem_pval, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_subSystem_pval.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
+
+
+
 
 
 

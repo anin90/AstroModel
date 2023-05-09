@@ -550,14 +550,20 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 															"FVA_norm_t2.p.val.fdr", "MTA_norm_t2.p.val.fdr")
 						
 					# filter for significance (fdr.p.value <= 0.05) in atleat 2 of six modules		
-						mod_x[,2:7][is.na(mod_x[,2:7])] <- 0
+						mod_x[,2:7][is.na(mod_x[,2:7])] <- 1
 						mod_x$rowMeans = rowMeans(mod_x[,2:7], na.rm=TRUE)
-						mod_x[,2:7][mod_x[,2:7] == 0] <- NA
+						mod_x[,2:7][mod_x[,2:7] == 1] <- NA
 						mod_x_filt = mod_x[rowSums(mod_x[2:7] <= 0.05, na.rm=TRUE) > 2, ]
-						setdiff(ST$subSystem, mod_x$subSystem)
-						setdiff(mod_x$subSystem, ST$subSystem)
-						ST_subSystem_pval <- merge(ST, mod_x, by.x = "subSystem", by.y = "subSystem")
+						setdiff(ST$subSystem, mod_x_filt$subSystem)
+						setdiff(mod_x_filt$subSystem, ST$subSystem)
+						ST_subSystem_pval <- merge(ST, mod_x_filt, by.x = "subSystem", by.y = "subSystem")
+						ST_subSystem_pval <- subset(ST_subSystem_pval, TRUE, c("subSystem", "Phenotype", "No.of.disrupted.modules", 
+																"disrupted.modules", "FVA_abs.p.val.fdr", "MTA_abs.p.val.fdr", 
+																"FVA_norm_t1.p.val.fdr", "MTA_norm_t1.p.val.fdr",
+																"FVA_norm_t2.p.val.fdr", "MTA_norm_t2.p.val.fdr", "rowMeans"))						
+						ST_subSystem_pval <- ST_subSystem_pval %>% relocate(Phenotype, .before = subSystem)
 						ST_subSystem_pval
+						write.table(ST_subSystem_pval, "PlotResults/plotDataOverlaysHyper_Tbl_Final/ST_subSystem_pval.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 						
 						mm = ST_subSystem_pval
 						ggplot(mm, aes(x=subSystem, y=-log10(rowMeans), fill=Phenotype)) + 

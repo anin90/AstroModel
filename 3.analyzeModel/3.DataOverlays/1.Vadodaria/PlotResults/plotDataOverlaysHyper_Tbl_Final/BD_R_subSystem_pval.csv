@@ -1,0 +1,4 @@
+	Phenotype	subSystem	No.of.disrupted.modules	disrupted.modules	FVA_abs.p.val.fdr	MTA_abs.p.val.fdr	FVA_norm_t1.p.val.fdr	MTA_norm_t1.p.val.fdr	FVA_norm_t2.p.val.fdr	MTA_norm_t2.p.val.fdr	rowMeans
+1	BD_R	Drug metabolism	2	MTA_BD_R_norm_t1 MTA_BD_R_norm_t2	NA	0.822952806650463	NA	2.11524384540675e-05	NA	6.56119130541184e-09	0.637162327608351
+2	BD_R	ROS detoxification	2	FVA_BD_R_norm_t1 MTA_BD_R_abs	NA	0.0145791085263145	8.1874613805905e-05	NA	NA	NA	0.669110163856687
+3	BD_R	Transport, extracellular	3	MTA_BD_R_abs MTA_BD_R_norm_t1 MTA_BD_R_norm_t2	0.999529082540828	0.00139755895024077	0.790200737806156	1.36653837005488e-13	0.999693227998858	5.10047901467089e-10	0.465136767967711
