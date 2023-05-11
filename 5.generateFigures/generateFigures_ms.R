@@ -30,7 +30,7 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 #################################
 #disrupted in >0 modules/phenotype-of-interest
 # Fig.1a
-		mat <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd.csv", header = T, sep = "\t")
+		mat <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd.csv", header = T, sep = "\t")
 		colnames(mat) = c("subSystem", "FVA_BD_abs", "FVA_BD_norm_t1", "FVA_BD_norm_t2", 
 							"MTA_BD_abs", "MTA_BD_norm_t1", "MTA_BD_norm_t2")
 		mat = subset(mat, TRUE, c("subSystem", "FVA_BD_abs", "FVA_BD_norm_t1", "FVA_BD_norm_t2", 
@@ -43,7 +43,7 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 		mat_keep = mat[(row.names(mat) %in% keep),]
 		write.table(mat_keep, "1.ManuscriptFigs/data/Tbl_bd_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
 
-		mat <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_r.csv", header = T, sep = "\t")
+		mat <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_r.csv", header = T, sep = "\t")
 		colnames(mat) = c("subSystem", "FVA_BD_R_abs", "FVA_BD_R_norm_t1", "FVA_BD_R_norm_t2", 
 							"MTA_BD_R_abs", "MTA_BD_R_norm_t1", "MTA_BD_R_norm_t2")
 		mat = subset(mat, TRUE, c("subSystem", "FVA_BD_R_abs", "FVA_BD_R_norm_t1", "FVA_BD_R_norm_t2", 
@@ -56,7 +56,7 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 		mat_keep = mat[(row.names(mat) %in% keep),]
 		write.table(mat_keep, "1.ManuscriptFigs/data/Tbl_bd_r_filt.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)	
 
-		mat <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_nr.csv", header = T, sep = "\t")
+		mat <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_bd_nr.csv", header = T, sep = "\t")
 		colnames(mat) = c("subSystem", "FVA_BD_NR_abs", "FVA_BD_NR_norm_t1", "FVA_BD_NR_norm_t2", 
 							"MTA_BD_NR_abs", "MTA_BD_NR_norm_t1", "MTA_BD_NR_norm_t2")
 		mat = subset(mat, TRUE, c("subSystem", "FVA_BD_NR_abs", "FVA_BD_NR_norm_t1", "FVA_BD_NR_norm_t2", 
@@ -122,7 +122,7 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 
 #disrupted in >2 modules/phenotype-of-interest
 # Fig.1e	
-		mat <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_mat_filt.csv", header = T, sep = "\t")	
+		mat <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_mat_filt.csv", header = T, sep = "\t")	
 		mat <- mat[, c("name", "bd_lst", "bd_r_lst", "bd_nr_lst")]
 		mat
 		colnames(mat) = c("subSystem", "BD", "BD_R", "BD_NR")
@@ -161,9 +161,9 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 		dev.off() 
 
 #Rxns belonging to the subSystems-disrupted in >2 modules/phenotype-of-interest
-		BD <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/BD_Rxns.csv", header = T, sep = "\t")
-		BD_R <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/BD_R_Rxns.csv", header = T, sep = "\t")
-		BD_NR <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/PlotResults/BD_NR_Rxns.csv", header = T, sep = "\t")
+		BD <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/PlotResults/BD_Rxns.csv", header = T, sep = "\t")
+		BD_R <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/PlotResults/BD_R_Rxns.csv", header = T, sep = "\t")
+		BD_NR <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/PlotResults/BD_NR_Rxns.csv", header = T, sep = "\t")
 
 		head(BD)		
 		dim(BD)

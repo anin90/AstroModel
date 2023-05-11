@@ -191,6 +191,112 @@ k=1;
     modelID{k,3} = 'norm_t2';
     modelID{k,4} = 'iMAT';
     k = k+1;    
+
+%% Koskuvi et al.
+%% Control
+
+    % Koskuvi_Ctrl_abs
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/1.Control/v1/abs/Koskuvi_Control.mat';
+    model = iAstro_iPS_SCZ_Ctrl_TP_abs;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Koskuvi';
+    modelID{k,2} = 'Ctrl';
+    modelID{k,3} = 'abs';
+    modelID{k,4} = 'iMAT';
+    k = k+1;    
+
+    % Koskuvi_Ctrl_norm_t1
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/1.Control/v1/norm_t1/Koskuvi_Control.mat';
+    model = iAstro_iPS_SCZ_Ctrl_TP_norm_t1;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Koskuvi';
+    modelID{k,2} = 'Ctrl';
+    modelID{k,3} = 'norm_t1';
+    modelID{k,4} = 'iMAT';
+    k = k+1;        
+
+    % Koskuvi_Ctrl_norm_t2
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/1.Control/v1/norm_t2/Koskuvi_Control.mat';
+    model = iAstro_iPS_SCZ_Ctrl_TP_norm_t2;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Koskuvi';
+    modelID{k,2} = 'Ctrl';
+    modelID{k,3} = 'norm_t2';
+    modelID{k,4} = 'iMAT';
+    k = k+1;        
+    
+%% HT
+
+    % Koskuvi_HT_abs
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/2.HT/v1/abs/Koskuvi_HT.mat';
+    model = iAstro_iPS_SCZ_HT_TP_abs;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Koskuvi';
+    modelID{k,2} = 'HT';
+    modelID{k,3} = 'abs';
+    modelID{k,4} = 'iMAT';
+    k = k+1;        
+
+    % Koskuvi_HT_norm_t1
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/2.HT/v1/norm_t1/Koskuvi_HT.mat';
+    model = iAstro_iPS_SCZ_HT_TP_norm_t1;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Koskuvi';
+    modelID{k,2} = 'HT';
+    modelID{k,3} = 'norm_t1';
+    modelID{k,4} = 'iMAT';
+    k = k+1;        
+
+    % Koskuvi_HT_norm_t2
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/2.HT/v1/norm_t2/Koskuvi_HT.mat';
+    model = iAstro_iPS_SCZ_HT_TP_norm_t2;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Koskuvi';
+    modelID{k,2} = 'HT';
+    modelID{k,3} = 'norm_t2';
+    modelID{k,4} = 'iMAT';
+    k = k+1;        
+
+%% ST
+
+    % Koskuvi_ST_abs
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/3.ST/v1/abs/Koskuvi_ST.mat';
+    model = iAstro_iPS_SCZ_ST_TP_abs;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Koskuvi';
+    modelID{k,2} = 'ST';
+    modelID{k,3} = 'abs';
+    modelID{k,4} = 'iMAT';
+    k = k+1;        
+
+    % Koskuvi_ST_norm_t1
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/3.ST/v1/norm_t1/Koskuvi_ST.mat';
+    model = iAstro_iPS_SCZ_ST_TP_norm_t1;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Koskuvi';
+    modelID{k,2} = 'ST';
+    modelID{k,3} = 'norm_t1';
+    modelID{k,4} = 'iMAT';
+    k = k+1;        
+
+    % Koskuvi_ST_norm_t2
+    expMat = '/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/1.matrix2model/3.Koskuvi/3.ST/v1/norm_t2/Koskuvi_ST.mat';
+    model = iAstro_iPS_SCZ_ST_TP_norm_t2;
+    modelStatsMat = printModelStats(model, expMat);
+    modelStatsMatSol(k,:) = modelStatsMat;
+    modelID{k,1} = 'Koskuvi';
+    modelID{k,2} = 'ST';
+    modelID{k,3} = 'norm_t2';
+    modelID{k,4} = 'iMAT';
+    k = k+1;        
     
 %% Final Table    
 modelStatsMatSol = [modelID, modelStatsMatSol];
