@@ -1120,7 +1120,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 						BD_subSystem_pval <- BD_subSystem_pval %>% relocate(Phenotype, .before = subSystem)
 						BD_subSystem_pval
 						write.table(BD_subSystem_pval, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_subSystem_pval.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
-
+					
 	# bd_r_subSystem_pval
 	
 					# results_vadodaria_subsystem_all
@@ -1216,8 +1216,6 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 						BD_NR_subSystem_pval <- BD_NR_subSystem_pval %>% relocate(Phenotype, .before = subSystem)
 						BD_NR_subSystem_pval
 						write.table(BD_NR_subSystem_pval, "PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_subSystem_pval.csv", sep = "\t", quote = FALSE, row.names = TRUE, col.names=NA)
-
-
 
 
 

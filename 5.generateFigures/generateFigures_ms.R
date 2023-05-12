@@ -124,7 +124,6 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 # Fig.1e	
 		mat <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/PlotResults/plotDataOverlaysHyper_Tbl/Tbl_mat_filt.csv", header = T, sep = "\t")	
 		mat <- mat[, c("name", "bd_lst", "bd_r_lst", "bd_nr_lst")]
-		mat
 		colnames(mat) = c("subSystem", "BD", "BD_R", "BD_NR")
 		mm2 <- melt(mat, id="subSystem")
 		plot = ggplot(mm2, aes(x=reorder(subSystem, -value), y=value, fill=variable)) + 
@@ -181,7 +180,7 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 # Fig.2 - test
 		ggplot(modelStats_post, aes(x=Phenotype, y=fluxInconsistentRxnsPrct, fill=Dataset)) + 
 			geom_bar(stat="identity", position=position_dodge(), width = 0.5, color="black")+
-			scale_fill_manual(values=c('#999999','#E69F00')) +
+			scale_fill_manual(values=c('#999999','#E69F00', '#56B4E9')) +
 			theme_classic() + theme(aspect.ratio=1) + xlab("") + ylab("fluxInconsistentRxnsPrct") +
 			coord_flip() + facet_grid(. ~ ExpThreshold)
 			
@@ -358,7 +357,9 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 						g
 						dev.off()
 
+##########################################
 # Fig.3 ------Compare models - Koskuvi. (2022) vs Biju. (2020)------
+##########################################
 
 					# merge colNames to create modelID (pre expansion)
 					pre = modelStats_pre
@@ -434,6 +435,43 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 						l
 						dev.off()
 
+#############################################
+# Fig.4 ------Merge final results - Vadodaria (BD) and Koskuvi. (SCZ)------
+#############################################
+
+		# load table
+		BD <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_subSystem_pval.csv", header = T, sep = "\t")
+		BD_R <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_R_subSystem_pval.csv", header = T, sep = "\t")
+		BD_NR <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/1.Vadodaria/PlotResults/plotDataOverlaysHyper_Tbl_Final/BD_NR_subSystem_pval.csv", header = T, sep = "\t")
+		ST <- read.csv("/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox/AstroModel/3.analyzeModel/3.DataOverlays/2.Koskuvi/PlotResults/plotDataOverlaysHyper_Tbl_Final/ST_subSystem_pval.csv", header = T, sep = "\t")
+
+		dat = rbind(BD, BD_R, BD_NR, ST)
+		dat$SignificantBy = as.character(dat$No.of.disrupted.modules)
+		dat$SignificantBy <- paste0(dat$SignificantBy, " modules")
+		dat
+
+						# grid plot - merge vadodaria & koskuvi results
+						m = ggplot(dat, aes(x=(subSystem), y=-log10(rowMeans),  fill = SignificantBy)) + 
+							geom_bar(stat="identity", color="black", width = 0.7) + theme_classic()+
+							scale_fill_manual(values=c('#999999','#E69F00', '#56B4E9')) + 
+							coord_flip()+
+							xlab("") + ylab("-log10(mean.fdr.p.val)") + 
+							geom_hline(yintercept = -log10(0.05), linetype="dashed", color = c("red")) + 
+							theme(text=element_text(color="black"), axis.text=element_text(color="black")) +
+							facet_grid(. ~ Phenotype)
+						
+						svg("1.ManuscriptFigs/4a.svg")
+						m + theme(aspect.ratio=2, text = element_text(size=7)) +
+								theme(axis.text.y=element_text(size=rel(1.4)), axis.text.x=element_text(size=rel(1.4))) +
+								theme(legend.text=element_text(size=7)) +
+								theme(strip.text.x = element_text(size = 7)) +
+								theme(axis.title.y=element_text(size=7))
+						dev.off()
+
+#############################################
+# print plots - grid/ stitch/ patchwork/ etc..
+#############################################
+
 				# plotGrid
 				plot_grid(a1, a2, labels=c("a1.)", "a2.)"), ncol = 1, nrow = 2)
 				plot_grid(a, b, labels=c("2a.)", "2b.)"), ncol = 1, nrow = 2)
@@ -443,7 +481,8 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 				plot_grid(h, i, labels=c("3a.)", "3b.)"), ncol = 1, nrow = 2)
 				plot_grid(j, k, labels=c("3c.)", "3d.)"), ncol = 1, nrow = 2)
 				plot_grid(l, labels=c("3e.)"), ncol = 1, nrow = 2)
-
+				plot_grid(m, labels=c("4a.)"), ncol = 1, nrow = 2)
+				
 				# patchwork
 				x1 =	 (a +theme(legend.position="none")) / 
 							(b+theme(legend.position="none")) | 
@@ -453,4 +492,3 @@ pdf("1.ManuscriptFigs/generateFigures_ms.pdf")
 				svg("1.ManuscriptFigs/Fig2.svg")
 				x1
 				dev.off()
-

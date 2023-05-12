@@ -571,7 +571,7 @@ pdf("PlotResults/plotDataOverlaysHyper.pdf")
 							scale_fill_manual(values=c("#339cff")) + 
 							coord_flip() +
 							scale_y_continuous(breaks=c(0:1:10)) + theme(aspect.ratio=1) +
-							xlab("") + ylab("median.p.val.fdr") + labs(fill = "Phenotype") +
+							xlab("") + ylab("mean.p.val.fdr") + labs(fill = "Phenotype") +
 							theme(axis.text.y=element_text(size=rel(1.1)))
 
 
