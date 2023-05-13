@@ -1,8 +1,8 @@
-	subSystem	disrupted.module	rxnList
-1	ROS detoxification	FVA_BD_R_norm_t1	SPODM
-2	ROS detoxification	FVA_BD_R_norm_t1	SPODMm
-3	ROS detoxification	FVA_BD_R_norm_t1	SPODMn
-4	ROS detoxification	FVA_BD_R_norm_t1	SPODMx
-5	ROS detoxification	MTA_BD_R_abs	SPODMn
-6	ROS detoxification	MTA_BD_R_abs	SPODMm
-7	ROS detoxification	MTA_BD_R_abs	CATm
+subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula	rxnName	rxnECNumbers
+ROS detoxification	FVA_BD_R_norm_t1	SPODM	superoxide dismutase, cytosol	[c]	2 h[c] + 2 o2s[c]  -> o2[c] + h2o2[c] 	Superoxide Dismutase	1.15.1.1
+ROS detoxification	FVA_BD_R_norm_t1	SPODMm	NA	[m]	2 h[m] + 2 o2s[m]  -> o2[m] + h2o2[m] 	Superoxide Dismutase	1.15.1.1
+ROS detoxification	FVA_BD_R_norm_t1	SPODMn	NA	[n]	2 h[n] + 2 o2s[n]  -> h2o2[n] + o2[n] 	Superoxide Dismutase, Nuclear	1.15.1.1
+ROS detoxification	FVA_BD_R_norm_t1	SPODMx	NA	[x]	2 h[x] + 2 o2s[x]  -> o2[x] + h2o2[x] 	Superoxide Dismutase, Peroxisome	1.15.1.1
+ROS detoxification	MTA_BD_R_abs	SPODMn	NA	intercompartmental	2 h[n] + 2 o2s[n]  -> h2o2[n] + o2[n] 	Superoxide Dismutase, Nuclear	1.15.1.1
+ROS detoxification	MTA_BD_R_abs	SPODMm	NA	intercompartmental	2 h[m] + 2 o2s[m]  -> o2[m] + h2o2[m] 	Superoxide Dismutase	1.15.1.1
+ROS detoxification	MTA_BD_R_abs	CATm	catalase	[m]	2 h2o2[m]  -> 2 h2o[m] + o2[m] 	Catalase	1.11.1.6

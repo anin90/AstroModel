@@ -1,6 +1,6 @@
-	reactionIdentifier	lineWidth	color
-1	r_SPODM	3	#00FF00
-2	r_SPODMm	3	#00FF00
-3	r_SPODMn	3	#00FF00
-4	r_SPODMx	3	#00FF00
-7	r_CATm	3	#00FF00
+reactionIdentifier	lineWidth	color
+r_SPODM	3	#00FF00
+r_SPODMm	3	#00FF00
+r_SPODMn	3	#00FF00
+r_SPODMx	3	#00FF00
+r_CATm	3	#00FF00

@@ -1,16 +1,16 @@
-	subSystem	disrupted.module	rxnList
-1	Methionine and cysteine metabolism	FVA_BD_abs	HMR_6515
-2	Methionine and cysteine metabolism	FVA_BD_abs	CYSTA
-3	Methionine and cysteine metabolism	FVA_BD_abs	MCLACCYSR
-4	Methionine and cysteine metabolism	FVA_BD_abs	MCLOR
-5	Methionine and cysteine metabolism	FVA_BD_abs	SFCYSc
-6	Methionine and cysteine metabolism	FVA_BD_abs	3SALATAi
-7	Methionine and cysteine metabolism	FVA_BD_abs	3SALATAim
-8	Methionine and cysteine metabolism	FVA_BD_abs	3SPYRSP
-9	Methionine and cysteine metabolism	FVA_BD_abs	3SPYRSPm
-10	Methionine and cysteine metabolism	FVA_BD_abs	r0595
-11	Methionine and cysteine metabolism	FVA_BD_norm_t2	HMR_6515
-12	Methionine and cysteine metabolism	FVA_BD_norm_t2	CYSTA
-13	Methionine and cysteine metabolism	FVA_BD_norm_t2	MCLACCYSR
-14	Methionine and cysteine metabolism	FVA_BD_norm_t2	MCLOR
-15	Methionine and cysteine metabolism	FVA_BD_norm_t2	SFCYSc
+subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula	rxnName	rxnECNumbers
+Methionine and cysteine metabolism	FVA_BD_abs	HMR_6515	NA	[c]	so3[c] + mercppyr[c]  -> pyr[c] + tsul[c] 	3-Mercaptopyruvate:Cyanide Sulfurtransferase	EC:2.8.1.2
+Methionine and cysteine metabolism	FVA_BD_abs	CYSTA	NA	[c]	akg[c] + cys_L[c]  <=> glu_L[c] + mercppyr[c] 	Cysteine Transaminase	2.6.1.3
+Methionine and cysteine metabolism	FVA_BD_abs	MCLACCYSR	NA	[c]	nad[c] + cys_L[c] + mercplac[c]  -> h[c] + nadh[c] + mercplaccys[c] 	3-Mercaptolactate:Cysteine Reductase	
+Methionine and cysteine metabolism	FVA_BD_abs	MCLOR	NA	[c]	nad[c] + mercplac[c]  <=> h[c] + nadh[c] + mercppyr[c] 	3-Mercaptolactate:NAD+ Oxidoreductase	1.1.1.27
+Methionine and cysteine metabolism	FVA_BD_abs	SFCYSc	NA	[c]	h[c] + so3[c] + cys_L[c]  <=> slfcys[c] 	Formation of Sulfocysteine	
+Methionine and cysteine metabolism	FVA_BD_abs	3SALATAi	cysteine metabolism	[c]	h[c] + akg[c] + 3sala[c]  -> glu_L[c] + 3snpyr[c] 	3-Sulfino-Alanine Transaminase (Irreversible)	2.6.1.1
+Methionine and cysteine metabolism	FVA_BD_abs	3SALATAim	NA	[m]	h[m] + akg[m] + 3sala[m]  -> glu_L[m] + 3snpyr[m] 	3-Sulfino-Alanine Transaminase (Irreversible), Mitochondrial	2.6.1.1
+Methionine and cysteine metabolism	FVA_BD_abs	3SPYRSP	cysteine metabolism	[c]	h2o[c] + 3snpyr[c]  -> h[c] + pyr[c] + so3[c] 	3-Sulfinopyruvate Hydrolase (Spotaneous Reaction)	2.6.1.1
+Methionine and cysteine metabolism	FVA_BD_abs	3SPYRSPm	NA	[m]	h2o[m] + 3snpyr[m]  -> h[m] + pyr[m] + so3[m] 	3-Sulfinopyruvate Hydrolase (Spotaneous Reaction), Mitochondrial	
+Methionine and cysteine metabolism	FVA_BD_abs	r0595	NA	[c]	h[c] + so3[c] + mercppyr[c]  -> pyr[c] + HC01501[c] 	3-Mercaptopyruvate:Cyanide Sulfurtransferase	2.8.1.2
+Methionine and cysteine metabolism	FVA_BD_norm_t2	HMR_6515	NA	intercompartmental	so3[c] + mercppyr[c]  -> pyr[c] + tsul[c] 	3-Mercaptopyruvate:Cyanide Sulfurtransferase	EC:2.8.1.2
+Methionine and cysteine metabolism	FVA_BD_norm_t2	CYSTA	NA	intercompartmental	akg[c] + cys_L[c]  <=> glu_L[c] + mercppyr[c] 	Cysteine Transaminase	2.6.1.3
+Methionine and cysteine metabolism	FVA_BD_norm_t2	MCLACCYSR	NA	intercompartmental	nad[c] + cys_L[c] + mercplac[c]  -> h[c] + nadh[c] + mercplaccys[c] 	3-Mercaptolactate:Cysteine Reductase	
+Methionine and cysteine metabolism	FVA_BD_norm_t2	MCLOR	NA	intercompartmental	nad[c] + mercplac[c]  <=> h[c] + nadh[c] + mercppyr[c] 	3-Mercaptolactate:NAD+ Oxidoreductase	1.1.1.27
+Methionine and cysteine metabolism	FVA_BD_norm_t2	SFCYSc	NA	intercompartmental	h[c] + so3[c] + cys_L[c]  <=> slfcys[c] 	Formation of Sulfocysteine	

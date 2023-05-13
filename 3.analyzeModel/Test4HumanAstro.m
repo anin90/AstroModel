@@ -148,7 +148,23 @@ k = 1;
     TestedMetabolite{k,1} = 'NA';
     TestedModel{k,1} = 'modelOri';
     k = k +1;   
-        
+
+    %% LNLCCPT2 - Carnitine Transferase
+    model = modelOri;
+    model.c(find(model.c)) = 0;
+    model.c(ismember(model.rxns,'LNLCCPT2'))=1;
+    if find(model.c)>0
+        FBA = optimizeCbModel(model,'max','zero');
+        TestSolution(k,1) = FBA.f;
+    else
+        TestSolution(k,1) = NaN;
+    end
+    TestSolutionName{k,1} = 'LNLCCPT2';
+    TestSolutionGroup{k,1} = 'Carnitine Transferase';
+    TestedMetabolite{k,1} = 'NA';
+    TestedModel{k,1} = 'modelOri';
+    k = k +1;   
+    
     %% ATP max, modelOri
 %     model = modelOri;
 %     model.c(find(model.c)) = 0;

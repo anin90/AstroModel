@@ -1,42 +1,42 @@
-	subSystem	disrupted.module	rxnList
-1	Drug metabolism	MTA_BD_R_norm_t1	CRVStu
-2	Drug metabolism	MTA_BD_R_norm_t1	CRVSthc
-3	Drug metabolism	MTA_BD_R_norm_t1	35DHPVStep
-4	Drug metabolism	MTA_BD_R_norm_t1	35DHPVSthc
-5	Drug metabolism	MTA_BD_R_norm_t1	LSTNM7TDhc
-6	Drug metabolism	MTA_BD_R_norm_t1	LSTNM7thc
-7	Drug metabolism	MTA_BD_R_norm_t1	4HATVLACtep
-8	Drug metabolism	MTA_BD_R_norm_t1	4HATVLACthc
-9	Drug metabolism	MTA_BD_R_norm_t1	6EPVStep
-10	Drug metabolism	MTA_BD_R_norm_t1	6EPVSthc
-11	Drug metabolism	MTA_BD_R_norm_t1	RSVtev
-12	Drug metabolism	MTA_BD_R_norm_t1	RSVtu
-13	Drug metabolism	MTA_BD_R_norm_t1	LST4EXPTDhc
-14	Drug metabolism	MTA_BD_R_norm_t1	LST4EXPthc
-15	Drug metabolism	MTA_BD_R_norm_t2	3ISPVStep
-16	Drug metabolism	MTA_BD_R_norm_t2	3ISPVSthc
-17	Drug metabolism	MTA_BD_R_norm_t2	4HATVACIDtep
-18	Drug metabolism	MTA_BD_R_norm_t2	4HATVACIDthc
-19	Drug metabolism	MTA_BD_R_norm_t2	TMDtd
-20	Drug metabolism	MTA_BD_R_norm_t2	CRVStu
-21	Drug metabolism	MTA_BD_R_norm_t2	CRVSthc
-22	Drug metabolism	MTA_BD_R_norm_t2	4HATVLACtep
-23	Drug metabolism	MTA_BD_R_norm_t2	4HATVLACthc
-24	Drug metabolism	MTA_BD_R_norm_t2	TMDOATtev
-25	Drug metabolism	MTA_BD_R_norm_t2	LSTNM7TDhc
-26	Drug metabolism	MTA_BD_R_norm_t2	LSTNM7thc
-27	Drug metabolism	MTA_BD_R_norm_t2	FVStu
-28	Drug metabolism	MTA_BD_R_norm_t2	OXYPthc
-29	Drug metabolism	MTA_BD_R_norm_t2	OXYPtepv
-30	Drug metabolism	MTA_BD_R_norm_t2	PVStep
-31	Drug metabolism	MTA_BD_R_norm_t2	TMDOATthc
-32	Drug metabolism	MTA_BD_R_norm_t2	RSVtev
-33	Drug metabolism	MTA_BD_R_norm_t2	RSVtu
-34	Drug metabolism	MTA_BD_R_norm_t2	3HPVSTETCOAhcm
-35	Drug metabolism	MTA_BD_R_norm_t2	3HPVSCOAitm
-36	Drug metabolism	MTA_BD_R_norm_t2	3HPVSTETCOAitm
-37	Drug metabolism	MTA_BD_R_norm_t2	LST4EXPTDhc
-38	Drug metabolism	MTA_BD_R_norm_t2	LST4EXPthc
-39	Drug metabolism	MTA_BD_R_norm_t2	LSTNRATt
-40	Drug metabolism	MTA_BD_R_norm_t2	LSTNtd
-41	Drug metabolism	MTA_BD_R_norm_t2	TMDOATPtsc
+subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula	rxnName	rxnECNumbers
+Drug metabolism	MTA_BD_R_norm_t1	CRVStu	NA	intercompartmental	crvs[e]  <=> crvs[c] 	cerivastatin uptake by enterocytes	
+Drug metabolism	MTA_BD_R_norm_t1	CRVSthc	NA	intercompartmental	hco3[c] + crvs[e]  <=> hco3[e] + crvs[c] 	cerivastatin uptake by hepatocytes	
+Drug metabolism	MTA_BD_R_norm_t1	35DHPVStep	NA	intercompartmental	35dhpvs[c]  <=> 35dhpvs[e] 	3-alpha-5-beta-dihydroxy pravastatin exit into portal blood	
+Drug metabolism	MTA_BD_R_norm_t1	35DHPVSthc	NA	intercompartmental	hco3[c] + 35dhpvs[e]  <=> hco3[e] + 35dhpvs[c] 	uptake of 3-alpha-5-beta-dihydroxy pravastatin by hepatocytes	
+Drug metabolism	MTA_BD_R_norm_t1	LSTNM7TDhc	NA	intercompartmental	lstnm7[e]  <=> lstnm7[c] 	uptake of Losartan-N2-glucuronide / Losartan-M7 into hepatocytes via diffusion	
+Drug metabolism	MTA_BD_R_norm_t1	LSTNM7thc	NA	intercompartmental	cl[c] + lstnm7[e]  <=> cl[e] + lstnm7[c] 	uptake of Losartan-N2-glucuronide / Losartan-M7 into hepatocytes	
+Drug metabolism	MTA_BD_R_norm_t1	4HATVLACtep	NA	intercompartmental	4hatvlac[c]  <=> 4hatvlac[e] 	efflux of 4-hydroxy-atorvastatin-lactone into portal blood	
+Drug metabolism	MTA_BD_R_norm_t1	4HATVLACthc	NA	intercompartmental	hco3[c] + 4hatvlac[e]  <=> hco3[e] + 4hatvlac[c] 	uptake of 4-hydroxy-atorvastatin-lactone into hepatocytes	
+Drug metabolism	MTA_BD_R_norm_t1	6EPVStep	NA	intercompartmental	6epvs[c]  <=> 6epvs[e] 	6-epi-pravastatin exit into portal blood	
+Drug metabolism	MTA_BD_R_norm_t1	6EPVSthc	NA	intercompartmental	hco3[c] + 6epvs[e]  <=> hco3[e] + 6epvs[c] 	uptake of 6-epi-pravastatin by hepatocytes	
+Drug metabolism	MTA_BD_R_norm_t1	RSVtev	NA	intercompartmental	rsv[c]  <=> rsv[e] 	exit of rosuvastatin into hepatic vein	
+Drug metabolism	MTA_BD_R_norm_t1	RSVtu	NA	intercompartmental	hco3[c] + rsv[e]  <=> hco3[e] + rsv[c] 	uptake of rosuvastatin by enterocytes	
+Drug metabolism	MTA_BD_R_norm_t1	LST4EXPTDhc	NA	intercompartmental	lst4exp[e]  <=> lst4exp[c] 	uptake of Losartan-E3174 into hepatocytes via diffusion	
+Drug metabolism	MTA_BD_R_norm_t1	LST4EXPthc	NA	intercompartmental	cl[c] + lst4exp[e]  <=> cl[e] + lst4exp[c] 	uptake of Losartan-E3174 into hepatocytes	
+Drug metabolism	MTA_BD_R_norm_t2	3ISPVStep	NA	intercompartmental	3ispvs[c]  <=> 3ispvs[e] 	3-alpha-iso-pravastatin exit into portal blood	
+Drug metabolism	MTA_BD_R_norm_t2	3ISPVSthc	NA	intercompartmental	hco3[c] + 3ispvs[e]  <=> hco3[e] + 3ispvs[c] 	uptake of 3-alpha-iso-pravastatin by hepatocytes	
+Drug metabolism	MTA_BD_R_norm_t2	4HATVACIDtep	NA	intercompartmental	4hatvacid[c]  <=> 4hatvacid[e] 	efflux of 4-hydroxy-atorvastatin-acid into portal blood	
+Drug metabolism	MTA_BD_R_norm_t2	4HATVACIDthc	NA	intercompartmental	hco3[c] + 4hatvacid[e]  <=> hco3[e] + 4hatvacid[c] 	uptake of 4-hydroxy-atorvastatin-acid into hepatocytes	
+Drug metabolism	MTA_BD_R_norm_t2	TMDtd	NA	intercompartmental	tmd[e]  <=> tmd[c] 	uptake of torasemide into enterocytes via diffusion	
+Drug metabolism	MTA_BD_R_norm_t2	CRVStu	NA	intercompartmental	crvs[e]  <=> crvs[c] 	cerivastatin uptake by enterocytes	
+Drug metabolism	MTA_BD_R_norm_t2	CRVSthc	NA	intercompartmental	hco3[c] + crvs[e]  <=> hco3[e] + crvs[c] 	cerivastatin uptake by hepatocytes	
+Drug metabolism	MTA_BD_R_norm_t2	4HATVLACtep	NA	intercompartmental	4hatvlac[c]  <=> 4hatvlac[e] 	efflux of 4-hydroxy-atorvastatin-lactone into portal blood	
+Drug metabolism	MTA_BD_R_norm_t2	4HATVLACthc	NA	intercompartmental	hco3[c] + 4hatvlac[e]  <=> hco3[e] + 4hatvlac[c] 	uptake of 4-hydroxy-atorvastatin-lactone into hepatocytes	
+Drug metabolism	MTA_BD_R_norm_t2	TMDOATtev	NA	intercompartmental	cl[e] + tmd[c]  <=> cl[c] + tmd[e] 	efflux of Torasemide into hepatic vein	
+Drug metabolism	MTA_BD_R_norm_t2	LSTNM7TDhc	NA	intercompartmental	lstnm7[e]  <=> lstnm7[c] 	uptake of Losartan-N2-glucuronide / Losartan-M7 into hepatocytes via diffusion	
+Drug metabolism	MTA_BD_R_norm_t2	LSTNM7thc	NA	intercompartmental	cl[c] + lstnm7[e]  <=> cl[e] + lstnm7[c] 	uptake of Losartan-N2-glucuronide / Losartan-M7 into hepatocytes	
+Drug metabolism	MTA_BD_R_norm_t2	FVStu	NA	intercompartmental	hco3[c] + fvs[e]  <=> hco3[e] + fvs[c] 	uptake of fluvastatin by enterocytes	
+Drug metabolism	MTA_BD_R_norm_t2	OXYPthc	NA	intercompartmental	oxyp[e]  <=> oxyp[c] 	uptake of oxypurinol by hepatocytes	
+Drug metabolism	MTA_BD_R_norm_t2	OXYPtepv	NA	intercompartmental	h[c] + oxyp[c]  <=> h[e] + oxyp[e] 	release of oxypurinol into portal blood	
+Drug metabolism	MTA_BD_R_norm_t2	PVStep	NA	intercompartmental	pvs[c]  <=> pvs[e] 	pravastatin exit into portal blood	
+Drug metabolism	MTA_BD_R_norm_t2	TMDOATthc	NA	intercompartmental	akg[c] + na1[e] + tmd[e]  <=> na1[c] + akg[e] + tmd[c] 	uptake of torasemide into hepatocytes via OAT1	
+Drug metabolism	MTA_BD_R_norm_t2	RSVtev	NA	intercompartmental	rsv[c]  <=> rsv[e] 	exit of rosuvastatin into hepatic vein	
+Drug metabolism	MTA_BD_R_norm_t2	RSVtu	NA	intercompartmental	hco3[c] + rsv[e]  <=> hco3[e] + rsv[c] 	uptake of rosuvastatin by enterocytes	
+Drug metabolism	MTA_BD_R_norm_t2	3HPVSTETCOAhcm	NA	[m]	2 h2o[m] + 2 nad[m] + 2 coa[m] + 2 fad[m] + 3hpvscoa[m]  -> o2[m] + 2 h[m] + 2 nadh[m] + 2 accoa[m] + 2 fadh2[m] + 3hpvstetcoa[m] 	beta oxidation of 3-S-hydroxy-pravastatin-CoA to tatranor-CoA derivative in hepatocytes, mitochondria	1.3.99.- ; 4.2.1.17 ; 1.1.1.211 ; 2.3.1.16
+Drug metabolism	MTA_BD_R_norm_t2	3HPVSCOAitm	NA	intercompartmental	3hpvscoa[m]  <=> 3hpvscoa[c] 	3HPVSCOAitm	
+Drug metabolism	MTA_BD_R_norm_t2	3HPVSTETCOAitm	NA	intercompartmental	3hpvstetcoa[m]  <=> 3hpvstetcoa[c] 	3HPVSTETCOAitm	
+Drug metabolism	MTA_BD_R_norm_t2	LST4EXPTDhc	NA	intercompartmental	lst4exp[e]  <=> lst4exp[c] 	uptake of Losartan-E3174 into hepatocytes via diffusion	
+Drug metabolism	MTA_BD_R_norm_t2	LST4EXPthc	NA	intercompartmental	cl[c] + lst4exp[e]  <=> cl[e] + lst4exp[c] 	uptake of Losartan-E3174 into hepatocytes	
+Drug metabolism	MTA_BD_R_norm_t2	LSTNRATt	NA	intercompartmental	cl[c] + lstn[e]  <=> cl[e] + lstn[c] 	uptake of losartan via antiport into enterocytes	
+Drug metabolism	MTA_BD_R_norm_t2	LSTNtd	NA	intercompartmental	lstn[e]  <=> lstn[c] 	uptake of losartan via diffusion into enterocytes	
+Drug metabolism	MTA_BD_R_norm_t2	TMDOATPtsc	NA	intercompartmental	hco3[c] + tmd[e]  <=> hco3[e] + tmd[c] 	uptake of torasemide into enterocytes via antiport	

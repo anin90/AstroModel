@@ -1,26 +1,26 @@
-	subSystem	disrupted.module	rxnList
-1	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	ACGPID
-2	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	BMTer_U
-3	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	GPIAT
-4	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	GPIDAer
-5	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	GPIMTer_U
-6	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H2ETer
-7	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H2MTer_U
-8	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H3ETer
-9	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H3MTer_U
-10	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H4ET3er
-11	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H4ETer
-12	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H5MTer_U
-13	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H6ET3er
-14	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H6_ETer
-15	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H7_ETer
-16	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H8TAer
-17	Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	PIACGT
-18	Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	ACGPID
-19	Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	GPIAT
-20	Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	GPIMTer_U
-21	Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	PIACGT
-22	Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	H3ETer
-23	Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	GPIDAer
-24	Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	H8TAer
-25	Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	RE3273C
+subSystem	disrupted_module	rxnList	MetabolicUnits	Localization	rxnFormula	rxnName	rxnECNumbers
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	ACGPID	NA	[c]	h2o[c] + acgpail_hs[c]  -> ac[c] + gpail_hs[c] 	N-Acetylglucosaminylphosphatidylinositol Deacetylase	3.5.1.89
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	BMTer_U	NA	[r]	memgacpail_hs[r] + 0.1 dolmanp_U[r]  -> h[r] + m2emgacpail_hs[r] + 0.1 dolp_U[r] 	B Mannosyltransferase, Endoplasmic Reticulum	
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	GPIAT	NA	[c]	gpail_hs[c] + pmtcoa[c]  -> coa[c] + gacpail_hs[c] 	Glucosaminylphosphatidyl Inositol Acetyltransferase	
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	GPIDAer	NA	[r]	h2o[r] + gpi_prot_hs[r]  -> h[r] + dgpi_prot_hs[r] + hdca[r] 	Glycophosphatidylinositol (Gpi) Deacylase, Endoplasmic Reticulum	
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	GPIMTer_U	NA	[r]	0.1 dolmanp_U[r] + gacpail_hs[r]  -> h[r] + 0.1 dolp_U[r] + mgacpail_hs[r] 	Glcn-Acylpi Mannosyltransferase, Endoplasmic Reticulum	1.1.1.44
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H2ETer	phospholipid metabolism, er/ inositol	[r]	mgacpail_hs[r] + pe_hs[r]  -> dag_hs[r] + emgacpail_hs[r] 	H2 Phosphoethanolaminyl Transferase, Endoplasmic Reticulum	3.5.4.16
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H2MTer_U	NA	[r]	0.1 dolmanp_U[r] + mgacpail_hs[r]  -> h[r] + 0.1 dolp_U[r] + m2gacpail_hs[r] 	H2 Mannosyltransferase, Endoplasmic Reticulum	4.6.1.2
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H3ETer	phospholipid metabolism, er/ inositol	[r]	pe_hs[r] + m2gacpail_hs[r]  -> memgacpail_hs[r] + dag_hs[r] 	H3 Phosphoethanolaminyl Transferase, Endoplasmic Reticulum	
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H3MTer_U	NA	[r]	0.1 dolmanp_U[r] + m2gacpail_hs[r]  -> h[r] + 0.1 dolp_U[r] + m3gacpail_hs[r] 	H3 Mannosyltransferase, Endoplasmic Reticulum	
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H4ET3er	phospholipid metabolism, er/ inositol	[r]	pe_hs[r] + m3gacpail_hs[r]  -> dag_hs[r] + em3gacpail_hs[r] 	H4 Phosphoethanolaminyl Transferase, Endoplasmic Reticulum	
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H4ETer	phospholipid metabolism, er/ inositol	[r]	pe_hs[r] + m3gacpail_hs[r]  -> m2emgacpail_hs[r] + dag_hs[r] 	H4 Phosphoethanolaminyl Transferase, Endoplasmic Reticulum	
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H5MTer_U	NA	[r]	0.1 dolmanp_U[r] + emgacpail_hs[r]  -> h[r] + memgacpail_hs[r] + 0.1 dolp_U[r] 	H5 Mannosyltransferase, Endoplasmic Reticulum	
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H6ET3er	phospholipid metabolism, er/ inositol	[r]	m2emgacpail_hs[r] + pe_hs[r]  -> dag_hs[r] + em2emgacpail_hs[r] 	H6 Phosphoethanolaminyl Transferase, Endoplasmic Reticulum	
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H6_ETer	phospholipid metabolism, er/ inositol	[r]	pe_hs[r] + em3gacpail_hs[r]  -> dag_hs[r] + em2emgacpail_hs[r] 	H6' Phosphoethanolaminyl Transferase, Endoplasmic Reticulum	
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H7_ETer	phospholipid metabolism, er/ inositol	[r]	pe_hs[r] + emem2gacpail_hs[r]  -> dag_hs[r] + gpi_hs[r] 	H7' Phosphoethanolaminyl Transferase, Endoplasmic Reticulum	
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	H8TAer	phospholipid metabolism, er/ inositol	[r]	gpi_hs[r] + pre_prot[r]  -> gpi_sig[r] + gpi_prot_hs[r] 	H8 Transamidase, Endoplasmic Reticulum	
+Phosphatidylinositol phosphate metabolism	FVA_BD_NR_norm_t1	PIACGT	NA	[c]	pail_hs[c] + uacgam[c]  -> h[c] + udp[c] + acgpail_hs[c] 	Phosphatidylinositol N-Acetylglucosaminyltransferase	2.4.1.198
+Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	ACGPID	NA	intercompartmental	h2o[c] + acgpail_hs[c]  -> ac[c] + gpail_hs[c] 	N-Acetylglucosaminylphosphatidylinositol Deacetylase	3.5.1.89
+Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	GPIAT	NA	intercompartmental	gpail_hs[c] + pmtcoa[c]  -> coa[c] + gacpail_hs[c] 	Glucosaminylphosphatidyl Inositol Acetyltransferase	
+Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	GPIMTer_U	NA	intercompartmental	0.1 dolmanp_U[r] + gacpail_hs[r]  -> h[r] + 0.1 dolp_U[r] + mgacpail_hs[r] 	Glcn-Acylpi Mannosyltransferase, Endoplasmic Reticulum	1.1.1.44
+Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	PIACGT	NA	intercompartmental	pail_hs[c] + uacgam[c]  -> h[c] + udp[c] + acgpail_hs[c] 	Phosphatidylinositol N-Acetylglucosaminyltransferase	2.4.1.198
+Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	H3ETer	phospholipid metabolism, er/ inositol	intercompartmental	pe_hs[r] + m2gacpail_hs[r]  -> memgacpail_hs[r] + dag_hs[r] 	H3 Phosphoethanolaminyl Transferase, Endoplasmic Reticulum	
+Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	GPIDAer	NA	intercompartmental	h2o[r] + gpi_prot_hs[r]  -> h[r] + dgpi_prot_hs[r] + hdca[r] 	Glycophosphatidylinositol (Gpi) Deacylase, Endoplasmic Reticulum	
+Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	H8TAer	phospholipid metabolism, er/ inositol	intercompartmental	gpi_hs[r] + pre_prot[r]  -> gpi_sig[r] + gpi_prot_hs[r] 	H8 Transamidase, Endoplasmic Reticulum	
+Phosphatidylinositol phosphate metabolism	MTA_BD_NR_norm_t2	RE3273C	NA	[c]	h2o[c] + pail_hs[c]  <=> h[c] + pa_hs[c] + inost[c] 	Phospholipase D	3.1.4.4
