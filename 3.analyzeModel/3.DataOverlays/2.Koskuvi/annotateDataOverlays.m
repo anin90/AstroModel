@@ -17,6 +17,7 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
     Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
+    Tbl(:,'Localization') = [];
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/ST_S1.csv', 'WriteVariableNames', true, 'Delimiter','\t');
 
     % ST_S2
@@ -28,6 +29,7 @@ addpath('/media/anirudh/Work/ADBS_NIMHANS/Thesis/1.Science/Analysis/cobratoolbox
     Tbl = [subSystem, disrupted_module, rxnList, MetabolicUnits, Localization, RxnFormula, RxnName, RxnECNumbers];
     Tbl = cell2table(Tbl);
     Tbl.Properties.VariableNames = {'subSystem', 'disrupted_module', 'rxnList', 'MetabolicUnits', 'Localization', 'rxnFormula', 'rxnName', 'rxnECNumbers'};
+    Tbl(:,'Localization') = [];
     writetable(Tbl, 'PlotResults/plotDataOverlaysHyper_Tbl_Final/ST_S2.csv', 'WriteVariableNames', true, 'Delimiter','\t');
     
 %% DF_X_ST_Minerva

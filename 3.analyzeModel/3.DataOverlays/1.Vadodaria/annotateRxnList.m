@@ -34,6 +34,9 @@ model = Recon3DModel_MetabolicUnits;
     MetabolicUnits(nameidx_L~=0) = List3(nonzeros(nameidx_L));
     MetabolicUnits(nameidx_L==0) = {'NA'};
 
+    %% THIS BLOCK DOES NOT WORK FOR NON-UNIQUE rxnList
+    % DONT USE THE OUTPUTS..
+    
     % Organelle from Recon3D (Brunk et al. 2018)
     [transportRxnBool] = transportReactionBool(model);
     trspRxns = model.rxns(transportRxnBool==1);
@@ -51,7 +54,9 @@ model = Recon3DModel_MetabolicUnits;
         end
     end
     idx = cellfun(@isempty,Localization);
-    Localization(idx) = {'intercompartmental'};    
+    Localization(idx) = {'intercompartmental'};
+    
+    %%
     
     % Reaction Formula
     [RxnFormula]= deal(repmat({''},size(rxnList))');
