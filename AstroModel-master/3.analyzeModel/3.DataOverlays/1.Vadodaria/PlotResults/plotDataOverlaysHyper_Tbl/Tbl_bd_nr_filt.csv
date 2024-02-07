@@ -1,0 +1,9 @@
+	FVA_BD_NR_abs	FVA_BD_NR_norm_t1	FVA_BD_NR_norm_t2	MTA_BD_NR_abs	MTA_BD_NR_norm_t1	MTA_BD_NR_norm_t2	Total
+Cholesterol metabolism	1	0	0	1	0	0	2
+Inositol phosphate metabolism	1	0	0	0	1	0	2
+Fatty acid oxidation	0	0	1	1	0	0	2
+Heparan sulfate degradation	0	0	0	1	0	1	2
+Tyrosine metabolism	0	0	1	1	0	0	2
+N-glycan synthesis	0	1	0	0	0	1	2
+Phosphatidylinositol phosphate metabolism	0	1	0	0	0	1	2
+Keratan sulfate degradation	0	1	0	1	0	1	3

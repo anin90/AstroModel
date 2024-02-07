@@ -1,0 +1,121 @@
+rxnList	subSystem	GPR	Fluxspan_a	Fluxspan_b	FluxSpanRatio	Flux	MetabolicUnits	Localization	RxnFormula
+3SALATAi	Methionine and cysteine metabolism	2805.1	20	35	0.571428571428571	H	cysteine metabolism	[c]	h[c] + akg[c] + 3sala[c]  -> glu_L[c] + 3snpyr[c] 
+3SALATAim	Methionine and cysteine metabolism	2806.1	20	35	0.571428571428571	H	NA	[m]	h[m] + akg[m] + 3sala[m]  -> glu_L[m] + 3snpyr[m] 
+3SPYRSP	Methionine and cysteine metabolism		20	35	0.571428571428571	H	cysteine metabolism	[c]	h2o[c] + 3snpyr[c]  -> h[c] + pyr[c] + so3[c] 
+3SPYRSPm	Methionine and cysteine metabolism		20	35	0.571428571428571	H	NA	[m]	h2o[m] + 3snpyr[m]  -> h[m] + pyr[m] + so3[m] 
+5AOPt	Transport, extracellular		377.076433386037	225	1.6758952594935	L	NA	intercompartmental	2 h[c] + 5aop[c]  <=> 2 h[e] + 5aop[e] 
+5AOPtm	Heme synthesis		397.489570570045	225	1.76662031364464	L	NA	intercompartmental	5aop[c]  <=> 5aop[m] 
+ASNCYSCYSr	Peptide metabolism		10	20	0.5	H	NA	[c]	2 h2o[c] + asncyscys[c]  <=> asn_L[c] + 2 cys_L[c] 
+ASNCYSCYSt	Transport, extracellular	6564.1 or 6565.1	10	20	0.5	H	NA	intercompartmental	h[e] + asncyscys[e]  <=> h[c] + asncyscys[c] 
+BGAL1e	Sphingolipid metabolism	2720.1	119.823745064862	180.114213197969	0.665265349898622	H	NA	[e]	h2o[e] + galgluside_hs[e]  -> gal[e] + gluside_hs[e] 
+C06314t	Transport, extracellular		0	20	0	H	NA	intercompartmental	h[c] + C06314[c]  <=> h[e] + C06314[e] 
+C06315t	Transport, extracellular		0	20	0	H	NA	intercompartmental	h[c] + C06315[c]  <=> h[e] + C06315[e] 
+CE2510ABCt	Transport, extracellular	376497.1 or 11001.1 or 11000.1 or 10999.1 or 10998.1 or 28965.1	0	346.099830795262	0	H	NA	intercompartmental	h2o[c] + atp[c] + CE2510[e]  -> h[c] + adp[c] + pi[c] + CE2510[c] 
+CE4890te	Transport, extracellular	222962.1	2000	0	Inf	L	NA	intercompartmental	h[c] + CE4890[c]  <=> h[e] + CE4890[e] 
+CERT1rt	Transport, endoplasmic reticular	10087.1	123.712633953749	180.11421319797	0.686856588145948	H	NA	intercompartmental	crm_hs[c]  <=> crm_hs[r] 
+CRVNCtr	Transport, extracellular		2000	20	100	L	NA	intercompartmental	crvnc[e]  <=> crvnc[c] 
+CYSCYSr	Peptide metabolism		10	20	0.5	H	NA	[c]	h2o[c] + cyscys[c]  <=> 2 cys_L[c] 
+CYSCYSt	Transport, extracellular	6564.1 or 6565.1	10	20	0.5	H	NA	intercompartmental	h[e] + cyscys[e]  <=> h[c] + cyscys[c] 
+CYSO	Taurine and hypotaurine metabolism	1036.1	20	35	0.571428571428571	H	cysteine and CoA metabolism	[c]	o2[c] + cys_L[c]  -> 2 h[c] + 3sala[c] 
+CYSTA	Methionine and cysteine metabolism	2805.1	20	37.5	0.533333333333333	H	NA	[c]	akg[c] + cys_L[c]  <=> glu_L[c] + mercppyr[c] 
+DM_Lcystin	Exchange/demand reaction		10	20	0.5	H	NA	[c]	Lcystin[c]  -> 
+DURAD2	Pyrimidine catabolism	1806.1	0	20	0	H	pyrimidine synthesis/ de novo	[c]	nadp[c] + 56dthm[c]  <=> h[c] + nadph[c] + thym[c] 
+EX_5aop[e]	Exchange/demand reaction		377.076433386036	225	1.67589525949349	L	NA	[e]	5aop[e]  -> 
+EX_C06314[e]	Exchange/demand reaction		0	20	0	H	NA	[e]	C06314[e]  -> 
+EX_C06315[e]	Exchange/demand reaction		0	20	0	H	NA	[e]	C06315[e]  -> 
+EX_HC00250[e]	Exchange/demand reaction		20	40	0.5	H	NA	[e]	HC00250[e]  -> 
+EX_Lcyst[e]	Exchange/demand reaction		0	23.3333333333333	0	H	NA	[e]	Lcyst[e]  -> 
+EX_asncyscys[e]	Exchange/demand reaction		10	20	0.5	H	NA	[e]	asncyscys[e]  -> 
+EX_caproic[e]	Exchange/demand reaction		104.111835847262	0	Inf	L	NA	[e]	caproic[e]  -> 
+EX_cgly[e]	Exchange/demand reaction		20	40	0.5	H	NA	[e]	cgly[e]  -> 
+EX_cys_L[e]	Exchange/demand reaction		20	40	0.5	H	NA	[e]	cys_L[e]  <=> 
+EX_cyscys[e]	Exchange/demand reaction		10	20	0.5	H	NA	[e]	cyscys[e]  -> 
+EX_dhap[e]	Exchange/demand reaction		210	0	Inf	L	NA	[e]	dhap[e]  -> 
+EX_gchola[e]	Exchange/demand reaction		40	10	4	L	NA	[e]	gchola[e]  -> 
+EX_gly[e]	Exchange/demand reaction		499.709210108915	225	2.22092982270629	L	NA	[e]	gly[e]  <=> 
+EX_glyc_S[e]	Exchange/demand reaction		368.122955442752	110.714285714286	3.32498153303131	L	NA	[e]	glyc_S[e]  -> 
+EX_glyclt[e]	Exchange/demand reaction		310.72403887774	130	2.39018491444415	L	NA	[e]	glyclt[e]  -> 
+EX_gthrd[e]	Exchange/demand reaction		20	40	0.5	H	NA	[e]	gthrd[e]  -> 
+EX_hiscyscys[e]	Exchange/demand reaction		10	20	0.5	H	NA	[e]	hiscyscys[e]  -> 
+EX_mercplaccys[e]	Exchange/demand reaction		10	20	0.5	H	NA	[e]	mercplaccys[e]  -> 
+EX_ppbng[e]	Exchange/demand reaction		197.864600803536	112.5	1.75879645158699	L	NA	[e]	ppbng[e]  -> 
+EX_ser_D[e]	Exchange		381.113497331771	110.714285714286	3.44231545977083	L	NA	[e]	ser_D[e]  -> 
+EX_ser_L[e]	Exchange/demand reaction		381.113497331771	110.714285714286	3.44231545977084	L	NA	[e]	ser_L[e]  <=> 
+EX_serglyglu[e]	Exchange/demand reaction		174.141466356509	75	2.32188621808679	L	NA	[e]	serglyglu[e]  -> 
+EX_sfcys[e]	Exchange/demand reaction		10	20	0.5	H	NA	[e]	slfcys[e]  -> 
+EX_sl_L[e]	Exchange/demand reaction		0	23.3333333333333	0	H	NA	[e]	sl_L[e]  -> 
+EX_so4[e]	Exchange/demand reaction		30	45	0.666666666666667	H	NA	[e]	so4[e]  <=> 
+EX_thym[e]	Exchange/demand reaction		0	20	0	H	NA	[e]	thym[e]  -> 
+FAOXC4C4DCc	Fatty acid oxidation	1374.1 or 1375.1 or 126129.1	698.942470389171	0	Inf	L	carnitine shuttle	[c]	crn[c] + succoa[c]  <=> coa[c] + c4dc[c] 
+FTHFDH	Folate metabolism	10840.1 or 160428.1	501.773265651439	115.833333333333	4.33185553080379	L	NA	[c]	10fthf[c] + h2o[c] + nadp[c]  -> h[c] + nadph[c] + co2[c] + thf[c] 
+GALT	Galactose metabolism	2592.1 or 2592.3 or 2592.2	2000	240.152284263959	8.32804903825832	L	galactose metabolism, cytosol	[c]	h[c] + utp[c] + gal1p[c]  <=> udpgal[c] + ppi[c] 
+GALU	Galactose metabolism	7360.1 or 7360.2	2000	417.106598984772	4.79493732505781	L	glycogen synthesis	[c]	h[c] + g1p[c] + utp[c]  <=> ppi[c] + udpg[c] 
+GCALDDm	Glyoxylate and dicarboxylate metabolism	4329.1 or 7915.1 or 8659.1 or 5832.1 or 217.1 or 7915.2 or 219.1 or 8659.2	310.72403887774	113.076923076923	2.74789966354464	L	NA	[m]	h2o[m] + nad[m] + gcald[m]  -> 2 h[m] + nadh[m] + glyclt[m] 
+GK1	Nucleotide interconversion	2987.1	1108.41370558376	1442.6565143824	0.768314352400277	H	purine synthesis, cytosol	[c]	atp[c] + gmp[c]  <=> adp[c] + gdp[c] 
+GLYCLTtd	Transport, extracellular		310.724038877739	130	2.39018491444415	L	NA	intercompartmental	glyclt[c]  <=> glyclt[e] 
+GLYCLTtm	Transport, mitochondrial		310.72403887774	113.076923076923	2.74789966354464	L	NA	intercompartmental	glyclt[m]  <=> glyclt[c] 
+GLYC_St	Transport, extracellular		368.122955442752	110.714285714286	3.32498153303131	L	NA	intercompartmental	glyc_S[c]  -> glyc_S[e] 
+HISCYSCYSr	Peptide metabolism		10	20	0.5	H	NA	[c]	2 h2o[c] + hiscyscys[c]  <=> 2 cys_L[c] + his_L[c] 
+HISCYSCYSt	Transport, extracellular	6564.1 or 6565.1	10	20	0.5	H	NA	intercompartmental	h[e] + hiscyscys[e]  <=> h[c] + hiscyscys[c] 
+HMR_0167	Transport, extracellular	28965.1 or 2170.1 or 376497.1 or 948.1 or 11000.1 or 2169.1 or 2168.1 or 2173.1 or 2171.1 or 10999.1 or 2172.1 or 2167.1 or 646486.1 or 646480.1	104.111835847262	0	Inf	L	NA	intercompartmental	caproic[e]  <=> caproic[c] 
+HMR_0292	Transport, extracellular	28965.1 or 2170.1 or 376497.1 or 948.1 or 11000.1 or 2169.1 or 2168.1 or 2173.1 or 2171.1 or 10999.1 or 2172.1 or 2167.1 or 646486.1 or 646480.1	0	692.199661590524	0	H	NA	intercompartmental	CE2510[e]  -> CE2510[c] 
+HMR_0467	Transport, endoplasmic reticular		1000	20	50	L	NA	intercompartmental	pail_hs[c]  <=> pail_hs[r] 
+HMR_0765	Sphingolipid metabolism	55830.1 or 11285.1 or 55650.1 or 9488.1 or 55624.1 or 2683.1 or 55757.1 or 168391.1 or 51809.1 or 8704.1 or 51146.1 or 9331.1 or 80235.1 or 83468.1 or 8702.1 or 140687.1 or 3703.1 or 56886.1 or 283358.1 or 93183.1 or 8473.1 or 26301.1 or 93010.1 or 9334.1 or 8703.1 or 8707.1 or 148789.1 or 56983.1 or 201595.1 or 124872.1 or 146664.1 or 10678.1 or 8708.1 or 10690.1 or 84750.1 or 146712.1 or 79369.1 or 84002.1 or 374907.1 or 10331.1 or 2529.1 or 338707.1 or 10317.1 or 145173.1 or 200810.1 or 2526.1 or 170384.1 or 192134.1 or 360203.1 or 152586.1 or 644378.1 or 84752.1 or 644974.1	119.823745064862	180.11421319797	0.66526534989862	H	NA	[r]	gluside_hs[r] + udpgal[r]  -> h[r] + udp[r] + galgluside_hs[r] 
+HMR_2666	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	85	35	2.42857142857143	L	NA	[c]	crn[c] + M00127[c]  <=> coa[c] + elaidcrn[c] 
+HMR_8776	Transport, mitochondrial		310.72403887774	113.076923076923	2.74789966354464	L	NA	intercompartmental	hpyr[c]  <=> hpyr[m] 
+HMR_9627	Transport, endoplasmic reticular		119.823745064862	180.11421319797	0.665265349898619	H	NA	intercompartmental	galgluside_hs[r]  <=> galgluside_hs[c] 
+HMR_9634	Transport, endoplasmic reticular		0	122.5	0	H	NA	intercompartmental	ethamp[r]  <=> ethamp[c] 
+HMR_9640	Transport, extracellular		119.823745064862	180.11421319797	0.665265349898623	H	NA	intercompartmental	galgluside_hs[c]  <=> galgluside_hs[e] 
+HPYRDCm	Glyoxylate and dicarboxylate metabolism		310.72403887774	113.076923076923	2.74789966354464	L	NA	[m]	h[m] + hpyr[m]  -> co2[m] + gcald[m] 
+HPYRR2x	Glyoxylate and dicarboxylate metabolism	3948.1 or 197257.1 or 3945.1 or 160287.1 or (3945.1 and 3939.1) or 92483.1 or 3939.1 or 197257.2 or 3948.2	184.061477721376	55.3571428571429	3.32498153303131	L	NA	[c]	3 h[c] + nadh[c] + 2 hpyr[c]  -> nad[c] + 2 glyc_S[c] 
+LCYSTAT	Methionine and cysteine metabolism	2805.1	0	23.3333333333334	0	H	NA	[c]	Lcyst[c] + akg[c]  <=> glu_L[c] + 3spyr[c] 
+LCYSTt	Transport, extracellular		0	23.3333333333334	0	H	NA	intercompartmental	2 na1[e] + cl[e] + Lcyst[e]  <=> Lcyst[c] + 2 na1[c] + cl[c] 
+MCLACCYSR	Methionine and cysteine metabolism		10	20	0.5	H	NA	[c]	nad[c] + cys_L[c] + mercplac[c]  -> h[c] + nadh[c] + mercplaccys[c] 
+MCLOR	Methionine and cysteine metabolism	92483.1 or (3945.1 and 3939.1) or 55293.1 or 3948.2 or 3948.1 or 3945.1 or 160287.1 or 3939.1	10	20	0.5	H	NA	[c]	nad[c] + mercplac[c]  <=> h[c] + nadh[c] + mercppyr[c] 
+MERCPLACCYSt	Transport, extracellular		10	20	0.5	H	NA	intercompartmental	mercplaccys[c]  -> mercplaccys[e] 
+NTD5	Pyrimidine catabolism	30833.1 or 22978.1 or 84618.1 or 51251.1 or 4907.1 or 93034.1	698.942470389172	20	34.9471235194586	L	pyrimidine catabolism, cytosol	[c]	h2o[c] + dtmp[c]  -> pi[c] + thymd[c] 
+O2ter	Transport, endoplasmic reticular		45	75	0.6	H	NA	intercompartmental	o2[c]  <=> o2[r] 
+PGCD	Glycine, serine, alanine, and threonine metabolism	26227.1	698.942470389168	200.000000000001	3.49471235194583	L	serine metabolism, cytosol	[c]	nad[c] + 3pg[c]  -> h[c] + nadh[c] + 3php[c] 
+PPBNGS	Heme synthesis	210.1 or 210.2	197.864600803536	112.5	1.75879645158699	L	heme synthesis	[c]	2 5aop[c]  -> 2 h2o[c] + h[c] + ppbng[c] 
+PPBNGte	Transport, extracellular		197.864600803536	112.5	1.75879645158699	L	NA	intercompartmental	ppbng[c]  <=> ppbng[e] 
+PPItm	Transport, mitochondrial		1044.68612521151	1401.79980407872	0.745246305622138	H	NA	intercompartmental	ppi[c]  <=> ppi[m] 
+PSERT	Glycine, serine, alanine, and threonine metabolism	29968.1 or 29968.2	698.942470389168	200.000000000001	3.49471235194583	L	phosphoserine transaminase, cytosol	[c]	glu_L[c] + 3php[c]  -> akg[c] + pser_L[c] 
+PUNP3	Purine catabolism	4860.1	788.942470389171	1474.39932318105	0.53509416206663	H	purine catabolism	[c]	pi[c] + gsn[c]  <=> gua[c] + r1p[c] 
+PUNP4	Purine catabolism	4860.1	748.942470389171	1434.39932318105	0.522129687518432	H	purine catabolism	[c]	pi[c] + dgsn[c]  <=> 2dr1p[c] + gua[c] 
+RE1810M	Bile acid synthesis		20.5555555555555	1022.5	0.0201032328171692	H	NA	[m]	2 nadp[m] + xol7ah2[m]  <=> 2 h[m] + 2 nadph[m] + xol7aone[m] 
+RE2814M	Bile acid synthesis		20.5555555555555	1022.5	0.0201032328171692	H	NA	[m]	nad[m] + xol27oh[m]  <=> h[m] + nadh[m] + xol7aone[m] 
+RE3038C	Arachidonic acid metabolism	2053.1	0	20	0	H	lipoxin synthesis	[c]	h2o[c] + CE2567[c]  <=> C06315[c] 
+RE3040C	Arachidonic acid metabolism	2053.1	0	20	0	H	lipoxin synthesis	[c]	h2o[c] + CE2567[c]  <=> C06314[c] 
+RE3273C	Phosphatidylinositol phosphate metabolism	5338.1	1715.60913705584	1059.09475465313	1.61988257379079	L	NA	[c]	h2o[c] + pail_hs[c]  <=> h[c] + pa_hs[c] + inost[c] 
+RE3273R	Phosphatidylinositol phosphate metabolism	5337.1	1000	20	50	L	NA	[r]	h2o[r] + pail_hs[r]  <=> h[r] + pa_hs[r] + inost[r] 
+RE3346C	Bile acid synthesis	223.1 or 218.1	2000	10	200	L	NA	[c]	2 h[c] + nadh[c] + thcholstoic[c]  <=> h2o[c] + nad[c] + CE4872[c] 
+RE3566C	Eicosanoid metabolism		28.3333333333335	2000	0.0141666666666667	H	NA	[c]	HC02203[c]  <=> HC02207[c] 
+RE3597C	Eicosanoid metabolism	874.1 or 873.1	10	2000	0.005	H	NA	[c]	h[c] + nadph[c] + leuktrB4wcooh[c]  <=> nadp[c] + CE5947[c] 
+SERGLYGLUr	Peptide metabolism		174.141466356509	75	2.32188621808679	L	NA	[c]	2 h2o[c] + serglyglu[c]  <=> glu_L[c] + gly[c] + ser_L[c] 
+SERGLYGLUt	Transport, extracellular	6564.1 or 6565.1	174.141466356509	75	2.32188621808679	L	NA	intercompartmental	h[e] + serglyglu[e]  <=> h[c] + serglyglu[c] 
+SFCYSc	Methionine and cysteine metabolism		10	20	0.5	H	NA	[c]	h[c] + so3[c] + cys_L[c]  <=> slfcys[c] 
+SFCYSe	Transport, extracellular		10	20	0.5	H	NA	intercompartmental	slfcys[c]  <=> slfcys[e] 
+SLDt	Methionine and cysteine metabolism		0	23.3333333333333	0	H	NA	intercompartmental	sl_L[c]  -> sl_L[e] 
+SLDx	Methionine and cysteine metabolism	4190.1 or 130752.1	0	23.3333333333334	0	H	NA	[c]	nad[c] + sl_L[c]  <=> h[c] + nadh[c] + 3spyr[c] 
+SRR			381.113497331772	110.714285714286	3.44231545977084	L	NA	[c]	ser_L[c]  <=> ser_D[c] 
+SUCCtp	Transport, peroxisomal		698.942470389171	0	Inf	L	NA	intercompartmental	succ[c]  <=> succ[x] 
+THFtm	Transport, mitochondrial		2000	1115.83333333333	1.79238237490665	L	NA	intercompartmental	thf[c]  <=> thf[m] 
+THYMt	Transport, extracellular	3177.1	0	20	0	H	NA	intercompartmental	thym[e]  <=> thym[c] 
+TPI	Glycolysis/gluconeogenesis	7167.1 or 286016.1	579.973841554559	364.463379260335	1.5913089614973	L	glycolysis	[c]	dhap[c]  <=> g3p[c] 
+TSULt4_3	Transport, extracellular	6561.1	2000	20	100	L	NA	intercompartmental	3 na1[e] + tsul[e]  <=> 3 na1[c] + tsul[c] 
+UDPGALt2r	Transport, endoplasmic reticular		123.712633953751	180.11421319797	0.686856588145957	H	NA	intercompartmental	udpgal[c]  -> udpgal[r] 
+UGCG	Sphingolipid metabolism	7357.1	119.823745064862	180.11421319797	0.66526534989862	H	NA	[r]	crm_hs[r] + udpg[r]  -> h[r] + gluside_hs[r] + udp[r] 
+r0193	Methionine and cysteine metabolism	1491.1	790.609137055838	165.714285714286	4.77091720637144	L	NA	[c]	h2o[c] + cys_L[c]  <=> nh4[c] + h[c] + pyr[c] + HC00250[c] 
+r0210	Methionine and cysteine metabolism	875.1 or 102724560.1	753.942470389171	110.714285714286	6.8098029583538	L	NA	[c]	h[c] + ser_L[c] + HC00250[c]  -> h2o[c] + cys_L[c] 
+r0276	Purine catabolism	51292.1 or 2766.1	768.942470389172	1454.39932318105	0.5287010645105	H	purine synthesis, cytosol	[c]	nh4[c] + nadp[c] + imp[c]  <=> 2 h[c] + nadph[c] + gmp[c] 
+r0472	Nucleotide interconversion	50484.1 and 6240.1 and 6241.1	1050	1742.19966159052	0.602686375820676	H	purine catabolism, cytosol	[c]	h2o[c] + dgtp[c] + trdox[c]  <=> gtp[c] + trdrd[c] 
+r0595	Methionine and cysteine metabolism	4357.1 or 7263.1	20	35	0.571428571428571	H	NA	[c]	h[c] + so3[c] + mercppyr[c]  -> pyr[c] + HC01501[c] 
+r0735	Fatty acid oxidation	55825.1 or 51102.1 	637.928571428572	1254.19966159052	0.508633984655662	H	fatty acid synthesis & elongation	[m]	nadp[m] + dcacoa[m]  <=> h[m] + nadph[m] + dc2coa[m] 
+r0795	Miscellaneous		20	35	0.571428571428571	H	NA	[c]	h2o[c] + HC01501[c]  -> 2 h[c] + so4[c] + HC00250[c] 
+r0826	Transport, endoplasmic reticular		1000	20	50	L	NA	intercompartmental	inost[c]  -> inost[r] 
+r0940	Transport, extracellular		20	40	0.5	H	NA	intercompartmental	HC00250[c]  <=> HC00250[e] 
+r1384	Nucleotide interconversion		788.942470389171	1474.39932318105	0.535094162066631	H	purine catabolism, cytosol	[c]	h2o[c] + h[c] + gsn[c]  <=> nh4[c] + xtsn[c] 
+r2333	Transport, extracellular	6578.1	2000	0	Inf	L	NA	intercompartmental	hco3[c] + gthrd[c] + HC02217[e]  <=> hco3[e] + gthrd[e] + HC02217[c] 
+sink_cys_L[c]	Exchange/demand reaction		20	40	0.5	H	NA	[c]	cys_L[c]  <=> 
+sink_gly[c]	Exchange/demand reaction		499.709210108914	225	2.22092982270628	L	NA	[c]	gly[c]  <=> 
+sink_ser_L[c]	Exchange/demand reaction		381.113497331771	110.714285714287	3.44231545977081	L	NA	[c]	ser_L[c]  <=> 

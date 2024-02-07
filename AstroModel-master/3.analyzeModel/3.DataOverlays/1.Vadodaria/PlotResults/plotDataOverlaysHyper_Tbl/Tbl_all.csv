@@ -1,0 +1,48 @@
+name	FVA_BD_abs$subSystem	FVA_BD_norm_t1$subSystem	FVA_BD_norm_t2$subSystem	FVA_BD_NR_abs$subSystem	FVA_BD_NR_norm_t1$subSystem	FVA_BD_NR_norm_t2$subSystem	FVA_BD_R_abs$subSystem	FVA_BD_R_norm_t1$subSystem	FVA_BD_R_norm_t2$subSystem	MTA_BD_abs$subSystem_CB	MTA_BD_norm_t1$subSystem_CB	MTA_BD_norm_t2$subSystem_CB	MTA_BD_NR_abs$subSystem_CBNR	MTA_BD_NR_norm_t1$subSystem_CBNR	MTA_BD_NR_norm_t2$subSystem_CBNR	MTA_BD_R_abs$subSystem_CBR	MTA_BD_R_norm_t1$subSystem_CBR	MTA_BD_R_norm_t2$subSystem_CBR
+Fatty acid oxidation	1	1	0	0	0	1	1	0	0	1	0	1	1	0	0	0	0	0
+Fructose and mannose metabolism	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0
+Lysine metabolism	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Methionine and cysteine metabolism	1	0	1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0
+Miscellaneous	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Valine, leucine, and isoleucine metabolism	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+Transport, endoplasmic reticular	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0
+Biotin metabolism	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Cholesterol metabolism	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0
+Fatty acid synthesis	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0
+Glutamate metabolism	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Glycolysis/gluconeogenesis	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Inositol phosphate metabolism	0	0	0	1	0	0	0	0	0	0	0	1	0	1	0	0	0	0
+Propanoate metabolism	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Pyrimidine catabolism	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Vitamin B6 metabolism	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Chondroitin sulfate degradation	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0
+Chondroitin synthesis	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+Heparan sulfate degradation	0	0	0	0	0	0	0	0	0	1	0	0	1	0	1	0	0	0
+Keratan sulfate degradation	0	0	1	0	1	0	0	0	1	1	0	0	1	0	1	0	0	0
+Sink	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+Tyrosine metabolism	0	0	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0	0
+ROS detoxification	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0
+Starch and sucrose metabolism	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0
+Transport, extracellular	0	0	0	0	0	0	0	0	0	0	1	0	0	0	1	1	1	1
+Keratan sulfate synthesis	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0
+Pyruvate metabolism	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Peptide metabolism	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0
+Aminosugar metabolism	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0
+N-glycan synthesis	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0
+Phosphatidylinositol phosphate metabolism	0	0	0	0	1	0	0	0	0	0	0	1	0	0	1	0	0	0
+Drug metabolism	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	1
+Nucleotide interconversion	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+Urea cycle	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+Arginine and proline metabolism	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0
+CoA synthesis	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0
+Eicosanoid metabolism	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0
+Nucleotide salvage pathway	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Purine synthesis	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Transport, lysosomal	0	0	1	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0
+O-glycan metabolism	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0
+Transport, golgi apparatus	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0
+Phenylalanine metabolism	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+Tetrahydrobiopterin metabolism	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+Transport, nuclear	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+Thiamine metabolism	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+Vitamin A metabolism	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1

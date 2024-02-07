@@ -1,0 +1,186 @@
+rxnList	subSystem	GPR	Fluxspan_a	Fluxspan_b	FluxSpanRatio	Flux	MetabolicUnits	Localization	RxnFormula
+10FTHF7GLUtl	Transport, lysosomal		166.666666666667	95.0801234902057	1.75290755363644	L	NA	intercompartmental	10fthf7glu[c]  -> 10fthf7glu[l] 
+10FTHFtl	Transport, lysosomal		166.666666666667	95.0801234902057	1.75290755363644	L	NA	intercompartmental	10fthf[c]  <=> 10fthf[l] 
+2HIVc	Valine, leucine, and isoleucine metabolism	(3945.1 and 3939.1) or 160287.1 or 3948.2 or 3939.1 or 3948.1 or 55293.1 or 3945.1 or 92483.1	20	10	2	L	NA	[c]	h[c] + nadh[c] + 3mob[c]  <=> nad[c] + 2hiv[c] 
+2HIVte	Transport, extracellular		20	10	2	L	NA	intercompartmental	2hiv[c]  <=> 2hiv[e] 
+2MOPtm	Transport, mitochondrial		856.744186046512	0	Inf	L	NA	intercompartmental	2mop[c]  -> 2mop[m] 
+34DHPLACOX_NADP_	Tyrosine metabolism	222.1 or 221.1 or 218.1	1010	10	101	L	NA	[c]	h2o[c] + nadp[c] + 34dhpac[c]  <=> 2 h[c] + nadph[c] + 34dhpha[c] 
+3HPPt	Transport, extracellular		375.785714285714	199.179374124918	1.88666982179609	L	NA	intercompartmental	3hpp[c]  <=> 3hpp[e] 
+3HPPtm	Transport, mitochondrial		375.785714285714	199.179374124917	1.88666982179609	L	NA	intercompartmental	3hpp[c]  <=> 3hpp[m] 
+3MOBte	Transport, extracellular		20	10	2	L	NA	intercompartmental	3mob[e]  <=> 3mob[c] 
+3MOX4HOXPGALDOX_NADP_	Tyrosine metabolism	222.1 or 220.1 or 221.1 or 218.1	1000	0	Inf	L	tyrosine metabolism, cytosol/ degradation of catechoamines	[c]	h2o[c] + nadp[c] + 3m4hpga[c]  <=> 2 h[c] + nadph[c] + 3mox4hoxm[c] 
+ADRNCOAtx	Transport, peroxisomal		0	17.5	0	H	NA	intercompartmental	adrncoa[c]  <=> adrncoa[x] 
+ARGTYRVALr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + argtyrval[c]  <=> arg_L[c] + tyr_L[c] + val_L[c] 
+ARGTYRVALt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + argtyrval[e]  <=> h[c] + argtyrval[c] 
+ARGVALCYSr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + argvalcys[c]  <=> cys_L[c] + arg_L[c] + val_L[c] 
+ARGVALCYSt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + argvalcys[e]  <=> h[c] + argvalcys[c] 
+ARGVALTRPr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + argvaltrp[c]  <=> arg_L[c] + trp_L[c] + val_L[c] 
+ARGVALTRPt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + argvaltrp[e]  <=> h[c] + argvaltrp[c] 
+ASPVALASNr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + aspvalasn[c]  <=> asp_L[c] + asn_L[c] + val_L[c] 
+ASPVALASNt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + aspvalasn[e]  <=> h[c] + aspvalasn[c] 
+ATP1ter	Transport, endoplasmic reticular		598.59375	21.6666666666666	27.6274038461539	L	NA	intercompartmental	atp[c] + adp[r]  <=> adp[c] + atp[r] 
+C160CPT2	Fatty acid oxidation	1376.1 or 1374.1	75	40	1.875	L	carnitine shuttle	[m]	coa[m] + pmtcrn[m]  <=> crn[m] + pmtcoa[m] 
+DCSPTN1CPT1	Fatty acid oxidation	1375.1 or 1375.3 or 1375.4 or 126129.1 or 1374.1 or 1375.2	0	17.5	0	H	carnitine shuttle	[c]	crn[c] + dcsptn1coa[c]  <=> coa[c] + dcsptn1crn[c] 
+DCSPTN1CPT2	Fatty acid oxidation	1376.1	0	17.5	0	H	carnitine shuttle	[m]	coa[m] + dcsptn1crn[m]  <=> crn[m] + dcsptn1coa[m] 
+EX_2hiv[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	2hiv[e]  -> 
+EX_3hpp[e]	Exchange/demand reaction		375.785714285714	199.179374124918	1.88666982179609	L	NA	[e]	3hpp[e]  -> 
+EX_3mob[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	3mob[e]  -> 
+EX_argtyrval[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	argtyrval[e]  -> 
+EX_argvalcys[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	argvalcys[e]  -> 
+EX_argvaltrp[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	argvaltrp[e]  -> 
+EX_aspvalasn[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	aspvalasn[e]  -> 
+EX_btn[e]	Exchange/demand reaction		10	0	Inf	L	NA	[e]	btn[e]  -> 
+EX_cholate[e]	Exchange/demand reaction		40	20	2	L	NA	[e]	cholate[e]  -> 
+EX_dcsptn1[e]	Exchange/demand reaction		0	17.5	0	H	NA	[e]	dcsptn1[e]  -> 
+EX_glyvalhis[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	glyvalhis[e]  -> 
+EX_hislysval[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	hislysval[e]  -> 
+EX_leuktrB4wcooh[e]	Exchange/demand reaction		10	0	Inf	L	NA	[e]	leuktrB4wcooh[e]  -> 
+EX_leuleu[e]	Exchange/demand reaction		10	0	Inf	L	NA	[e]	leuleu[e]  -> 
+EX_leuval[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	leuval[e]  -> 
+EX_lysvalphe[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	lysvalphe[e]  -> 
+EX_lysvaltrp[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	lysvaltrp[e]  -> 
+EX_o2s[e]	Exchange/demand reaction		0	0.166666666666667	0	H	NA	[e]	o2s[e]  -> 
+EX_procys[e]	Exchange/demand reaction		20	40	0.5	H	NA	[e]	procys[e]  -> 
+EX_provalgln[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	provalgln[e]  -> 
+EX_tchola[e]	Exchange/demand reaction		30	10	3	L	NA	[e]	tchola[e]  -> 
+EX_trpglyval[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	trpglyval[e]  -> 
+EX_trpleuval[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	trpleuval[e]  -> 
+EX_trpmetval[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	trpmetval[e]  -> 
+EX_trpproval[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	trpproval[e]  -> 
+EX_trpvalasp[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	trpvalasp[e]  -> 
+EX_tyrvalmet[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	tyrvalmet[e]  -> 
+EX_val_L[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	val_L[e]  <=> 
+EX_valarggly[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	valarggly[e]  -> 
+EX_valhisasn[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	valhisasn[e]  -> 
+EX_valleuphe[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	valleuphe[e]  -> 
+EX_vallystyr[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	vallystyr[e]  -> 
+EX_valphearg[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	valphearg[e]  -> 
+EX_valprotrp[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	valprotrp[e]  -> 
+EX_valserarg[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	valserarg[e]  -> 
+EX_valtrpphe[e]	Exchange/demand reaction		20	10	2	L	NA	[e]	valtrpphe[e]  -> 
+EX_valtrpval[e]	Exchange/demand reaction		10	5	2	L	NA	[e]	valtrpval[e]  -> 
+EX_valval[e]	Exchange/demand reaction		10	5	2	L	NA	[e]	valval[e]  -> 
+FAOXC184C163m	Fatty acid oxidation	3030.1 and 3032.1	0	17.5	0	H	betaoxidation	[m]	h2o[m] + nad[m] + coa[m] + 2octdectecoa[m]  -> h[m] + nadh[m] + accoa[m] + 4hexdtricoa[m] 
+FAOXC184m	Fatty acid oxidation	1632.1	0	17.5	0	H	betaoxidation	[m]	3octdectecoa[m]  -> 2octdectecoa[m] 
+FAOXC204C184m	Fatty acid oxidation	37.1 and 3030.1 and 3032.1	0	17.5	0	H	betaoxidation	[m]	h2o[m] + nad[m] + coa[m] + fad[m] + eitetcoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + 3octdectecoa[m] 
+FAOXC225C204m	Fatty acid oxidation	3030.1 and 3032.1	0	17.5	0	H	betaoxidation	[m]	h2o[m] + nad[m] + coa[m] + 2docopencoa[m]  -> h[m] + nadh[m] + accoa[m] + eitetcoa[m] 
+FAOXC225C226m	Fatty acid oxidation	37.1	0	17.5	0	H	betaoxidation	[m]	fad[m] + dcsptn1coa[m]  -> fadh2[m] + docohexcoa[m] 
+FAOXC225m	Fatty acid oxidation	1632.1	0	17.5	0	H	betaoxidation	[m]	3docopencoa[m]  -> 2docopencoa[m] 
+FAOXC226C225m	Fatty acid oxidation	1666.1	0	17.5	0	H	betaoxidation	[m]	h[m] + nadph[m] + docohexcoa[m]  -> nadp[m] + 3docopencoa[m] 
+FPGS9	Folate metabolism	2356.1	166.666666666667	95.0801234902057	1.75290755363644	L	NA	[c]	10fthf6glu[c] + atp[c] + glu_L[c]  -> 10fthf7glu[c] + h[c] + adp[c] + pi[c] 
+GAPD	Glycolysis/gluconeogenesis	2597.1 or 26330.1	481.126279863481	320.737632264141	1.50006183080897	L	glycolysis	[c]	pi[c] + nad[c] + g3p[c]  <=> h[c] + nadh[c] + 13dpg[c] 
+GGH_10FTHF5GLUl	Folate metabolism	8836.1	166.666666666667	95.0801234902057	1.75290755363644	L	NA	[l]	10fthf5glu[l] + 4 h2o[l]  -> 10fthf[l] + 4 glu_L[l] 
+GGH_10FTHF6GLUl	Folate metabolism	8836.1	166.666666666667	95.0801234902057	1.75290755363644	L	NA	[l]	10fthf6glu[l] + h2o[l]  -> 10fthf5glu[l] + glu_L[l] 
+GGH_10FTHF7GLUl	Folate metabolism	8836.1	166.666666666667	95.0801234902057	1.75290755363644	L	NA	[l]	10fthf7glu[l] + h2o[l]  -> 10fthf6glu[l] + glu_L[l] 
+GLB1	Sphingolipid metabolism	(5476.1 and 2720.1 and 2588.1 and 4758.1) or (5476.1 and 2720.1)	0	78.5414258188821	0	H	NA	[l]	h2o[l] + galgluside_hs[l]  -> gal[l] + gluside_hs[l] 
+GLUCYS	Glutathione metabolism	2729.1 and 2730.1	233.283783783784	40	5.83209459459459	L	glutathione synthesis	[c]	atp[c] + glu_L[c] + cys_L[c]  -> h[c] + adp[c] + pi[c] + glucys[c] 
+GLYVALHISr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + glyvalhis[c]  <=> gly[c] + his_L[c] + val_L[c] 
+GLYVALHISt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + glyvalhis[e]  <=> h[c] + glyvalhis[c] 
+H2O2tn	Transport, nuclear		0	0.0837520938023317	0	H	NA	intercompartmental	h2o2[c]  <=> h2o2[n] 
+HISLYSVALr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + hislysval[c]  <=> lys_L[c] + his_L[c] + val_L[c] 
+HISLYSVALt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + hislysval[e]  <=> h[c] + hislysval[c] 
+HMR_0769	Transport, lysosomal		0	78.5414258188821	0	H	NA	intercompartmental	gluside_hs[c]  <=> gluside_hs[l] 
+HMR_3422	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	0	17.5	0	H	NA	[m]	10 h2o[m] + 10 nad[m] + 10 coa[m] + 5 fad[m] + dcsptn1coa[m]  -> 10 h[m] + 10 nadh[m] + 11 accoa[m] + 5 fadh2[m] 
+HMR_9803	Propanoate metabolism		375.785714285714	199.179374124917	1.88666982179609	L	NA	[m]	2 h[m] + nadph[m] + malcoa[m]  <=> h2o[m] + nadp[m] + M03168[m] 
+HMR_9804	Propanoate metabolism	51171.1 or 80270.1 or 10202.1 or 10553.1 or 7923.1 or 157506.1 or 130752.1 or 145226.1 or 84869.1 or 1487.1 or 112724.1 or 56898.1 or 374875.1 or 121214.1 or 195814.1 or 3291.1 or 100288072.1 or 93517.1 or 51741.1 or 1645.1 or 340811.1 or 128.1 or 57016.1 or 51170.1 or 1109.1 or 7923.1 or 7923.1 or 441282.1 or 7923.1 or 7923.1 or 7923.1 or 57665.1	375.785714285714	199.179374124917	1.88666982179609	L	NA	[m]	nadp[m] + 3hpcoa[m]  <=> h[m] + nadph[m] + M03168[m] 
+LEUKTRB4WCOOHt	Transport, extracellular		10	0	Inf	L	NA	intercompartmental	h2o[c] + atp[c] + leuktrB4wcooh[c]  -> h[c] + adp[c] + pi[c] + leuktrB4wcooh[e] 
+LEULEULAPc	Transport, extracellular	51056.1	10	0	Inf	L	peptide metabolism, Leucylleucine, cytosol	[c]	h2o[c] + leuleu[c]  <=> 2 leu_L[c] 
+LEUVALr	Peptide metabolism		20	10	2	L	NA	[c]	h2o[c] + leuval[c]  <=> leu_L[c] + val_L[c] 
+LEUVALt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + leuval[e]  <=> h[c] + leuval[c] 
+LPCOXp	Lysine metabolism	51268.1	0	20	0	H	lysine metabolism	[x]	Lpipecol[x] + o2[x]  -> h[x] + h2o2[x] + thp2c[x] 
+LYSVALPHEr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + lysvalphe[c]  <=> lys_L[c] + phe_L[c] + val_L[c] 
+LYSVALPHEt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + lysvalphe[e]  <=> h[c] + lysvalphe[c] 
+LYSVALTRPr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + lysvaltrp[c]  <=> lys_L[c] + trp_L[c] + val_L[c] 
+LYSVALTRPt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + lysvaltrp[e]  <=> h[c] + lysvaltrp[c] 
+O2St	Transport, extracellular		0	0.166666666666629	0	H	NA	intercompartmental	o2s[c]  <=> o2s[e] 
+O2Stm	Transport, mitochondrial		0	0.167504187604663	0	H	NA	intercompartmental	o2s[c]  <=> o2s[m] 
+O2Stn	Transport, nuclear		0	0.167504187604663	0	H	NA	intercompartmental	o2s[c]  <=> o2s[n] 
+O2Stx	Transport, peroxisomal		0	0.167504187604663	0	H	NA	intercompartmental	o2s[c]  <=> o2s[x] 
+O2tn	Transport, nuclear		0	0.0837520938023317	0	H	NA	intercompartmental	o2[c]  <=> o2[n] 
+PGESr	Eicosanoid metabolism	80142.4 or 80142.2 or 9536.1 or 80142.1 or 9536.2 or 80142.3	1000	2000	0.5	H	prostaglandin synthesis, cytosol	[r]	prostgh2[r]  <=> prostge2[r] 
+PROCYSr	Peptide metabolism		20	40	0.5	H	NA	[c]	h2o[c] + procys[c]  <=> cys_L[c] + pro_L[c] 
+PROCYSt	Transport, extracellular	6564.1 or 6565.1	20	40	0.5	H	NA	intercompartmental	h[e] + procys[e]  <=> h[c] + procys[c] 
+PROSTGE2t2r	Transport, endoplasmic reticular		1000	2000	0.5	H	NA	intercompartmental	prostge2[r]  <=> prostge2[c] 
+PROVALGLNr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + provalgln[c]  <=> gln_L[c] + pro_L[c] + val_L[c] 
+PROVALGLNt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + provalgln[e]  <=> h[c] + provalgln[c] 
+RE1254C	Lysine metabolism		0	20	0	H	lysine metabolism	[c]	h2o[c] + h[c] + thp2c[c]  <=> L2aadp6sa[c] 
+RE1342C	Fructose and mannose metabolism		1000	1261.66666666667	0.792602377807133	H	NA	[c]	nad[c] + sbt_D[c]  <=> h[c] + nadh[c] + glc_D[c] 
+RE2814R	Bile acid synthesis		0	1010	0	H	NA	[r]	nad[r] + xol27oh[r]  <=> h[r] + nadh[r] + xol7aone[r] 
+SO4t4_2	Transport, extracellular	26266.1	2000	1010	1.98019801980198	L	NA	intercompartmental	2 na1[e] + so4[e]  <=> 2 na1[c] + so4[c] 
+SPODM	ROS detoxification	6647.1	0	0.0837520938023451	0	H	superoxide dismutase, cytosol	[c]	2 h[c] + 2 o2s[c]  -> o2[c] + h2o2[c] 
+SPODMm	ROS detoxification	6648.1	0	0.0837520938023451	0	H	NA	[m]	2 h[m] + 2 o2s[m]  -> o2[m] + h2o2[m] 
+SPODMn	ROS detoxification	6647.1	0	0.0837520938023451	0	H	NA	[n]	2 h[n] + 2 o2s[n]  -> h2o2[n] + o2[n] 
+SPODMx	ROS detoxification	6647.1	0	0.0837520938023451	0	H	NA	[x]	2 h[x] + 2 o2s[x]  -> o2[x] + h2o2[x] 
+THFt2	Transport, extracellular	6573.1 or 6573.2	20	0	Inf	L	NA	intercompartmental	h2o[c] + thf[e]  <=> h2o[e] + thf[c] 
+THP2Ctp	Transport, peroxisomal		0	20	0	H	NA	intercompartmental	thp2c[c]  <=> thp2c[x] 
+TRPGLYVALr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + trpglyval[c]  <=> gly[c] + trp_L[c] + val_L[c] 
+TRPGLYVALt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + trpglyval[e]  <=> h[c] + trpglyval[c] 
+TRPLEUVALr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + trpleuval[c]  <=> leu_L[c] + trp_L[c] + val_L[c] 
+TRPLEUVALt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + trpleuval[e]  <=> h[c] + trpleuval[c] 
+TRPMETVALr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + trpmetval[c]  <=> met_L[c] + trp_L[c] + val_L[c] 
+TRPMETVALt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + trpmetval[e]  <=> h[c] + trpmetval[c] 
+TRPPROVALr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + trpproval[c]  <=> trp_L[c] + pro_L[c] + val_L[c] 
+TRPPROVALt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + trpproval[e]  <=> h[c] + trpproval[c] 
+TRPVALASPr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + trpvalasp[c]  <=> asp_L[c] + trp_L[c] + val_L[c] 
+TRPVALASPt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + trpvalasp[e]  <=> h[c] + trpvalasp[c] 
+TYRVALMETr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + tyrvalmet[c]  <=> met_L[c] + tyr_L[c] + val_L[c] 
+TYRVALMETt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + tyrvalmet[e]  <=> h[c] + tyrvalmet[c] 
+VALARGGLYr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + valarggly[c]  <=> gly[c] + arg_L[c] + val_L[c] 
+VALARGGLYt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + valarggly[e]  <=> h[c] + valarggly[c] 
+VALHISASNr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + valhisasn[c]  <=> asn_L[c] + his_L[c] + val_L[c] 
+VALHISASNt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + valhisasn[e]  <=> h[c] + valhisasn[c] 
+VALLEUPHEr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + valleuphe[c]  <=> leu_L[c] + phe_L[c] + val_L[c] 
+VALLEUPHEt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + valleuphe[e]  <=> h[c] + valleuphe[c] 
+VALLYSTYRr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + vallystyr[c]  <=> lys_L[c] + tyr_L[c] + val_L[c] 
+VALLYSTYRt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + vallystyr[e]  <=> h[c] + vallystyr[c] 
+VALPHEARGr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + valphearg[c]  <=> arg_L[c] + phe_L[c] + val_L[c] 
+VALPHEARGt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + valphearg[e]  <=> h[c] + valphearg[c] 
+VALPROTRPr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + valprotrp[c]  <=> trp_L[c] + pro_L[c] + val_L[c] 
+VALPROTRPt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + valprotrp[e]  <=> h[c] + valprotrp[c] 
+VALSERARGr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + valserarg[c]  <=> ser_L[c] + arg_L[c] + val_L[c] 
+VALSERARGt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + valserarg[e]  <=> h[c] + valserarg[c] 
+VALTRPPHEr	Peptide metabolism		20	10	2	L	NA	[c]	2 h2o[c] + valtrpphe[c]  <=> trp_L[c] + phe_L[c] + val_L[c] 
+VALTRPPHEt	Transport, extracellular	6564.1 or 6565.1	20	10	2	L	NA	intercompartmental	h[e] + valtrpphe[e]  <=> h[c] + valtrpphe[c] 
+VALTRPVALr	Peptide metabolism		10	5	2	L	NA	[c]	2 h2o[c] + valtrpval[c]  <=> trp_L[c] + 2 val_L[c] 
+VALTRPVALt	Transport, extracellular	6564.1 or 6565.1	10	5	2	L	NA	intercompartmental	h[e] + valtrpval[e]  <=> h[c] + valtrpval[c] 
+VALVALr	Peptide metabolism		10	5	2	L	NA	[c]	h2o[c] + valval[c]  <=> 2 val_L[c] 
+VALVALt	Transport, extracellular	6564.1 or 6565.1	10	5	2	L	NA	intercompartmental	h[e] + valval[e]  <=> h[c] + valval[c] 
+XOL27OHtm	Transport, mitochondrial		0	1010	0	H	NA	intercompartmental	xol27oh[r]  <=> xol27oh[m] 
+r0472	Nucleotide interconversion	50484.1 and 6240.1 and 6241.1	1030	1493.47437886409	0.689667003717467	H	purine catabolism, cytosol	[c]	h2o[c] + dgtp[c] + trdox[c]  <=> gtp[c] + trdrd[c] 
+r0596	CoA synthesis	26275.1	375.785714285714	199.179374124917	1.88666982179609	L	NA	[m]	h2o[m] + 3hpcoa[m]  -> h[m] + coa[m] + 3hpp[m] 
+r0642	Miscellaneous	224.1 or 217.1 or 219.1 or 223.1 or 501.1	856.744186046512	0	Inf	L	valine metabolism	[c]	h2o[c] + nad[c] + 2mop[c]  <=> 2 h[c] + nadh[c] + HC00900[c] 
+r0990	Transport, peroxisomal		1010	10	101	L	NA	intercompartmental	cholcoa[x]  <=> cholcoa[c] 
+r2201	Transport, extracellular	10599.1	2000	0	Inf	L	NA	intercompartmental	hco3[c] + gthrd[c] + leuktrE4[e]  <=> hco3[e] + gthrd[e] + leuktrE4[c] 
+r2317	Transport, extracellular	6578.1	2000	0	Inf	L	NA	intercompartmental	hco3[c] + gthrd[c] + leuktrB4[e]  <=> hco3[e] + gthrd[e] + leuktrB4[c] 
+sink_cholate[c]	Exchange/demand reaction		40	20	2	L	NA	[c]	cholate[c]  <=> 
+sink_tchola[c]	Exchange/demand reaction		30	10	3	L	NA	[c]	tchola[c]  <=> 
+ACCOAC	Fatty acid oxidation	31.5 or 31.4 or (31.2 and 32.1) or (31.4 and 32.1) or 31.2 or (32.1 and 31.3) or (31.1 and 32.1) or 31.1 or (31.5 and 32.1) or 31.3	419.303370786517	229.509259259259	1.82695622886771	L	fatty acid synthesis & elongation	[c]	atp[c] + hco3[c] + accoa[c]  -> h[c] + adp[c] + pi[c] + malcoa[c] 
+ADNtm	Transport, mitochondrial	2030.1	1024.67410714286	574.408214935823	1.78387787726424	L	NA	intercompartmental	adn[c]  <=> adn[m] 
+EX_eicostet[e]	Exchange/demand reaction		0	10	0	H	NA	[e]	eicostet[e]  -> 
+EX_xol27oh[e]	Exchange/demand reaction		0	10	0	H	NA	[e]	xol27oh[e]  -> 
+EX_xol7aone[e]	Exchange/demand reaction		0	10	0	H	NA	[e]	xol7aone[e]  -> 
+HMR_2774	Fatty acid oxidation	1374.1 or 126129.1 or 1375.1	0	32	0	H	NA	[c]	crn[c] + CE4847[c]  <=> coa[c] + M00263[c] 
+HMR_2775	Transport, mitochondrial	114571.1 or 6580.1 or 788.1 or 123096.1 or 6583.1	0	32	0	H	NA	intercompartmental	crn[m] + M00263[c]  <=> crn[c] + M00263[m] 
+HMR_2776	Transport, mitochondrial	1384.1 or 1376.1	0	32	0	H	NA	[m]	crn[m] + CE4847[m]  <=> coa[m] + M00263[m] 
+HMR_3229	Fatty acid oxidation	3030.1 or 3032.1 or 10449.1	30	0	Inf	L	NA	[m]	coa[m] + HC10858[m]  -> accoa[m] + M01191[m] 
+HMR_3230	Fatty acid oxidation	37.1 or 33.1 or 34.1 or 28976.1	30	0	Inf	L	NA	[m]	fad[m] + M01191[m]  -> fadh2[m] + M03019[m] 
+HMR_3231	Fatty acid oxidation	3030.1 or 1892.1	30	0	Inf	L	NA	[m]	h2o[m] + M03019[m]  -> M00172[m] 
+HMR_3232	Fatty acid oxidation	3028.1 or 3030.1 or 3033.1	30	0	Inf	L	NA	[m]	nad[m] + M00172[m]  -> h[m] + nadh[m] + M00849[m] 
+HMR_3233	Fatty acid oxidation	3030.1 or 3032.1 or 10449.1	30	0	Inf	L	NA	[m]	coa[m] + M00849[m]  -> accoa[m] + M01141[m] 
+HMR_3425	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	0	32	0	H	NA	[m]	10 h2o[m] + 10 nad[m] + 10 coa[m] + 7 fad[m] + CE4847[m]  -> 10 h[m] + 10 nadh[m] + 11 accoa[m] + 7 fadh2[m] 
+Htr	Transport, endoplasmic reticular		2000	1095	1.82648401826484	L	NA	intercompartmental	h[c]  <=> h[r] 
+ILETA	Valine, leucine, and isoleucine metabolism	586.1	20	677.240503593235	0.0295316064143919	H	isoleucine metabolism	[c]	akg[c] + ile_L[c]  <=> glu_L[c] + 3mop[c] 
+ILETAm	Valine, leucine, and isoleucine metabolism	587.1	20	685.560864431447	0.029173193858705	H	isoleucine metabolism	[m]	akg[m] + ile_L[m]  <=> glu_L[m] + 3mop[m] 
+ILEt5m	Transport, mitochondrial		20	685.560864431447	0.029173193858705	H	isoleucine metabolism	intercompartmental	ile_L[c]  <=> ile_L[m] 
+NAtx	Transport, peroxisomal		2000	1000	2	L	NA	intercompartmental	na1[c]  <=> na1[x] 
+PI5P4K	Inositol phosphate metabolism	5297.1 or 55361.1 or 5298.1	598.59375	225.646127162353	2.65279868760747	L	new to recon	[c]	atp[c] + pail5p_hs[c]  -> h[c] + adp[c] + pail45p_hs[c] 
+TAURtcx	Taurine and hypotaurine metabolism	6533.1	2000	1000	2	L	NA	intercompartmental	na1[c] + taur[c]  <=> taur[x] + na1[x] 
+XOL27OHte	Transport, extracellular		0	10	0	H	NA	intercompartmental	xol27oh[c]  -> xol27oh[e] 
+XOL27OHtmc	Transport, mitochondrial		0	10	0	H	NA	intercompartmental	xol27oh[m]  <=> xol27oh[c] 
+XOL7AONEt	Transport, extracellular	6554.1	0	10	0	H	NA	intercompartmental	na1[c] + xol7aone[c]  <=> na1[e] + xol7aone[e] 
+XOL7AONEtr	Transport, endoplasmic reticular		0	1010	0	H	NA	intercompartmental	xol7aone[c]  <=> xol7aone[r] 
+r0747	Bile acid synthesis	1109.1	1000	2000	0.5	H	NA	[c]	nadp[c] + xol7ah2[c]  <=> h[c] + nadph[c] + xol7ah[c] 
+r1472	Fatty acid oxidation	33.1	30	0	Inf	L	betaoxidation	[m]	fad[m] + odecoa[m]  -> fadh2[m] + HC10856[m] 
+r1474	Fatty acid oxidation	3030.1 and 1962.1 and 1892.1	30	0	Inf	L	betaoxidation	[m]	h2o[m] + HC10856[m]  -> HC10857[m] 
+r1477	Fatty acid oxidation	(3028.1 and 1962.1 and 3295.1) or (3033.1 and 1962.1 and 3295.1)	30	0	Inf	L	betaoxidation	[m]	nad[m] + HC10857[m]  -> h[m] + nadh[m] + HC10858[m] 
+r2331	Transport, extracellular	6578.1	2000	21.6666666666666	92.3076923076925	L	NA	intercompartmental	hco3[c] + gthrd[c] + prostgf2[e]  <=> hco3[e] + prostgf2[c] + gthrd[e] 

@@ -1,0 +1,130 @@
+subSystem	disrupted_module	rxnList	MetabolicUnits	rxnFormula	rxnName	rxnECNumbers
+Fatty acid oxidation	FVA_BD_NR_norm_t2	C12DCACT	fatty acid activation, cytosol	atp[c] + coa[c] + dodecanac[c]  -> amp[c] + ppi[c] + c12dccoa[c] 	Activation of Dodecanedioic Acid	
+Fatty acid oxidation	FVA_BD_NR_norm_t2	C30CPT1	carnitine shuttle	ppcoa[c] + crn[c]  <=> coa[c] + pcrn[c] 	Production of Propionylcarnitine	
+Fatty acid oxidation	FVA_BD_NR_norm_t2	C40CPT1	carnitine shuttle	crn[c] + btcoa[c]  <=> coa[c] + c4crn[c] 	Production of Butyrylcarnitine	
+Fatty acid oxidation	FVA_BD_NR_norm_t2	CSNATp	NA	accoa[x] + crn[x]  <=> coa[x] + acrn[x] 	Carnitine O-Acetyltransferase, Reverse Direction, Peroxisomal	2.3.1.7
+Fatty acid oxidation	FVA_BD_NR_norm_t2	FAOXC12DCTc	NA	c12dc[x]  <=> c12dc[c] 	Transport of Dodecanedioyl Carnitine into Cytosol	
+Fatty acid oxidation	FVA_BD_NR_norm_t2	FAOXC12DCc	carnitine shuttle	crn[c] + c12dccoa[c]  <=> coa[c] + c12dc[c] 	Formation of Dodecanedioyl Carnitine	
+Fatty acid oxidation	FVA_BD_NR_norm_t2	FAOXC12DCx	carnitine shuttle	crn[x] + c12dccoa[x]  <=> coa[x] + c12dc[x] 	Production of Dodecanedioyl Carnitine	
+Fatty acid oxidation	FVA_BD_NR_norm_t2	FAOXC164C143m	betaoxidation	h2o[m] + nad[m] + coa[m] + 2hexdtetcoa[m]  -> h[m] + nadh[m] + accoa[m] + 5tedtricoa[m] 	Fatty Acid Beta Oxidation (C16:4->C14:3), Mitochondrial	
+Fatty acid oxidation	FVA_BD_NR_norm_t2	FAOXC164C165m	betaoxidation	fad[m] + 4hexdtetcoa[m]  -> fadh2[m] + hexdpencoa[m] 	Fatty Acid Beta Oxidation (C16:4->C16:5), Mitochondrial	
+Fatty acid oxidation	FVA_BD_NR_norm_t2	FAOXC164m	betaoxidation	3hexdtetcoa[m]  -> 2hexdtetcoa[m] 	Isomerization (C16:4), Mitochondrial	
+Fatty acid oxidation	FVA_BD_NR_norm_t2	FAOXC165C164m	betaoxidation	h[m] + nadph[m] + hexdpencoa[m]  -> nadp[m] + 3hexdtetcoa[m] 	Fatty Acid Beta Oxidation (C16:5->C16:4), Mitochondrial	
+Fatty acid oxidation	FVA_BD_NR_norm_t2	FAOXC184C164m	betaoxidation	h2o[m] + nad[m] + coa[m] + fad[m] + strdnccoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + 4hexdtetcoa[m] 	Fatty Acid Beta Oxidation (C18:4->C16:4), Mitochondrial	
+Fatty acid oxidation	FVA_BD_NR_norm_t2	HMR_9719	NA	8 h2o[m] + 8 nad[m] + 8 coa[m] + 4 fad[m] + strdnccoa[m]  -> 8 h[m] + 8 nadh[m] + 9 accoa[m] + 4 fadh2[m] 	Enoyl Coenzyme A Hydratase	EC:4.2.1.17;EC:1.1.1.35;EC:1.1.1.211;EC:1.3.8.7;EC:1.3.8.8;EC:1.3.8.9;EC:2.3.1.16
+Fatty acid oxidation	FVA_BD_NR_norm_t2	LNLNCGCPT1	carnitine shuttle	crn[c] + lnlncgcoa[c]  <=> coa[c] + lnlncgcrn[c] 	Carnitine O-Palmitoyltransferase	2.3.1.21
+Fatty acid oxidation	FVA_BD_NR_norm_t2	r0636	carnitine shuttle	coa[m] + c8crn[m]  <=> crn[m] + occoa[m] 	Octanoyl Coenzyme A:L-Carnitine O-Octanoyltransferase	2.3.1.137
+Fatty acid oxidation	FVA_BD_NR_norm_t2	r1401	carnitine shuttle	btcoa[m] + crn[c]  <=> crn[m] + btcoa[c] 	Facilitated Diffusion	
+Fatty acid oxidation	FVA_BD_NR_norm_t2	C160CPT2	carnitine shuttle	coa[m] + pmtcrn[m]  <=> crn[m] + pmtcoa[m] 	C160 Transport into the Mitochondria	2.3.1.21
+Fatty acid oxidation	FVA_BD_NR_norm_t2	FAOXC18480m	betaoxidation	5 h2o[m] + 5 nad[m] + 5 coa[m] + fad[m] + strdnccoa[m]  -> 5 h[m] + 5 nadh[m] + 5 accoa[m] + fadh2[m] + occoa[m] 	Beta Oxidation of Fatty Acid	4.2.1.74
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_2705	NA	crn[c] + CE5155[c]  <=> coa[c] + M01727[c] 	Carnitine O-Palmitoyltransferase	EC:2.3.1.21
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3218	NA	fad[m] + CE5155[m]  -> fadh2[m] + CE5154[m] 	Medium-Chain Acyl Coenzyme A Dehydrogenase	EC:1.3.8.7;EC:1.3.8.8;EC:1.3.8.9;EC:1.3.99.-;
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3219	NA	h2o[m] + CE5154[m]  -> CE5153[m] 	Enoyl Coenzyme A Hydratase	EC:4.2.1.17
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3220	NA	nad[m] + CE5153[m]  -> h[m] + nadh[m] + CE5152[m] 	3-Hydroxyacyl Coenzyme A Dehydrogenase	EC:1.1.1.35;EC:1.1.1.211
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3221	NA	coa[m] + CE5152[m]  -> accoa[m] + CE5151[m] 	Acetyl Coenzyme A C-Acyltransferase	EC:2.3.1.16;EC:1.1.1.211
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3422	NA	10 h2o[m] + 10 nad[m] + 10 coa[m] + 5 fad[m] + dcsptn1coa[m]  -> 10 h[m] + 10 nadh[m] + 11 accoa[m] + 5 fadh2[m] 	Enoyl Coenzyme A Hydratase	EC:4.2.1.17;EC:1.1.1.35;EC:1.1.1.211;EC:1.3.8.7;EC:1.3.8.8;EC:1.3.8.9;EC:2.3.1.16
+Fatty acid oxidation	MTA_BD_NR_abs	ADRNCPT2	carnitine shuttle	coa[m] + adrncrn[m]  <=> adrncoa[m] + crn[m] 	Carnitine Transferase	2.3.1.21
+Fatty acid oxidation	MTA_BD_NR_abs	2MB2COAc	NA	2mb2coa[m]  <=> 2mb2coa[c] 	Transport of 2-Methylcrotonoyl Coenzyme A into Cytosol	
+Fatty acid oxidation	MTA_BD_NR_abs	C51CPT1	carnitine shuttle	crn[c] + 2mb2coa[c]  <=> coa[c] + c51crn[c] 	Production of Tiglylcarnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	TIGCRNe	NA	c51crn[c]  -> c51crn[e] 	Transport of Tiglyl Carnitine into the Extra Cellular Fluid	
+Fatty acid oxidation	MTA_BD_NR_abs	C142ACBP	NA	3ttetddcoa[m]  <=> 3ttetddcoa[c] 	Transport of 3-Hydroxytetradeca Dienoyl Coenzyme A from Mitochondria into Cytosol	
+Fatty acid oxidation	MTA_BD_NR_abs	C142OHc	carnitine shuttle	crn[c] + 3ttetddcoa[c]  <=> coa[c] + 3ttetddcoacrn[c] 	Production of 3-Hydroxytetradeca Dienoyl Carnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	C142OHe	NA	3ttetddcoacrn[c]  -> 3ttetddcoacrn[e] 	Excretion of 3-Hydroxy Trans5,8Tetradecadienoyl Carnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC142C142OHm	betaoxidation	h2o[m] + fad[m] + ttetddcoa[m]  -> fadh2[m] + 3ttetddcoa[m] 	Fatty Acid Beta Oxidation (C14:2->C14:2Oh), Mitochondrial	
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3204	NA	nad[m] + M00797[m]  -> h[m] + nadh[m] + M00899[m] 	3-Hydroxyacyl Coenzyme A Dehydrogenase	EC:1.1.1.35;EC:1.1.1.211
+Fatty acid oxidation	MTA_BD_NR_abs	C161OHc	carnitine shuttle	crn[c] + 3hdeccoa[c]  <=> coa[c] + 3hdececrn[c] 	Production of 3-Hydroxyhexadecenoylcarnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC161C161OHm	betaoxidation	h2o[m] + fad[m] + hdcoa[m]  -> fadh2[m] + 3hdeccoa[m] 	Production of 3-Hydroxyhexadecenoylcoa	
+Fatty acid oxidation	MTA_BD_NR_abs	HDECEACBP	NA	3hdeccoa[m]  <=> 3hdeccoa[c] 	Transport of 3-Hydroxyhexadecenoylcoa from Mitochondria into the Cytosol	
+Fatty acid oxidation	MTA_BD_NR_abs	HEDCECRNe	NA	3hdececrn[c]  -> 3hdececrn[e] 	Transport of 3-Hydroxyhexadecenoyl Carnitine into Extra Cellular Space	
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_2771	NA	crn[c] + M00023[c]  <=> h[c] + coa[c] + M00022[c] 	Carnitine O-Palmitoyltransferase	EC:2.3.1.21
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3424	NA	10 h2o[m] + 10 nad[m] + 10 coa[m] + 8 fad[m] + M00023[m]  -> 10 h[m] + 10 nadh[m] + 11 accoa[m] + 8 fadh2[m] 	Enoyl Coenzyme A Hydratase	EC:4.2.1.17;EC:1.1.1.35;EC:1.1.1.211;EC:1.3.8.7;EC:1.3.8.8;EC:1.3.8.9;EC:2.3.1.16
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC11C9m	betaoxidation	h2o[m] + nad[m] + coa[m] + fad[m] + undcoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + noncoa[m] 	Fatty Acid Beta Oxidation (C11->C9), Mitochondrial	
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC13C11m	betaoxidation	h2o[m] + nad[m] + coa[m] + fad[m] + tridcoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + undcoa[m] 	Fatty Acid Beta Oxidation (C13->C11), Mitochondrial	
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC15C13m	betaoxidation	h2o[m] + nad[m] + coa[m] + fad[m] + ptdcacoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + tridcoa[m] 	Fatty Acid Beta Oxidation (C15->C13), Mitochondrial	
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC5C3x	betaoxidation	h2o[m] + nad[m] + coa[m] + fad[m] + pentcoa[m]  -> h[m] + nadh[m] + accoa[m] + ppcoa[m] + fadh2[m] 	Fatty Acid Beta Oxidation (C5->C3), Mitochondrial	
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC7C5m	betaoxidation	h2o[m] + nad[m] + coa[m] + fad[m] + hepcoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + pentcoa[m] 	Fatty Acid Beta Oxidation (C7->C5), Mitochondrial	
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC9C7m	betaoxidation	h2o[m] + nad[m] + coa[m] + fad[m] + noncoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + hepcoa[m] 	Fatty Acid Beta Oxidation (C9->C7), Mitochondrial	
+Fatty acid oxidation	MTA_BD_NR_abs	C141ACBP	NA	3tetd7ecoa[m]  <=> 3tetd7ecoa[c] 	Transport of 3-Hydroxytetradecenoyl Coenzyme A from Mitochondria into Cytosol	
+Fatty acid oxidation	MTA_BD_NR_abs	C141OHc	carnitine shuttle	crn[c] + 3tetd7ecoa[c]  <=> coa[c] + 3tetd7ecoacrn[c] 	Production of 3-Hydroxytetradecenoyl Carnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	C141OHe	NA	3tetd7ecoacrn[c]  -> 3tetd7ecoacrn[e] 	Excretion of 3-Hydroxy Tetradecenoyl-7-Carnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC141C141OHm	betaoxidation	h2o[m] + fad[m] + tetd7ecoa[m]  -> fadh2[m] + 3tetd7ecoa[m] 	Fatty Acid Beta Oxidation (C14:1->C14:1Oh), Mitochondrial	
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3340	NA	nad[x] + CE5148[x]  -> h[x] + nadh[x] + CE5144[x] 	3-Hydroxyacyl Coenzyme A Dehydrogenase	EC:1.1.1.35;EC:1.1.1.211
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_2739	NA	crn[c] + CE4854[c]  <=> coa[c] + M00261[c] 	Carnitine O-Palmitoyltransferase	EC:2.3.1.21
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3433	NA	10 h2o[m] + 10 nad[m] + 10 coa[m] + 6 fad[m] + CE4854[m]  -> 10 h[m] + 10 nadh[m] + 11 accoa[m] + 6 fadh2[m] 	Enoyl Coenzyme A Hydratase	EC:4.2.1.17;EC:1.1.1.35;EC:1.1.1.211;EC:1.3.8.7;EC:1.3.8.8;EC:1.3.8.9;EC:2.3.1.16
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3057	NA	o2[x] + hexccoa[x]  -> h2o2[x] + M00049[x] 	Acyl Coenzyme A Oxidase	EC:1.3.3.6
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3058	NA	h2o[x] + M00049[x]  -> M00783[x] 	Enoyl Coenzyme A Hydratase	EC:4.2.1.17
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3065	NA	coa[x] + CE2253[x]  -> accoa[x] + docoscoa[x] 	Acetyl Coenzyme A C-Acyltransferase	EC:2.3.1.16
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3066	NA	o2[x] + docoscoa[x]  -> h2o2[x] + CE2242[x] 	Acyl Coenzyme A Oxidase	EC:1.3.3.6
+Fatty acid oxidation	MTA_BD_NR_abs	r1443	betaoxidation	ddcacoa[x] + o2[x]  -> h2o2[x] + dd2coa[x] 	Acyl-CoA Oxidase	3.5.4.15
+Fatty acid oxidation	MTA_BD_NR_abs	C16OHc	carnitine shuttle	crn[c] + 3hexdcoa[c]  <=> coa[c] + 3hexdcrn[c] 	Production of 3-Hydroxyhexadecanoylcarnitinec	
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC16C16OHm	betaoxidation	h2o[m] + fad[m] + pmtcoa[m]  -> fadh2[m] + 3hexdcoa[m] 	Fatty Acid Beta Oxidation (C16->C16Oh), Mitochondrial	
+Fatty acid oxidation	MTA_BD_NR_abs	HDECAACBP	NA	3hexdcoa[m]  <=> 3hexdcoa[c] 	Transport of 3-Hydroxyhexadecanoylcoa from Mitochondria into the Cytosol	
+Fatty acid oxidation	MTA_BD_NR_abs	HEXDCRNe	NA	3hexdcrn[c]  -> 3hexdcrn[e] 	Transport of 3-Hydroxyhexadecanoyl Carnitine into Extra Cellular Space	
+Fatty acid oxidation	MTA_BD_NR_abs	C8DCc	carnitine shuttle	crn[c] + sbcoa[c]  <=> coa[c] + c8dc[c] 	Production of Suberylcarnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	SUBERCACT	NA	c8dc[x]  <=> c8dc[c] 	Transport of Suberyl Carnitine into Cytosol	
+Fatty acid oxidation	MTA_BD_NR_abs	SUBERCROT	carnitine shuttle	crn[x] + sbcoa[x]  <=> coa[x] + c8dc[x] 	Production of Suberyl Carnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	PTDCACRNCPT1	carnitine shuttle	crn[c] + ptdcacoa[c]  <=> coa[c] + ptdcacrn[c] 	Carnitine Fatty-Acyl Transferase	2.3.1.21
+Fatty acid oxidation	MTA_BD_NR_abs	sink_c81coa[c]	NA	c81coa[c]  <=> 	Sink for Octenoyl Coenzyme A	
+Fatty acid oxidation	MTA_BD_NR_abs	C81CPT1	carnitine shuttle	crn[c] + c81coa[c]  <=> coa[c] + c81crn[c] 	Production of Ocetenoylcarnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	C81CRNe	NA	c81crn[c]  -> c81crn[e] 	Transport of Octenoyl Carnitine into the Extra Cellular Space	
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3067	NA	h2o[x] + CE2242[x]  -> CE2246[x] 	Enoyl Coenzyme A Hydratase	EC:4.2.1.17
+Fatty acid oxidation	MTA_BD_NR_abs	C120CPT1	carnitine shuttle	crn[c] + ddcacoa[c]  <=> coa[c] + ddeccrn[c] 	Production of Dodecanoylcarnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	DDECCRNe	NA	ddeccrn[c]  -> ddeccrn[e] 	Transport of Lauroyl Carnitine into Extra Cellular Space	
+Fatty acid oxidation	MTA_BD_NR_abs	r1253	NA	atp[r] + 8 h[r] + coa[r] + strdnc[r]  -> amp[r] + ppi[r] + stcoa[r] 	Long-Chain-Fatty-Acid---Coa Ligase	6.2.1.3
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC1811603m	betaoxidation	5 h2o[m] + 5 nad[m] + 5 coa[m] + 4 fad[m] + odecoa[m]  -> 5 h[m] + 5 nadh[m] + 5 accoa[m] + 4 fadh2[m] + occoa[m] 	Beta Oxidation Fatty Acid	4.2.1.74
+Fatty acid oxidation	MTA_BD_NR_abs	ACACT6p	betaoxidation	coa[x] + 3otdcoa[x]  -> accoa[x] + ddcacoa[x] 	Acetyl Coenzyme A C-Acetyltransferase (Dodecanoyl), Peroxisomal	2.3.1.16
+Fatty acid oxidation	MTA_BD_NR_abs	r0719	betaoxidation	nad[x] + 3htdcoa[x]  -> h[x] + nadh[x] + 3otdcoa[x] 	(S)-3-Hydroxytetradecanoyl Coenzyme A:NAD+ Oxidoreductase 	1.1.1.35
+Fatty acid oxidation	MTA_BD_NR_abs	r0721	betaoxidation	h2o[x] + HC01412[x]  -> 3htdcoa[x] 	(S)-3-Hydroxytetradecanoyl Coenzyme A Hydro-Lyase 	4.2.1.17
+Fatty acid oxidation	MTA_BD_NR_abs	r1444	betaoxidation	tdcoa[x] + o2[x]  -> h2o2[x] + HC01412[x] 	Acyl-CoA Oxidase	3.5.4.15
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC16C14m	betaoxidation	h2o[m] + nad[m] + coa[m] + fad[m] + pmtcoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + tdcoa[m] 	Fatty Acid Beta Oxidation (C16->C14), Mitochondrial	
+Fatty acid oxidation	MTA_BD_NR_abs	C181OHc	carnitine shuttle	crn[c] + 3octdece1coa[c]  <=> coa[c] + 3octdece1crn[c] 	Production of 3-Hydroxyoctadecenoylcarnitinec	
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC181C181OHm	betaoxidation	h2o[m] + fad[m] + octdececoa[m]  -> fadh2[m] + 3octdece1coa[m] 	Fatty Acid Beta Oxidation (C18:1->C18:1Oh), Mitochondrial	
+Fatty acid oxidation	MTA_BD_NR_abs	HOCTDACBP	NA	3octdece1coa[m]  <=> 3octdece1coa[c] 	Transport of 3-Hydroxyoctadecenoylcoa from Mitochondria into the Cytosol	
+Fatty acid oxidation	MTA_BD_NR_abs	OCTDECCACT	carnitine shuttle	octdececrn[c]  <=> octdececrn[m] 	Transport of Octadecenoyl Coenzyme A into Mitochondrial Matrix	
+Fatty acid oxidation	MTA_BD_NR_abs	OCTDECCPT1	carnitine shuttle	crn[c] + octdececoa[c]  <=> coa[c] + octdececrn[c] 	Transport of Octadecenoyl Coenzyme A into Mitochondrial Matrix	
+Fatty acid oxidation	MTA_BD_NR_abs	OCTDECCPT2	carnitine shuttle	coa[m] + octdececrn[m]  <=> crn[m] + octdececoa[m] 	Transport of Octadecenoyl Coenzyme A into Mitochondrial Matrix	
+Fatty acid oxidation	MTA_BD_NR_abs	OCTDECE1CRNe	NA	3octdece1crn[c]  -> 3octdece1crn[e] 	Transport of 3-Hydroxy-Octadecenoyl Carnitine into Extra Cellular Space	
+Fatty acid oxidation	MTA_BD_NR_abs	sink_octdececoa[c]	NA	octdececoa[c]  <=> 	Sink for Octadecenoyl Coenzyme A	
+Fatty acid oxidation	MTA_BD_NR_abs	DOCO13EFATP	NA	atp[c] + coa[c] + doco13ac[e]  -> amp[c] + ppi[c] + doco13ecoa[c] 	Absorption Or Uptake of 13-Docosenoic Acid into Cells	
+Fatty acid oxidation	MTA_BD_NR_abs	3HBCOARc	NA	3hbcoa_R[m]  <=> 3hbcoa_R[c] 	Transport of (R)-3-Hydroxybutanoyl Coenzyme A into Cytosol	
+Fatty acid oxidation	MTA_BD_NR_abs	BCRNe	NA	3bcrn[c]  -> 3bcrn[e] 	Transport of 3-Hydroxy Butyryl Carnitine into Extra Cellular Space	
+Fatty acid oxidation	MTA_BD_NR_abs	C4OHc	carnitine shuttle	crn[c] + 3hbcoa_R[c]  <=> coa[c] + 3bcrn[c] 	Production of 3-Hydroxybytyryl Carnitinec	
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3178	NA	fad[m] + hpdcacoa[m]  -> fadh2[m] + M00046[m] 	Medium-Chain Acyl Coenzyme A Dehydrogenase	EC:1.3.8.7;EC:1.3.8.8;EC:1.3.8.9;EC:1.3.99.-;
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3179	NA	h2o[m] + M00046[m]  -> M00780[m] 	Enoyl Coenzyme A Hydratase	EC:4.2.1.17
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3180	NA	nad[m] + M00780[m]  -> h[m] + nadh[m] + M00875[m] 	3-Hydroxyacyl Coenzyme A Dehydrogenase	EC:1.1.1.35;EC:1.1.1.211
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3181	NA	coa[m] + M00875[m]  -> accoa[m] + ptdcacoa[m] 	Acetyl Coenzyme A C-Acyltransferase	EC:2.3.1.16;EC:1.1.1.211
+Fatty acid oxidation	MTA_BD_NR_abs	C18OHc	carnitine shuttle	crn[c] + 3hodcoa[c]  <=> coa[c] + 3octdeccrn[c] 	Production of 3-Hydroxyoctadecanoylcarnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC18C18OHm	betaoxidation	h2o[m] + fad[m] + stcoa[m]  -> fadh2[m] + 3hodcoa[m] 	Fatty Acid Beta Oxidation (C18->C18Oh), Mitochondrial	
+Fatty acid oxidation	MTA_BD_NR_abs	HOCDACBP	NA	3hodcoa[m]  <=> 3hodcoa[c] 	Transport of (S)-3-Hydroxyoctadecanoyl Coenzyme A from Mitochondria into the Cytosol	
+Fatty acid oxidation	MTA_BD_NR_abs	HOCTDECCRNe	NA	3octdeccrn[c]  -> 3octdeccrn[e] 	Transport of 3-Hydroxyoctadecanoyl Carnitine into Extra Cellular Space	
+Fatty acid oxidation	MTA_BD_NR_abs	C162ACBP	NA	3thexddcoa[m]  <=> 3thexddcoa[c] 	Transport of 3-Hydroxy Trans7, 10-Hexadecadienoylcoa from Mitochondria into Cytosol	
+Fatty acid oxidation	MTA_BD_NR_abs	C162OHc	carnitine shuttle	crn[c] + 3thexddcoa[c]  <=> coa[c] + 3thexddcoacrn[c] 	Production of 3-Hydroxy Hexadecadienoyl Carnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	C162OHe	NA	3thexddcoacrn[c]  -> 3thexddcoacrn[e] 	Excretion of 3-Hydroxy Trans7,10-Hexadecadienoyl Carnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC162C162OHm	betaoxidation	h2o[m] + fad[m] + thexddcoa[m]  -> fadh2[m] + 3thexddcoa[m] 	Fatty Acid Beta Oxidation (C16:2->C16:2Oh), Mitochondrial	
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3068	NA	nad[x] + CE2246[x]  -> h[x] + nadh[x] + CE2250[x] 	3-Hydroxyacyl Coenzyme A Dehydrogenase	EC:1.1.1.35;EC:1.1.1.211
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC2251836m	betaoxidation	2 h2o[m] + 2 nad[m] + 2 coa[m] + dcsptn1coa[m]  -> 2 h[m] + 2 nadh[m] + 2 accoa[m] + lnlncgcoa[m] 	Beta Oxidation of Fatty Acid	4.2.1.74
+Fatty acid oxidation	MTA_BD_NR_abs	C100CPT1	carnitine shuttle	crn[c] + dcacoa[c]  <=> coa[c] + c10crn[c] 	Production of Decanoylcarnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	C10CRNe	NA	c10crn[c]  -> c10crn[e] 	Transport of Decanoyl Carnitine into Extra Cellular Space	
+Fatty acid oxidation	MTA_BD_NR_abs	C141CPT1	carnitine shuttle	crn[c] + tetdece1coa[c]  <=> coa[c] + tetdece1crn[c] 	Production of Tetradecenoylcarnitine	
+Fatty acid oxidation	MTA_BD_NR_abs	sink_tetdece1coa[c]	NA	tetdece1coa[c]  <=> 	Sink for Tetradecenoyl Coenzyme A	
+Fatty acid oxidation	MTA_BD_NR_abs	TETDECE1CRNe	NA	tetdece1crn[c]  -> tetdece1crn[e] 	Transport of Tetradecenoyl Carnitine into Extra Cellular Space	
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC18480m	betaoxidation	5 h2o[m] + 5 nad[m] + 5 coa[m] + fad[m] + strdnccoa[m]  -> 5 h[m] + 5 nadh[m] + 5 accoa[m] + fadh2[m] + occoa[m] 	Beta Oxidation of Fatty Acid	4.2.1.74
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC182806m	betaoxidation	5 h2o[m] + 5 nad[m] + 5 coa[m] + 3 fad[m] + lnlccoa[m]  -> 5 h[m] + 5 nadh[m] + 5 accoa[m] + 3 fadh2[m] + occoa[m] 	Beta Oxidation of Fatty Acid	4.2.1.74
+Fatty acid oxidation	MTA_BD_NR_abs	EICOSTETCPT2	carnitine shuttle	coa[m] + eicostetcrn[m]  <=> crn[m] + eicostetcoa[m] 	Carnitine Transferase	4.2.1.17
+Fatty acid oxidation	MTA_BD_NR_abs	EICOSTETCPT1	carnitine shuttle	crn[c] + eicostetcoa[c]  <=> coa[c] + eicostetcrn[c] 	Carnitine O-Palmitoyltransferase	2.3.1.21
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_0414	NA	h2o[c] + adrncoa[c]  -> h[c] + coa[c] + adrn[c] 	Palmitoyl Coenzyme A Hydrolase	EC:3.1.2.2
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_0342	NA	h2o[c] + hexccoa[c]  -> h[c] + coa[c] + hexc[c] 	Palmitoyl Coenzyme A Hydrolase	EC:3.1.2.2
+Fatty acid oxidation	MTA_BD_NR_abs	FACOAL150	fatty acid activation, cytosol	atp[c] + coa[c] + ptdca[c]  -> amp[c] + ppi[c] + ptdcacoa[c] 	Fatty-Acid- Coenzyme A Ligase	6.2.1.3
+Fatty acid oxidation	MTA_BD_NR_abs	FACOAL245_1	fatty acid activation, cytosol	atp[c] + coa[c] + tetpent6[c]  -> amp[c] + ppi[c] + tetpent6coa[c] 	Fatty-Acid- Coenzyme A Ligase	6.2.1.3
+Fatty acid oxidation	MTA_BD_NR_abs	r1259	NA	atp[r] + coa[r] + lnlnca[r]  -> amp[r] + ppi[r] + lnlncgcoa[r] 	Long-Chain-Fatty-Acid---Coa Ligase	6.2.1.3
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_2693	NA	crn[c] + M00101[c]  <=> coa[c] + M00100[c] 	Carnitine O-Palmitoyltransferase	EC:2.3.1.21
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3414	NA	9 h2o[m] + 9 nad[m] + 9 coa[m] + 6 fad[m] + M00101[m]  -> 9 h[m] + 9 nadh[m] + 10 accoa[m] + 6 fadh2[m] 	Enoyl Coenzyme A Hydratase	EC:4.2.1.17;EC:1.1.1.35;EC:1.1.1.211;EC:1.3.8.7;EC:1.3.8.8;EC:1.3.8.9;EC:2.3.1.16
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3326	NA	o2[x] + M02112[x]  -> h2o2[x] + M03016[x] 	Acyl Coenzyme A Oxidase	EC:1.3.3.6
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3327	NA	h2o[x] + M03016[x]  -> M00715[x] 	Enoyl Coenzyme A Hydratase	EC:4.2.1.17
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3328	NA	nad[x] + M00715[x]  -> h[x] + nadh[x] + M00879[x] 	3-Hydroxyacyl Coenzyme A Dehydrogenase	EC:1.1.1.35;EC:1.1.1.211
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3342	NA	o2[x] + odecoa[x]  -> h2o2[x] + HC10856[x] 	Acyl Coenzyme A Oxidase	EC:1.3.3.6
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3344	NA	nad[x] + HC10857[x]  -> h[x] + nadh[x] + HC10858[x] 	3-Hydroxyacyl Coenzyme A Dehydrogenase	EC:1.1.1.35;EC:1.1.1.211
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3346	NA	o2[x] + M01191[x]  -> h2o2[x] + M03019[x] 	Acyl Coenzyme A Oxidase	EC:1.3.3.6
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3349	NA	coa[x] + M00849[x]  -> accoa[x] + M01141[x] 	Acetyl Coenzyme A C-Acyltransferase	EC:2.3.1.16
+Fatty acid oxidation	MTA_BD_NR_abs	FAOXC121x	betaoxidation	dd3coa[x]  -> dd2coa[x] 	Isomerization (C12:1), Peroxisomal	
+Fatty acid oxidation	MTA_BD_NR_abs	HMR_3353	NA	coa[x] + M00885[x]  -> accoa[x] + dd3coa[x] 	Acetyl Coenzyme A C-Acyltransferase	EC:2.3.1.16

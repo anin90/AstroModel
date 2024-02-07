@@ -1,0 +1,105 @@
+rxnList	subSystem	GPR	Fluxspan_a	Fluxspan_b	FluxSpanRatio	Flux	MetabolicUnits	Localization	RxnFormula
+ASPGLUPROr	Peptide metabolism		20	177.583576396679	0.112623027454548	H	NA	[c]	2 h2o[c] + aspglupro[c]  <=> glu_L[c] + asp_L[c] + pro_L[c] 
+ASPGLUPROt	Transport, extracellular	6564.1 or 6565.1	20	177.583576396679	0.112623027454548	H	NA	intercompartmental	h[e] + aspglupro[e]  <=> h[c] + aspglupro[c] 
+BILIRUBtr	Transport, endoplasmic reticular		2000	0	Inf	L	NA	intercompartmental	bilirub[c]  <=> bilirub[r] 
+C12DCACT	Fatty acid oxidation		0	394.166666666667	0	H	fatty acid activation, cytosol	[c]	atp[c] + coa[c] + dodecanac[c]  -> amp[c] + ppi[c] + c12dccoa[c] 
+C4DCCACT	Fatty acid oxidation	788.1	0	775	0	H	NA	intercompartmental	c4dc[x]  <=> c4dc[c] 
+CE1261t	Transport, extracellular		0	238.003472222222	0	H	NA	intercompartmental	CE1261[c]  <=> CE1261[e] 
+CE5026t	Transport, extracellular	10928.1 or 4363.1	0	238.003472222222	0	H	NA	intercompartmental	h2o[c] + atp[c] + CE5026[c]  -> h[c] + adp[c] + pi[c] + CE5026[e] 
+EX_HC01444[e]	Exchange/demand reaction		0	100.798215171046	0	H	NA	[e]	HC01444[e]  -> 
+EX_M00010[e]	Exchange/demand reaction		0	10	0	H	NA	[e]	M00010[e]  -> 
+EX_aspglupro[e]	Exchange/demand reaction		20	177.583576396679	0.112623027454548	H	NA	[e]	aspglupro[e]  -> 
+EX_glnproglu[e]	Exchange/demand reaction		20	133.875789946428	0.149392209061872	H	NA	[e]	glnproglu[e]  -> 
+EX_glypro[e]	Exchange/demand reaction		20	257.5	0.0776699029126214	H	NA	[e]	glypro[e]  -> 
+EX_lnlc[e]	Exchange/demand reaction		40	10	4	L	NA	[e]	lnlc[e]  -> 
+EX_lnlncg[e]	Exchange/demand reaction		0	40	0	H	NA	[e]	lnlncg[e]  -> 
+EX_mag_hs[e]	Exchange/demand reaction		0	50	0	H	NA	[e]	mag_hs[e]  -> 
+EX_pro_L[e]	Exchange/demand reaction		20	550	0.0363636363636364	H	NA	[e]	pro_L[e]  <=> 
+EX_proglnpro[e]	Exchange/demand reaction		10	137.5	0.0727272727272727	H	NA	[e]	proglnpro[e]  -> 
+EX_prolyspro[e]	Exchange/demand reaction		10	20	0.5	H	NA	[e]	prolyspro[e]  -> 
+EX_proproarg[e]	Exchange/demand reaction		10	20	0.5	H	NA	[e]	proproarg[e]  -> 
+EX_propropro[e]	Exchange/demand reaction		6.66666666666667	183.333333333333	0.0363636363636364	H	NA	[e]	propropro[e]  -> 
+EX_retinal[e]	Exchange/demand reaction		10	20	0.5	H	NA	[e]	retinal[e]  -> 
+EX_sphings[e]	Exchange/demand reaction		82.9411764705882	55	1.50802139037433	L	NA	[e]	sphings[e]  -> 
+FACOAL1821	Fatty acid oxidation	2180.1 or 2182.1 or 81616.1 or 2181.1	394.166666666667	10	39.4166666666667	L	fatty acid activation, cytosol	[c]	atp[c] + coa[c] + lnlc[c]  -> amp[c] + ppi[c] + lnlccoa[c] 
+FACOAL1831	Fatty acid oxidation	2180.1 or 2182.1 or 2181.1 or 81616.1 or 23305.1 or 51703.1	0	394.166666666667	0	H	fatty acid activation, cytosol	[c]	atp[c] + coa[c] + lnlncg[c]  -> amp[c] + ppi[c] + lnlncgcoa[c] 
+FACOAL204	Fatty acid oxidation	2181.2 or 2181.1 or 2180.1 or 2182.1 or 2182.2 or 81616.1	10	394.166666666667	0.025369978858351	H	fatty acid activation, cytosol	[c]	atp[c] + coa[c] + arachd[c]  -> amp[c] + ppi[c] + arachdcoa[c] 
+FAOXC10C10OHm	Fatty acid oxidation	34.1 and 1892.1	504.455223880597	635.833333333333	0.793376498894779	H	betaoxidation	[m]	h2o[m] + fad[m] + dcacoa[m]  -> fadh2[m] + 3hdcoa[m] 
+FAOXC12C12OHm	Fatty acid oxidation	34.1 and 1892.1	504.455223880597	635.833333333333	0.79337649889478	H	betaoxidation	[m]	h2o[m] + fad[m] + ddcacoa[m]  -> fadh2[m] + 3hddcoa[m] 
+FAOXC12DCTc	Fatty acid oxidation	788.1	0	394.166666666667	0	H	NA	intercompartmental	c12dc[x]  <=> c12dc[c] 
+FAOXC12DCc	Fatty acid oxidation	1374.1 or 1375.1 or 126129.1	0	394.166666666667	0	H	carnitine shuttle	[c]	crn[c] + c12dccoa[c]  <=> coa[c] + c12dc[c] 
+FAOXC12DCx	Fatty acid oxidation	54677.1	0	394.166666666667	0	H	carnitine shuttle	[x]	crn[x] + c12dccoa[x]  <=> coa[x] + c12dc[x] 
+FAOXC162C142m	Fatty acid oxidation	37.1 and 3030.1 and 3032.1	40	20	2	L	betaoxidation	[m]	h2o[m] + nad[m] + coa[m] + fad[m] + hexddcoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + tetdecdicoa[m] 
+FAOXC164C143m	Fatty acid oxidation	3030.1 and 3032.1	30	10	3	L	betaoxidation	[m]	h2o[m] + nad[m] + coa[m] + 2hexdtetcoa[m]  -> h[m] + nadh[m] + accoa[m] + 5tedtricoa[m] 
+FAOXC164C165m	Fatty acid oxidation	37.1	30	10	3	L	betaoxidation	[m]	fad[m] + 4hexdtetcoa[m]  -> fadh2[m] + hexdpencoa[m] 
+FAOXC164m	Fatty acid oxidation	1632.1	30	10	3	L	betaoxidation	[m]	3hexdtetcoa[m]  -> 2hexdtetcoa[m] 
+FAOXC165C164m	Fatty acid oxidation	1666.1	30	10	3	L	betaoxidation	[m]	h[m] + nadph[m] + hexdpencoa[m]  -> nadp[m] + 3hexdtetcoa[m] 
+FAOXC182806m	Fatty acid oxidation	34.1 or 35.1	40	20	2	L	betaoxidation	[m]	5 h2o[m] + 5 nad[m] + 5 coa[m] + 3 fad[m] + lnlccoa[m]  -> 5 h[m] + 5 nadh[m] + 5 accoa[m] + 3 fadh2[m] + occoa[m] 
+FAOXC182C162m	Fatty acid oxidation	37.1 and 3030.1 and 3032.1	40	20	2	L	betaoxidation	[m]	h2o[m] + nad[m] + coa[m] + fad[m] + lnlccoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + hexddcoa[m] 
+FAOXC18480m	Fatty acid oxidation	34.1 or 35.1	30	10	3	L	betaoxidation	[m]	5 h2o[m] + 5 nad[m] + 5 coa[m] + fad[m] + strdnccoa[m]  -> 5 h[m] + 5 nadh[m] + 5 accoa[m] + fadh2[m] + occoa[m] 
+FAOXC184C164m	Fatty acid oxidation	37.1 and 3030.1 and 3032.1	30	10	3	L	betaoxidation	[m]	h2o[m] + nad[m] + coa[m] + fad[m] + strdnccoa[m]  -> h[m] + nadh[m] + accoa[m] + fadh2[m] + 4hexdtetcoa[m] 
+FAOXC4C4DCc	Fatty acid oxidation	1374.1 or 1375.1 or 126129.1	0	775	0	H	carnitine shuttle	[c]	crn[c] + succoa[c]  <=> coa[c] + c4dc[c] 
+FE3R2e	Heme synthesis	79901.1	5	95	0.0526315789473684	H	NA	[e]	ascb_L[e] + 2 fe3[e]  -> h[e] + 2 fe2[e] + dhdascb[e] 
+GGTe_1	Tyrosine metabolism	2687.1	0	238.003472222223	0	H	NA	[e]	h2o[e] + CE5026[e]  <=> glu_L[e] + 5cysgly34dhphe[e] 
+GLNPROGLUr	Peptide metabolism		20	133.875789946428	0.149392209061872	H	NA	[c]	2 h2o[c] + glnproglu[c]  <=> glu_L[c] + gln_L[c] + pro_L[c] 
+GLNPROGLUt	Transport, extracellular	6564.1 or 6565.1	20	133.875789946428	0.149392209061872	H	NA	intercompartmental	h[e] + glnproglu[e]  <=> h[c] + glnproglu[c] 
+GLYCtm	Transport, mitochondrial		0	162.083333333333	0	H	NA	intercompartmental	glyc[c]  <=> glyc[m] 
+GLYPROPRO1c	Transport, extracellular	5184.1	20	257.5	0.0776699029126213	H	peptide metabolism, Leucylleucine, cytosol	[c]	h2o[c] + glypro[c]  <=> gly[c] + pro_L[c] 
+GLYPROt	Transport, extracellular		20	257.5	0.0776699029126214	H	NA	intercompartmental	glypro[c]  <=> glypro[e] 
+H2Otp	Transport, peroxisomal		1516.25	2000	0.758125	H	NA	intercompartmental	h2o[c]  <=> h2o[x] 
+HMR_0188	Fatty acid synthesis	2182.1 or 23205.1 or 2181.1 or 81616.1 or 11001.1 or 2180.1 or 23305.1 or 51703.1	0	394.166666666667	0	H	NA	[c]	atp[c] + coa[c] + ddca[c]  -> amp[c] + ppi[c] + ddcacoa[c] 
+HMR_0381	Fatty acid synthesis	2182.1 or 23205.1 or 2181.1 or 81616.1 or 11001.1 or 2180.1 or 23305.1 or 51703.1	0	394.166666666667	0	H	NA	[c]	atp[c] + coa[c] + M00010[c]  -> amp[c] + ppi[c] + M00012[c] 
+HMR_3115	Fatty acid oxidation	37.1 or 33.1 or 34.1 or 28976.1	504.455223880597	635.833333333333	0.793376498894778	H	NA	[m]	fad[m] + stcoa[m]  -> fadh2[m] + od2coa[m] 
+HMR_3121	Fatty acid oxidation	37.1 or 33.1 or 34.1 or 28976.1	504.455223880596	635.833333333333	0.793376498894778	H	NA	[m]	fad[m] + pmtcoa[m]  -> fadh2[m] + hdd2coa[m] 
+HMR_3128	Fatty acid oxidation	37.1 or 33.1 or 34.1 or 28976.1	504.455223880597	635.833333333333	0.793376498894779	H	NA	[m]	fad[m] + tdcoa[m]  -> fadh2[m] + HC01412[m] 
+HMR_3135	Fatty acid oxidation	37.1 or 33.1 or 34.1 or 28976.1	504.455223880597	635.833333333333	0.793376498894779	H	NA	[m]	fad[m] + ddcacoa[m]  -> fadh2[m] + dd2coa[m] 
+HMR_3142	Fatty acid oxidation	34.1 or 28976.1	504.455223880597	635.833333333333	0.793376498894779	H	NA	[m]	fad[m] + dcacoa[m]  -> fadh2[m] + dc2coa[m] 
+HMR_3149	Fatty acid oxidation	34.1 or 28976.1	504.455223880597	635.833333333333	0.793376498894779	H	NA	[m]	fad[m] + occoa[m]  -> fadh2[m] + HC01415[m] 
+HMR_7757	Transport, mitochondrial	1622.1	0	1522.01754385965	0	H	NA	intercompartmental	h[c] + succoa[c]  <=> h[m] + succoa[m] 
+HMR_9719	Fatty acid oxidation	30.1 or 3028.1 or 37.1 or 3030.1 or 33.1 or 34.1 or 1892.1 or 3032.1 or 3033.1 or 10449.1 or 28976.1	30	10	3	L	NA	[m]	8 h2o[m] + 8 nad[m] + 8 coa[m] + 4 fad[m] + strdnccoa[m]  -> 8 h[m] + 8 nadh[m] + 9 accoa[m] + 4 fadh2[m] 
+LEUKTRB4t	Transport, extracellular	387775.1	2000	10	200	L	NA	intercompartmental	leuktrB4[e]  <=> leuktrB4[c] 
+LNLCCPT2	Fatty acid oxidation	1376.1	40	20	2	L	carnitine shuttle	[m]	coa[m] + lnlccrn[m]  <=> crn[m] + lnlccoa[m] 
+LNLNCGCPT1	Fatty acid oxidation	1375.1 or 1375.3 or 1375.4 or 126129.1 or 1374.1 or 1375.2	2000	40	50	L	carnitine shuttle	[c]	crn[c] + lnlncgcoa[c]  <=> coa[c] + lnlncgcrn[c] 
+LPS3	Triacylglycerol synthesis	11343.1 or 11343.2	0	164.0625	0	H	triglyceride degradation, cytosol	[c]	h2o[c] + mag_hs[c]  -> h[c] + Rtotal2[c] + glyc[c] 
+MAGt	Transport, extracellular		0	50	0	H	NA	intercompartmental	mag_hs[e]  <=> mag_hs[c] 
+NMNS	NAD metabolism	10135.1	10	30	0.333333333333333	H	NA	[c]	h[c] + ncam[c] + prpp[c]  -> ppi[c] + nmn[c] 
+O2t	Transport, extracellular		10	45	0.222222222222222	H	NA	intercompartmental	o2[e]  <=> o2[c] 
+PPA	Oxidative phosphorylation	5464.1 or 64077.1	355.041666666666	507.867383512545	0.699083418610395	H	NA	[c]	h2o[c] + ppi[c]  -> h[c] + 2 pi[c] 
+PPAm	Oxidative phosphorylation	27068.4 or 27068.1 or 27068.3 or 27068.2	384.166666666667	708.75	0.542034097589653	H	NA	[m]	h2o[m] + ppi[m]  -> h[m] + 2 pi[m] 
+PROGLNPROr	Peptide metabolism		10	137.5	0.0727272727272727	H	NA	[c]	2 h2o[c] + proglnpro[c]  <=> gln_L[c] + 2 pro_L[c] 
+PROGLNPROt	Transport, extracellular	6564.1 or 6565.1	10	137.5	0.0727272727272727	H	NA	intercompartmental	h[e] + proglnpro[e]  <=> h[c] + proglnpro[c] 
+PROLYSPROr	Peptide metabolism		10	20	0.5	H	NA	[c]	2 h2o[c] + prolyspro[c]  <=> lys_L[c] + 2 pro_L[c] 
+PROLYSPROt	Transport, extracellular	6564.1 or 6565.1	10	20	0.5	H	NA	intercompartmental	h[e] + prolyspro[e]  <=> h[c] + prolyspro[c] 
+PROPROARGr	Peptide metabolism		10	20	0.5	H	NA	[c]	2 h2o[c] + proproarg[c]  <=> arg_L[c] + 2 pro_L[c] 
+PROPROARGt	Transport, extracellular	6564.1 or 6565.1	10	20	0.5	H	NA	intercompartmental	h[e] + proproarg[e]  <=> h[c] + proproarg[c] 
+PROPROPROr	Peptide metabolism		6.66666666666663	183.333333333333	0.0363636363636361	H	NA	[c]	2 h2o[c] + propropro[c]  <=> 3 pro_L[c] 
+PROPROPROt	Transport, extracellular	6564.1 or 6565.1	6.66666666666663	183.333333333333	0.0363636363636361	H	NA	intercompartmental	h[e] + propropro[e]  <=> h[c] + propropro[c] 
+RE0512M	Fatty acid oxidation	3030.1 or 3295.1 or 1962.1 or 3033.1 or 3028.1 or 3032.1	40	20	2	L	betaoxidation	[m]	nad[m] + CE2421[m]  -> h[m] + nadh[m] + CE0713[m] 
+RE1516M	Fatty acid oxidation	33.1 or 51.1	40	20	2	L	betaoxidation	[m]	fad[m] + lnlccoa[m]  <=> fadh2[m] + CE2434[m] 
+RE1517M	Fatty acid oxidation	33.1 or 51.1	40	20	2	L	betaoxidation	[m]	fad[m] + CE0849[m]  <=> fadh2[m] + CE2433[m] 
+RE1523M	Fatty acid oxidation	1892.1 or 3030.1 or 1962.1 or 3032.1	40	20	2	L	betaoxidation	[m]	h2o[m] + CE2434[m]  <=> CE2421[m] 
+RE1530C	Pyrimidine synthesis		1682	1020	1.64901960784314	L	pyrimidine synthesis/ de novo	[c]	dgtp[c] + duri[c]  <=> h[c] + dgdp[c] + dump[c] 
+RE1531M	Fatty acid oxidation	10449.1 or 3032.1 or 3030.1	40	20	2	L	betaoxidation	[m]	coa[m] + CE0713[m]  <=> accoa[m] + CE0849[m] 
+RE1903R	Vitamin A metabolism		2000	0	Inf	L	NA	[r]	h2o[r] + nad[r] + retinal_cis_13[r]  <=> 2 h[r] + nadh[r] + 13_cis_retn[r] 
+RE1916C	Tyrosine metabolism		0	238.003472222222	0	H	NA	[c]	gthrd[c] + dopaqn[c]  <=> CE5026[c] 
+RETINALt	Transport, extracellular		10	20	0.5	H	NA	intercompartmental	retinal[c]  <=> retinal[e] 
+SPHGNSte	Transport, extracellular		82.9411764705883	55	1.50802139037433	L	NA	intercompartmental	sphings[c]  <=> sphings[e] 
+SUCCCROT	Fatty acid oxidation	54677.1	0	775	0	H	carnitine shuttle	[x]	crn[x] + succoa[x]  <=> coa[x] + c4dc[x] 
+SUCCtp	Transport, peroxisomal		0	775	0	H	NA	intercompartmental	succ[c]  <=> succ[x] 
+UREAt5	Transport, extracellular	6523.1	2000	20	100	L	NA	intercompartmental	h2o[e] + urea[e]  <=> h2o[c] + urea[c] 
+r0178	Glutamate metabolism	7915.1	867.19696969697	1270.90909090909	0.682343824511207	H	glutamate metabolism, mitochondria/ Succinic semialdehyde dehydrogenase	[m]	h2o[m] + nad[m] + sucsal[m]  <=> 2 h[m] + nadh[m] + succ[m] 
+r0246	Miscellaneous	231.1 or 10327.1	0	162.083333333333	0	H	gluconeogenesis, mitochondria	[m]	nadp[m] + glyc[m]  -> h[m] + nadph[m] + glyald[m] 
+r0308	Fatty acid oxidation	11332.1 or 10965.1 or 5538.1 or 122970.1 or 641371.1 or 9374.1	10	714.010416666667	0.0140053979137793	H	NA	[x]	h[x] + coa[x] + arachd[x]  -> h2o[x] + arachdcoa[x] 
+r0340	Miscellaneous	132158.1	0	162.083333333333	0	H	NA	[m]	atp[m] + glyc_R[m]  -> h[m] + adp[m] + 3pg[m] 
+r0393	Miscellaneous	224.1 or 217.1 or 219.1 or 223.1 or 501.1	0	162.083333333333	0	H	NA	[m]	h2o[m] + nad[m] + glyald[m]  -> 2 h[m] + nadh[m] + glyc_R[m] 
+r0627	Miscellaneous	2717.1	0	100.798215171046	0	H	NA	[e]	h2o[e] + HC01444[e]  <=> gal[e] + glyc[e] 
+r0688	Bile acid synthesis	224.1 or 217.1 or 219.1 or 223.1 or 501.1	778.333333333333	2000	0.389166666666667	H	NA	[c]	h2o[c] + nad[c] + xol7ah2al[c]  <=> 2 h[c] + nadh[c] + dhcholestanate[c] 
+r0926	Transport, mitochondrial		0	162.083333333333	0	H	NA	intercompartmental	3pg[m]  -> 3pg[c] 
+r1257	Fatty acid oxidation	2182.1 or 2181.1 or 81616.1 or 11001.1 or 2180.1 or 23305.1 or 51703.1	392.5	10	39.25	L	NA	[r]	atp[r] + coa[r] + lnlc[r]  -> amp[r] + ppi[r] + lnlccoa[r] 
+r2497	Transport, peroxisomal	215.1	10	714.010416666667	0.0140053979137793	H	NA	intercompartmental	h2o[c] + atp[c] + arachd[c]  -> h[c] + adp[c] + pi[c] + arachd[x] 
+r2520	Transport, mitochondrial	8402.1	2000	0	Inf	L	NA	intercompartmental	akg[m] + gthrd[c]  <=> akg[c] + gthrd[m] 
+r2537	Transport, endoplasmic reticular		2000	0	Inf	L	NA	intercompartmental	lnlncgcoa[c]  <=> lnlncgcoa[r] 
+sink_lnlc[c]	Exchange/demand reaction		40	10	4	L	NA	[c]	lnlc[c]  <=> 
+sink_lnlccoa[c]	Exchange/demand reaction		40	20	2	L	NA	[c]	lnlccoa[c]  <=> 
+sink_pro_L[c]	Exchange/demand reaction		20	550	0.0363636363636364	H	NA	[c]	pro_L[c]  <=> 
+sink_retinol[c]	Exchange/demand reaction		10	20	0.5	H	NA	[c]	retinol[c]  <=> 
