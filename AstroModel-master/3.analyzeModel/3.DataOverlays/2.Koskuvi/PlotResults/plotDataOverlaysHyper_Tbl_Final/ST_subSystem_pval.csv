@@ -1,3 +1,0 @@
-	Phenotype	subSystem	No.of.disrupted.modules	disrupted.modules	FVA_abs.p.val.fdr	MTA_abs.p.val.fdr	FVA_norm_t1.p.val.fdr	MTA_norm_t1.p.val.fdr	FVA_norm_t2.p.val.fdr	MTA_norm_t2.p.val.fdr	rowMeans
-1	ST	Fatty acid oxidation	3	FVA_ST_norm_t1 FVA_ST_norm_t2 MTA_ST_norm_t2	0.999988982021604	0.819807399269897	0.000829593278489288	0.961326943103406	6.88503234895987e-08	0.0243577418941165	0.467718454736306
-2	ST	Nucleotide interconversion	3	MTA_ST_abs MTA_ST_norm_t1 MTA_ST_norm_t2	0.683733512199903	0.000249026376202121	NA	0.00195867351740693	NA	1.17725086423618e-09	0.44765686887846

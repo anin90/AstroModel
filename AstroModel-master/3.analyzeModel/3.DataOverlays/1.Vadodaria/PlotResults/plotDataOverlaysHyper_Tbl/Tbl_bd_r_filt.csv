@@ -1,4 +1,0 @@
-	FVA_BD_R_abs	FVA_BD_R_norm_t1	FVA_BD_R_norm_t2	MTA_BD_R_abs	MTA_BD_R_norm_t1	MTA_BD_R_norm_t2	Total
-ROS detoxification	0	1	0	1	0	0	2
-Drug metabolism	0	0	0	0	1	1	2
-Transport, extracellular	0	0	0	1	1	1	3
